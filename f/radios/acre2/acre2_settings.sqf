@@ -69,4 +69,4 @@ f_radios_settings_acre2_groups_indfor = ["Alpha","Bravo","Charlie","Delta","Echo
 
 // ACRE can AI hear players?
 // False - AI not hear players, true - AI hear players.
-[false] call acre_api_fnc_setRevealToAI;
+[true] call acre_api_fnc_setRevealToAI;

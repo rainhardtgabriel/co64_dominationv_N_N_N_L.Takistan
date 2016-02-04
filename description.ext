@@ -176,9 +176,9 @@ class Params
     class f_param_radios
     {
             title = "Radio System";
-            values[] = {0,1,2,3};
-            texts[] = {"Off","ACRE","TFR","ACRE2"};
-            default = 3;
+            values[] = {0,1,2};
+            texts[] = {"Off","ACRE2","TFR"};
+            default = 1;
             code = "f_var_radios = %1";
     };
 
@@ -192,7 +192,7 @@ class Params
             title = "Medical System";
             values[] = {0,1,2};
             texts[] = {"Arma 3 Default","ACE3 Basic Medical System","ACE3 Advanced Medical System"};
-            default = 4;
+            default = 2;
             code = "f_var_medical = %1";
     };
 
@@ -528,7 +528,7 @@ class CfgFunctions
 		};
 		class acre
 		{
-			file = "f\radios\acre";
+			file = "f\radios\acre2";
 			class acre_removeRadios{};
 			class acre_addRadios{};
 			class acre_setRadioFrequencies{};
