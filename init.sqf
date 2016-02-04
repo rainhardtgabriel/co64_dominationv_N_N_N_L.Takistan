@@ -129,7 +129,7 @@ f_var_removeBodyDistance = 500;
 // F3 - Assign Gear AI
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// [] execVM "f\assignGear\f_assignGear_AI.sqf";
+ [] execVM "f\assignGear\f_assignGear_AI.sqf";
 
 // ====================================================================================
 
@@ -207,10 +207,6 @@ f_var_cachingAggressiveness = 1;
 
 // F3 - Medical Systems Support
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// SWS Config Settings
-// How many extra FirstAidKits (FAKS) each player should receive when using the F3 Simple Wounding System:
-f_wound_extraFAK = 2;
 
 [] execVM "f\medical\medical_init.sqf";
 
