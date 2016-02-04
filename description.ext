@@ -37,7 +37,7 @@ enableDebugConsole = 2;
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 respawn = 3;
-respawndelay = 60;
+respawndelay = 10;
 respawnOnStart = 0;
 RespawnDialog = 0;										// default = 1. show respawn timer and scoreboard when killed.
 
@@ -190,8 +190,8 @@ class Params
     class f_param_medical
     {
             title = "Medical System";
-            values[] = {0,1,2,3,4};
-            texts[] = {"Arma 3 Default","F3 Simple Wounding System","Authentic Gameplay Mod","ACE3 Basic Medical System","ACE3 Advanced Medical System"};
+            values[] = {0,1,2};
+            texts[] = {"Arma 3 Default","ACE3 Basic Medical System","ACE3 Advanced Medical System"};
             default = 4;
             code = "f_var_medical = %1";
     };
