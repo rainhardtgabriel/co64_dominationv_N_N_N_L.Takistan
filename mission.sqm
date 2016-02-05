@@ -6275,6 +6275,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.2;
+			init="";
 		};
 		class Item309
 		{
@@ -6295,6 +6296,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item311
 		{
@@ -6304,6 +6306,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item312
 		{
@@ -6313,6 +6316,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item313
 		{
@@ -6359,6 +6363,7 @@ class Mission
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
 			text="stuffbox_1_2_1";
+			init="";
 		};
 		class Item317
 		{
@@ -6381,6 +6386,7 @@ class Mission
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
 			text="stuffbox_1_1_1_1";
+			init="";
 		};
 		class Item319
 		{
@@ -6390,6 +6396,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item320
 		{
@@ -6399,6 +6406,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item321
 		{
@@ -6408,6 +6416,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item322
 		{
@@ -6417,6 +6426,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item323
 		{
@@ -6475,6 +6485,7 @@ class Mission
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
 			text="box1";
+			init="";
 		};
 		class Item328
 		{
@@ -6497,6 +6508,7 @@ class Mission
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
 			text="stuffbox_1_1_1_1_1";
+			init="";
 		};
 		class Item330
 		{
@@ -10616,6 +10628,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item734
 		{
@@ -10625,6 +10638,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item735
 		{
@@ -10887,6 +10901,7 @@ class Mission
 			side="EMPTY";
 			vehicle="ACE_medicalSupplyCrate_advanced";
 			skill=0.2;
+			init="";
 		};
 		class Item760
 		{
@@ -10896,6 +10911,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item761
 		{
@@ -10905,6 +10921,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item762
 		{
@@ -10914,6 +10931,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item763
 		{
@@ -10972,6 +10990,7 @@ class Mission
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
 			text="stuffbox_1_2_1_2";
+			init="";
 		};
 		class Item768
 		{
@@ -10993,6 +11012,7 @@ class Mission
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
 			text="stuffbox_1_1_1_1_2";
+			init="";
 		};
 		class Item770
 		{
@@ -11002,6 +11022,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item771
 		{
@@ -11022,6 +11043,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item773
 		{
@@ -11042,6 +11064,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item775
 		{
@@ -11051,6 +11074,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item776
 		{
@@ -11060,6 +11084,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item777
 		{
@@ -11106,6 +11131,7 @@ class Mission
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
 			text="stuffbox_1_2_1_2_1";
+			init="";
 		};
 		class Item781
 		{
@@ -11128,6 +11154,7 @@ class Mission
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
 			text="stuffbox_1_1_1_1_2_1";
+			init="";
 		};
 		class Item783
 		{
@@ -11137,6 +11164,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item784
 		{
@@ -11602,6 +11630,7 @@ class Mission
 			vehicle="Infostand_2_EP1";
 			leader=1;
 			skill=0.2;
+			init="";
 			description="Lamp";
 		};
 		class Item829
@@ -11671,6 +11700,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item836
 		{
@@ -11680,6 +11710,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item837
 		{
@@ -11689,6 +11720,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item838
 		{
@@ -11735,6 +11767,7 @@ class Mission
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
 			text="stuffbox_1_2_1_2_1_1";
+			init="";
 		};
 		class Item842
 		{
@@ -11757,6 +11790,7 @@ class Mission
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
 			text="stuffbox_1_1_1_1_2_1_1";
+			init="";
 		};
 		class Item844
 		{
@@ -11766,6 +11800,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item845
 		{
@@ -11788,6 +11823,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CargoBox_V1_F";
 			skill=0.2;
+			init="";
 		};
 		class Item847
 		{
@@ -11798,6 +11834,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.2;
+			init="";
 		};
 		class Item848
 		{
@@ -11808,6 +11845,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CargoNet_01_box_F";
 			skill=0.2;
+			init="";
 		};
 		class Item849
 		{
@@ -13907,6 +13945,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item1044
 		{
@@ -13916,6 +13955,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item1045
 		{
@@ -13925,6 +13965,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item1046
 		{
@@ -13934,6 +13975,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Box_AmmoOld_F";
 			skill=0.60000002;
+			init="";
 		};
 		class Item1047
 		{

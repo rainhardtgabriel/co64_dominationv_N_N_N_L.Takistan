@@ -16,7 +16,9 @@ if (_veh == _drv) then {
 	_veh vehicleChat "Das Fahrzeug wird betankt - This Vehicle is being refuelled...";
 
 	_fuel = fuel _veh;
-	_veh setFuel 0;
+	_veh setVehicleInit "this setFuel 0;";
+	processInitCommands;
+	waitUntil {sleep 1; (fuel _veh) == 0};
 
 	_refuelTime = 30 * (1 - _fuel);
 
@@ -33,7 +35,8 @@ if (_veh == _drv) then {
 
 	sleep _refuelTime;	
 	_veh vehicleChat format["Das Fahrzeug wird betankt - This Vehicle is being refuelled... (%1%2)", 100, "%"];
-	_veh setFuel 1;
+	_veh setVehicleInit "this setFuel 1";
+	processInitCommands;
 
 	_veh vehicleChat "Betankung vollstaendig abgeschlossen! - Refuelling done!";
 	_veh setVariable ["vehServiceActive", false, true];

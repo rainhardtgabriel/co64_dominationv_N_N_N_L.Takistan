@@ -17,7 +17,9 @@ if (_veh == _drv) then {
 	_veh vehicleChat "Das Fahrzeug wird beladen - This Vehicle is being loaded...";
 
 	_fuel = fuel _veh;
-	_veh setFuel 0;
+	_veh setVehicleInit "this setFuel 0;";
+	processInitCommands;
+	waitUntil {sleep 1; (fuel _veh) == 0};
 		
 	_loadTime = 6;	
 	if(!isMultiplayer) then {
@@ -37,7 +39,8 @@ if (_veh == _drv) then {
 	sleep _loadTime;
 	_veh vehicleChat format["Das Fahrzeug wird beladen - This Vehicle is being loaded... (%1%2)", 100, "%"];
 	
-	_veh setFuel _fuel;
+	_veh setVehicleInit format["this setFuel %1;", _fuel];
+	processInitCommands;
 
 	_loadoutname = _veh getVariable ["loadoutName", "Unknown Loadout"];
 
