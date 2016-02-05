@@ -16,9 +16,7 @@ if (_veh == _drv) then {
 	_veh vehicleChat "Das Fahrzeug wird aufmunitioniert - This Vehicle is being rearmed...";
 
 	_fuel = fuel _veh;
-	_veh setVehicleInit "this setFuel 0;";
-	processInitCommands;
-	waitUntil {sleep 1; (fuel _veh) == 0};
+	_veh setFuel 0;
 		
 	_loadTime = 12;	
 	if(!isMultiplayer) then {
@@ -35,9 +33,7 @@ if (_veh == _drv) then {
 	sleep _loadTime;
 	_veh vehicleChat format["Das Fahrzeug wird aufmunitioniert - This Vehicle is being rearmed... (%1%2)", 100, "%"];
 	
-	_veh setVehicleInit format["this setFuel %1;", _fuel];
-	processInitCommands;
-
+	_veh setFuel _fuel;
 	_loadoutname = _veh getVariable ["loadoutName", "Unknown Loadout"];
 
 	_veh vehicleChat "Das Fahrzeug ist voll aufmunitioniert - The Vehicle is fully rearmed.";
