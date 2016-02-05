@@ -2,7 +2,7 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// MAKE SURE THE PLAYER INITIALIZES PROPERLY HAHAHA
+// MAKE SURE THE PLAYER INITIALIZES PROPERLY
 
 if (!isDedicated && (isNull player)) then
 {
