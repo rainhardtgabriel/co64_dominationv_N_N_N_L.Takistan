@@ -25,7 +25,7 @@ _NumOfPlayers = west countSide playableUnits;
 
 		"side_mkr1" setmarkerpos [0,0,0];
 		sleep 1;
-		if (alive  powertrans) then {deletevehicle powertrans;};
+		if (alive powertrans) then {deletevehicle powertrans;};
 		if (alive Tent1) then {deletevehicle Tent1;};
 		if (alive Tent2) then {deletevehicle Tent2;};
 		if (alive Tent3) then {deletevehicle Tent3;};
@@ -67,7 +67,7 @@ if ( _side_select == "gamsar") then {
 									_side_flatPos = _side_position isFlatEmpty[3, 1, 0.5, 30, 0, false];
 									};
 									CapVeh1 = "CUP_B_AH1_BAF" createVehicle _side_flatPos;
-									waitUntil { sleep 0.5; alive CapVeh1 };
+									waitUntil { sleep 0.5; alive CapVeh1; };
 									CapVeh1 setVectorUp [0,0,1];
 									CapVeh1 setDamage 0.95;
 									CapVeh1Alive = true;									
