@@ -28,8 +28,7 @@ if (_veh == _drv) then {
 		// Pull out Units, remove Fuel and lock Vehicle
 		_veh vehicleChat "Das Fahrzeug wird in 5 Minuten respawnen - This Vehicle will respawn in 5 Minutes.";
 	
-		_veh setVehicleInit "this setFuel 0;";
-		processInitCommands;
+		_veh setFuel 0;
 	
 		_crw = crew _veh;
 		{
@@ -38,9 +37,7 @@ if (_veh == _drv) then {
 			_crwman action ["getOut", _veh];
 		} forEach _crw;
 
-		waitUntil {sleep 1; (fuel _veh) == 0};
-		_veh setVehicleInit "this lock true;";
-		processInitCommands;
+		_veh lock true;
 
 		// Initiate Respawn
 		sleep 5;
