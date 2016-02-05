@@ -1,3 +1,1 @@
-if(!isServer) exitwith {};
-
-[playSound "sidemission_new"] call BIS_fnc_MP;
+playSound "sidemission_new";
