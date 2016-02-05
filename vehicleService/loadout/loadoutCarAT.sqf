@@ -1,16 +1,7 @@
 _veh = _this select 0;	
 _veh setVariable ["loadoutName", "Anti Tank Loadout", true];
 
-_veh addWeaponCargoGlobal ["MAAWS",1];
-_veh addWeaponCargoGlobal ["ACE_M72A2",4];
-_veh addWeaponCargoGlobal ["ACE_M136_CSRS",1];
-_veh addWeaponCargoGlobal ["ACE_Javelin_CLU",1];
-_veh addWeaponCargoGlobal ["ACE_Javelin_Direct",3];
-_veh addWeaponCargoGlobal ["BAF_NLAW_Launcher", 5]; 
-_veh addMagazineCargoGlobal ["ACE_ANM14",10];
-_veh addWeaponCargoGlobal ["ACE_MX2A",2];
 _veh addWeaponCargoGlobal ["Binocular",2];
-_veh addMagazineCargoGlobal ["MAAWS_HEAT",10];
 _veh addMagazineCargoGlobal ["SmokeShell",10];
 _veh addMagazineCargoGlobal ["SmokeShellGreen",5];
 _veh addMagazineCargoGlobal ["SmokeShellRed",5];
