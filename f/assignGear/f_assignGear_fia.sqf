@@ -996,22 +996,19 @@ if (!_isMan) then
 	{
 	switch(f_var_medical) do
 		{
-		case 2:	// Authentic Gameplay Modification
-			{
-				[_unit] execVM "f\medical\AGM_converter.sqf";
-			};
-			
-		case 3: // ACE 3 Basic Medic System
+				
+		case 1: // ACE 3 Basic Medic System
 			{
 				[_unit] execVM "f\medical\ACEbasic_converter.sqf";
 			};
 			
-		case 4: // ACE 3 Advanced Medic System
+		case 2: // ACE 3 Advanced Medic System
 			{
 				[_unit] execVM "f\medical\ACEadvanced_converter.sqf";
 			};
 		};
 	};
+
 
 // ====================================================================================
 
