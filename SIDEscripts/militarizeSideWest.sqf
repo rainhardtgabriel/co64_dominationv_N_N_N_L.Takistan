@@ -1,3 +1,10 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//																																  //
+//                      		***		ARMA3 Domination-Like-Script v1.0 - by Sepp	***											  //
+//																																  //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 //////////////// Exit if not server /////////////////////////////////////////////////////////////////////////////////////////////
 if(!isServer) exitwith {};
 
@@ -47,10 +54,15 @@ if ( _side_select == "lalezar") then {
 									//////////////// create a powertrans /////////////////////////////////////////////////////////////////////////////////////////////
 
 									_side_position = getPos _side_log_pos;
-									powertrans = "Land_dp_transformer_F" createVehicle _side_flatPos;
+									powertrans = "Land_dp_transformer_F" createVehicle _side_position;
 									waitUntil { sleep 0.5; alive powertrans };
 									powertrans setVectorUp [0,0,1];
 									powertransAlive = true;									
+									
+									//////////////// creates a task/show notification for the ao ///////////////////////////////////////////////////////////////////////////////////////		
+		
+									["tsk4", true, ["Find the power transformer running the oil reservoir pumps","Side Mission: Lalezar","Side Mission"],getPos _side_log_pos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
+
 									
 									//////////////// create 2 ai patrol around powertrans /////////////////////////////////////////////////////////////////////////
 
@@ -67,8 +79,8 @@ if ( _side_select == "lalezar") then {
 		
 									_side_trig = createTrigger 					["EmptyDetector", getPos _side_log_pos];   
 									_side_trig setTriggerArea 					[_side_rad, _side_rad, 0, false];  
-									_side_trig setTriggerActivation 			["EAST", "notpresent", true];   
-									_side_trig setTriggerStatements 			["this", "0 = execVM ""SIDEscripts\militarizeSideEast.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; deletevehicle thisTrigger" , ""];
+									_side_trig setTriggerActivation 			["none", "notpresent", true];   
+									_side_trig setTriggerStatements 			["!alive powertrans", "0 = execVM ""SIDEscripts\militarizeSideEast.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; [""tsk4"", true, ['Find the power transformer running the oil reservoir pumps','Side Mission: Lalezar',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger" , ""];
 		
 
 									
@@ -81,18 +93,25 @@ if ( _side_select == "woods") then {
 									//_mkr_text 	 			=
 									_side_name   				= "Valley of Death";
 									
-									_posTent1 = (getpos _side_log_pos) findEmptyPosition [0,10];
-									_posTent2 = (getpos _side_log_pos) findEmptyPosition [0,10];
-									_posTent3 = (getpos _side_log_pos) findEmptyPosition [0,10];
-		
+									_posTent1 		= (getpos _side_log_pos) findEmptyPosition [5,30];
+									_posTent2 		= (getpos _side_log_pos) findEmptyPosition [5,30];
+									_posTent3 		= (getpos _side_log_pos) findEmptyPosition [5,30];
+									_posCampFire 	= (getpos _side_log_pos) findEmptyPosition [5,30];
+									
 									sleep 0.1;
 		
-									Tent1 = "ACamp_EP1" createVehicle _posTent1;
-									Tent2 = "ACamp_EP1" createVehicle _posTent2;
-									Tent3 = "ACamp_EP1" createVehicle _posTent3;
-		
+									Tent1 		= "ACamp_EP1" createVehicle _posTent1;
+									Tent2 		= "ACamp_EP1" createVehicle _posTent2;
+									Tent3 		= "ACamp_EP1" createVehicle _posTent3;
+									CampFire 	= "Campfire_burning_F" createVehicle _posCampFire;
+									
 									sleep 0.1;
+									
+									//////////////// creates a task/show notification for the ao ///////////////////////////////////////////////////////////////////////////////////////		
 		
+									["tsk5", true, ["Find the enemy Camp and eliminate all enemy Soldiers!","Side Mission: Woods","Side Mission"],getPos _side_log_pos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
+
+									
 									nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],false,[15,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
 									
 									//////////////// create trigger at the side ////////////////////////////////////////////////////////////////////////////////////////			
@@ -102,7 +121,7 @@ if ( _side_select == "woods") then {
 									_side_trig = createTrigger 					["EmptyDetector", getPos _side_log_pos];   
 									_side_trig setTriggerArea 					[_side_rad, _side_rad, 0, false];  
 									_side_trig setTriggerActivation 			["EAST", "notpresent", true];   
-									_side_trig setTriggerStatements 			["this", "0 = execVM ""SIDEscripts\militarizeSideEast.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; deletevehicle thisTrigger" , ""];
+									_side_trig setTriggerStatements 			["this", "0 = execVM ""SIDEscripts\militarizeSideEast.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; [""tsk5"", true, ['Find the enemy Camp and eliminate all enemy Soldiers!','Side Mission: Woods',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger" , ""];
 		
 
 									
