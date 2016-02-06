@@ -209,7 +209,7 @@ _RAT = "tf47_at4_heat";
 // Medium AT
 _MAT = "tf47_m3maaws";
 _MATmag1 = "tf47_m3maaws_HE";
-_MATmag2 = "tf47_m3maaws_HE";
+_MATmag2 = "tf47_m3maaws_HEAT";
 
 // Surface Air
 _SAM = "CUP_launch_FIM92Stinger";
@@ -218,7 +218,7 @@ _SAMmag = "CUP_Stinger_M";
 // Heavy AT
 _HAT = "tf47_m3maaws";
 _HATmag1 = "tf47_m3maaws_HE";
-_HATmag2 = "tf47_m3maaws_HE";
+_HATmag2 = "tf47_m3maaws_HEAT";
 
 // Sniper
 _SNrifle = "CUP_srifle_M107_Base";
