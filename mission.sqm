@@ -12142,7 +12142,7 @@ class Mission
 		};
 		class Item879
 		{
-			position[]={8155.9604,296.04001,2009.6184};
+			position[]={7910.2104,296.04001,1779.7874};
 			azimut=150;
 			special="NONE";
 			id=1011;
@@ -12155,7 +12155,7 @@ class Mission
 		};
 		class Item880
 		{
-			position[]={8185.6211,296.04001,2026.6777};
+			position[]={7895.7598,296.04001,1769.9805};
 			azimut=150;
 			special="NONE";
 			id=1012;
@@ -12168,7 +12168,7 @@ class Mission
 		};
 		class Item881
 		{
-			position[]={8170.7749,296.04001,2018.0602};
+			position[]={7880.6895,296.04001,1759.7889};
 			azimut=150;
 			special="NONE";
 			id=1013;
@@ -12565,7 +12565,7 @@ class Mission
 		};
 		class Item921
 		{
-			position[]={8185.3774,296.04001,2026.3932};
+			position[]={7895.5161,296.04001,1769.6959};
 			azimut=330;
 			id=1053;
 			side="EMPTY";
@@ -12576,7 +12576,7 @@ class Mission
 		};
 		class Item922
 		{
-			position[]={8170.7627,296.04001,2017.8757};
+			position[]={7880.6772,296.04001,1759.6045};
 			azimut=330;
 			id=1054;
 			side="EMPTY";
@@ -12587,7 +12587,7 @@ class Mission
 		};
 		class Item923
 		{
-			position[]={8155.6328,296.04001,2009.4911};
+			position[]={7909.8828,296.04001,1779.66};
 			azimut=330;
 			id=1055;
 			side="EMPTY";
@@ -16198,21 +16198,21 @@ class Mission
 		};
 		class Item72
 		{
-			position[]={8185.8018,296.04001,2025.9478};
+			position[]={7895.9404,296.04001,1769.2505};
 			name="callsign_4_2_1";
 			text="BUTTERFLY-01";
 			type="b_air";
 		};
 		class Item73
 		{
-			position[]={8170.9966,296.04001,2017.319};
+			position[]={7880.9111,296.04001,1759.0477};
 			name="callsign_4_2_2";
 			text="BUTTERFLY-02";
 			type="b_air";
 		};
 		class Item74
 		{
-			position[]={8155.0581,296.04001,2009.0715};
+			position[]={7909.3081,296.04001,1779.2405};
 			name="callsign_4_2_3";
 			text="FIREFLY";
 			type="b_air";
