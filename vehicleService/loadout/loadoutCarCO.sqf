@@ -1,6 +1,10 @@
 _veh = _this select 0;	
 _veh setVariable ["loadoutName", "Combined Operations Loadout", true];
 
+clearItemCargoGlobal _veh;
+clearWeaponCargoGlobal _veh;
+clearMagazineCargoGlobal _veh;	
+
 _veh addWeaponCargoGlobal ["ACE_M136_CSRS",1];
 _veh addWeaponCargoGlobal ["ACE_Javelin_CLU",1];
 _veh addWeaponCargoGlobal ["ACE_Javelin_Direct",3];

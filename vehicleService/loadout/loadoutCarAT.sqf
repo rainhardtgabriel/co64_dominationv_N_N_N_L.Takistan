@@ -1,6 +1,10 @@
 _veh = _this select 0;	
 _veh setVariable ["loadoutName", "Anti Tank Loadout", true];
 
+clearItemCargoGlobal _veh;
+clearWeaponCargoGlobal _veh;
+clearMagazineCargoGlobal _veh;	
+
 _veh addWeaponCargoGlobal ["tf47_m3maaws",1];
 _veh addWeaponCargoGlobal ["tf47_at4_heat",4];
 _veh addWeaponCargoGlobal ["ACE_EarPlugs",4];

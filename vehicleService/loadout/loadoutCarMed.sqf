@@ -1,6 +1,10 @@
 _veh = _this select 0;	
 _veh setVariable ["loadoutName", "Medical Loadout", true];
 
+clearItemCargoGlobal _veh;
+clearWeaponCargoGlobal _veh;
+clearMagazineCargoGlobal _veh;	
+
 _veh addMagazineCargoGlobal ["ACE_Bandage",50];
 _veh addMagazineCargoGlobal ["ACE_LargeBandage",50];
 _veh addMagazineCargoGlobal ["ACE_Medkit",50];
