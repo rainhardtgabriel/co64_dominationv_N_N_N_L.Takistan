@@ -25,13 +25,45 @@ KitPickInit =
     _idx = COMBO lbAdd "Rifleman (AT)"; COMBO lbSetData [_idx, "rat"];
     COMBO lbAdd "----";
 
-    _idx = COMBO lbAdd "Engineer (no repair)"; COMBO lbSetData [_idx, "eng"];
+    _idx = COMBO lbAdd "Designated Marksman"; COMBO lbSetData [_idx, "dm"];
+    _idx = COMBO lbAdd "UAV Operator"; COMBO lbSetData [_idx, "uav"];    
+    COMBO lbAdd "----";
+
+    _idx = COMBO lbAdd "Sniper"; COMBO lbSetData [_idx, "sn"];
+    _idx = COMBO lbAdd "Spotter"; COMBO lbSetData [_idx, "sp"];
+    COMBO lbAdd "----";
+    
+    _idx = COMBO lbAdd "Medium Machine Gunner"; COMBO lbSetData [_idx, "mmgg"];
+    _idx = COMBO lbAdd "Medium Machine Gunner Asst."; COMBO lbSetData [_idx, "mmgag"];   
+    COMBO lbAdd "----";
+
+    _idx = COMBO lbAdd "Anti Tank Gunner"; COMBO lbSetData [_idx, "matg"];     
+    _idx = COMBO lbAdd "Asst. Anti Tank Gunner"; COMBO lbSetData [_idx, "matag"];     
+    COMBO lbAdd "----";
+
+    _idx = COMBO lbAdd "Anti Air Missile Gunner"; COMBO lbSetData [_idx, "msamg"];     
+    _idx = COMBO lbAdd "Asst. Anti Air Missile Gunner"; COMBO lbSetData [_idx, "msamag"];     
+    COMBO lbAdd "----";
+
+    _idx = COMBO lbAdd "Engineer Demolitian"; COMBO lbSetData [_idx, "eng"];
+    _idx = COMBO lbAdd "Engineer Mines"; COMBO lbSetData [_idx, "engm"];    
     COMBO lbAdd "----";
 	
     _idx = COMBO lbAdd "Rifleman"; COMBO lbSetData [_idx, "r"];
     _idx = COMBO lbAdd "Carabineer"; COMBO lbSetData [_idx, "car"];
 	_idx = COMBO lbAdd "Submachinegunner"; COMBO lbSetData [_idx, "smg"];
-	
+    _idx = COMBO lbAdd "Grenadier"; COMBO lbSetData [_idx, "gren"];
+    COMBO lbAdd "----";
+
+    _idx = COMBO lbAdd "Ground Vehicle Commander"; COMBO lbSetData [_idx, "vc"];
+    _idx = COMBO lbAdd "Ground Vehicle Driver"; COMBO lbSetData [_idx, "vd"];
+    _idx = COMBO lbAdd "Ground Vehicle Gunner"; COMBO lbSetData [_idx, "vg"];    
+    COMBO lbAdd "----";
+
+    _idx = COMBO lbAdd "Air Vehicle Commander"; COMBO lbSetData [_idx, "pcc"];
+    _idx = COMBO lbAdd "Air Vehicle Pilot"; COMBO lbSetData [_idx, "pp"];
+    _idx = COMBO lbAdd "Air Vehicle Crew"; COMBO lbSetData [_idx, "pc"];
+    	
     _sel = player getVariable "KitPicker_Selection";
     if (!isNil '_sel') then
     {
