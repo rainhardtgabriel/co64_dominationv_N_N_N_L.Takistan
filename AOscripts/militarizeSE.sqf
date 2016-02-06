@@ -1,3 +1,10 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//																																  //
+//                      		***		ARMA3 Domination-Like-Script v1.0 - by Sepp	***											  //
+//																																  //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 //////////////// Exit if not server /////////////////////////////////////////////////////////////////////////////////////////////
 if(!isServer) exitwith {};
 
@@ -106,8 +113,10 @@ if ( _ao_select == "gamsar") then {
 
 		"ao_mkr1" setmarkerpos getpos _log_pos;
 
-
-
+//////////////// creates a task/show notification for the ao ///////////////////////////////////////////////////////////////////////////////////////		
+		
+["tsk1", true, ["Seize the Village held by hostile forces","Seize the AO","Main Mission"],getMarkerPos "ao_mkr1", "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
+		
 //////////////// Hint for completed Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
 
 ao_endText = format
@@ -124,7 +133,7 @@ ao_endText = format
 		_trig = createTrigger 					["EmptyDetector", getPos _log_pos];   
 		_trig setTriggerArea 					[_ao_rad, _ao_rad, 0, false];  
 		_trig setTriggerActivation 				["EAST", "notpresent", true];   
-		_trig setTriggerStatements 				["this", "0 = execVM ""AOscripts\militarizeNW.sqf""; [ao_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\missionComplete.sqf""; deletevehicle thisTrigger; AOcount = AOcount + 1" , ""];
+		_trig setTriggerStatements 				["this", "0 = execVM ""AOscripts\militarizeNW.sqf""; [ao_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\missionComplete.sqf""; [""tsk1"", true, ['Seize the Village held by hostile forces','Seize the AO',""Main Mission""],getMarkerPos ""ao_mkr1"", ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger; AOcount = AOcount + 1" , ""];
 		
 		
 //////////////// create a radiotower /////////////////////////////////////////////////////////////////////////////////////////////
