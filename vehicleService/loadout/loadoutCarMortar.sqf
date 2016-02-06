@@ -29,3 +29,7 @@ _veh addWeaponCargoGlobal ["ACE_Vector",3];
 
 //Radio
 _veh addWeaponCargoGlobal ["ACRE_PRC117F",1];
+
+//Mortar
+_veh addBackpackCargoGlobal ["B_Mortar_01_weapon_F",1];
+_veh addBackpackCargoGlobal ["B_Mortar_01_support_F",1];
