@@ -1,11 +1,21 @@
 _veh = _this select 0;	
 _veh setVariable ["loadoutName", "Medical Loadout", true];
+//Clear Cargo
+clearItemCargoGlobal _veh;
+clearWeaponCargoGlobal _veh;
+clearMagazineCargoGlobal _veh;	
 
-_veh addMagazineCargoGlobal ["ACE_Bandage",50];
-_veh addMagazineCargoGlobal ["ACE_LargeBandage",50];
-_veh addMagazineCargoGlobal ["ACE_Medkit",50];
-_veh addMagazineCargoGlobal ["ACE_Morphine",15];
-_veh addMagazineCargoGlobal ["ACE_Epinephrine",35];
+//Medic
+_veh addWeaponCargoGlobal ["ACE_fieldDressing",15];
+_veh addWeaponCargoGlobal ["ACE_elasticBandage",15];
+_veh addWeaponCargoGlobal ["ACE_quikclot",15];
+_veh addWeaponCargoGlobal ["ACE_tourniquet",8];
+_veh addWeaponCargoGlobal ["ACE_personalAidKit",10];
+_veh addWeaponCargoGlobal ["ACE_packingBandage",15];
+//Injectors
+_veh addWeaponCargoGlobal ["ACE_morphine",10];
+_veh addWeaponCargoGlobal ["ACE_atropine",10];
+_veh addWeaponCargoGlobal ["ACE_epinephrine",10];
 
 
 _veh addMagazineCargoGlobal ["SmokeShell",20];
@@ -13,14 +23,4 @@ _veh addMagazineCargoGlobal ["SmokeShellGreen",10];
 _veh addMagazineCargoGlobal ["SmokeShellRed",10];
 _veh addMagazineCargoGlobal ["SmokeShellBLue",5];
 
-_veh addMagazineCargoGlobal ["ACE_VS21MEDICPANEL_M",5];
-
-_veh addWeaponCargoGlobal ["ACE_Flaregun",2];
-_veh addMagazineCargoGlobal ["ACE_SSGreen_FG",5];
-_veh addMagazineCargoGlobal ["ACE_SSRed_FG",5];
-_veh addMagazineCargoGlobal ["ACE_SSWhite_FG",5];
-
-_veh addWeaponCargoGlobal ["ItemRadio",5];
-_veh addWeaponCargoGlobal["tf_rt1523g",1];
-
-_veh addWeaponCargoGlobal ["ACE_Rucksack_MOLLE_DMARPAT_Medic",3];
+_veh addWeaponCargoGlobal ["ACRE_PRC117F",1];
