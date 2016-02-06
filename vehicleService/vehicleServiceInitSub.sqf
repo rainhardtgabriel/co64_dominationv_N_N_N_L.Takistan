@@ -16,6 +16,8 @@ _veh setVariable ["tf47service", true, true];
 	_vehServ11 = 0;
 	_vehServ12 = 0;
 	_vehServ13 = 0;
+	_vehServ14 = 0;
+	_vehServ15 = 0;
 	_vehServ99 = 0;
 
 	_vehServ1 = _veh addAction [("<t color=""#fa8f3e"">" + ("Repair Vehicle") + "</t>"), "vehicleService\vehicleRepairSubroutine.sqf", [_veh]];  
@@ -34,9 +36,6 @@ _veh setVariable ["tf47service", true, true];
 	if (_respawnactive) then {
 		_vehServ99 = _veh addAction [("<t color=""#fa4f3e"">" + ("Respawn Vehicle") + "</t>"), "vehicleService\vehicleRespawnSubroutine.sqf", [_veh]];  
 	};
-
-
-
 
 	while {(_veh distance _location) < 10} do { sleep 5 };
 
