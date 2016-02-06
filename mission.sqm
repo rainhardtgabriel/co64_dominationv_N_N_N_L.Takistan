@@ -93,7 +93,8 @@ class Mission
 		"A3_Structures_F_Bootcamp_Items_Electronics",
 		"A3_Structures_F_EPA_Items_Tools",
 		"A3_Structures_F_Items_Cans",
-		"ace_repair"
+		"ace_repair",
+		"CUP_WheeledVehicles_Stryker"
 	};
 	addOnsAuto[]=
 	{
@@ -114,6 +115,7 @@ class Mission
 		"CUP_TrackedVehicles_M1_Abrams",
 		"CUP_WheeledVehicles_HMMWV",
 		"A3_Air_F_Gamma_UAV_02",
+		"CUP_Creatures_People_Military_DummyInfantrySet",
 		"A3_Structures_F_Mil_Helipads",
 		"RHS_US_A2_AirImport",
 		"CUP_AirVehicles_UH60",
@@ -130,7 +132,6 @@ class Mission
 		"CUP_WheeledVehicles_LR",
 		"CUP_AirVehicles_AV8B",
 		"A3_Structures_F_Walls",
-		"CUP_Creatures_People_Military_DummyInfantrySet",
 		"cup_casigns_e",
 		"WarfareBuildings",
 		"cup_warfarebuildings",
@@ -157,19 +158,17 @@ class Mission
 		"a3_roads_f",
 		"CUP_WheeledVehicles_M1030",
 		"A3_Soft_F_Quadbike",
-		"CUP_WheeledVehicles_UAZ",
 		"cup_airvehicles_ah64",
 		"A3_Structures_F_Ind_Cargo",
 		"A3_Supplies_F_Heli_CargoNets",
 		"A3_Air_F_Heli_Light_01",
 		"A3_Structures_F_Items_Vessels",
 		"CUP_A2_EditorObjects",
-		"A3_Misc_F_Helpers",
 		"CUP_AirVehicles_A10",
 		"CUP_AirVehicles_C130J",
 		"CUP_TrackedVehicles_Bradley",
+		"CUP_WheeledVehicles_Stryker",
 		"CUP_WheeledVehicles_LAV25",
-		"CUP_TrackedVehicles_M113",
 		"A3_Structures_F_Heli_Items_Airport",
 		"Ind_Tank",
 		"cup_ind_tank",
@@ -2549,7 +2548,7 @@ class Mission
 					special="NONE";
 					id=101;
 					side="WEST";
-					vehicle="rhsusf_army_ucp_rifleman_1stcav";
+					vehicle="CUP_B_US_Soldier";
 					leader=1;
 					skill=0.2;
 					init="if(isserver)then{(createvehicle [""Land_Lampa_Ind_EP1"",getpos this,[],0,""NONE""]) setdir ((getdir this)+90)}";
@@ -3396,8 +3395,8 @@ class Mission
 		};
 		class Item18
 		{
-			position[]={7987.3164,296.04001,1830.3662};
-			azimut=-300.92612;
+			position[]={7987.439,296.04001,1830.2981};
+			azimut=-391.47125;
 			special="NONE";
 			id=150;
 			side="EMPTY";
@@ -9296,7 +9295,7 @@ class Mission
 		};
 		class Item615
 		{
-			position[]={8211.7227,296.04001,2033.3862};
+			position[]={8210.1738,296.04001,2036.0848};
 			azimut=150;
 			special="NONE";
 			id=747;
@@ -11578,7 +11577,7 @@ class Mission
 			special="NONE";
 			id=958;
 			side="EMPTY";
-			vehicle="CUP_I_UAZ_Unarmed_UN";
+			vehicle="CUP_B_LR_Transport_CZ_D";
 			skill=0.60000002;
 			init="veh = [this, 1800, 7200, "" "", ""mil_dot"", ""ColorBlue"", WEST, """", 5] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";";
 		};
@@ -12667,7 +12666,7 @@ class Mission
 			special="FLY";
 			id=1062;
 			side="EMPTY";
-			vehicle="Sign_Sphere100cm_F";
+			vehicle="HeliH";
 			leader=1;
 			skill=0.60000002;
 			text="hsp1";
@@ -12740,8 +12739,8 @@ class Mission
 		};
 		class Item937
 		{
-			position[]={7987.3237,296.04001,1830.3872};
-			azimut=60;
+			position[]={7987.4165,296.04001,1830.3052};
+			azimut=-30.545193;
 			id=1069;
 			side="EMPTY";
 			vehicle="HeliH";
@@ -14284,7 +14283,7 @@ class Mission
 			special="NONE";
 			id=1214;
 			side="EMPTY";
-			vehicle="CUP_B_LAV25_USMC";
+			vehicle="CUP_B_M1126_ICV_MK19_Desert";
 			lock="UNLOCKED";
 			skill=0.60000002;
 			text="tiger3";
@@ -14297,7 +14296,7 @@ class Mission
 			special="NONE";
 			id=1215;
 			side="EMPTY";
-			vehicle="CUP_B_LAV25_USMC";
+			vehicle="CUP_B_M1126_ICV_MK19_Desert_Slat";
 			lock="UNLOCKED";
 			skill=0.60000002;
 			text="tiger2";
@@ -14310,7 +14309,7 @@ class Mission
 			special="NONE";
 			id=1216;
 			side="EMPTY";
-			vehicle="CUP_B_M113_USA";
+			vehicle="CUP_B_LAV25M240_USMC";
 			lock="UNLOCKED";
 			skill=0.60000002;
 			text="tiger4";
@@ -14363,7 +14362,7 @@ class Mission
 			special="NONE";
 			id=1221;
 			side="EMPTY";
-			vehicle="CUP_B_LAV25_USMC";
+			vehicle="CUP_B_M1126_ICV_MK19_Desert";
 			lock="UNLOCKED";
 			skill=0.60000002;
 			text="tiger1";
@@ -15654,7 +15653,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=82;
+		items=83;
 		class Item0
 		{
 			position[]={-95.494179,610.15997,-89.086151};
@@ -16264,10 +16263,19 @@ class Mission
 			name="respawn_west_4_2";
 			type="Empty";
 		};
+		class Item82
+		{
+			position[]={7987.2734,296.04001,1830.675};
+			name="clp_2_1";
+			text="Helicopter Service";
+			type="o_service";
+			colorName="ColorBlack";
+			angle=-90.545197;
+		};
 	};
 	class Sensors
 	{
-		items=14;
+		items=15;
 		class Item0
 		{
 			position[]={-113.41749,610.15997,-87.380219};
@@ -16384,8 +16392,8 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			expCond="(""b_air"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
-			expActiv="0=[thislist, hsp1, ""b_air""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
+			expCond="(""helicopter"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
+			expActiv="0=[thislist, hsp1, ""helicopter""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
 			class Effects
 			{
 			};
@@ -16400,8 +16408,8 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			expCond="(""b_air"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
-			expActiv="0=[thislist, helipad_spawn, ""b_air""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
+			expCond="(""helicopter"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
+			expActiv="0=[thislist, helipad_spawn, ""helicopter""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
 			class Effects
 			{
 			};
@@ -16416,24 +16424,24 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			expCond="(""b_air"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
-			expActiv="0=[thislist, manticore1hp, ""b_air""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
+			expCond="(""helicopter"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
+			expActiv="0=[thislist, manticore1hp, ""helicopter""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
 			class Effects
 			{
 			};
 		};
 		class Item9
 		{
-			position[]={7987.3081,296.04001,1830.2893};
+			position[]={7987.5381,296.04001,1830.2222};
 			a=5;
 			b=5;
-			angle=-88.504799;
+			angle=-179.05;
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			expCond="(""b_air"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
-			expActiv="0=[thislist, helipad_rep, ""b_air""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
+			expCond="(""helicopter"" countType thislist  > 0) && count (thislist unitsBelowHeight 2) > 0";
+			expActiv="0=[thislist, helipad_rep, ""helicopter""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
 			class Effects
 			{
 			};
@@ -16505,6 +16513,22 @@ class Mission
 			expCond="player in thislist;";
 			expActiv="0 = [[1,1,100],"""",true] execVM ""MKY\MKY_Sand_Snow_Init.sqf"";";
 			expDesactiv="0 = [] call MKY_fnc_Exit_Sand;";
+			class Effects
+			{
+			};
+		};
+		class Item14
+		{
+			position[]={1475.4766,542.51904,9989.9756};
+			a=5;
+			b=5;
+			rectangular=1;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expCond="(""LandVehicle"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
+			expActiv="0=[thislist, vsp1, ""LandVehicle""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
 			class Effects
 			{
 			};
