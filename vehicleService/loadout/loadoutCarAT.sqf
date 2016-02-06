@@ -1,6 +1,6 @@
 _veh = _this select 0;	
 _veh setVariable ["loadoutName", "Anti Tank Loadout", true];
-
+//Clear Cargo
 clearItemCargoGlobal _veh;
 clearWeaponCargoGlobal _veh;
 clearMagazineCargoGlobal _veh;	
