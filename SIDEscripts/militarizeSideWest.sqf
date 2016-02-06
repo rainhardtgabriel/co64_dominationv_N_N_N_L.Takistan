@@ -35,6 +35,10 @@ _NumOfPlayers = west countSide playableUnits;
 		trig_sandstorm setpos [0,0,0];
 		sleep 0.1;
 		if (alive  CapVeh1) then {deletevehicle CapVeh1;};
+		sleep 0.1;
+		if (alive  pilot1) then {deletevehicle pilot1;};
+		sleep 0.1;
+		if (alive  offizier) then {deletevehicle offizier;};
 		sleep 60;
 		
 //////////////// Random Selects the AO  //////////////////////////////////////////////////////////////////////////////////////////		
