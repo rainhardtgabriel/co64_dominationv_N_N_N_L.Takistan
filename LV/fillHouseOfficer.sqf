@@ -54,12 +54,12 @@ if(isNil("LV_ACskills"))then{LV_ACskills = compile preprocessFile "LV\LV_functio
 if(isNil("LV_vehicleInit"))then{LV_vehicleInit = compile preprocessFile "LV\LV_functions\LV_fnc_vehicleInit.sqf";};
 if(isNil("LV_nearestBuilding"))then{LV_nearestBuilding = compile preprocessFile "LV\LV_functions\LV_fnc_nearestBuilding.sqf";};
 
-_blueMenArray = ["B_Soldier_A_F","B_soldier_AR_F","B_medic_F","B_engineer_F","B_soldier_exp_F","B_Soldier_GL_F","B_soldier_M_F","B_soldier_AA_F","B_soldier_AT_F","B_officer_F","B_soldier_repair_F","B_Soldier_F","B_soldier_LAT_F","B_Soldier_lite_F","B_Soldier_SL_F","B_Soldier_TL_F","B_soldier_AAR_F","B_soldier_AAA_F","B_soldier_AAT_F"];
-_blueMenArray2 = ["B_recon_exp_F","B_recon_JTAC_F","B_recon_M_F","B_recon_medic_F","B_recon_F","B_recon_LAT_F","B_recon_TL_F","B_soldier_AAR_F","B_soldier_AAA_F","B_soldier_AAT_F"];
-_blueMenArray3 = ["B_G_Soldier_A_F","B_G_soldier_AR_F","B_G_medic_F","B_G_engineer_F","B_G_soldier_exp_F","B_G_Soldier_GL_F","B_G_soldier_M_F","B_G_officer_F","B_G_Soldier_F","B_G_soldier_LAT_F","B_G_Soldier_lite_F","B_G_Soldier_SL_F","B_G_Soldier_TL_F"];
+_blueMenArray = ["CUP_B_US_Pilot"];
+_blueMenArray2 = ["CUP_B_US_Pilot"];
+_blueMenArray3 = ["CUP_B_US_Pilot"];
 _BLUarrays = [_blueMenArray,_blueMenArray2,_blueMenArray3];
-_redMenArray = ["O_officer_F"];
-_redMenArray2 = ["O_officer_F"];
+_redMenArray = ["CUP_O_TK_Officer"];
+_redMenArray2 = ["CUP_O_TK_Officer"];
 _OPFarrays = [_redMenArray,_redMenArray2];
 _greenMenArray = ["I_Soldier_A_F","I_soldier_AR_F","I_medic_F","I_engineer_F","I_soldier_exp_F","I_Soldier_GL_F","I_soldier_M_F","I_soldier_AA_F","I_soldier_AT_F","I_officer_F","I_soldier_repair_F","I_Soldier_F","I_soldier_LAT_F","I_Soldier_lite_F","I_Soldier_SL_F","I_Soldier_TL_F","I_soldier_AAR_F","I_soldier_AAA_F","I_soldier_AAT_F"];
 
@@ -124,7 +124,7 @@ while{_i2 < _rat}do{
     _i2 = _i2 + 1;
 
     _unitType = _menArray select (floor(random(count _menArray)));
-	_unit = _milGroup createUnit [_unitType, _newPos, [], 0, "NONE"];
+	_unit = _milGroup createUnit [_unitType, _newPos, [], 0, "NONE"]; 
 	_unit setpos _newPos;  
 	
 	if(typeName _skills != "STRING")then{_skls = [_unit,_skills] call LV_ACskills;};
