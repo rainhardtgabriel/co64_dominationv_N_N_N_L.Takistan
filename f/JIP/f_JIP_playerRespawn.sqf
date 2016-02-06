@@ -37,7 +37,7 @@ if (isNil "_unit") exitWith {};
 
 if (isNil "f_var_JIP_FirstMenu") then {f_var_JIP_FirstMenu = false};
 if (isNil "f_var_JIP_GearMenu") then {f_var_JIP_GearMenu = true};
-if (isNil "f_var_JIP_RemoveCorpse") then {f_var_JIP_RemoveCorpse = false};
+if (isNil "f_var_JIP_RemoveCorpse") then {f_var_JIP_RemoveCorpse = true};
 
 // ===================================================================================
 
