@@ -2138,7 +2138,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4724.2124,132.97688,9498.6523};
+					position[]={4697.7427,133.07153,9475.4814};
 					id=81;
 					side="LOGIC";
 					vehicle="Logic";
@@ -2192,7 +2192,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={10380.397,257.51379,6441.5269};
+					position[]={10460.027,259.17734,6434.5039};
 					id=84;
 					side="LOGIC";
 					vehicle="Logic";
@@ -16267,7 +16267,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=13;
+		items=14;
 		class Item0
 		{
 			position[]={-113.41749,610.15997,-87.380219};
@@ -16485,6 +16485,26 @@ class Mission
 			age="UNKNOWN";
 			expCond="(""LandVehicle"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
 			expActiv="0=[thislist, vsp2, ""LandVehicle""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item13
+		{
+			position[]={-397.37744,610.15997,-98.574829};
+			a=500;
+			b=500;
+			activationBy="ANY";
+			repeating=1;
+			timeoutMin=1;
+			timeoutMid=2;
+			timeoutMax=5;
+			interruptable=1;
+			age="UNKNOWN";
+			name="trig_sandstorm";
+			expCond="player in thislist;";
+			expActiv="0 = [[1,1,100],"""",true] execVM ""MKY\MKY_Sand_Snow_Init.sqf"";";
+			expDesactiv="0 = [] call MKY_fnc_Exit_Sand;";
 			class Effects
 			{
 			};
