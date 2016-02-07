@@ -94,7 +94,8 @@ class Mission
 		"A3_Structures_F_EPA_Items_Tools",
 		"A3_Structures_F_Items_Cans",
 		"ace_repair",
-		"CUP_WheeledVehicles_Stryker"
+		"CUP_WheeledVehicles_Stryker",
+		"CUP_WheeledVehicles_TowingTractor"
 	};
 	addOnsAuto[]=
 	{
@@ -131,6 +132,7 @@ class Mission
 		"CUP_WheeledVehicles_Dingo",
 		"CUP_WheeledVehicles_LR",
 		"CUP_AirVehicles_AV8B",
+		"CUP_WheeledVehicles_TowingTractor",
 		"A3_Structures_F_Walls",
 		"cup_casigns_e",
 		"WarfareBuildings",
@@ -3743,7 +3745,7 @@ class Mission
 			special="NONE";
 			id=181;
 			side="EMPTY";
-			vehicle="rhsusf_m113d_usarmy_supply";
+			vehicle="CUP_B_TowingTractor_USMC";
 			skill=0.60000002;
 			init="veh = [this, 60, 1200, """", ""mil_dot"", ""ColorBlue"", WEST, """", 1] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";";
 		};
@@ -4364,6 +4366,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier5x";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item116
 		{
@@ -4374,6 +4377,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier5x";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item117
 		{
@@ -4384,6 +4388,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier5x";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item118
 		{
@@ -4408,6 +4413,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier5x";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item120
 		{
@@ -4429,6 +4435,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10x";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item122
 		{
@@ -4439,6 +4446,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10x";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item123
 		{
@@ -4449,6 +4457,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier5x";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item124
 		{
@@ -4471,6 +4480,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10x";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item126
 		{
@@ -4481,6 +4491,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier5x";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item127
 		{
@@ -4488,7 +4499,7 @@ class Mission
 			azimut=333;
 			id=259;
 			side="EMPTY";
-			vehicle="USMC_WarfareBBarracks";
+			vehicle="WarfareBunkerSign";
 			leader=1;
 			skill=0.60000002;
 			init="null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";this setPos [getPos this select 0, getPos this select 1, -0.27];";
@@ -4502,6 +4513,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier5x";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item129
 		{
@@ -4512,6 +4524,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier5x";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item130
 		{
@@ -4532,6 +4545,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item132
 		{
@@ -4541,6 +4555,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item133
 		{
@@ -4550,6 +4565,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item134
 		{
@@ -4559,6 +4575,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item135
 		{
@@ -4568,6 +4585,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item136
 		{
@@ -4577,6 +4595,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item137
 		{
@@ -4586,6 +4605,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item138
 		{
@@ -4595,6 +4615,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item139
 		{
@@ -4604,6 +4625,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item140
 		{
@@ -4613,6 +4635,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item141
 		{
@@ -4622,6 +4645,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item142
 		{
@@ -5085,6 +5109,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item187
 		{
@@ -5094,6 +5119,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item188
 		{
@@ -5103,6 +5129,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item189
 		{
@@ -5263,6 +5290,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Misc_Cargo1E_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item204
 		{
@@ -5290,6 +5318,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Misc_Cargo1E_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item207
 		{
@@ -5330,6 +5359,7 @@ class Mission
 			vehicle="Land_Misc_Scaffolding";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item211
 		{
@@ -5397,6 +5427,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Misc_Cargo1B_military";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item218
 		{
@@ -5406,6 +5437,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Misc_Cargo1E_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item219
 		{
@@ -5415,6 +5447,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Misc_Cargo1E_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item220
 		{
@@ -5450,6 +5483,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Misc_Cargo1E_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item224
 		{
@@ -5459,6 +5493,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Misc_Cargo1E_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item225
 		{
@@ -5506,6 +5541,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Misc_Cargo1B_military";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item230
 		{
@@ -5515,6 +5551,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Misc_Cargo1E_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item231
 		{
@@ -5524,6 +5561,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Misc_Cargo1E_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item232
 		{
@@ -5533,6 +5571,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Misc_Cargo1E_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item233
 		{
@@ -5542,6 +5581,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Misc_Cargo1E_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item234
 		{
@@ -5708,6 +5748,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item252
 		{
@@ -5719,6 +5760,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item253
 		{
@@ -5730,6 +5772,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item254
 		{
@@ -5741,6 +5784,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item255
 		{
@@ -5752,6 +5796,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item256
 		{
@@ -5763,6 +5808,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item257
 		{
@@ -5774,6 +5820,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item258
 		{
@@ -5807,6 +5854,7 @@ class Mission
 			vehicle="Land_Barrack2_EP1";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item261
 		{
@@ -5818,6 +5866,7 @@ class Mission
 			vehicle="Land_Barrack2_EP1";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item262
 		{
@@ -5881,6 +5930,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item269
 		{
@@ -5892,6 +5942,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item270
 		{
@@ -5903,6 +5954,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item271
 		{
@@ -5914,6 +5966,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item272
 		{
@@ -5925,6 +5978,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item273
 		{
@@ -5936,6 +5990,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item274
 		{
@@ -5947,6 +6002,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item275
 		{
@@ -5958,6 +6014,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item276
 		{
@@ -5990,6 +6047,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item279
 		{
@@ -6005,13 +6063,14 @@ class Mission
 		class Item280
 		{
 			position[]={7652.1284,341.51004,1367.1451};
-			azimut=48.607319;
+			azimut=48.6073;
 			special="FLY";
 			id=412;
 			side="EMPTY";
 			vehicle="Land_fort_rampart_EP1";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item281
 		{
@@ -6090,6 +6149,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item289
 		{
@@ -6099,6 +6159,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item290
 		{
@@ -6108,6 +6169,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item291
 		{
@@ -6117,6 +6179,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item292
 		{
@@ -6126,6 +6189,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item293
 		{
@@ -6135,6 +6199,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item294
 		{
@@ -6144,6 +6209,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item295
 		{
@@ -6153,6 +6219,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item296
 		{
@@ -6162,6 +6229,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item297
 		{
@@ -6171,6 +6239,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item298
 		{
@@ -6180,6 +6249,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item299
 		{
@@ -6189,6 +6259,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item300
 		{
@@ -6198,6 +6269,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item301
 		{
@@ -6207,6 +6279,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item302
 		{
@@ -6216,6 +6289,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item303
 		{
@@ -6225,6 +6299,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item304
 		{
@@ -6234,6 +6309,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item305
 		{
@@ -6243,6 +6319,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item306
 		{
@@ -6252,6 +6329,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item307
 		{
@@ -6544,13 +6622,14 @@ class Mission
 		class Item334
 		{
 			position[]={7641.519,341.02991,1380.5328};
-			azimut=76.514771;
+			azimut=76.514801;
 			special="FLY";
 			id=466;
 			side="EMPTY";
 			vehicle="Land_fort_rampart_EP1";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item335
 		{
@@ -6595,6 +6674,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item339
 		{
@@ -6606,6 +6686,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item340
 		{
@@ -6617,6 +6698,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item341
 		{
@@ -6628,6 +6710,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item342
 		{
@@ -6639,6 +6722,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item343
 		{
@@ -6650,6 +6734,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item344
 		{
@@ -6661,6 +6746,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item345
 		{
@@ -6672,6 +6758,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item346
 		{
@@ -6683,6 +6770,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item347
 		{
@@ -6694,6 +6782,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item348
 		{
@@ -6705,6 +6794,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item349
 		{
@@ -6716,6 +6806,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item350
 		{
@@ -6727,6 +6818,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item351
 		{
@@ -6738,6 +6830,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item352
 		{
@@ -6749,6 +6842,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item353
 		{
@@ -6758,6 +6852,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item354
 		{
@@ -6767,6 +6862,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item355
 		{
@@ -6776,6 +6872,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10xTall";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item356
 		{
@@ -6785,6 +6882,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item357
 		{
@@ -6794,6 +6892,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item358
 		{
@@ -6803,6 +6902,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item359
 		{
@@ -6812,6 +6912,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item360
 		{
@@ -6821,6 +6922,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item361
 		{
@@ -6830,6 +6932,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item362
 		{
@@ -6839,6 +6942,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item363
 		{
@@ -6848,6 +6952,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item364
 		{
@@ -6857,6 +6962,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item365
 		{
@@ -6866,6 +6972,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item366
 		{
@@ -6875,6 +6982,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item367
 		{
@@ -6884,6 +6992,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item368
 		{
@@ -6893,6 +7002,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item369
 		{
@@ -6902,6 +7012,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item370
 		{
@@ -6913,6 +7024,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item371
 		{
@@ -6924,6 +7036,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item372
 		{
@@ -6935,6 +7048,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item373
 		{
@@ -6955,6 +7069,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item375
 		{
@@ -6964,6 +7079,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item376
 		{
@@ -6973,6 +7089,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item377
 		{
@@ -6982,6 +7099,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item378
 		{
@@ -6991,6 +7109,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item379
 		{
@@ -7000,6 +7119,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item380
 		{
@@ -7009,6 +7129,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item381
 		{
@@ -7047,6 +7168,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier5x";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item385
 		{
@@ -7131,6 +7253,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item393
 		{
@@ -7140,6 +7263,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item394
 		{
@@ -7149,6 +7273,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item395
 		{
@@ -7158,6 +7283,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item396
 		{
@@ -7167,6 +7293,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item397
 		{
@@ -7176,6 +7303,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item398
 		{
@@ -7185,6 +7313,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item399
 		{
@@ -7194,6 +7323,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item400
 		{
@@ -7203,6 +7333,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item401
 		{
@@ -7212,6 +7343,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item402
 		{
@@ -7221,6 +7353,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item403
 		{
@@ -7230,6 +7363,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item404
 		{
@@ -7239,6 +7373,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item405
 		{
@@ -7248,6 +7383,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item406
 		{
@@ -7257,6 +7393,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item407
 		{
@@ -7266,6 +7403,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item408
 		{
@@ -7275,6 +7413,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item409
 		{
@@ -7284,6 +7423,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item410
 		{
@@ -7293,6 +7433,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item411
 		{
@@ -7302,6 +7443,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item412
 		{
@@ -7311,6 +7453,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item413
 		{
@@ -7320,6 +7463,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item414
 		{
@@ -7329,6 +7473,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item415
 		{
@@ -7338,6 +7483,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item416
 		{
@@ -7347,6 +7493,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item417
 		{
@@ -7356,6 +7503,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item418
 		{
@@ -7365,6 +7513,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item419
 		{
@@ -7374,6 +7523,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item420
 		{
@@ -7383,6 +7533,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item421
 		{
@@ -7392,6 +7543,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item422
 		{
@@ -7401,6 +7553,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item423
 		{
@@ -7410,6 +7563,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item424
 		{
@@ -7419,10 +7573,11 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item425
 		{
-			position[]={8263.9404,296.03442,1797.9591};
+			position[]={8266.3955,296.03278,1799.3713};
 			azimut=330;
 			id=557;
 			side="EMPTY";
@@ -7438,10 +7593,11 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item427
 		{
-			position[]={8261.709,296.035,1796.8759};
+			position[]={8263.1191,296.03513,1797.5518};
 			azimut=330;
 			id=559;
 			side="EMPTY";
@@ -7451,7 +7607,7 @@ class Mission
 		};
 		class Item428
 		{
-			position[]={8259.8643,296.03326,1795.7817};
+			position[]={8259.8037,296.03305,1795.6597};
 			azimut=330;
 			id=560;
 			side="EMPTY";
@@ -7461,7 +7617,7 @@ class Mission
 		};
 		class Item429
 		{
-			position[]={8269.7832,296.02875,1799.8038};
+			position[]={8269.8447,296.03226,1801.4006};
 			azimut=330;
 			id=561;
 			side="EMPTY";
@@ -7471,8 +7627,8 @@ class Mission
 		};
 		class Item430
 		{
-			position[]={8267.5049,296.02966,1798.5526};
-			azimut=330;
+			position[]={8300.6504,296.04001,1830.4326};
+			azimut=419.6369;
 			id=562;
 			side="EMPTY";
 			vehicle="Land_Misc_Cargo1E_EP1";
@@ -7491,7 +7647,7 @@ class Mission
 		};
 		class Item432
 		{
-			position[]={8272.0342,296.03424,1802.6398};
+			position[]={8273.0166,296.03522,1803.2539};
 			azimut=330;
 			id=564;
 			side="EMPTY";
@@ -7521,7 +7677,7 @@ class Mission
 		};
 		class Item435
 		{
-			position[]={8289.6904,296.03891,1811.8196};
+			position[]={8292.207,296.04001,1813.9695};
 			azimut=150;
 			id=567;
 			side="EMPTY";
@@ -7531,7 +7687,7 @@ class Mission
 		};
 		class Item436
 		{
-			position[]={8291.8447,296.04001,1813.0754};
+			position[]={8295.5293,296.03717,1815.8411};
 			azimut=150;
 			id=568;
 			side="EMPTY";
@@ -7541,7 +7697,7 @@ class Mission
 		};
 		class Item437
 		{
-			position[]={8287.5713,296.03696,1810.6021};
+			position[]={8288.9219,296.03925,1812.015};
 			azimut=150;
 			id=569;
 			side="EMPTY";
@@ -7551,7 +7707,7 @@ class Mission
 		};
 		class Item438
 		{
-			position[]={8285.4717,296.035,1809.3662};
+			position[]={8285.7158,296.03638,1810.2268};
 			azimut=150;
 			id=570;
 			side="EMPTY";
@@ -7561,7 +7717,7 @@ class Mission
 		};
 		class Item439
 		{
-			position[]={8294.083,296.03949,1814.3625};
+			position[]={8298.749,296.03839,1817.741};
 			azimut=150;
 			id=571;
 			side="EMPTY";
@@ -7571,7 +7727,7 @@ class Mission
 		};
 		class Item440
 		{
-			position[]={8298.6611,296.03619,1816.3627};
+			position[]={8305.4736,296.03473,1821.7062};
 			azimut=330;
 			id=572;
 			side="EMPTY";
@@ -7581,7 +7737,7 @@ class Mission
 		};
 		class Item441
 		{
-			position[]={8296.3828,296.0358,1815.1115};
+			position[]={8302.0918,296.03665,1819.7188};
 			azimut=330;
 			id=573;
 			side="EMPTY";
@@ -7591,7 +7747,7 @@ class Mission
 		};
 		class Item442
 		{
-			position[]={8305.0566,296.03467,1821.6691};
+			position[]={8311.9932,296.03082,1825.4768};
 			azimut=330;
 			id=574;
 			side="EMPTY";
@@ -7601,7 +7757,7 @@ class Mission
 		};
 		class Item443
 		{
-			position[]={8300.9121,296.03854,1819.1986};
+			position[]={8308.7686,296.03378,1823.6206};
 			azimut=330;
 			id=575;
 			side="EMPTY";
@@ -7833,7 +7989,7 @@ class Mission
 		};
 		class Item467
 		{
-			position[]={8272.6064,296.04001,1809.22};
+			position[]={8272.4619,296.04001,1811.395};
 			azimut=330;
 			id=599;
 			side="EMPTY";
@@ -7843,7 +7999,7 @@ class Mission
 		};
 		class Item468
 		{
-			position[]={8279.002,296.04001,1814.5264};
+			position[]={8278.9541,296.04001,1815.1543};
 			azimut=330;
 			id=600;
 			side="EMPTY";
@@ -7853,7 +8009,7 @@ class Mission
 		};
 		class Item469
 		{
-			position[]={8274.8574,296.04001,1812.0559};
+			position[]={8275.6299,296.04001,1813.1187};
 			azimut=330;
 			id=601;
 			side="EMPTY";
@@ -7863,7 +8019,7 @@ class Mission
 		};
 		class Item470
 		{
-			position[]={8298.418,296.04001,1834.2111};
+			position[]={8298.6631,296.04001,1833.8434};
 			azimut=240;
 			id=602;
 			side="EMPTY";
@@ -7901,6 +8057,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item474
 		{
@@ -7912,6 +8069,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item475
 		{
@@ -7923,6 +8081,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item476
 		{
@@ -8113,6 +8272,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item495
 		{
@@ -8123,6 +8283,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item496
 		{
@@ -8133,6 +8294,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item497
 		{
@@ -8143,6 +8305,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item498
 		{
@@ -8153,6 +8316,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item499
 		{
@@ -8163,6 +8327,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item500
 		{
@@ -8173,6 +8338,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item501
 		{
@@ -8183,6 +8349,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item502
 		{
@@ -8193,6 +8360,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item503
 		{
@@ -8203,6 +8371,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item504
 		{
@@ -8213,6 +8382,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item505
 		{
@@ -8223,6 +8393,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item506
 		{
@@ -8233,6 +8404,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item507
 		{
@@ -8243,6 +8415,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item508
 		{
@@ -8253,6 +8426,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item509
 		{
@@ -8263,6 +8437,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item510
 		{
@@ -8273,6 +8448,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item511
 		{
@@ -8283,6 +8459,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item512
 		{
@@ -8293,6 +8470,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item513
 		{
@@ -8303,6 +8481,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item514
 		{
@@ -8313,6 +8492,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item515
 		{
@@ -8323,6 +8503,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item516
 		{
@@ -8333,6 +8514,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item517
 		{
@@ -8343,6 +8525,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item518
 		{
@@ -8353,6 +8536,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item519
 		{
@@ -8363,6 +8547,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item520
 		{
@@ -8383,6 +8568,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item522
 		{
@@ -8393,6 +8579,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item523
 		{
@@ -8403,6 +8590,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item524
 		{
@@ -8413,6 +8601,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item525
 		{
@@ -8423,6 +8612,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item526
 		{
@@ -8433,6 +8623,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item527
 		{
@@ -8443,6 +8634,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item528
 		{
@@ -8453,6 +8645,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item529
 		{
@@ -8463,6 +8656,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item530
 		{
@@ -8473,6 +8667,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item531
 		{
@@ -8483,6 +8678,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item532
 		{
@@ -8493,6 +8689,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item533
 		{
@@ -8503,6 +8700,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item534
 		{
@@ -8513,6 +8711,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item535
 		{
@@ -8523,6 +8722,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item536
 		{
@@ -8533,6 +8733,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item537
 		{
@@ -8543,6 +8744,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item538
 		{
@@ -8553,6 +8755,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item539
 		{
@@ -8613,6 +8816,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item545
 		{
@@ -8623,6 +8827,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item546
 		{
@@ -8633,6 +8838,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item547
 		{
@@ -8643,6 +8849,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item548
 		{
@@ -8653,6 +8860,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item549
 		{
@@ -8663,6 +8871,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item550
 		{
@@ -8673,6 +8882,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item551
 		{
@@ -8683,6 +8893,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item552
 		{
@@ -8693,6 +8904,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item553
 		{
@@ -8703,6 +8915,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item554
 		{
@@ -8713,6 +8926,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item555
 		{
@@ -8723,6 +8937,7 @@ class Mission
 			vehicle="Concrete_Wall_EP1";
 			lock="UNLOCKED";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item556
 		{
@@ -8732,6 +8947,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item557
 		{
@@ -8741,6 +8957,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item558
 		{
@@ -8750,6 +8967,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item559
 		{
@@ -8759,6 +8977,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item560
 		{
@@ -8768,6 +8987,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item561
 		{
@@ -8777,6 +8997,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item562
 		{
@@ -8786,6 +9007,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item563
 		{
@@ -8795,6 +9017,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item564
 		{
@@ -8804,6 +9027,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item565
 		{
@@ -8813,6 +9037,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item566
 		{
@@ -8822,6 +9047,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item567
 		{
@@ -8831,6 +9057,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item568
 		{
@@ -8840,6 +9067,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item569
 		{
@@ -8849,6 +9077,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item570
 		{
@@ -8858,6 +9087,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item571
 		{
@@ -8867,6 +9097,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item572
 		{
@@ -8876,6 +9107,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item573
 		{
@@ -8885,6 +9117,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item574
 		{
@@ -8894,6 +9127,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item575
 		{
@@ -8903,6 +9137,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item576
 		{
@@ -8912,6 +9147,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item577
 		{
@@ -8921,6 +9157,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item578
 		{
@@ -8930,6 +9167,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item579
 		{
@@ -8939,6 +9177,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item580
 		{
@@ -8948,6 +9187,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item581
 		{
@@ -8957,6 +9197,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item582
 		{
@@ -8966,6 +9207,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item583
 		{
@@ -8975,6 +9217,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item584
 		{
@@ -8984,6 +9227,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item585
 		{
@@ -8993,6 +9237,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item586
 		{
@@ -9002,6 +9247,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item587
 		{
@@ -9011,6 +9257,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item588
 		{
@@ -9020,6 +9267,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item589
 		{
@@ -9029,6 +9277,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item590
 		{
@@ -9038,6 +9287,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item591
 		{
@@ -9047,6 +9297,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item592
 		{
@@ -9056,6 +9307,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item593
 		{
@@ -9065,7 +9317,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
-			init="this allowDamage false";
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item594
 		{
@@ -9093,6 +9345,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier5x";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item597
 		{
@@ -9102,6 +9355,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Base_WarfareBBarrier10x";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item598
 		{
@@ -9124,6 +9378,7 @@ class Mission
 			vehicle="Land_fort_rampart_EP1";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item600
 		{
@@ -10756,6 +11011,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item748
 		{
@@ -10775,7 +11031,7 @@ class Mission
 			special="NONE";
 			id=881;
 			side="EMPTY";
-			vehicle="C_Quadbike_01_F";
+			vehicle="CUP_B_TowingTractor_USMC";
 			skill=0.60000002;
 			init="veh = [this, 60, 1200, """", ""mil_dot"", ""ColorBlue"", WEST, """", 1] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";";
 		};
@@ -11307,7 +11563,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
-			init="this allowDamage false";
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item800
 		{
@@ -11327,7 +11583,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
-			init="this allowDamage false";
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item802
 		{
@@ -11347,7 +11603,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
-			init="this allowDamage false";
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item804
 		{
@@ -11367,7 +11623,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
-			init="this allowDamage false";
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item806
 		{
@@ -11387,7 +11643,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
-			init="this allowDamage false";
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item808
 		{
@@ -11407,7 +11663,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
-			init="this allowDamage false";
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item810
 		{
@@ -11427,7 +11683,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
-			init="this allowDamage false";
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item812
 		{
@@ -11457,7 +11713,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
-			init="this allowDamage false";
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item815
 		{
@@ -11477,7 +11733,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
-			init="this allowDamage false";
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item817
 		{
@@ -11497,7 +11753,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
-			init="this allowDamage false";
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item819
 		{
@@ -11517,7 +11773,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
-			init="this allowDamage false";
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item821
 		{
@@ -11537,7 +11793,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
-			init="this allowDamage false";
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item823
 		{
@@ -11557,7 +11813,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_CncBarrier_stripes_F";
 			skill=0.60000002;
-			init="this allowDamage false";
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item825
 		{
@@ -11863,6 +12119,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10x";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item854
 		{
@@ -12129,6 +12386,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item878
 		{
@@ -12138,6 +12396,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Fence_Ind_long";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item879
 		{
@@ -12545,7 +12804,7 @@ class Mission
 			special="FLY";
 			id=1051;
 			side="EMPTY";
-			vehicle="US_WarfareBHeavyFactory_EP1";
+			vehicle="US_WarfareBHeavyFactory_Base_EP1";
 			leader=1;
 			skill=1;
 			init="this setPos [getPos this select 0, getPos this select 1, -0.27];null = this execVM ""tf47CoreScripts\saveBuilding.sqf""";
@@ -12626,6 +12885,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier5x";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item927
 		{
@@ -12827,7 +13087,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10x";
 			leader=1;
 			skill=0.60000002;
-			init="this setPos [getPos this select 0, getPos this select 1, 0.0];";
+			init="this setPos [getPos this select 0, getPos this select 1, 0.0]; null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item945
 		{
@@ -12838,7 +13098,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10x";
 			leader=1;
 			skill=0.60000002;
-			init="this setPos [getPos this select 0, getPos this select 1, 0.0];";
+			init="this setPos [getPos this select 0, getPos this select 1, 0.0]; null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item946
 		{
@@ -12849,7 +13109,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier5x";
 			leader=1;
 			skill=0.60000002;
-			init="this setPos [getPos this select 0, getPos this select 1, 0.0];";
+			init="this setPos [getPos this select 0, getPos this select 1, 0.0]; null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item947
 		{
@@ -12860,6 +13120,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item948
 		{
@@ -12870,6 +13131,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item949
 		{
@@ -12880,6 +13142,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item950
 		{
@@ -12890,6 +13153,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item951
 		{
@@ -12900,6 +13164,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item952
 		{
@@ -12910,6 +13175,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item953
 		{
@@ -12920,6 +13186,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item954
 		{
@@ -12930,6 +13197,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item955
 		{
@@ -12940,6 +13208,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item956
 		{
@@ -12950,6 +13219,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item957
 		{
@@ -13031,6 +13301,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item965
 		{
@@ -13041,6 +13312,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item966
 		{
@@ -13051,6 +13323,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item967
 		{
@@ -13061,6 +13334,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item968
 		{
@@ -13071,6 +13345,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item969
 		{
@@ -13081,6 +13356,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item970
 		{
@@ -13091,6 +13367,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item971
 		{
@@ -13101,6 +13378,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item972
 		{
@@ -13111,6 +13389,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item973
 		{
@@ -13121,6 +13400,7 @@ class Mission
 			vehicle="Base_WarfareBBarrier10xTall";
 			leader=1;
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item974
 		{
@@ -13967,6 +14247,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1050
 		{
@@ -13976,6 +14257,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1051
 		{
@@ -13985,6 +14267,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1052
 		{
@@ -13994,6 +14277,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1053
 		{
@@ -14003,6 +14287,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1054
 		{
@@ -14012,6 +14297,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1055
 		{
@@ -14021,6 +14307,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1056
 		{
@@ -14030,6 +14317,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1057
 		{
@@ -14039,6 +14327,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1058
 		{
@@ -14048,6 +14337,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1059
 		{
@@ -14057,6 +14347,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1060
 		{
@@ -14066,6 +14357,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1061
 		{
@@ -14075,6 +14367,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1062
 		{
@@ -14084,6 +14377,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1063
 		{
@@ -14093,6 +14387,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1064
 		{
@@ -14102,6 +14397,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1065
 		{
@@ -14111,6 +14407,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1066
 		{
@@ -14120,6 +14417,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1067
 		{
@@ -14129,6 +14427,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1068
 		{
@@ -14138,6 +14437,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1069
 		{
@@ -14147,6 +14447,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1070
 		{
@@ -14156,6 +14457,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1071
 		{
@@ -14165,6 +14467,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1072
 		{
@@ -14174,6 +14477,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1073
 		{
@@ -14183,33 +14487,37 @@ class Mission
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1074
 		{
 			position[]={8386.1123,296.04001,1933.2964};
-			azimut=329.05573;
+			azimut=329.056;
 			id=1206;
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1075
 		{
 			position[]={8392.8701,296.04001,1936.4343};
-			azimut=337.09576;
+			azimut=337.09601;
 			id=1207;
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1076
 		{
 			position[]={8400.0322,296.04001,1939.2511};
-			azimut=338.67462;
+			azimut=338.67499;
 			id=1208;
 			side="EMPTY";
 			vehicle="Concrete_Wall_EP1";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1077
 		{
@@ -14874,6 +15182,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1139
 		{
@@ -14883,6 +15192,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1140
 		{
@@ -14892,6 +15202,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1141
 		{
@@ -14901,6 +15212,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1142
 		{
@@ -14910,6 +15222,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1143
 		{
@@ -14919,6 +15232,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1144
 		{
@@ -14928,6 +15242,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1145
 		{
@@ -14937,6 +15252,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1146
 		{
@@ -14946,6 +15262,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1147
 		{
@@ -14955,6 +15272,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1148
 		{
@@ -14964,6 +15282,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1149
 		{
@@ -14973,6 +15292,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1150
 		{
@@ -14982,6 +15302,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1151
 		{
@@ -14991,6 +15312,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1152
 		{
@@ -15000,6 +15322,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1153
 		{
@@ -15009,6 +15332,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1154
 		{
@@ -15018,6 +15342,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1155
 		{
@@ -15532,6 +15857,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1207
 		{
@@ -15541,6 +15867,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1208
 		{
@@ -15550,6 +15877,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1209
 		{
@@ -15559,42 +15887,47 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1210
 		{
 			position[]={8208.7148,296.04001,2135.0527};
-			azimut=369.36835;
+			azimut=369.36801;
 			id=1342;
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1211
 		{
 			position[]={8205.6035,296.04001,2134.5076};
-			azimut=332.30386;
+			azimut=332.30399;
 			id=1343;
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1212
 		{
 			position[]={8202.3594,296.04001,2132.8706};
-			azimut=332.30386;
+			azimut=332.30399;
 			id=1344;
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1213
 		{
 			position[]={8199.5742,296.04001,2131.4592};
-			azimut=332.30386;
+			azimut=332.30399;
 			id=1345;
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1214
 		{
@@ -15604,6 +15937,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1215
 		{
@@ -15613,6 +15947,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1216
 		{
@@ -15622,6 +15957,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1217
 		{
@@ -15631,6 +15967,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1218
 		{
@@ -15640,6 +15977,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 		class Item1219
 		{
@@ -15649,6 +15987,7 @@ class Mission
 			side="EMPTY";
 			vehicle="CUP_A2_cncblock_stripes";
 			skill=0.60000002;
+			init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
 		};
 	};
 	class Markers
