@@ -10,7 +10,7 @@ if(!isServer) exitwith {};
 
 //////////////// Declare Variables  /////////////////////////////////////////////////////////////////////////////////////////////
 
-private ["_side_Playertext", "_side_select", "_side_mkr", "_side_trig", "_side_trig2", "_side_log_pos", "_side_mkr_text", "_side_name", "_side_rad", "_side_position","_side_flatPos", "_side_iniText"];
+private ["_side_Playertext", "_side_select", "_side_mkr", "_side_trig", "_side_trig2", "_side_log_pos", "_side_mkr_text", "_side_name", "_side_rad", "_side_position","_side_flatPos", "_side_iniText"."_clean"];
 
 
 
@@ -33,8 +33,7 @@ _NumOfPlayers = west countSide playableUnits;
 		"side_mkr1" setmarkerpos [0,0,0];
 		sleep 0.1;
 	    trig_sandstorm setpos [0,0,0];
-		sleep 0.1;
-		
+	    _clean = [false] execVM "SIDEscripts\init.sqf";
 		sleep 60;
 		
 		

@@ -2,7 +2,7 @@
 // =========originally by Wartheatre  adjusted by 4Lucke================================
 private ["_init","_missionsarray","_mission","_sidemission"];
 
-_init = [true] execVM "SIDEscripts\init.sqf"
+_init = [true] execVM "SIDEscripts\init.sqf";
 
 sleep 30;
 
