@@ -2,7 +2,7 @@
 // =========originally by Wartheatre  adjusted by 4Lucke================================
 private ["_missionsarray","_mission","_sidemission"];
 
-sleep 30;
+//sleep 30;
 
 // ======================== random Side Mission Start ==================================
 _missionsarray =["militarizeSideEast","militarizeSideWest"]; 		// Defines Scripts for Missions to execute

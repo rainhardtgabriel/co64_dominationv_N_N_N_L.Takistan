@@ -41,7 +41,7 @@ _side_select = ["lalezar", "woods"] call BIS_fnc_selectRandom;
 
 
 switch (_side_select) do { 
-	case 1 : {
+	case "lalezar" : {
 		_side_log_pos   	= log_lalezar;
 		_side_rad    		= 150;
 		//_mkr_text  		=
@@ -93,7 +93,7 @@ switch (_side_select) do {
 			_side_trig2 setTriggerStatements 			["player in thislist", "0 = [[1,1,100],"""",true] execVM ""MKY\MKY_Sand_Snow_Init.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; [""tsk4"", true, ['Find the power transformer running the oil reservoir pumps','Side Mission: Lalezar',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask;" , "0 = [] call MKY_fnc_Exit_Sand;"];
 		*/
 	}; 
-	case 2 : {
+	case "woods" : {
 		_side_log_pos   			= log_woods;
 		_side_rad    				= 150;
 		//_mkr_text 	 			=
@@ -129,6 +129,7 @@ switch (_side_select) do {
 		_side_trig setTriggerActivation 			["EAST", "notpresent", true];   
 		_side_trig setTriggerStatements 			["this", "0 = execVM ""SIDEscripts\militarizeSideEast.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; [""tsk5"", true, ['Find the enemy Camp and eliminate all enemy Soldiers!','Side Mission: Woods',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger" , ""];				
 	};
+	default {test = "fuck";};
 };								
 		
 //////////////// moves a visible marker to the ao //////////////////////////////////////////////////////////////////////////		

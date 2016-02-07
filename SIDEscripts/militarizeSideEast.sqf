@@ -10,7 +10,7 @@ if(!isServer) exitwith {};
 
 //////////////// Declare Variables  /////////////////////////////////////////////////////////////////////////////////////////////
 
-private ["_side_Playertext", "_side_select", "_side_mkr", "_side_trig", "_side_trig2", "_side_log_pos", "_side_mkr_text", "_side_name", "_side_rad", "_side_position","_side_flatPos", "_side_iniText"."_clean"];
+private ["_side_Playertext", "_side_select", "_side_mkr", "_side_trig", "_side_trig2", "_side_log_pos", "_side_mkr_text", "_side_name", "_side_rad", "_side_position","_side_flatPos", "_side_iniText","_clean"];
 
 
 
@@ -49,7 +49,7 @@ _side_select = [ "gamsar","village"] call BIS_fnc_selectRandom;
 
 
 switch (_side_select) do { 
-	case "gamsar" : { 
+	case "gamsar" : {
 		_side_log_pos   	= log_gamsar_side;
 		_side_rad    		= 250;
 		//_mkr_text  		=
@@ -107,7 +107,7 @@ switch (_side_select) do {
 		_side_trig2 setTriggerActivation 			["Any", "present", true];   
 		_side_trig2 setTriggerStatements 			["!alive pilot1", "0 = execVM ""SIDEscripts\militarizeSideWest.sqf""; [side_endText_fail] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; [""tsk2"", true, ['Find the Attack Helicopter captured by enemy troops and find and capture the missing pilot held as hostage','Side Mission: Gamsar',""Side Mission""],getPos _side_log_pos, ""FAILED"", 1, true, true,"""",true] call BIS_fnc_setTask;deletevehicle thisTrigger" , ""];
 		}; 
-	case 2 : {
+	case "village" : {
 		_side_log_pos   		= log_village;
 		_side_rad    			= 100;
 		//_mkr_text 	 		=
@@ -138,7 +138,8 @@ switch (_side_select) do {
 		_side_trig setTriggerArea 					[0, 0, 0, false];  
 		_side_trig setTriggerActivation 			["NONE", "notpresent", true];   
 		_side_trig setTriggerStatements 			["!alive offizier", "0 = execVM ""SIDEscripts\militarizeSideWest.sqf""; [side_endText_fail] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; [""tsk3"", true, ['Find the enemy Officer. Capture him and bring him to Base for further Interrogation.','Side Mission: Officer Hideout',""Side Mission""],getPos _side_log_pos, ""FAILED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger" , ""];
-	}; 
+	};
+	default {test = "fuck";};
 };
 
 
