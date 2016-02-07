@@ -21,29 +21,30 @@ if (_veh == _drv) then {
 	if (_dmg > 0.1) then {
 		_veh vehicleChat "Das Fahrzeug kann nicht respawnen da es beschädigt ist - This Vehicle can't respawn because it is damaged.";
 
-	} else {
-		_veh setVariable ["vehServiceActive", true, true];
-		_veh setVariable ["debugRespawn", true, true];
-		
-		// Pull out Units, remove Fuel and lock Vehicle
-		_veh vehicleChat "Das Fahrzeug wird in 5 Minuten respawnen - This Vehicle will respawn in 5 Minutes.";
-	
-		_veh setFuel 0;
-	
-		_crw = crew _veh;
-		{
-			_crwman = _x;
-			unAssignVehicle _crwman;
-			_crwman action ["getOut", _veh];
-		} forEach _crw;
-
-		_veh lock true;
-
-		// Initiate Respawn
-		sleep 5;
-		_veh setPos[0,0,0];
-		sleep 1;
-		_veh setDamage 1;
-	};
+		} else {
+			_veh setVariable ["vehServiceActive", true, true];
+			_veh setVariable ["debugRespawn", true, true];
 			
-}; };
+			// Pull out Units, remove Fuel and lock Vehicle
+			_veh vehicleChat "Das Fahrzeug wird in 5 Minuten respawnen - This Vehicle will respawn in 5 Minutes.";
+		
+			_veh setFuel 0;
+		
+			_crw = crew _veh;
+			{
+				_crwman = _x;
+				unAssignVehicle _crwman;
+				_crwman action ["getOut", _veh];
+			} forEach _crw;
+
+			_veh lock true;
+
+			// Initiate Respawn
+			sleep 5;
+			_veh setPos[0,0,0];
+			sleep 1;
+			_veh setDamage 1;
+		};
+				
+	};
+};
