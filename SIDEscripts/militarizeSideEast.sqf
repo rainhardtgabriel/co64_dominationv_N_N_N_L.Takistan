@@ -34,11 +34,6 @@ _NumOfPlayers = west countSide playableUnits;
 		sleep 0.1;
 	    trig_sandstorm setpos [0,0,0];
 		sleep 0.1;
-		if (alive  powertrans) then {deletevehicle powertrans;};
-		if (alive Tent1) then {deletevehicle Tent1;};
-		if (alive Tent2) then {deletevehicle Tent2;};
-		if (alive Tent3) then {deletevehicle Tent3;};
-		if (alive CampFire) then {deletevehicle CampFire;};
 		
 		sleep 60;
 		

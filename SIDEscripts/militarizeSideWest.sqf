@@ -31,14 +31,6 @@ _NumOfPlayers = west countSide playableUnits;
 //////////////// Deletes/Moves all remaining Marker/Object/Trigger ////////////////////////////////////////////////////////////////////
 
 		"side_mkr1" setmarkerpos [0,0,0];
-		sleep 0.1;
-		trig_sandstorm setpos [0,0,0];
-		sleep 0.1;
-		if (alive  CapVeh1) then {deletevehicle CapVeh1;};
-		sleep 0.1;
-		if (alive  pilot1) then {deletevehicle pilot1;};
-		sleep 0.1;
-		if (alive  offizier) then {deletevehicle offizier;};
 		sleep 60;
 		
 //////////////// Random Selects the AO  //////////////////////////////////////////////////////////////////////////////////////////		
