@@ -4,7 +4,7 @@ _onoff = _this select 0;
 for [{_i=0},{_i < (count _types)},{_i=_i+1}] do
 {
     // powercoverage is a marker I placed.
-	_lamps = getMarkerPos "powerplant1" nearObjects [_types select _i, 5000];
+	_lamps = getMarkerPos "powerplant1" nearObjects [_types select _i, 4000];
 	sleep 1;
 	{_x setDamage _onoff} forEach _lamps;
 };
