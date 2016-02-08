@@ -63,7 +63,7 @@ if ( _side_select == "lalezar") then {
 									cache1 = "CUP_TKBasicWeapons_EP1" createVehicle _side_position;
 									waitUntil { sleep 0.5; alive cache1 };
 									cache1 setVectorUp [0,0,1];
-									powertransAlive = true;									
+									cache1Alive = true;									
 									
 									//////////////// creates a task/show notification for the ao ///////////////////////////////////////////////////////////////////////////////////////		
 		
