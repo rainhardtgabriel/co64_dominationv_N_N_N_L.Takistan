@@ -3377,7 +3377,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={931.22461,232.47064,3099.1484};
+					position[]={937.23065,232.46188,3054.9978};
 					id=140;
 					side="LOGIC";
 					vehicle="Logic";
@@ -3490,7 +3490,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9446.2676,231.7354,6559.1313};
+					position[]={9425.4395,232.50496,6521.1323};
 					azimut=400.896;
 					id=146;
 					side="LOGIC";
@@ -3604,7 +3604,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1576.1835,172.36543,12041.08};
+					position[]={1552.2438,171.91972,12057.033};
 					azimut=215.772;
 					id=152;
 					side="LOGIC";
@@ -20927,25 +20927,25 @@ class Mission
 		};
 		class Item83
 		{
-			position[]={1938.8601,260.16138,3571.7568};
+			position[]={3327.4309,397.75848,3006.2952};
 			name="powerplant1";
 			type="Empty";
 		};
 		class Item84
 		{
-			position[]={8864.5791,212.49579,10648.594};
+			position[]={9841.7217,187.65498,10014.592};
 			name="powerplant2";
 			type="Empty";
 		};
 		class Item85
 		{
-			position[]={9379.8242,279.44876,6380.9199};
+			position[]={10347.384,678.27661,4984.9634};
 			name="powerplant3";
 			type="Empty";
 		};
 		class Item86
 		{
-			position[]={1469.9279,192.2762,11817.954};
+			position[]={3938.4998,57.03957,10258.652};
 			name="powerplant4";
 			type="Empty";
 			angle=-185.12399;
