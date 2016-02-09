@@ -538,6 +538,15 @@ class CfgFunctions
 
 	};
 	
+	class tf47 
+	{
+		tag = "tf47";
+		class intro
+		{
+			file = "functions";
+			class introShot;
+		};
+	};
 	
 		//#include "tf47CoreScripts\UMenu\Functions.hpp"
         //#include "tf47CoreScripts\tf47CfgFunctions.hpp"	
@@ -548,6 +557,55 @@ class CfgFunctions
 
 class RscTitles
 {
+	class intro
+
+	{
+
+	  	idd=-1;
+
+	  	movingEnable=0;
+
+	  	duration=4.2;
+
+	  	fadein=1;
+
+	  	fadeout=1.5;
+
+	  	name="intro";
+
+	  	controls[]={"title1"};
+
+	  	class title1: RscPicture
+
+		{
+   			type =0;
+
+   			idc = -1;
+
+   			style =48;
+
+   			colorBackground[] = {0, 0, 0, 0};
+
+   			colorText[] = {1, 1, 1, 1};
+
+   			font = "PuristaMedium";
+
+   			size = 0;
+
+	  	  	text="loading.jpg";
+
+			x=0;
+
+	  	  	y=-0.2;
+
+	  	  	w=1;
+
+	  	  	h=1.3;
+
+		};
+
+	};
+
 	class CapProgressBar
 	{
 		idd = -1;
@@ -625,6 +683,13 @@ class CfgMusic
 	{
 		name = "";
 		sound[] = {"\MKY\sounds\m0nkey_snowfall.ogg", db+0, 1.0};
+	};
+
+	class intro
+	{
+		name="intro";
+		sound[] = {"\sounds\intro.ogg",1,1.0};
+		titles[]={};
 	};
 };
 
