@@ -12,6 +12,15 @@ _veh addWeaponCargoGlobal ["ACE_quikclot",15];
 _veh addWeaponCargoGlobal ["ACE_tourniquet",8];
 _veh addWeaponCargoGlobal ["ACE_personalAidKit",10];
 _veh addWeaponCargoGlobal ["ACE_packingBandage",15];
+_veh addWeaponCargoGlobal ["ACE_bloodIV",15];
+_veh addWeaponCargoGlobal ["ACE_plasmaIV",15];
+_veh addWeaponCargoGlobal ["ACE_salineIV",15];
+_veh addWeaponCargoGlobal ["ACE_bloodIV_500",15];
+_veh addWeaponCargoGlobal ["ACE_plasmaIV_500",15];
+_veh addWeaponCargoGlobal ["ACE_salineIV_500",15];
+_veh addWeaponCargoGlobal ["ACE_bloodIV_250",15];
+_veh addWeaponCargoGlobal ["ACE_plasmaIV_250",15];
+_veh addWeaponCargoGlobal ["ACE_salineIV_250",15];
 //Injectors
 _veh addWeaponCargoGlobal ["ACE_morphine",10];
 _veh addWeaponCargoGlobal ["ACE_atropine",10];
