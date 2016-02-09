@@ -248,7 +248,8 @@ execVM format ["%1mapMarkerInit.sqf", _pathToScripts];
 sleep 0.1;
 [] execVM "SIDEscripts\SIDEstart.sqf";
 sleep 0.1;
-
+[] execVM "TacAds\createpowerstations.sqf";
+sleep 0.1;
 if ((paramsArray select 0) != 4) then {
 	// define the global sand parameter array
 	//[fog,overcast,use ppEfx,allow rain,force wind,vary fog,use wind audio,EFX strength]
