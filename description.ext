@@ -708,7 +708,3 @@ class CfgUnitInsignia {
 };
 
 // =============== TF47 Stuff =================================================================
-
-
-//#include "ZadeServicePoint\include\description.hpp"
-//#include "tf47CoreScripts\UMenu\Description.hpp"
