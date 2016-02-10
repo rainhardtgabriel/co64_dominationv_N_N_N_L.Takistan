@@ -10,7 +10,7 @@ if(!isServer) exitwith {};
 
 //////////////// Declare Variables  /////////////////////////////////////////////////////////////////////////////////////////////
 
-private ["_side_Playertext", "_side_select", "_side_mkr", "_side_trig", "_side_trig2", "_side_log_pos", "_side_mkr_text", "_side_name", "_side_rad", "_side_position","_side_flatPos", "_side_iniText"];
+private ["_side_Playertext", "_side_select", "_side_mkr", "_side_trig", "_side_log_pos", "_side_mkr_text", "_side_name", "_side_rad", "_side_position","_side_flatPos", "_side_iniText"];
 
 
 
@@ -34,7 +34,7 @@ _NumOfPlayers = west countSide playableUnits;
 		sleep 0.1;
 	    trig_sandstorm setpos [0,0,0];
 		sleep 0.1;
-		if (alive  powertrans) then {deletevehicle powertrans;};
+		if (alive cache1) then {deletevehicle cache1;};
 		if (alive Tent1) then {deletevehicle Tent1;};
 		if (alive Tent2) then {deletevehicle Tent2;};
 		if (alive Tent3) then {deletevehicle Tent3;};
@@ -106,12 +106,12 @@ if ( _side_select == "gamsar") then {
 									_side_trig = createTrigger 					["EmptyDetector", getPos D_FLAG_BASE];   
 									_side_trig setTriggerArea 					[5, 5, 0, false];  
 									_side_trig setTriggerActivation 			["Any", "present", true];   
-									_side_trig setTriggerStatements 			["(!alive CapVeh1) && (pilot1 in thislist)", "0 = execVM ""SIDEscripts\militarizeSideWest.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; [""tsk2"", true, ['Find the Attack Helicopter captured by enemy troops. Find and capture the missing pilot held as hostage','Side Mission: Gamsar',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger" , ""];
+									_side_trig setTriggerStatements 			["(!alive CapVeh1) && (pilot1 in thislist)", "0 = execVM ""SIDEscripts\militarizeSideWest.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; [""Sidemission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; [""tsk2"", true, ['Find the Attack Helicopter captured by enemy troops. Find and capture the missing pilot held as hostage','Side Mission: Gamsar',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger; deletevehicle side_trig2" , ""];
 		
-									_side_trig2 = createTrigger 				["EmptyDetector", getPos _side_log_pos];   
-									_side_trig2 setTriggerArea 					[0, 0, 0, false];  
-									_side_trig2 setTriggerActivation 			["Any", "present", true];   
-									_side_trig2 setTriggerStatements 			["!alive pilot1", "0 = execVM ""SIDEscripts\militarizeSideWest.sqf""; [side_endText_fail] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; [""tsk2"", true, ['Find the Attack Helicopter captured by enemy troops and find and capture the missing pilot held as hostage','Side Mission: Gamsar',""Side Mission""],getPos _side_log_pos, ""FAILED"", 1, true, true,"""",true] call BIS_fnc_setTask;deletevehicle thisTrigger" , ""];
+									side_trig2 = createTrigger 				["EmptyDetector", getPos _side_log_pos];   
+									side_trig2 setTriggerArea 					[0, 0, 0, false];  
+									side_trig2 setTriggerActivation 			["Any", "present", true];   
+									side_trig2 setTriggerStatements 			["!alive pilot1", "0 = execVM ""SIDEscripts\militarizeSideWest.sqf""; [side_endText_fail] remoteExec [""SEPP_fnc_globalHint"",0,false]; [""Sidemission_failed""] remoteExec [""SEPP_fnc_globalsound"",0,false]; [""tsk2"", true, ['Find the Attack Helicopter captured by enemy troops and find and capture the missing pilot held as hostage','Side Mission: Gamsar',""Side Mission""],getPos _side_log_pos, ""FAILED"", 1, true, true,"""",true] call BIS_fnc_setTask;deletevehicle thisTrigger" , ""];
 		
 									
 };
@@ -138,17 +138,17 @@ if ( _side_select == "village") then {
 
 									sleep 1;
 	
-									_side_trig2 = createTrigger 				["EmptyDetector", getPos D_FLAG_BASE];   
-									_side_trig2 setTriggerArea 					[5, 5, 0, false];  
-									_side_trig2 setTriggerActivation 			["ANY", "present", false];   
-									_side_trig2 setTriggerStatements 			["offizier in thislist;", "0 = execVM ""SIDEscripts\militarizeSideWest.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; [""tsk3"", true, ['Find the enemy Officer. Capture him and bring him to Base for further Interrogation.','Side Mission: Officer Hideout',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger" , ""];
+									_side_trig = createTrigger 				["EmptyDetector", getPos D_FLAG_BASE];   
+									_side_trig setTriggerArea 					[5, 5, 0, false];  
+									_side_trig setTriggerActivation 			["ANY", "present", false];   
+									_side_trig setTriggerStatements 			["offizier in thislist;", "0 = execVM ""SIDEscripts\militarizeSideWest.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; [""tsk3"", true, ['Find the enemy Officer. Capture him and bring him to Base for further Interrogation.','Side Mission: Officer Hideout',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger; deletevehicle side_trig2" , ""];
 		
 									sleep 1;
 									
-									_side_trig = createTrigger 					["EmptyDetector", getPos _side_log_pos];   
-									_side_trig setTriggerArea 					[0, 0, 0, false];  
-									_side_trig setTriggerActivation 			["NONE", "notpresent", true];   
-									_side_trig setTriggerStatements 			["!alive offizier", "0 = execVM ""SIDEscripts\militarizeSideWest.sqf""; [side_endText_fail] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; [""tsk3"", true, ['Find the enemy Officer. Capture him and bring him to Base for further Interrogation.','Side Mission: Officer Hideout',""Side Mission""],getPos _side_log_pos, ""FAILED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger" , ""];
+									side_trig2 = createTrigger 					["EmptyDetector", getPos _side_log_pos];   
+									side_trig2 setTriggerArea 					[0, 0, 0, false];  
+									side_trig2 setTriggerActivation 			["NONE", "notpresent", true];   
+									side_trig2 setTriggerStatements 			["!alive offizier", "0 = execVM ""SIDEscripts\militarizeSideWest.sqf""; [side_endText_fail] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; [""tsk3"", true, ['Find the enemy Officer. Capture him and bring him to Base for further Interrogation.','Side Mission: Officer Hideout',""Side Mission""],getPos _side_log_pos, ""FAILED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger" , ""];
 								
 										
 };
@@ -193,6 +193,4 @@ _side_iniText = format
 
 sleep 0.1;
 
-[] execVM "sounds\sidemissionNew.sqf";
- 
-//[playSound "sidemission_new"] call BIS_fnc_MP;
+["Sidemission_new"] remoteExec ["SEPP_fnc_globalsound",0,false];

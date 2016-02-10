@@ -237,18 +237,14 @@ execVM format ["%1serverEvents.sqf", _pathToScripts];
 // Special Markers
 execVM format ["%1mapMarkerInit.sqf", _pathToScripts];
 
-[false,"ColorBlufor","ColorGreen","ColorOrange"] call TF47_UMenu_fnc_EnableUMenu;
-
-#include "ZadeServicePoint\include\init.hpp"
-
-
 */
 
 [] execVM "AOscripts\AOstart.sqf";
 sleep 0.1;
 [] execVM "SIDEscripts\SIDEstart.sqf";
 sleep 0.1;
-
+[] execVM "TacAds\createpowerstations.sqf";
+sleep 0.1;
 if ((paramsArray select 0) != 4) then {
 	// define the global sand parameter array
 	//[fog,overcast,use ppEfx,allow rain,force wind,vary fog,use wind audio,EFX strength]
