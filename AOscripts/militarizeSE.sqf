@@ -107,7 +107,8 @@ if ( _ao_select == "gamsar") then {
 
 		nul = [_log_pos,2,true,2,[6,6],_ao_rad,"default",nil,nil,nil] execVM "LV\fillHouse.sqf";
 		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],false,[20,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
-		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,true],true,[0,0],[3,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[5,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
 
 //////////////// creates a visible marker for the ao //////////////////////////////////////////////////////////////////////////		
 
