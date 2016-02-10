@@ -86,7 +86,7 @@ if ( _side_select == "lalezar") then {
 									_side_trig = createTrigger 					["EmptyDetector", getPos _side_log_pos];   
 									_side_trig setTriggerArea 					[_side_rad, _side_rad, 0, false];  
 									_side_trig setTriggerActivation 			["none", "notpresent", true];   
-									_side_trig setTriggerStatements 			["!alive cache1", "0 = execVM ""SIDEscripts\militarizeSideEast.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; [""tsk4"", true, ['Find the power transformer running the oil reservoir pumps','Side Mission: Lalezar',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger" , ""];
+									_side_trig setTriggerStatements 			["!alive cache1", "0 = execVM ""SIDEscripts\militarizeSideEast.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; [""Sidemission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; [""tsk4"", true, ['Find the power transformer running the oil reservoir pumps','Side Mission: Lalezar',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger" , ""];
 								
 									//////////////// moves sandstorm trigger to side ///////////////////////////////////////////////////////////////////////////		
 									sleep 1;
@@ -98,7 +98,7 @@ if ( _side_select == "lalezar") then {
 									_side_trig2 = createTrigger 				["EmptyDetector", getPos _side_log_pos];   
 									_side_trig2 setTriggerArea 					[500, 500, 0, false];  
 									_side_trig2 setTriggerActivation 			["any", "present", true];   
-									_side_trig2 setTriggerStatements 			["player in thislist", "0 = [[1,1,100],"""",true] execVM ""MKY\MKY_Sand_Snow_Init.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; [""tsk4"", true, ['Find the power transformer running the oil reservoir pumps','Side Mission: Lalezar',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask;" , "0 = [] call MKY_fnc_Exit_Sand;"];
+									_side_trig2 setTriggerStatements 			["player in thislist", "0 = [[1,1,100],"""",true] execVM ""MKY\MKY_Sand_Snow_Init.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; [""Sidemission_failed""] remoteExec [""SEPP_fnc_globalsound"",0,false]; [""tsk4"", true, ['Find the power transformer running the oil reservoir pumps','Side Mission: Lalezar',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask;" , "0 = [] call MKY_fnc_Exit_Sand;"];
 								*/
 
 									
@@ -175,6 +175,4 @@ _side_iniText = format
 
 sleep 0.1;
 
-[] execVM "sounds\sidemissionNew.sqf";
- 
-//[playSound "sidemission_new"] call BIS_fnc_MP;
+["Sidemission_new"] remoteExec ["SEPP_fnc_globalsound",0,false];
