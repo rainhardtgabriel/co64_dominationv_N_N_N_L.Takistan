@@ -237,11 +237,6 @@ execVM format ["%1serverEvents.sqf", _pathToScripts];
 // Special Markers
 execVM format ["%1mapMarkerInit.sqf", _pathToScripts];
 
-[false,"ColorBlufor","ColorGreen","ColorOrange"] call TF47_UMenu_fnc_EnableUMenu;
-
-#include "ZadeServicePoint\include\init.hpp"
-
-
 */
 
 [] execVM "AOscripts\AOstart.sqf";
