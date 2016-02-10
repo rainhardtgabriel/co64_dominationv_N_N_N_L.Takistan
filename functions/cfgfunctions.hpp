@@ -7,5 +7,6 @@ class SEPP
 		class globalHint {};
 		class globalNotification {};
 		class globalSideChat {};
+        class globalSound {};
 	};
 };
