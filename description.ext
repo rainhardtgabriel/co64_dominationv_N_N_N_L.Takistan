@@ -643,7 +643,7 @@ class RscTitles
 class CfgSounds
 {
 
-sounds[] = {mission_new, mission_complete};
+sounds[] = {mission_new, mission_complete,sidemission_complete,sidemission_new,sidemission_failed};
 
 class mission_new
 {
@@ -667,6 +667,12 @@ class sidemission_new
 {
 name = "sidemission_new";
 sound[] = {\sounds\sidemission_new.ogg, 1.9, 1.0};
+titles[] = {0, ""};
+};
+class sidemission_failed
+{
+name = "sidemission_failed";
+sound[] = {\sounds\sidemission_failed.ogg, 1.9, 1.0};
 titles[] = {0, ""};
 };
 };

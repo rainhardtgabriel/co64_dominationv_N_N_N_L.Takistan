@@ -10,7 +10,7 @@ if(!isServer) exitwith {};
 
 //////////////// Declare Variables  /////////////////////////////////////////////////////////////////////////////////////////////
 
-private ["_Playertext", "_NumOfPlayers", "_ao_select", "_ao_mkr", "_trig", "_trig_rt", "_log_pos", "_ao_task", "_mkr_text", "_ao_name", "_ao_rad", "_position","_flatPos", "_ao_iniText"];
+private ["_Playertext", "_NumOfPlayers", "_ao_select", "_ao_mkr", "_trig", "_trig_rt", "_log_pos", "_ao_task", "_mkr_text", "_ao_name", "_ao_rad", "_position","_flatPos", "_ao_iniText", "_mission_complete", "_mission_new"];
 
 
 
@@ -133,7 +133,26 @@ ao_endText = format
 		_trig = createTrigger 					["EmptyDetector", getPos _log_pos];   
 		_trig setTriggerArea 					[_ao_rad, _ao_rad, 0, false];  
 		_trig setTriggerActivation 				["EAST", "notpresent", true];   
-		_trig setTriggerStatements 				["this", "0 = execVM ""AOscripts\militarizeSW.sqf""; [ao_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\missionComplete.sqf""; [""tsk1"", true, ['Seize the Village held by hostile forces','Seize the AO',""ao_mkr1""],getMarkerPos ""Main Mission"", ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger; AOcount = AOcount + 1" , ""];
+		_trig setTriggerStatements 				["this", "0 = execVM ""AOscripts\militarizeSW.sqf""; [ao_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; [""mission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; [""tsk1"", true, ['Seize the Village held by hostile forces','Seize the AO',""ao_mkr1""],getMarkerPos ""Main Mission"", ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger; AOcount = AOcount + 1" , ""];
+
+//////////////// Hint for active Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
+
+_ao_iniText = format
+	[
+		"<t align='center' size='1.5'>New Target</t><br/><t size='1' align='center' color='#FF0000'>%1</t><br/>____________________<br/>New Mission available near %1 !<br/><br/>Destroy the enemy's Radio Tower to stop them from calling in Reinforcements. <br/><br/> Also watch out for Enemy Bunker, check your Map to see their exact Location.",
+		_ao_name
+	];
+
+	//-------------------------------------------- Show global target start hint
+	
+	[_ao_iniText] remoteExec ["SEPP_fnc_globalHint",0,false];
+
+	
+//////////////// Sound for Hint for active Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
+
+sleep 0.1;
+
+["mission_new"] remoteExec ["SEPP_fnc_globalsound",0,false];
 		
 //////////////// create a radiotower /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -182,27 +201,6 @@ ao_endText = format
 		
 		trig_rt setpos (getpos _log_pos);		
 
-
-//////////////// Hint for active Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
-
-_ao_iniText = format
-	[
-		"<t align='center' size='1.5'>New Target</t><br/><t size='1' align='center' color='#FF0000'>%1</t><br/>____________________<br/>New Mission available near %1 !<br/><br/>Caution: if an Enemy Radio Tower is nearby, destroy it to stop them from calling in Reinforcements. <br/><br/> Also watch out for Enemy Bunker, check your Map to see their exact Location.",
-		_ao_name
-	];
-
-	//-------------------------------------------- Show global target start hint
-	
-	[_ao_iniText] remoteExec ["SEPP_fnc_globalHint",0,false];
-
-	
-//////////////// Sound for Hint for active Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
-
-sleep 0.1;
-
-[] execVM "sounds\missionNew.sqf";
- 
-//[playSound "mission_new"] call BIS_fnc_MP;
 
 
 //////////////// Add Capturable Bunker /////////////////////////////////////////////////////////////////////////////////////////// 
