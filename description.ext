@@ -545,6 +545,11 @@ class CfgFunctions
 		{
 			file = "functions";
 			class introShot;
+			class prepareFOBlocal;
+			class buildFOB;
+			class buildFOBlocal;
+			class removeFOB;
+			class isFlatEmpty;
 		};
 	};
 	
@@ -552,6 +557,37 @@ class CfgFunctions
         //#include "tf47CoreScripts\tf47CfgFunctions.hpp"	
 };
 
+class CfgRemoteExec
+{        
+    class Functions
+    {
+        mode = 2;
+        jip = 1;
+        class tf47_fnc_buildFOB
+        {
+            allowedTargets=2; // can target anyone (default)
+            jip = 0; // sending jip messages is disabled for this function (overrides settings in the Functions class)
+        };
+        class tf47_fnc_buildFOBlocal
+        {
+            allowedTargets=1;
+            jip = 0;
+        };
+        class tf47_fnc_removeFOB
+        {
+            allowedTargets=2;
+            jip = 0;
+        };
+    }; 
+    class Commands
+    {
+        class hint
+        {
+        	allowedTargets=1;
+        	jip=0;
+        };
+	}; 
+};
 
 #include "dyncap\Defines.hpp"
 
@@ -675,6 +711,12 @@ name = "sidemission_failed";
 sound[] = {\sounds\sidemission_failed.ogg, 1.9, 1.0};
 titles[] = {0, ""};
 };
+	class buildingFOB
+	{
+		name="buildingFOB";
+		sound[] = {"\sounds\buildingFOB.ogg",1,1.0};
+		titles[]={};
+	};
 };
 class CfgMusic
 {
