@@ -63,4 +63,3 @@ if (isNil{_type}) then {} else {
 			default { _object enableSimulationGlobal false;}; 
 		};
 	};
-};
