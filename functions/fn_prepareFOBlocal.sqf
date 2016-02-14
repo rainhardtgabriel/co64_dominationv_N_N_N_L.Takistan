@@ -35,6 +35,6 @@ if (count _nearRoads < 0) exitWith {hint composeText ["Es sind keine Straßen in
 
 } forEach _nearRoads;
 
-// if (_location isEqualTo [0,0]) exitWith {hint composeText ["Das Gelände ist uneben oder nicht frei.", lineBreak, lineBreak,"The terrain is not free or empty."]};
+if (_location isEqualTo [0,0]) exitWith {hint composeText ["Das Gelände ist uneben oder nicht frei.", lineBreak, lineBreak,"The terrain is not free or empty."]};
 
 [_location, _angle] remoteExec ["tf47_fnc_buildFOB", 2];
