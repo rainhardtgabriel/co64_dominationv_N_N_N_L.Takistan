@@ -1,4 +1,3 @@
-if (isServer) then {
 	private ["_object","_type","_pos_x","_pos_y","_pos_z"];
 	_object = _this select 0;
 	_type = _this select 1;
