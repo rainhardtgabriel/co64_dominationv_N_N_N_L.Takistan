@@ -77,7 +77,7 @@ if ( _ao_select == "shamali") then {
 									_log_pos   			= log_shamali;
 									//_ao_rad    			= 150;
 									//_mkr_text 	 	=
-									_ao_name   			= "Samali";
+									_ao_name   			= "Shamali";
 									//_ao_array_member 	= "shamali";
 									
 									sleep 1;
