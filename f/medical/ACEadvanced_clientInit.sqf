@@ -19,8 +19,8 @@ player addItemToUniform "ACE_personalAidKit";
 player addItemToUniform "ACE_tourniquet";
 {player addItemToUniform "ACE_packingBandage"} forEach [1,2,3,4,5];
 {player addItemToUniform "ACE_elasticBandage"} forEach [1,2,3,4,5];
-{player addItemToUniform "ACE_morphine";} forEach [1,2];
-{player addItemToUniform "ACE_epinephrine";} forEach [1,2];
+{player addItemToUniform "ACE_morphine"} forEach [1,2];
+{player addItemToUniform "ACE_epinephrine"} forEach [1,2];
 
 if (_typeOfUnit == "m") then
 {
