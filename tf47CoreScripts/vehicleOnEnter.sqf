@@ -28,12 +28,12 @@ _vehicleIdentifier = format["%1", _vehicle];
 _position = _params select 1;
 _player = _params select 2;
 _playerSlot = format["%1", _player];
-
+/*
 // Let Dustoff become Dustoff
 if(typeOf _vehicle == "RHS_UH60M_MEV2") then {
 	[[_player,civilian],"tf47_fnc_changePlayerSide"] call BIS_fnc_MP;
 };
-
+*/
 _playerid = "7412934";
 if(isMultiplayer) then {
 	_playerid = getPlayerUID _player;
