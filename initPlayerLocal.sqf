@@ -1,3 +1,4 @@
+_null = [] execVM "tf47CoreScripts\safezone.sqf"; 		// spawn protection
 //Every Unit spawning gets introCamride
 if (hasInterface) then {[
 	getPos player,
