@@ -19,8 +19,10 @@ TICKETS_HARDCAP = 150;
 // 7 ... ISLA DI CAPRAIA PatrolOps Mod
 // 9 ... Invade&Annex Al Rayak
 // 7 ... I&A Altis
+// 93 ...Insurgency Kunduz
+// 94...Operation Solve Conflict {Domination 2.0}
 // 99... Development Server
-TF47_MISSIONID = 1;
+TF47_MISSIONID = 94;
  
 // Mission Name/Version Info for Log
 TF47_MISSIONINFO = "CO 64 Operation Solve Conflict";
