@@ -207,7 +207,7 @@ gator2 addEventhandler ["GetIn", {[_this,[UnitNATO_IFV1_C,UnitNATO_IFV1_D,UnitNA
 
 f_var_JIP_FirstMenu = false;		// Do players connecting for the first time get the JIP menu? - This only works in missions with respawn.
 f_var_JIP_RemoveCorpse = true;		// Remove the old corpse of respawning players?
-f_var_JIP_GearMenu = false;			// Can JIP/respawned players select their own gear? False will use gear assigned by F3 Gear Component if possible
+f_var_JIP_GearMenu = true;			// Can JIP/respawned players select their own gear? False will use gear assigned by F3 Gear Component if possible
 
 // ====================================================================================
 
