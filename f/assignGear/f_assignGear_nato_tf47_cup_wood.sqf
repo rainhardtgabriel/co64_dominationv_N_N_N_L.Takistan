@@ -691,7 +691,7 @@ switch (_typeofUnit) do
 		{_unit addmagazine _pistolmag; }		forEach [1,2,3,4];
 		_unit addweapon _pistol;
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
-		_attachments = [_scope3];
+		_attachments = [_scope4];
 	};
 
 // LOADOUT: SPOTTER
