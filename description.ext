@@ -6,7 +6,7 @@ class Header
 {
 	gameType = Coop;
 	minPlayers = 1;
-	maxPlayers = 42;
+	maxPlayers = 64;
 };
 
 // ============================================================================================
@@ -551,10 +551,27 @@ class CfgFunctions
 			class removeFOB;
 			class isFlatEmpty;
 		};
+		class Whitelist {
+			file = "tf47CoreScripts";
+			//class vehicleOnEnter;
+			class addGetInEvent;
+			class addGetOutEvent;
+		};
+
+		class Helpers {
+			file = "tf47CoreScripts\helper";
+			class allowDamage;
+			class setDamage;
+			class setFuel;
+			class lock;
+			class setVehicleVarName;
+			class callVehicleRespawn;
+			class changePlayerSide;
+			class isStable;
+		};
 	};
 	
-		//#include "tf47CoreScripts\UMenu\Functions.hpp"
-        //#include "tf47CoreScripts\tf47CfgFunctions.hpp"	
+		/*#include "tf47CoreScripts\tf47CfgFunctions.hpp"	disabled because of errors keep file in folder*/
 };
 
 class CfgRemoteExec

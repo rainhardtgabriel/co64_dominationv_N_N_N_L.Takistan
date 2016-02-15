@@ -23,7 +23,7 @@ TICKETS_HARDCAP = 150;
 TF47_MISSIONID = 1;
  
 // Mission Name/Version Info for Log
-TF47_MISSIONINFO = "CO-154 Insurgency Kunduz";
+TF47_MISSIONINFO = "CO 64 Operation Solve Conflict";
  
 _pathtoscripts = "tf47CoreScripts\";
  
@@ -46,25 +46,32 @@ _baseCleanupMarkers = [["respawn_west","respawn_west_1",200]];
 //              see mcmarker.sqf and mcmarkerchange.sqf for details
 _statusMarkersInit = false;
 _statusMarkerData = [
-        ["a_1",                         ["mc1marker",                           "b_hq",                         "ColorGreen",           "CCT - Command and Control ""SPECTRE""",                                                true]],
-        ["a_2",                         ["mc2marker",                           "b_hq",                         "ColorGreen",           "CCT - Fliegerleitoffizier ""TOPMAN""",                                                 true]]
-        // ["raven1",           ["callsign_raven1",                     "b_air",                        "ColorBrown",           "RAVEN-01",                                                                                                             false]],
-        // ["raven2",           ["callsign_raven2",                     "b_air",                        "ColorBrown",           "RAVEN-02",                                                                                                             false]],
-        // ["butterfly1",       ["callsign_butterfly1",         "b_air",                        "ColorBrown",           "BUTTERFLY-01",                                                                                                 false]],
-        // ["butterfly2",       ["callsign_butterfly2",         "b_air",                        "ColorBrown",           "BUTTERFLY-02",                                                                                                 false]],
-        // ["pelican1",         ["callsign_pelican1",           "b_air",                        "ColorBrown",           "PELICAN",                                                                                                              false]],
-        // ["griffin1",         ["callsign_griffin1",           "b_air",                        "ColorBrown",           "GRIFFIN-01",                                                                                                   false]],
-        // ["griffin2",         ["callsign_murphy1",            "b_air",                        "ColorBrown",           "GRIFFIN-02",                                                                                                   false]],
-        // ["dragon1",          ["callsign_dragon1",            "b_air",                        "ColorOrange",          "DRAGON",                                                                                                               false]],
-        // ["firefly1",         ["callsign_firefly1",           "b_air",                        "ColorOrange",          "FIREFLY",                                                                                                              false]],
+        //["a_1",              ["mc1marker",                           "b_hq",                         "ColorGreen",           "CCT - Command and Control ""SPECTRE""",                                                true]],
+        //["a_2",              ["mc2marker",                           "b_hq",                         "ColorGreen",           "CCT - Fliegerleitoffizier ""TOPMAN""",                                                 true]]
+        ["raven1",           ["callsign_raven1",        "b_air",        "ColorBrown",           "RAVEN-01",     false]],
+        ["raven2",           ["callsign_raven2",        "b_air",        "ColorBrown",           "RAVEN-02",     false]],
+        ["dustoff",          ["callsign_raven2",        "b_air",        "ColorBrown",           "RAVEN-02",     false]],
+        ["butterfly1",       ["callsign_butterfly1",    "b_air",        "ColorBrown",           "BUTTERFLY-01", false]],
+        ["butterfly2",       ["callsign_butterfly2",    "b_air",        "ColorBrown",           "BUTTERFLY-02", false]],
+        ["pelican1",         ["callsign_pelican1",      "b_air",        "ColorBrown",           "PELICAN",      false]],
+        ["griffin1",         ["callsign_griffin1",      "b_air",        "ColorBrown",           "GRIFFIN-01",   false]],
+        ["goose1",           ["callsign_goose1",        "b_plane",      "ColorBrown",           "GOOSE",        false]],
+        ["manticore1",       ["callsign_manticore1",    "b_air",        "ColorRed",             "DUSTOFF",      false]],
+        ["firefly1",         ["callsign_firefly1",      "b_air",        "ColorOrange",          "FIREFLY",      false]],
         // ["thunderbird1",     ["callsign_thunderbird1",       "b_plane",                      "ColorOrange",          "THUNDERBIRD",                                                                                                  false]],
-        // ["falcon1",          ["callsign_falcon1",            "b_plane",                      "ColorOrange",          "FALCON-01",                                                                                                    false]],
-        // ["falcon2",          ["callsign_falcon2",            "b_plane",                      "ColorOrange",          "FALCON-02",                                                                                                    false]],
-        // ["c130",                     ["callsign_c130",                       "b_plane",                      "ColorBrown",           "C130J",                                                                                                                false]],
-        // ["rhino1",           ["callsign_rhino1",                     "b_armor",                      "ColorOrange",          "RHINO-01",                                                                                                             false]],
-        // ["rhino2",           ["callsign_rhino2",                     "b_armor",                      "ColorOrange",          "RHINO-02",                                                                                                             false]],
-        // ["tiger1",           ["callsign_tiger1",                     "b_mech_inf",           "ColorOrange",          "TIGER-01",                                                                                                             false]],
-        // ["tiger2",           ["callsign_tiger2",                     "b_mech_inf",           "ColorOrange",          "TIGER-02",                                                                                                             false]]
+        ["falcon1",          ["callsign_falcon1",       "b_plane",      "ColorOrange",          "FALCON-01",    false]],
+        ["falcon2",          ["callsign_falcon2",       "b_plane",      "ColorOrange",          "FALCON-02",    false]],
+        ["Albatros",         ["callsign_albatros",      "b_plane",      "ColorBrown",           "ALBATROS",     false]],
+        ["rhino1",           ["callsign_rhino1",        "b_armor",      "ColorOrange",          "RHINO-01",     false]],
+        ["rhino2",           ["callsign_rhino2",        "b_armor",      "ColorOrange",          "RHINO-02",     false]],
+        ["lion1",            ["callsign_lion1",         "b_armor",      "ColorOrange",          "LION-01",      false]],
+        ["lion2",            ["callsign_lion2",         "b_armor",      "ColorOrange",          "LION-02",      false]],
+        ["frog1",            ["callsign_frog1",         "b_armor",      "ColorOrange",          "FROG-01",      false]],        
+        ["tiger1",           ["callsign_tiger1",        "b_mech_inf",   "ColorOrange",          "TIGER-01",     false]],
+        ["tiger2",           ["callsign_tiger2",        "b_mech_inf",   "ColorOrange",          "TIGER-02",     false]],
+        ["tiger3",           ["callsign_tiger3",        "b_mech_inf",   "ColorOrange",          "TIGER-03",     false]],
+        ["gator1",           ["callsign_gator1",        "b_mech_inf",   "ColorOrange",          "GATOR-01",     false]],
+        ["gator2",           ["callsign_gator2",        "b_mech_inf",   "ColorOrange",          "GATOR-02",     false]]
 ];
 _statusMarkers = [_statusMarkerData, []] call CBA_fnc_hashCreate;
  
@@ -83,27 +90,63 @@ _JumpOutHelicopters = [];
  
  
 // --- VEHICLE RESTRICTIONS -------------------------------------------------------------------------------------------------------------------------
-// Vehicle Name, Driver Whitelist ID (0 for None), Crew Whitelist ID (0 for None), Driver Slots, Crew Slots
+// ["Vehicle Name",Driver Whitelist ID (0 for None), Crew Whitelist ID (0 for None), ["Driver Slots"], ["Crew Slots"]
+/*
+Parameter Datatypes
+Vehicle Name = "STRING"
+Driver Whitelist ID  = 0 //(0 for None)
+Crew Whitelist ID = 0 //(0 for None)
+Driver Slots = ["UnitName"]
+Crew Slots = ["Unitname"]
+*/
 _vehicleRestrictionData = [
-        // AH-6
-        ["ah6",                       [1, 1,  ["a_73","a_74"],                               ["a_73","a_74"]]],
-        // MH-6
-        ["mh6",                       [1, 1,  ["a_71","a_72"],                               ["a_71","a_72"]]],
-        // UH-60
-        ["uh60",                      [1, 1,  ["a_67","a_68","a_69","a_70"],                 ["a_67","a_68","a_69","a_70"]]],
-		// AW-101
-        ["aw101",                     [1, 1,  ["b_31","b_32"],                               ["b_31","b_32"]]],
-        // AW-159
-        ["aw159",                     [1, 1,  ["b_29","b_30"],                               ["b_29","b_30"]]],
-		
-		
-        ["t1",                     [2, 2,  ["a_61","a_62","a_63","a_64","a_65","a_66"],      ["a_61","a_62","a_63","a_64","a_65","a_66"]]],
-        ["t2",                     [2, 2,  ["a_61","a_62","a_63","a_64","a_65","a_66"],      ["a_61","a_62","a_63","a_64","a_65","a_66"]]],
-        ["t3",                     [2, 2,  ["g_39","g_40","g_41","g_42","g_43","g_44"],      ["g_39","g_40","g_41","g_42","g_43","g_44"]]],
-        ["t4",                     [2, 2,  ["g_39","g_40","g_41","g_42","g_43","g_44"],      ["g_39","g_40","g_41","g_42","g_43","g_44"]]]
-		
-		
-		// AH6
+        // Rotary Wing Attack 1 AH-6 Firefly
+        ["firefly1",                       [1, 1,  ["UnitNATO_AH1_P","UnitNATO_AH1_CP"],                               ["UnitNATO_AH1_P","UnitNATO_AH1_CP"]]],
+        // Rotary Wing Attack 2 AH 64 D Manticore
+        ["manticore1",                       [1, 1,  ["UnitNATO_AH1_P","UnitNATO_AH1_CP"],                               ["UnitNATO_AH1_P","UnitNATO_AH1_CP"]]],
+        // Rotary Transport MH 6 Butterfly
+        ["butterfly1",                      [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"]]],
+        ["butterfly2",                      [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"]]],
+        // Rotary Transport UH 1Y Griffin
+        ["griffin1",                      [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"]]],
+	// Rotary Transport UH 60 L Raven
+        ["raven1",                          [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
+        ["raven2",                          [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
+        // Rotary Transport UH 60 M Dustoff
+        ["dustoff",                          [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
+        // Rotary Transport CH 47 Pelican
+        ["pelican1",                          [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
+        
+        //FIXED WINGS
+        // Fixed Wing Transport MV 22 Goose
+        ["goose1",                          [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
+        // Fixed Wing Transport C130J Albatros
+        ["albatros1",                       [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
+
+        //Fixed Wing Attack Harrier AV8B GBU 12
+        ["wasp1",                          [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P"],                 []]],
+        //Fixed Wing Attack Harrier AV8B AGM
+        ["wasp2",                          [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P"],                 []]],	
+
+        // Tank M1A1 Rhino
+        ["rhino1",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"]]],
+        ["rhino2",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"]]],
+        // Tank M2A2 Lion
+        ["lion1",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"]]],
+        ["lion2",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"]]],
+        // M6 Linebacker Frog
+        ["frog1",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"]]],
+        // IFV M1126 ICV Tiger
+        ["tiger1",                     [2, 2,  ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"],      ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"]]],
+        ["tiger2",                     [2, 2,  ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"],      ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"]]],
+        ["tiger3",                     [2, 2,  ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"],      ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"]]],
+        // LAV25 GATOR
+        ["gator1",                     [2, 2,  ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"],      ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"]]],
+        ["gator2",                     [2, 2,  ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"],      ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"]]]
+
+	// AW-159
+        //["aw159",                     [1, 1,  ["b_29","b_30"],                               ["b_29","b_30"]]],
+        // AH6
         //["ah6",                                       [1, 1,  ["rotwa21","rotwa22"],                                          ["rotwa21","rotwa22"]]],
         // A-10/F-16
         //["a10",                               [1, 1,  ["fixwa11","fixwa21"],                                          []]],
@@ -146,8 +189,8 @@ _vehicleRestrictions = [_vehicleRestrictionData, []] call CBA_fnc_hashCreate;
 // --- SECURE SLOTS ---------------------------------------------------------------------------------------------------------------------------------
 // Slot Name, Whitelist ID
 _secureSlots = [
-        ["a_1", 3],     // CCT Command and Control
-        ["a_2", 3]      // CCT 1st JTAC
+        ["UnitNATO_CO", 3],     // CCT Command and Control
+        ["UnitNATO_DC_D", 3]      // CCT 1st JTAC
         //["mc3",1],    // Tower
         //["Zeus1", 5], //Zeus 1
         //["Zeus2", 5]  //Zeus 2
@@ -174,53 +217,27 @@ _infantryTicketsDefault = 2;
 _infantryTicketsData = [
 
         // Platoon Lead
-		
-		["a_4",6],	["b_1",6],	["g_1",6],
-		
+		["UnitNATO_CO",6],	["UnitNATO_DC",6],
         //Squad Lead
-        ["a_5",5],	["a_7",5],	["a_21",5],	["a_35",5],	["a_49",5],	["b_5",5],	["b_13",5],	["b_21",5],	["b_2",5],	["g_2",5],	["g_3",5],	["g_15",5],	["g_27",5],
-		
+        ["UnitNATO_ASL_SL",5],	["UnitNATO_BSL_SL",5],	["UnitNATO_CSL_SL",5],
 		//Fireteam Lead
-		["a_9",4],	["a_13",4],	["a_17",4],	["a_23",4],	["a_27",4],	["a_31",4],	["a_37",4],	["a_41",4],	["a_45",4],	["a_51",4],	["a_56",4],	["g_9",4],	["g_21",4],	["g_33",4],
-       
+		      ["UnitNATO_A1_FTL",4],  ["UnitNATO_A2_FTL",4],  ["UnitNATO_A3_FTL",4],  ["UnitNATO_B1_FTL",4],  ["UnitNATO_B2_FTL",4],  ["UnitNATO_B3_FTL",4],  ["UnitNATO_C1_FTL",4],	["UnitNATO_C2_FTL",4],	["UnitNATO_C3_FTL",4],   
         // Medics
-        ["a_3",3],	["a_6",3],	["a_8",3],	["a_22",3],	["a_36",3],	["a_50",3],	["a_75",5],	["a_76",5],	["b_3",3],	["b_9",3],	["b_17",3],	["b_25",3],	["b_33",5],	["b_34",5],
-	    
-		["g_4",3],	["g_10",3],	["g_16",3],	["g_22",3],	["g_28",5],	["G_34",5],
-	   
+        ["UnitNATO_ASL_M",3],	["UnitNATO_BSL_M",3],	["UnitNATO_CSL_M",3],	["UnitNATO_CO_M",3],
 	    // SPZ Crew
+	    ["UnitNATO_TNK1_C", 10],	["UnitNATO_TNK1_G", 10],	["UnitNATO_TNK1_D", 10],	["UnitNATO_IFV_C", 10],	        ["UnitNATO_IFV_G", 10],	        ["UnitNATO_IFV_D", 10],
 		
-	    ["a_61", 10],	["a_62", 10],	["a_63", 10],	["a_64", 10],	["a_65", 10],	["a_66", 10],
-		
-        // Ah6
-        ["a_73", 10],            ["a_74", 10],
+        // Transport Rotary Wing
+        ["UnitNATO_TH1_P", 10],         ["UnitNATO_TH1_CP", 10],        ["UnitNATO_TH1_G1",10],          ["UnitNATO_TH1_G2",10],        ["UnitNATO_TH2_P", 10],         ["UnitNATO_TH2_CP", 10],         ["UnitNATO_TH2_G1",10],        ["UnitNATO_TH2_G2",10],
        
-		// Mh6
-        ["a_71", 10],            ["a_72", 10],
+	// Attack Rotary Wing
+        ["UnitNATO_AH1_P", 10],            ["UnitNATO_AH1_CP", 10],
 	   
-        // UH60
-        ["a_67", 10],  		     ["a_68", 10],    ["a_69", 7],    ["a_70", 7],
+        // Fixed Wing
+        ["UnitNATO_AFW1_P", 10],	     ["UnitNATO_AFW2_P", 10],
        
-        // AW101 Crew
-        ["b_31",10],                ["b_32",10],
-       
-        // AW159
-        ["b_29",10],       		["b_30",10],
-       
-        // MH6
-        //["rotwt31",5],                ["rotwt32",5],
-       
-        // CH47
-        //["rotwt21",10],               ["rotwt22",10],         ["rotwt23",10],         ["rotwt24",10],
-       
-        // C-130
-        //["fixwt11",13],               ["fixwt12",13],         ["fixwt12",13],
-       
-        // UH60M (DUSTOFF)
-        //["rotwt41",7],                ["rotwt42",7],          ["rotwt43",10],         ["rotwt44",10],
- 
         // CCT, JTAC, TOWER
-        ["a_1", 10],            ["a_2", 10]
+        ["UnitNATO_DC_D", 10]
  
 ];
 _infantryTickets = [_infantryTicketsData, _infantryTicketsDefault] call CBA_fnc_hashCreate;
