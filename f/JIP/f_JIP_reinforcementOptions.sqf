@@ -44,7 +44,7 @@ if (f_var_JIP_GearMenu) then {
 // We remove the action to the player's action menu.
 // NB This is on the assumption that the player has made positive selections and not
 // cancelled the menu.
-if ((!isNil "_checkparam") && (_checkparam == 1)) exitWith {["JIP",["Have a good Day Sir"]] call BIS_fnc_showNotification;};
+if ((!isNil "_checkparam") && (_checkparam == 1)) exitWith {["JIP",["Have a good Day Sir"]] call BIS_fnc_showNotification;}else{
 	SelectGear = nil;
 player removeAction F3_JIP_reinforcementOptionsAction;
 F3_JIP_reinforcementOptionsAction = nil;
@@ -65,4 +65,5 @@ if (_grp != group player) then {
 		[_grp,_joinDistance] execVM "f\JIP\f_JIP_nearTargetGroupCheck.sqf";
 		["JIP",[format ["Selection successful. Get within %2m of %1 to link up.",name leader _grp,_joinDistance]]] call BIS_fnc_showNotification;
 	};
+};
 };
