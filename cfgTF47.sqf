@@ -52,7 +52,7 @@ _statusMarkerData = [
         //["a_2",              ["mc2marker",                           "b_hq",                         "ColorGreen",           "CCT - Fliegerleitoffizier ""TOPMAN""",                                                 true]]
         ["raven1",           ["callsign_raven1",        "b_air",        "ColorBrown",           "RAVEN-01",     false]],
         ["raven2",           ["callsign_raven2",        "b_air",        "ColorBrown",           "RAVEN-02",     false]],
-        ["dustoff",          ["callsign_raven2",        "b_air",        "ColorRED",           "DUSTOFF",     false]],
+        ["dustoff",          ["callsign_dustoff",       "b_air",        "ColorRED",           "DUSTOFF",     false]],
         ["butterfly1",       ["callsign_butterfly1",    "b_air",        "ColorBrown",           "BUTTERFLY-01", false]],
         ["butterfly2",       ["callsign_butterfly2",    "b_air",        "ColorBrown",           "BUTTERFLY-02", false]],
         ["pelican1",         ["callsign_pelican1",      "b_air",        "ColorBrown",           "PELICAN",      false]],
