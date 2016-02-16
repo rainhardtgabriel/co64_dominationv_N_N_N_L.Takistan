@@ -57,7 +57,7 @@ f_script_setTeamColours = [] execVM "f\setTeamColours\f_setTeamColours.sqf";
 // F3 - F3 Folk ARPS Group Markers
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_script_setGroupMarkers = [] execVM "f\groupMarkers\f_setLocalGroupMarkers.sqf";
+//f_script_setGroupMarkers = [] execVM "f\groupMarkers\f_setLocalGroupMarkers.sqf";
 
 // ====================================================================================
 
@@ -96,7 +96,7 @@ f_var_removeBodyDistance = 500;
 // F3 - Authorised Crew Check
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 //Rotary Wings Transport
-dustoff addEventhandler ["GetIn", {[_this,[UnitNATO_TH1_P,UnitNATO_TH1_CP,UnitNATO_TH2_P,UnitNATO_TH2_CP,UnitNATO_TH1_G1,UnitNATO_TH1_G2,UnitNATO_TH2_G1,UnitNATO_TH2_G2],false] call f_fnc_authorisedCrewCheck}];
+/*dustoff addEventhandler ["GetIn", {[_this,[UnitNATO_TH1_P,UnitNATO_TH1_CP,UnitNATO_TH2_P,UnitNATO_TH2_CP,UnitNATO_TH1_G1,UnitNATO_TH1_G2,UnitNATO_TH2_G1,UnitNATO_TH2_G2],false] call f_fnc_authorisedCrewCheck}];
 raven1 addEventhandler ["GetIn", {[_this,[UnitNATO_TH1_P,UnitNATO_TH1_CP,UnitNATO_TH2_P,UnitNATO_TH2_CP,UnitNATO_TH1_G1,UnitNATO_TH1_G2,UnitNATO_TH2_G1,UnitNATO_TH2_G2],false] call f_fnc_authorisedCrewCheck}];
 raven2 addEventhandler ["GetIn", {[_this,[UnitNATO_TH1_P,UnitNATO_TH1_CP,UnitNATO_TH2_P,UnitNATO_TH2_CP,UnitNATO_TH1_G1,UnitNATO_TH1_G2,UnitNATO_TH2_G1,UnitNATO_TH2_G2],false] call f_fnc_authorisedCrewCheck}];
 pelican1 addEventhandler ["GetIn", {[_this,[UnitNATO_TH1_P,UnitNATO_TH1_CP,UnitNATO_TH2_P,UnitNATO_TH2_CP,UnitNATO_TH1_G1,UnitNATO_TH1_G2,UnitNATO_TH2_G1,UnitNATO_TH2_G2],false] call f_fnc_authorisedCrewCheck}];
@@ -123,7 +123,7 @@ tiger2 addEventhandler ["GetIn", {[_this,[UnitNATO_IFV1_C,UnitNATO_IFV1_D,UnitNA
 tiger3 addEventhandler ["GetIn", {[_this,[UnitNATO_IFV1_C,UnitNATO_IFV1_D,UnitNATO_IFV1_G],false] call f_fnc_authorisedCrewCheck}];
 gator1 addEventhandler ["GetIn", {[_this,[UnitNATO_IFV1_C,UnitNATO_IFV1_D,UnitNATO_IFV1_G],false] call f_fnc_authorisedCrewCheck}];
 gator2 addEventhandler ["GetIn", {[_this,[UnitNATO_IFV1_C,UnitNATO_IFV1_D,UnitNATO_IFV1_G],false] call f_fnc_authorisedCrewCheck}];
- //VehicleName addEventhandler ["GetIn", {[_this,["UnitClass1","UnitClass2"],false] call f_fnc_authorisedCrewCheck}];
+*/ //VehicleName addEventhandler ["GetIn", {[_this,["UnitClass1","UnitClass2"],false] call f_fnc_authorisedCrewCheck}];
 //UnitNATO_AH1_P,UnitNATO_AH1_CP
 // ====================================================================================
 
@@ -148,7 +148,7 @@ gator2 addEventhandler ["GetIn", {[_this,[UnitNATO_IFV1_C,UnitNATO_IFV1_D,UnitNA
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 // f_var_civAI = independent; 		// Optional: The civilian AI will use this side's settings
-// [] execVM "f\setAISKill\f_setAISkill.sqf";
+ [] execVM "f\setAISKill\f_setAISkill.sqf";
 
 // ====================================================================================
 
