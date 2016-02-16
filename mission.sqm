@@ -3197,8 +3197,8 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitNATO_DC_D";
-					init="GrpNATO_DC = group this; [""vd"",this] call f_fnc_assignGear;";
-					description="US Driver (Repair)";
+					init="GrpNATO_DC = group this; [""uav"",this] call f_fnc_assignGear;";
+					description="US Platoon UAV Controller";
 				};
 			};
 		};
@@ -4279,7 +4279,7 @@ class Mission
 			vehicle="CUP_B_UH60L_FFV_US";
 			skill=0.60000002;
 			text="raven1";
-			init="veh = [this, 2700, 0, ""RAVEN-01"", ""b_air"", ""ColorBrown"", WEST, ""rottrans"", 20] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";";
+			init="veh = [this, 2700, 0, ""RAVEN-01"", ""b_air"", ""ColorBrown"", WEST, ""rottrans"", 20] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";hNil = [this, ""RAVEN-01"", ""b_air"", WEST, ""ColorBlue""] execVM ""tf47CoreScripts\unitMarkerInit.sqf"";";
 		};
 		class Item6
 		{
@@ -4291,7 +4291,7 @@ class Mission
 			lock="UNLOCKED";
 			skill=0.60000002;
 			text="raven2";
-			init="veh = [this, 2700, 0, ""RAVEN-02"", ""b_air"", ""ColorBrown"", WEST, ""rottrans"", 20] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";";
+			init="veh = [this, 2700, 0, ""RAVEN-02"", ""b_air"", ""ColorBrown"", WEST, ""rottrans"", 20] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";hNil = [this, ""RAVEN-02"", ""b_air"", WEST, ""ColorBlue""] execVM ""tf47CoreScripts\unitMarkerInit.sqf"";";
 		};
 		class Item7
 		{
@@ -4668,7 +4668,7 @@ class Mission
 			lock="UNLOCKED";
 			skill=0.60000002;
 			text="goose1";
-			init="veh = [this, 2700, 0, ""GOOSE"", ""b_air"", ""ColorBrown"", WEST, ""rottrans"", 30] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";";
+			init="veh = [this, 2700, 0, ""GOOSE"", ""b_air"", ""ColorBrown"", WEST, ""rottrans"", 30] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";hNil = [this, ""GOOSE"", ""b_plane"", WEST, ""ColorBlue""] execVM ""tf47CoreScripts\unitMarkerInit.sqf"";";
 		};
 		class Item41
 		{
@@ -7363,7 +7363,7 @@ class Mission
 			lock="UNLOCKED";
 			skill=0.60000002;
 			text="pelican1";
-			init="veh = [this, 3600, 0, ""PELICAN"", ""b_air"", ""ColorBrown"", WEST, ""rottrans"", 20] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";";
+			init="veh = [this, 3600, 0, ""PELICAN"", ""b_air"", ""ColorBrown"", WEST, ""rottrans"", 20] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";hNil = [this, ""PLECAN"", ""b_air"", WEST, ""ColorBlue""] execVM ""tf47CoreScripts\unitMarkerInit.sqf"";";
 		};
 		class Item308
 		{
@@ -10395,7 +10395,7 @@ class Mission
 			lock="UNLOCKED";
 			skill=0.60000002;
 			text="griffin1";
-			init="veh = [this, 2700, 0, ""GRIFFIN"", ""b_air"", ""ColorBrown"", WEST, ""rottrans"", 25] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";";
+			init="veh = [this, 2700, 0, ""GRIFFIN"", ""b_air"", ""ColorBrown"", WEST, ""rottrans"", 25] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";hNil = [this, ""GRIFFIN"", ""b_air"", WEST, ""ColorBlue""] execVM ""tf47CoreScripts\unitMarkerInit.sqf"";";
 		};
 		class Item598
 		{
@@ -10407,7 +10407,7 @@ class Mission
 			lock="UNLOCKED";
 			skill=0.60000002;
 			text="dustoff";
-			init="veh = [this, 2700, 0, ""DUSTOFF"", ""b_air"", ""ColorRed"", WEST, ""rottrans"", 30] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";";
+			init="veh = [this, 2700, 0, ""DUSTOFF"", ""b_air"", ""ColorRed"", WEST, ""rottrans"", 30] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";hNil = [this, ""DUSTOFF"", ""b_air"", WEST, ""ColorBlue""] execVM ""tf47CoreScripts\unitMarkerInit.sqf"";";
 		};
 		class Item599
 		{
@@ -13562,7 +13562,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="albatros1";
-			init="veh = [this, 2700, 0, ""ALBATROS"", ""b_plane"", ""ColorOrange"", WEST, ""fixatk"", 25] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";if(isServer) then { clearBackpackCargoGlobal this; clearWeaponCargoGlobal this;          clearMagazineCargoGlobal this;         clearItemCargoGlobal this; };";
+			init="veh = [this, 2700, 0, ""ALBATROS"", ""b_plane"", ""ColorOrange"", WEST, ""fixatk"", 25] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";hNil = [this, ""ALBATROS"", ""b_plane"", WEST, ""ColorBlue""] execVM ""tf47CoreScripts\unitMarkerInit.sqf"";if(isServer) then { clearBackpackCargoGlobal this; clearWeaponCargoGlobal this;          clearMagazineCargoGlobal this;         clearItemCargoGlobal this; };";
 		};
 		class Item891
 		{
