@@ -104,7 +104,7 @@ Crew Slots = ["Unitname"]
 _vehicleRestrictionData = [
         // Rotary Wing Attack 1 AH-6 Firefly
         ["firefly1",                       [1, 1,  ["UnitNATO_AH1_P","UnitNATO_AH1_CP"],                               ["UnitNATO_AH1_P","UnitNATO_AH1_CP"]]],
-        // Rotary Wing Attack 2 AH 64 D Manticore
+        // Rotary Wing Attack 2 AH 1 Z Manticore
         ["manticore1",                       [1, 1,  ["UnitNATO_AH1_P","UnitNATO_AH1_CP"],                               ["UnitNATO_AH1_P","UnitNATO_AH1_CP"]]],
         // Rotary Transport MH 6 Butterfly
         ["butterfly1",                      [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"]]],
