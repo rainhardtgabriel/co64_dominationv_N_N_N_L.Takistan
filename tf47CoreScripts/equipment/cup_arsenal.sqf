@@ -74,6 +74,7 @@ _mod_weapons = [
 "tf47_at4_heat",
 "tf47_m3maaws",
 "CUP_launch_FIM92Stinger",
+"CUP_Weapon_arifle_Mk20",
 "CUP_srifle_M107_Base",
 "CUP_hgun_Colt1911",
 "CUP_HandGrenade_M67",

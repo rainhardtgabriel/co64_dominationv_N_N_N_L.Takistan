@@ -19,8 +19,10 @@ TICKETS_HARDCAP = 150;
 // 7 ... ISLA DI CAPRAIA PatrolOps Mod
 // 9 ... Invade&Annex Al Rayak
 // 7 ... I&A Altis
+// 93 ...Insurgency Kunduz
+// 94...Operation Solve Conflict {Domination 2.0}
 // 99... Development Server
-TF47_MISSIONID = 1;
+TF47_MISSIONID = 94;
  
 // Mission Name/Version Info for Log
 TF47_MISSIONINFO = "CO 64 Operation Solve Conflict";
@@ -50,13 +52,13 @@ _statusMarkerData = [
         //["a_2",              ["mc2marker",                           "b_hq",                         "ColorGreen",           "CCT - Fliegerleitoffizier ""TOPMAN""",                                                 true]]
         ["raven1",           ["callsign_raven1",        "b_air",        "ColorBrown",           "RAVEN-01",     false]],
         ["raven2",           ["callsign_raven2",        "b_air",        "ColorBrown",           "RAVEN-02",     false]],
-        ["dustoff",          ["callsign_raven2",        "b_air",        "ColorBrown",           "RAVEN-02",     false]],
+        ["dustoff",          ["callsign_dustoff",       "b_air",        "ColorRED",           "DUSTOFF",     false]],
         ["butterfly1",       ["callsign_butterfly1",    "b_air",        "ColorBrown",           "BUTTERFLY-01", false]],
         ["butterfly2",       ["callsign_butterfly2",    "b_air",        "ColorBrown",           "BUTTERFLY-02", false]],
         ["pelican1",         ["callsign_pelican1",      "b_air",        "ColorBrown",           "PELICAN",      false]],
         ["griffin1",         ["callsign_griffin1",      "b_air",        "ColorBrown",           "GRIFFIN-01",   false]],
         ["goose1",           ["callsign_goose1",        "b_plane",      "ColorBrown",           "GOOSE",        false]],
-        ["manticore1",       ["callsign_manticore1",    "b_air",        "ColorRed",             "DUSTOFF",      false]],
+        ["manticore1",       ["callsign_manticore1",    "b_air",        "ColorOrange",          "MANTICORE",    false]],
         ["firefly1",         ["callsign_firefly1",      "b_air",        "ColorOrange",          "FIREFLY",      false]],
         // ["thunderbird1",     ["callsign_thunderbird1",       "b_plane",                      "ColorOrange",          "THUNDERBIRD",                                                                                                  false]],
         ["falcon1",          ["callsign_falcon1",       "b_plane",      "ColorOrange",          "FALCON-01",    false]],
@@ -102,7 +104,7 @@ Crew Slots = ["Unitname"]
 _vehicleRestrictionData = [
         // Rotary Wing Attack 1 AH-6 Firefly
         ["firefly1",                       [1, 1,  ["UnitNATO_AH1_P","UnitNATO_AH1_CP"],                               ["UnitNATO_AH1_P","UnitNATO_AH1_CP"]]],
-        // Rotary Wing Attack 2 AH 64 D Manticore
+        // Rotary Wing Attack 2 AH 1 Z Manticore
         ["manticore1",                       [1, 1,  ["UnitNATO_AH1_P","UnitNATO_AH1_CP"],                               ["UnitNATO_AH1_P","UnitNATO_AH1_CP"]]],
         // Rotary Transport MH 6 Butterfly
         ["butterfly1",                      [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"]]],
