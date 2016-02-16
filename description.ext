@@ -264,7 +264,7 @@ class Params
 	};
 */
 
-/*
+
 	class f_param_AISkill_OPFOR
 	{
 		title = "$STR_f_param_AISkill_OPFOR";
@@ -273,7 +273,7 @@ class Params
 		default = 1;
 		code = "f_param_AISkill_OPFOR = %1";
 	};
-*/
+
 
 /*
 	class f_param_AISkill_INDP
@@ -310,7 +310,7 @@ class Params
 		title = "Sand Particle EFX strength";
 		values[] = {0,1,2,3,4};
 		texts[] = {"Random","Light","Moderate","Heavy","Disabled"};
-		default = 1;
+		default = 3;
 	};
 
 };
