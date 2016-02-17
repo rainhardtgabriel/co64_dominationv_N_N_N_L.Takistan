@@ -21132,8 +21132,8 @@ class Mission
 			age="UNKNOWN";
 			name="trig_sandstorm";
 			expCond="player in thislist;";
-			expActiv="0 = [[1,1,100],"""",true] execVM ""MKY\MKY_Sand_Snow_Init.sqf"";";
-			expDesactiv="0 = [] call MKY_fnc_Exit_Sand;";
+			expActiv="[0 = [[1,1,100],"""",true] execVM ""MKY\MKY_Sand_Snow_Init.sqf""] call BIS_fnc_MP;";
+			expDesactiv="[0 = [] call MKY_fnc_Exit_Sand] call BIS_fnc_MP;";
 			class Effects
 			{
 			};
