@@ -324,7 +324,7 @@ _items_no_radio = [
 "Laserdesignator_02",
 "Laserdesignator_03",		
 "ToolKit",
-"B_UavTerminal",
+"B_UavTerminal"
 ];
 _mod_magazines = [
 "30Rnd_65x39_caseless_mag",
