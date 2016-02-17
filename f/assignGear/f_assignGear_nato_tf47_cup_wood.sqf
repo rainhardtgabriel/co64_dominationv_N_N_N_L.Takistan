@@ -338,6 +338,7 @@ if (_isMan) then {
 	_unit linkItem "ItemWatch";		// Add and equip a watch
 	_unit addItemtoUniform "ACE_Maptools"; 	// Add Maptools
 	_unit addItemtoVest "ACE_IR_Strobe_Item"; // Add IR Strobe
+    _unit addItemtoVest "ACE_CableTie"; // Add Cable Ties
 	_unit addItemToVest "ACE_Flashlight_XL50"; // Add ACE Flashlights
 	//_unit linkItem "ItemGPS"; 	// Add and equip a GPS
 
