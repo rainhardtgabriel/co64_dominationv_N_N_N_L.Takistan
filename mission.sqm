@@ -257,7 +257,7 @@ class Mission
 						};
 						class Item1
 						{
-							value="0";
+							value="1";
 							parentCls="ACE_moduleAdvancedMedicalSettings";
 							typeName="enableAdvancedWounds";
 						};
@@ -287,7 +287,7 @@ class Mission
 						};
 						class Item6
 						{
-							value="3";
+							value="2";
 							parentCls="ACE_moduleAdvancedMedicalSettings";
 							typeName="useLocation_PAK";
 						};
@@ -299,7 +299,7 @@ class Mission
 						};
 						class Item8
 						{
-							value="1";
+							value="0";
 							parentCls="ACE_moduleAdvancedMedicalSettings";
 							typeName="consumeItem_SurgicalKit";
 						};
@@ -323,7 +323,7 @@ class Mission
 						};
 						class Item12
 						{
-							value="1";
+							value="0";
 							parentCls="ACE_moduleAdvancedMedicalSettings";
 							typeName="painIsOnlySuppressed";
 						};
@@ -536,6 +536,8 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					syncId=0;
+					synchronizations[]={2};
 				};
 			};
 		};
@@ -1851,8 +1853,8 @@ class Mission
 					skill=1;
 					text="evileye";
 					init="hNil = [this, ""EVILEYE"", ""b_uav"", WEST, ""ColorBrown""] execVM ""tf47CoreScripts\unitMarkerInit.sqf"";";
-					syncId=0;
-					synchronizations[]={0};
+					syncId=1;
+					synchronizations[]={1};
 				};
 			};
 		};
@@ -4231,7 +4233,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={-57.804966,463.0538,736.3327};
+					position[]={-63.065262,463.6965,731.07526};
 					class args
 					{
 						items=3;
@@ -5467,6 +5469,8 @@ class Mission
 			text="MEDIC_TENT_2";
 			init="this enableSimulation false;";
 			description="Medic Tent";
+			syncId=2;
+			synchronizations[]={0};
 		};
 		class Item119
 		{
