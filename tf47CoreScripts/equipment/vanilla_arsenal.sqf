@@ -307,7 +307,7 @@ _mod_backpacks = [
 "U_B_Wetsuit", 	//Wetsuit [NATO]
 "U_I_G_resistanceLeader_F", 	//Combat Fatigues (Stavrou) 	 		 		
 "U_IG_leader", 	//Guerilla Uniform 	 			 		
-"C_Marshal_F 	//Marshal
+"C_Marshal_F" 	//Marshal
 ];
 _items_no_radio = [
 "ItemWatch",
