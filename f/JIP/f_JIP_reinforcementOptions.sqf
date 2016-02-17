@@ -10,8 +10,6 @@ private ["_unit","_textAction","_grp","_joinDistance","_loadout","_checkparam"];
 
 //Check if Script was called from arsenal
 
-_checkparam = _this select 1;// expects 1
-
 // ALLOW PLAYER TO SELECT GROUP
 // Using a dialog we allow the player to select the group s/he is going to [re-]join.
 

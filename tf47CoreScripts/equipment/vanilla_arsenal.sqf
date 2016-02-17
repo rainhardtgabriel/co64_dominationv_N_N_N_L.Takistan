@@ -233,8 +233,8 @@ _mod_backpacks = [
 "U_OG_leader", 	//Guerilla Uniform 		
 "U_BG_Guerilla1_1", 	//Guerilla Garment
 "U_IG_Guerilla1_1", 	//Guerilla Garment 
-"U_OG_Guerilla1_1";//Guerilla Garment
-"U_OG_Guerilla2_1";//Guerilla Outfit (Plain, Dark) 
+"U_OG_Guerilla1_1",		//Guerilla Garment
+"U_OG_Guerilla2_1",		//Guerilla Outfit (Plain, Dark) 
 "U_IG_Guerilla2_1", 	//Guerilla Outfit (Plain, Dark) 
 "U_BG_Guerilla2_1", 	//Guerilla Outfit (Plain, Dark)
 "U_BG_Guerilla2_2", 	//Guerilla Outfit (Pattern) 
