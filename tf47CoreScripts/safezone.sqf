@@ -32,8 +32,8 @@ player addEventHandler ["Fired", {
 	{
 		deleteVehicle (_this select 6);
 		titleText [MESSAGE, "PLAIN", 3];
-	};/*
-	if (({(_this select 0) hasWeapon _x} count ["B_sniper_F","B_spotter_F"] > 0)) then {
+	};
+	/*if (({(_this select 0) hasWeapon _x} count ["B_sniper_F","B_spotter_F"] > 0)) then {
 		if (({(_this select 0) isKindOf _x} count ["CUP_Weapon_srifle_AS50","CUP_Weapon_arifle_Mk20"] < 1)) then {
 			(_this select 0) removeWeapon (primaryWeapon (_this select 0));
 			titleText [SNIPER_MSG,"PLAIN",3];
