@@ -125,7 +125,7 @@ _mod_backpacks = [
 "H_HelmetB_sand", 	//ECH (Sand)
 "H_HelmetB_desert", 	//ECH (Desert) 	 
 "H_HelmetB_light_black", 	//ECH (Light, Black) 			
-"H_HelmetB_light_grass //ECH (Light, Grass)
+"H_HelmetB_light_grass", //ECH (Light, Grass),
 "H_HelmetB_light_snakeskin", 	//ECH (Light, Snakeskin)
 "H_HelmetB_light_desert", 	//ECH (Light, Desert)
 "H_HelmetB_light_sand", 	//ECH (Light, Sand) 
