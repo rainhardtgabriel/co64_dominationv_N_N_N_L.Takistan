@@ -219,17 +219,18 @@ class Mission
 	{
 		briefingName="co64_Operation_Conflict_Solved.Takistan";
 		overviewText="[TF47] Community Project";
-		timeOfChanges=1800.0002;
-		startWeather=0.40000001;
-		startWind=0.1;
-		startWaves=0.1;
-		forecastWeather=0.40000001;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
-		year=2009;
-		day=28;
-		hour=16;
+		resistanceWest=0;
+		startWeather=0.39999998;
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWeather=0.39999998;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
+		year=1995;
+		month=8;
+		day=18;
+		hour=8;
 		minute=20;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
@@ -468,6 +469,8 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					syncId=0;
+					synchronizations[]={4,7,6,5};
 				};
 			};
 		};
@@ -536,8 +539,8 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=0;
-					synchronizations[]={2};
+					syncId=1;
+					synchronizations[]={9};
 				};
 			};
 		};
@@ -572,6 +575,8 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					syncId=2;
+					synchronizations[]={10,8,11};
 				};
 			};
 		};
@@ -1853,8 +1858,8 @@ class Mission
 					skill=1;
 					text="evileye";
 					init="hNil = [this, ""EVILEYE"", ""b_uav"", WEST, ""ColorBrown""] execVM ""tf47CoreScripts\unitMarkerInit.sqf"";";
-					syncId=1;
-					synchronizations[]={1};
+					syncId=3;
+					synchronizations[]={3};
 				};
 			};
 		};
@@ -3167,6 +3172,8 @@ class Mission
 					text="UnitNATO_CO_M";
 					init="GrpNATO_CO = group this; [""m"",this] call f_fnc_assignGear;";
 					description="US Medic";
+					syncId=4;
+					synchronizations[]={0};
 				};
 			};
 		};
@@ -3240,6 +3247,8 @@ class Mission
 					text="UnitNATO_ASL_M";
 					init="GrpNATO_ASL = group this; [""m"",this] call f_fnc_assignGear;";
 					description="US Alpha Medic";
+					syncId=5;
+					synchronizations[]={0};
 				};
 			};
 		};
@@ -3463,6 +3472,8 @@ class Mission
 					text="UnitNATO_BSL_M";
 					init="GrpNATO_BSL = group this; [""m"",this] call f_fnc_assignGear;";
 					description="US Bravo Medic";
+					syncId=6;
+					synchronizations[]={0};
 				};
 			};
 		};
@@ -3686,6 +3697,8 @@ class Mission
 					text="UnitNATO_CSL_M";
 					init="GrpNATO_CSL = group this; [""m"",this] call f_fnc_assignGear;";
 					description="US Charlie Medic";
+					syncId=7;
+					synchronizations[]={0};
 				};
 			};
 		};
@@ -5092,6 +5105,8 @@ class Mission
 			vehicle="CUP_B_HMMWV_Ambulance_USA";
 			skill=0.60000002;
 			init="veh = [this, 1800, 7200, "" "", ""mil_dot"", ""ColorBlue"", WEST, """", 15] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";";
+			syncId=8;
+			synchronizations[]={2};
 		};
 		class Item79
 		{
@@ -5469,8 +5484,8 @@ class Mission
 			text="MEDIC_TENT_2";
 			init="this enableSimulation false;";
 			description="Medic Tent";
-			syncId=2;
-			synchronizations[]={0};
+			syncId=9;
+			synchronizations[]={1};
 		};
 		class Item119
 		{
@@ -5538,6 +5553,8 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			init="veh = [this, 1800, 7200, "" "", ""mil_dot"", ""ColorBlue"", WEST, """", 15] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";";
+			syncId=10;
+			synchronizations[]={2};
 		};
 		class Item125
 		{
@@ -10454,6 +10471,8 @@ class Mission
 			skill=0.60000002;
 			text="dustoff";
 			init="veh = [this, 2700, 0, ""DUSTOFF"", ""b_air"", ""ColorRed"", WEST, ""rottrans"", 30] execVM ""tf47CoreScripts\vehicleRespawn.sqf"";hNil = [this, ""DUSTOFF"", ""b_air"", WEST, ""ColorBlue""] execVM ""tf47CoreScripts\unitMarkerInit.sqf"";";
+			syncId=11;
+			synchronizations[]={2};
 		};
 		class Item599
 		{
