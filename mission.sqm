@@ -21221,6 +21221,7 @@ class Mission
 			age="UNKNOWN";
 			expCond="(""Man"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
 			expActiv="0 = [thislist] execVM ""tf47CoreScripts\playerRespawn.sqf"";";
+			expDesactiv="player removeAction F3_JIP_reinforcementOptionsAction;  F3_JIP_reinforcementOptionsAction = nil;";
 			class Effects
 			{
 			};
