@@ -21133,7 +21133,7 @@ class Mission
 			name="trig_sandstorm";
 			expCond="player in thislist;";
 			expActiv="[[[[1,1,100],"""",true], ""MKY\MKY_Sand_Snow_Init.sqf""], ""BIS_fnc_execVM"", true] call BIS_fnc_MP;";
-			expDesactiv="[0 = [] call MKY_fnc_Exit_Sand] call BIS_fnc_MP;";
+			expDesactiv="[{0 = [] call MKY_fnc_Exit_Sand;},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;";
 			class Effects
 			{
 			};
