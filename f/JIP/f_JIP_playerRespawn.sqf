@@ -75,7 +75,7 @@ if (isNil "F3_JIP_reinforcementOptionsAction") then {
 if (typeof _unit != "seagull" && {f_var_JIP_RemoveCorpse && !isNull _corpse}) then {
 	_corpse spawn {
 		hideBody _this;
-		sleep 60;
+		sleep 20;
 		deleteVehicle _this;
 	};
 };

@@ -86,7 +86,7 @@ if ( _side_select == "lalezar") then {
 									_side_trig = createTrigger 					["EmptyDetector", getPos _side_log_pos];   
 									_side_trig setTriggerArea 					[_side_rad, _side_rad, 0, false];  
 									_side_trig setTriggerActivation 			["none", "notpresent", true];   
-									_side_trig setTriggerStatements 			["!alive cache1", "0 = execVM ""SIDEscripts\militarizeSideEast.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; [""Sidemission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; [""tsk4"", true, ['Find the power transformer running the oil reservoir pumps','Side Mission: Lalezar',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger" , ""];
+									_side_trig setTriggerStatements 			["!alive cache1", "0 = execVM ""SIDEscripts\militarizeSideEast.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; [""Sidemission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; [""tsk4"", true, ['Find the power transformer running the oil reservoir pumps','Side Mission: Lalezar',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask;[""tf47_changetickets"", [WEST, 2, 5]] call CBA_fnc_globalEvent; deletevehicle thisTrigger" , ""];
 								
 									//////////////// moves sandstorm trigger to side ///////////////////////////////////////////////////////////////////////////		
 									sleep 1;
@@ -139,7 +139,7 @@ if ( _side_select == "woods") then {
 									_side_trig = createTrigger 					["EmptyDetector", getPos _side_log_pos];   
 									_side_trig setTriggerArea 					[_side_rad, _side_rad, 0, false];  
 									_side_trig setTriggerActivation 			["EAST", "notpresent", true];   
-									_side_trig setTriggerStatements 			["this", "0 = execVM ""SIDEscripts\militarizeSideEast.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; [""Sidemission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; [""tsk5"", true, ['Find the enemy Camp and eliminate all enemy Soldiers!','Side Mission: Woods',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger" , ""];
+									_side_trig setTriggerStatements 			["this", "0 = execVM ""SIDEscripts\militarizeSideEast.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; [""Sidemission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; [""tsk5"", true, ['Find the enemy Camp and eliminate all enemy Soldiers!','Side Mission: Woods',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask;[""tf47_changetickets"", [WEST, 2, 5]] call CBA_fnc_globalEvent; deletevehicle thisTrigger" , ""];
 		
 
 									

@@ -44,12 +44,12 @@ if (side player != _side) exitWith {};
 if (count _this > 4) then {
 	_color = _this select 4;
 } else {
-	_color = "ColorRed";
+	_color = "ColorOPFOR";
 	if (_side == WEST) then {
-		_color = "ColorBlue";
+		_color = "ColorBLUFOR";
 	};
 	if (_side == RESISTANCE) then {
-		_color = "ColorYellow";
+		_color =  "ColorIndependent";
 	};
 };
 _markerdespawn = if (count _this > 5) then {_this select 5} else { 300 };

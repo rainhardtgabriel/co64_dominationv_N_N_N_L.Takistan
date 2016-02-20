@@ -22,7 +22,7 @@ f_radios_settings_acre2_longRange = ["co", "dc", "m", "mmgag","hmgag","matag","h
 
 // Unit types you want to give an extra long-range radio
 // E.G: ["co", "m"] would give the CO and all medics an extra long-range radios
-f_radios_settings_acre2_extraRadios = [];
+f_radios_settings_acre2_extraRadios = ["co","dc","pp","pcc"];
 
 // Standard Short
 f_radios_settings_acre2_standardSHRadio = "ACRE_PRC343";
@@ -42,14 +42,14 @@ f_radios_settings_acre2_languages = [["english","English"],["farsi","Farsi"],["g
 // can define multiple
 f_radios_settings_acre2_language_blufor = ["english"];
 f_radios_settings_acre2_language_opfor = ["farsi"];
-f_radios_settings_acre2_language_indfor = ["greek"];
+f_radios_settings_acre2_language_indfor = ["english"];
 
 // Channels names
 // first item in the array will correspond to the first channel
 // note these only work if f_radios_settings_acre2_disableFrequencySplit is set to false
-f_radios_settings_acre2_groups_blufor = ["Alpha","Bravo","Charlie","Delta","Echo","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-ray","Yankee","Zulu"];
+f_radios_settings_acre2_groups_blufor = ["Test","Ground-Ground","Ground-Air","AIR","Godfather","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-ray","Yankee","Zulu"];
 f_radios_settings_acre2_groups_opfor = ["Alpha","Bravo","Charlie","Delta","Echo","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-ray","Yankee","Zulu"];
-f_radios_settings_acre2_groups_indfor = ["Alpha","Bravo","Charlie","Delta","Echo","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-ray","Yankee","Zulu"];
+f_radios_settings_acre2_groups_indfor = ["Test","Ground-Ground","Ground-Air","AIR","Godfather","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-ray","Yankee","Zulu"];
 
 // ====================================================================================
 // MISC ACRE2 settings, these are all set the ACRE2 defaults

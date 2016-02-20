@@ -33,34 +33,6 @@ f_script_briefing = [] execVM "briefing.sqf";
 
 // ====================================================================================
 
-// F3 - F3 Folk ARPS Group IDs
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-f_script_setGroupIDs = [] execVM "f\setGroupID\f_setGroupIDs.sqf";
-
-// ====================================================================================
-
-// F3 - Buddy Team Colours
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-f_script_setTeamColours = [] execVM "f\setTeamColours\f_setTeamColours.sqf";
-
-// ====================================================================================
-
-// F3 - Fireteam Member Markers
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-[] spawn f_fnc_SetLocalFTMemberMarkers;
-
-// ====================================================================================
-
-// F3 - F3 Folk ARPS Group Markers
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-f_script_setGroupMarkers = [] execVM "f\groupMarkers\f_setLocalGroupMarkers.sqf";
-
-// ====================================================================================
-
 // F3 - F3 Common Local Variables
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // WARNING: DO NOT DISABLE THIS COMPONENT
@@ -95,34 +67,43 @@ f_var_removeBodyDistance = 500;
 
 // F3 - Authorised Crew Check
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// VehicleName addEventhandler ["GetIn", {[_this,[UnitName1,UnitName2],false] call f_fnc_authorisedCrewCheck}];
-// VehicleName addEventhandler ["GetIn", {[_this,["UnitClass1","UnitClass2"],false] call f_fnc_authorisedCrewCheck}];
-
-// ====================================================================================
-
-// F3 - Casualties Cap
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// [[GroupName or SIDE],100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
-// [[GroupName or SIDE],100,{code}] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
-
-// BLUFOR > NATO
-// [BLUFOR,100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
-
-// OPFOR > CSAT
-// [OPFOR,100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
-
-// INDEPENDENT > AAF
-// [INDEPENDENT,100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
-
+//Rotary Wings Transport
+/*dustoff addEventhandler ["GetIn", {[_this,[UnitNATO_TH1_P,UnitNATO_TH1_CP,UnitNATO_TH2_P,UnitNATO_TH2_CP,UnitNATO_TH1_G1,UnitNATO_TH1_G2,UnitNATO_TH2_G1,UnitNATO_TH2_G2],false] call f_fnc_authorisedCrewCheck}];
+raven1 addEventhandler ["GetIn", {[_this,[UnitNATO_TH1_P,UnitNATO_TH1_CP,UnitNATO_TH2_P,UnitNATO_TH2_CP,UnitNATO_TH1_G1,UnitNATO_TH1_G2,UnitNATO_TH2_G1,UnitNATO_TH2_G2],false] call f_fnc_authorisedCrewCheck}];
+raven2 addEventhandler ["GetIn", {[_this,[UnitNATO_TH1_P,UnitNATO_TH1_CP,UnitNATO_TH2_P,UnitNATO_TH2_CP,UnitNATO_TH1_G1,UnitNATO_TH1_G2,UnitNATO_TH2_G1,UnitNATO_TH2_G2],false] call f_fnc_authorisedCrewCheck}];
+pelican1 addEventhandler ["GetIn", {[_this,[UnitNATO_TH1_P,UnitNATO_TH1_CP,UnitNATO_TH2_P,UnitNATO_TH2_CP,UnitNATO_TH1_G1,UnitNATO_TH1_G2,UnitNATO_TH2_G1,UnitNATO_TH2_G2],false] call f_fnc_authorisedCrewCheck}];
+griffin1 addEventhandler ["GetIn", {[_this,[UnitNATO_TH1_P,UnitNATO_TH1_CP,UnitNATO_TH2_P,UnitNATO_TH2_CP,UnitNATO_TH1_G1,UnitNATO_TH1_G2,UnitNATO_TH2_G1,UnitNATO_TH2_G2],false] call f_fnc_authorisedCrewCheck}];
+butterfly1 addEventhandler ["GetIn", {[_this,[UnitNATO_TH1_P,UnitNATO_TH1_CP,UnitNATO_TH2_P,UnitNATO_TH2_CP],false] call f_fnc_authorisedCrewCheck}];
+butterfly2 addEventhandler ["GetIn", {[_this,[UnitNATO_TH1_P,UnitNATO_TH1_CP,UnitNATO_TH2_P,UnitNATO_TH2_CP],false] call f_fnc_authorisedCrewCheck}];
+goose1 addEventhandler ["GetIn", {[_this,[UnitNATO_TH1_P,UnitNATO_TH1_CP,UnitNATO_TH2_P,UnitNATO_TH2_CP],false] call f_fnc_authorisedCrewCheck}];
+// Rotary Wings Attack
+firefly1 addEventhandler ["GetIn", {[_this,[UnitNATO_AH1_P,UnitNATO_AH1_CP],false] call f_fnc_authorisedCrewCheck}];
+manticore1 addEventhandler ["GetIn", {[_this,[UnitNATO_AH1_P,UnitNATO_AH1_CP],false] call f_fnc_authorisedCrewCheck}];
+// Fixed Wings Attack
+wasp1 addEventhandler ["GetIn", {[_this,[UnitNATO_AFW1_P,UnitNATO_AFW2_P],false] call f_fnc_authorisedCrewCheck}];
+wasp2 addEventhandler ["GetIn", {[_this,[UnitNATO_AFW1_P,UnitNATO_AFW2_P],false] call f_fnc_authorisedCrewCheck}];
+// Fixed Wings Transport
+albatros1 addEventhandler ["GetIn", {[_this,[UnitNATO_TH1_P,UnitNATO_TH1_CP,UnitNATO_TH2_P,UnitNATO_TH2_CP,UnitNATO_TH1_G1,UnitNATO_TH1_G2,UnitNATO_TH2_G1,UnitNATO_TH2_G2],false] call f_fnc_authorisedCrewCheck}];
+// Tanks
+rhino1 addEventhandler ["GetIn", {[_this,[UnitNATO_TNK1_C,UnitNATO_TNK1_D,UnitNATO_TNK1_G],false] call f_fnc_authorisedCrewCheck}];
+rhino2 addEventhandler ["GetIn", {[_this,[UnitNATO_TNK1_C,UnitNATO_TNK1_D,UnitNATO_TNK1_G],false] call f_fnc_authorisedCrewCheck}];
+lion1 addEventhandler ["GetIn", {[_this,[UnitNATO_TNK1_C,UnitNATO_TNK1_D,UnitNATO_TNK1_G],false] call f_fnc_authorisedCrewCheck}];
+lion2 addEventhandler ["GetIn", {[_this,[UnitNATO_TNK1_C,UnitNATO_TNK1_D,UnitNATO_TNK1_G],false] call f_fnc_authorisedCrewCheck}];
+frog1 addEventhandler ["GetIn", {[_this,[UnitNATO_TNK1_C,UnitNATO_TNK1_D,UnitNATO_TNK1_G],false] call f_fnc_authorisedCrewCheck}];
+tiger1 addEventhandler ["GetIn", {[_this,[UnitNATO_IFV1_C,UnitNATO_IFV1_D,UnitNATO_IFV1_G],false] call f_fnc_authorisedCrewCheck}];
+tiger2 addEventhandler ["GetIn", {[_this,[UnitNATO_IFV1_C,UnitNATO_IFV1_D,UnitNATO_IFV1_G],false] call f_fnc_authorisedCrewCheck}];
+tiger3 addEventhandler ["GetIn", {[_this,[UnitNATO_IFV1_C,UnitNATO_IFV1_D,UnitNATO_IFV1_G],false] call f_fnc_authorisedCrewCheck}];
+gator1 addEventhandler ["GetIn", {[_this,[UnitNATO_IFV1_C,UnitNATO_IFV1_D,UnitNATO_IFV1_G],false] call f_fnc_authorisedCrewCheck}];
+gator2 addEventhandler ["GetIn", {[_this,[UnitNATO_IFV1_C,UnitNATO_IFV1_D,UnitNATO_IFV1_G],false] call f_fnc_authorisedCrewCheck}];
+*/ //VehicleName addEventhandler ["GetIn", {[_this,["UnitClass1","UnitClass2"],false] call f_fnc_authorisedCrewCheck}];
+//UnitNATO_AH1_P,UnitNATO_AH1_CP
 // ====================================================================================
 
 // F3 - AI Skill Selector
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 // f_var_civAI = independent; 		// Optional: The civilian AI will use this side's settings
-// [] execVM "f\setAISKill\f_setAISkill.sqf";
+ [] execVM "f\setAISKill\f_setAISkill.sqf";
 
 // ====================================================================================
 
@@ -133,46 +114,10 @@ f_var_removeBodyDistance = 500;
 
 // ====================================================================================
 
-// F3 - Name Tags
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// [] execVM "f\nametag\f_nametags.sqf";
-
-// ====================================================================================
-
-// F3 - Group E&E Check
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// [side,ObjectName or "MarkerName",100,1] execVM "f\EandEcheck\f_EandECheckLoop.sqf";
-// [["Grp1","Grp2"],ObjectName or "MarkerName",100,1] execVM "f\EandEcheck\f_EandECheckLoop.sqf";
-
-// ====================================================================================
-
-// F3 - ORBAT Notes
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-[] execVM "f\briefing\f_orbatNotes.sqf";
-
-// ====================================================================================
-
 // F3 - Loadout Notes
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [] execVM "f\briefing\f_loadoutNotes.sqf";
-
-// ====================================================================================
-
-// F3 - Join Group Action
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-[false] execVM "f\groupJoin\f_groupJoinAction.sqf";
-
-// ====================================================================================
-
-// F3 - Mission Timer/Safe Start
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-[] execVM "f\safeStart\f_safeStart.sqf";
 
 // ====================================================================================
 
@@ -212,13 +157,10 @@ f_var_cachingAggressiveness = 1;
 
 // ======================== TF47 Stuff ===================================
 
-
-
-/*
-
 waitUntil { isServer || !isNull player };
 cfgTF47 = compile preprocessFileLineNumbers "cfgTF47.sqf";
 private "_pathToScripts";
+_pathToScripts = "tf47CoreScripts\";
 call cfgTF47;
 
 tf47_fnc_vehicleOnEnter     = compileFinal preprocessFileLineNumbers format ["%1vehicleOnEnter.sqf", _pathToScripts];
@@ -237,7 +179,7 @@ execVM format ["%1serverEvents.sqf", _pathToScripts];
 // Special Markers
 execVM format ["%1mapMarkerInit.sqf", _pathToScripts];
 
-*/
+// ======================== Mission init ================================
 
 [] execVM "AOscripts\AOstart.sqf";
 sleep 0.1;

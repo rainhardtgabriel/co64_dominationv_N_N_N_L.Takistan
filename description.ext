@@ -6,7 +6,7 @@ class Header
 {
 	gameType = Coop;
 	minPlayers = 1;
-	maxPlayers = 42;
+	maxPlayers = 64;
 };
 
 // ============================================================================================
@@ -28,7 +28,7 @@ overviewPicture = "intro\pics\taskforce47.paa";
 // F3 - Debug Console
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-enableDebugConsole = 2;
+enableDebugConsole = 1;
 
 // ============================================================================================
 
@@ -36,10 +36,10 @@ enableDebugConsole = 2;
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 respawn = 3;
-respawndelay = 10;
+respawndelay = 20;
 respawnOnStart = 0;
-RespawnDialog = 0;										// default = 1. show respawn timer and scoreboard when killed.
-respawnTemplates[] = {};
+RespawnDialog = 1;										// default = 1. show respawn timer and scoreboard when killed.
+respawnTemplates[] = {"f_JIP"};  						// possible types are "f_JIP"
 
 // ============================================================================================
 
@@ -151,7 +151,7 @@ class Params
             title = "$STR_f_param_loadouts";
             values[] = {0,1,2};
             texts[] = {"Light","Medium","Heavy"};
-            default = 1;
+            default = 2;
             code = "f_param_backpacks = %1";
     };
 	
@@ -264,7 +264,7 @@ class Params
 	};
 */
 
-/*
+
 	class f_param_AISkill_OPFOR
 	{
 		title = "$STR_f_param_AISkill_OPFOR";
@@ -273,7 +273,7 @@ class Params
 		default = 1;
 		code = "f_param_AISkill_OPFOR = %1";
 	};
-*/
+
 
 /*
 	class f_param_AISkill_INDP
@@ -310,7 +310,7 @@ class Params
 		title = "Sand Particle EFX strength";
 		values[] = {0,1,2,3,4};
 		texts[] = {"Random","Light","Moderate","Heavy","Disabled"};
-		default = 1;
+		default = 3;
 	};
 
 };
@@ -444,11 +444,6 @@ class CfgFunctions
 			file = "f\assignGear";
 			class assignGear{};
 		};
-		class setGroupID
-		{
-			file = "f\setGroupID";
-			class setGroupID{};
-		};
 		class missionConditions
 		{
 			file = "f\missionConditions";
@@ -464,22 +459,10 @@ class CfgFunctions
 			class gCache {};
 			class gUncache {};
 		};
-		class groupMarkers {
-			file = "f\groupMarkers";
-			class localGroupMarker{};
-			class localSpecialistMarker{};
-		};
 		class authorisedCrew
 		{
 			file = "f\authorisedCrew";
 			class authorisedCrewCheck {};
-		};
-		class FTMemberMarkers
-		{
-			file = "f\FTMemberMarkers";
-			class SetLocalFTMemberMarkers{};
-			class GetMarkerColor{};
-			class LocalFTMarkerSync{};
 		};
 		class bodyRemoval
 		{
@@ -496,16 +479,6 @@ class CfgFunctions
 			file = "f\mapClickTeleport";
 			class mapClickTeleportUnit{};
 			class mapClickTeleportGroup{};
-		};
-		class nametag
-		{
-			file = "f\nametag";
-			class drawNameTag{};
-		};
-		class preMount
-		{
-			file = "f\preMount";
-			class mountGroups{};
 		};
 		class zeus
 		{
@@ -530,12 +503,6 @@ class CfgFunctions
 			class tfr_setRadioFrequencies{};
 			class tfr_configureSpectatorChat{};
 		};
-		class safeStart
-		{
-			file = "f\safeStart";
-			class safety{};
-		};
-
 	};
 	
 	class tf47 
@@ -551,10 +518,27 @@ class CfgFunctions
 			class removeFOB;
 			class isFlatEmpty;
 		};
+		class Whitelist {
+			file = "tf47CoreScripts";
+			//class vehicleOnEnter;
+			class addGetInEvent;
+			class addGetOutEvent;
+		};
+
+		class Helpers {
+			file = "tf47CoreScripts\helper";
+			class allowDamage;
+			class setDamage;
+			class setFuel;
+			class lock;
+			class setVehicleVarName;
+			class callVehicleRespawn;
+			class changePlayerSide;
+			class isStable;
+		};
 	};
 	
-		//#include "tf47CoreScripts\UMenu\Functions.hpp"
-        //#include "tf47CoreScripts\tf47CfgFunctions.hpp"	
+		/*#include "tf47CoreScripts\tf47CfgFunctions.hpp"	disabled because of errors keep file in folder*/
 };
 
 class CfgRemoteExec
