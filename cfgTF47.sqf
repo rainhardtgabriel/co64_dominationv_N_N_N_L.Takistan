@@ -33,14 +33,14 @@ _pathtoscripts = "tf47CoreScripts\";
  
 // --- DESPAWN PREVENTION MARKERS -------------------------------------------------------------------------------------------------------------------
 _despawnPreventionMarkers = [
-        ["respawn_west","respawn_west_1",250]
+        ["respawn_west","respawn_west_1","respawn_west_2","respawn_west_3","respawn_west_4",250]
 ];
  
 // --- BASE CLEAN-UP MARKERS ------------------------------------------------------------------------------------------------------------------------
 // see basecleanup.sqf for details
 // Markers to Check for Base Clean-up Process
 // [Marker Name, Clean-up Distance]
-_baseCleanupMarkers = [["respawn_west","respawn_west_1",200]];
+_baseCleanupMarkers = [["respawn_west","respawn_west_1","respawn_west_2","respawn_west_3","respawn_west_4",200]];
  
  
  

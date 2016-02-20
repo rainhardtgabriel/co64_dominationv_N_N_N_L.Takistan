@@ -24,6 +24,8 @@ _veh setVariable ["tf47service", true, true];
 	_vehServ1 = _veh addAction [("<t color=""#fa8f3e"">" + ("Repair Vehicle") + "</t>"), "vehicleService\vehicleRepairSubroutine.sqf", [_veh]];  
 	_vehServ2 = _veh addAction [("<t color=""#fa8f3e"">" + ("Refuel Vehicle") + "</t>"), "vehicleService\vehicleRefuelSubroutine.sqf", [_veh]];  
 	_vehServ3 = _veh addAction [("<t color=""#fa8f3e"">" + ("Rearm Vehicle") + "</t>"), "vehicleService\vehicleAmmoSubroutine.sqf", [_veh]];  
+	
+};
 
 	if(!(_veh isKindOf "Plane")&&!(_veh isKindOf "Helicopter")) then {
 		_vehServ10 = _veh addAction [("<t color=""#fadf3e"">" + ("Loadout: Infantry") + "</t>"), "vehicleService\vehicleLoadoutSubroutine.sqf", [_veh, "CarInf"]];  
