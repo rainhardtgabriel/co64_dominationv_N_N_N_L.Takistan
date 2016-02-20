@@ -115,6 +115,14 @@ class cfgNotifications
 		duration = 3;
 		priority = 5;
 	};
+	class GEAR {
+		title= "REARM"
+		description="%1";
+		iconPicture = "\A3\ui_f\data\map\markers\nato\b_support.paa";
+		duration = 3;
+		priority = 5;
+
+	};
 };
 
 // ============================================================================================

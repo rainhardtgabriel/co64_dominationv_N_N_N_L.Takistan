@@ -43,14 +43,14 @@ f_script_setGroupIDs = [] execVM "f\setGroupID\f_setGroupIDs.sqf";
 // F3 - Buddy Team Colours
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_script_setTeamColours = [] execVM "f\setTeamColours\f_setTeamColours.sqf";
+//f_script_setTeamColours = [] execVM "f\setTeamColours\f_setTeamColours.sqf";
 
 // ====================================================================================
 
 // F3 - Fireteam Member Markers
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[] spawn f_fnc_SetLocalFTMemberMarkers;
+//[] spawn f_fnc_SetLocalFTMemberMarkers;
 
 // ====================================================================================
 
@@ -177,7 +177,7 @@ gator2 addEventhandler ["GetIn", {[_this,[UnitNATO_IFV1_C,UnitNATO_IFV1_D,UnitNA
 // F3 - ORBAT Notes
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[] execVM "f\briefing\f_orbatNotes.sqf";
+//[] execVM "f\briefing\f_orbatNotes.sqf";
 
 // ====================================================================================
 
@@ -207,7 +207,7 @@ gator2 addEventhandler ["GetIn", {[_this,[UnitNATO_IFV1_C,UnitNATO_IFV1_D,UnitNA
 
 f_var_JIP_FirstMenu = false;		// Do players connecting for the first time get the JIP menu? - This only works in missions with respawn.
 f_var_JIP_RemoveCorpse = true;		// Remove the old corpse of respawning players?
-f_var_JIP_GearMenu = true;			// Can JIP/respawned players select their own gear? False will use gear assigned by F3 Gear Component if possible
+f_var_JIP_GearMenu = false;			// Can JIP/respawned players select their own gear? False will use gear assigned by F3 Gear Component if possible
 
 // ====================================================================================
 

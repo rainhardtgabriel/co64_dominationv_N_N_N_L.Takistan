@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8246.4375,321.99643,2219.061};
+		pos[]={8256.8936,313.22662,2201.6211};
 		dir[]={0.019846063,-0.41085482,-0.91150618};
 		up[]={0.0089441203,0.91169477,-0.41077179};
 		aside[]={-0.99978471,1.5750993e-007,-0.021770138};
@@ -273,7 +273,7 @@ class Mission
 			text="GOOSE";
 			type="b_air";
 			colorName="ColorBlack";
-			angle=180.25395;
+			angle=180.25392;
 			id=8;
 		};
 		class Item9
@@ -1373,8 +1373,8 @@ class Mission
 		class Item110
 		{
 			dataType="Trigger";
-			position[]={8277.7881,296.04492,2170.2834};
-			angle=0.94996506;
+			position[]={8277.7881,296.04492,2170.283};
+			angle=0.94996512;
 			class Attributes
 			{
 				condition="(""Man"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
@@ -1394,7 +1394,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={8292.502,296.04001,2149.6208};
-			angle=0.94996506;
+			angle=0.94996476;
 			class Attributes
 			{
 				condition="(""Man"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
@@ -1414,7 +1414,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={8305.0645,296.04001,2132.2622};
-			angle=0.94996506;
+			angle=0.94996476;
 			class Attributes
 			{
 				condition="(""Man"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
@@ -1434,7 +1434,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={8232.9824,296.04001,1791.4069};
-			angle=0.94996506;
+			angle=0.94996476;
 			class Attributes
 			{
 				condition="(""Man"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";

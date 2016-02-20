@@ -30,9 +30,9 @@ if(count _this > 2) then
 
 // INSIGNIA
 // This block will give units insignia on their uniforms.
-[_unit,_typeofUnit] spawn {
+/*[_unit,_typeofUnit] spawn {
 	#include "f_assignInsignia.sqf"
-};
+};*/
 
 // ====================================================================================
 
