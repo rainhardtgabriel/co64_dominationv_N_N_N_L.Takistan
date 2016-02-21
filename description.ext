@@ -550,6 +550,7 @@ class CfgFunctions
 			class buildFOBlocal;
 			class removeFOB;
 			class isFlatEmpty;
+			class spawnIED;
 		};
 	};
 	
