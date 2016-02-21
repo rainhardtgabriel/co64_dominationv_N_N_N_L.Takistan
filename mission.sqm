@@ -19461,7 +19461,7 @@ class Mission
 		class Item1516
 		{
 			position[]={8273.9502,296.04001,2116.012};
-			azimut=-21.461864;
+			azimut=-21.461901;
 			id=1682;
 			side="EMPTY";
 			vehicle="rhs_weapon_smaw_green";
@@ -19879,7 +19879,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=83;
+		items=87;
 		class Item0
 		{
 			position[]={-95.494179,610.15997,-89.086151};
@@ -20491,6 +20491,54 @@ class Mission
 			text="FOB Containers";
 			type="n_maint";
 			colorName="ColorWEST";
+		};
+		class Item83
+		{
+			position[]={8174.0469,296.04001,2027.1798};
+			name="BaseCleanMarker_0";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorGrey";
+			fillName="Border";
+			a=200;
+			b=200;
+			drawBorder=1;
+		};
+		class Item84
+		{
+			position[]={8217.375,296.04001,1798.8477};
+			name="BaseCleanMarker_1";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorGrey";
+			fillName="Border";
+			a=100;
+			b=100;
+			drawBorder=1;
+		};
+		class Item85
+		{
+			position[]={8382.6865,296.00433,1863.2329};
+			name="BaseCleanMarker_2";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorGrey";
+			fillName="Border";
+			a=100;
+			b=100;
+			drawBorder=1;
+		};
+		class Item86
+		{
+			position[]={7943.6226,296.04001,1800.694};
+			name="BaseCleanMarker_3";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorGrey";
+			fillName="Border";
+			a=100;
+			b=100;
+			drawBorder=1;
 		};
 	};
 	class Sensors

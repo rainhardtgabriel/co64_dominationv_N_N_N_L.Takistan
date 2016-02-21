@@ -6,6 +6,10 @@
 	_pos_z = getPos _object select 2;
 
 if (isNil{_type}) then {} else {
+
+    //prevent cleaning from cleanup script 
+    _object setVariable ["isDecoration", true , true];
+
 	switch (_type) do { 
 			case "chair" : {
 					[_object,false] call ace_dragging_fnc_setCarryable; 
