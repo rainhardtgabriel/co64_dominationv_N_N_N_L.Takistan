@@ -1,3 +1,10 @@
+private ["_location","_position","_vehicles"];
+
+if (tf47_var_FOBStatus == 1) exitWith {};
+
+tf47_var_FOBStatus = 1;
+publicVariable "tf47_var_FOBStatus";
+
 _vehicles = [fobhelipad,fob31,fob32,fob33,fob34,fob35,fob36,fob37,fob38,fob39,fob40,
 			 fob1,fob2,fob3,fob4,fob5,fob6,fob7,fob8,fob9,fob10,
 			 fob11,fob12,fob13,fob14,fob15,fob16,fob17,fob18,fob19,fob20,
@@ -32,3 +39,6 @@ sleep 0.5;
 } forEach _vehicles;
 
 deleteMarker "fobmarker";
+
+tf47_var_FOBStatus = 0;
+publicVariable "tf47_var_FOBStatus";

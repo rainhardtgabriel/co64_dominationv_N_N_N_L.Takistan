@@ -118,11 +118,17 @@ _camera camPreparePos [8157.05,2105.99,2.69];
 _camera camPrepareFOV 0.489;
 _camera camCommitPrepared 0;
 
+waitUntil {time > 0.1};
+
 titleRsc ["intro","PLAIN"];
 
-playMusic "intro";
+playSound "preintro";
 
-sleep 7;
+sleep 6.5;
+
+playSound "intro";
+
+sleep 0.25;
 
 _camera cameraeffect ["internal", "back"];
 

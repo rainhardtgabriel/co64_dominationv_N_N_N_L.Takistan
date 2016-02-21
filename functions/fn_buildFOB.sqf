@@ -50,7 +50,12 @@ Using orientation of objects: yes
 
 */
 
-private ["_location","_dir"];
+if (tf47_var_FOBStatus == 1) exitWith {};
+
+tf47_var_FOBStatus = 1;
+publicVariable "tf47_var_FOBStatus";
+
+private ["_location","_dir","_comp"];
 
 params ["_location","_dir"];
 
@@ -74,12 +79,12 @@ _comp = [
 [_location, _dir-40, _comp] call BIS_fnc_ObjectsMapper;
 */
 
-while {count ( [(_location select 0) + 8*sin(180-_dir),(_location select 1) + 8*cos(180-_dir)] nearEntities ["Man", 15]) >0 } do
+while {count ( [(_location select 0) + 8*sin(90+_dir),(_location select 1) + 8*cos(90+_dir)] nearEntities ["Man", 15]) >0 } do
 {
 	{
 		if (_x distance fobtable < 15) then
 		{
-			(composeText ["Bitte entfernen sie sich von der Baustelle.", lineBreak, lineBreak, "Please leave the construction site."]) remoteExecCall ["hint", _x];
+			(composeText ["Bitte entfernen Sie sich von der Baustelle.", lineBreak, lineBreak, "Please leave the construction site."]) remoteExecCall ["hint", _x];
 		};
 	} forEach allPlayers;
 
@@ -150,4 +155,9 @@ fobmarker = createMarker ["fobmarker",_location];
 fobmarker setMarkerText "F.O.B. Knight";
 fobmarker setMarkerType "Faction_CUP_NATO";
 
-fobtable addAction ["F.O.B. abbauen", "remoteExec ['tf47_fnc_removeFOB', 2];"];
+deleteVehicle fobtable;
+
+[_location, _dir-40, [["Land_Workbench_01_F",[3.4,-4.45,0],310.891,1,0,[],"fobtable","this addAction ['remove F.O.B.', '[] remoteExec [""tf47_fnc_removeFOB"", 2];'];",true,false]]] call BIS_fnc_ObjectsMapper;
+
+tf47_var_FOBStatus = 0;
+publicVariable "tf47_var_FOBStatus";
