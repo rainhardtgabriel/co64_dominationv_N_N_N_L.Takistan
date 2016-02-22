@@ -562,6 +562,8 @@ class CfgFunctions
 			class spawnIED;
 			class typeText;
 		};
+        #include "SIDEscripts\Missions\Missions.hpp"
+        
 		class Whitelist {
 			file = "tf47CoreScripts";
 			//class vehicleOnEnter;

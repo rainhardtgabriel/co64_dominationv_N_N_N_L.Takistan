@@ -28,7 +28,7 @@ tf47_var_mainCount = tf47_var_mainCount + 1;
 
 //////////////// Declare Variables  /////////////////////////////////////////////////////////////////////////////////////////////
 
-private ["_Playertext", "_NumOfPlayers", "_ao_select", "_ao_mkr", "_trig", "_trig_rt", "_log_pos", "_ao_task", "_mkr_text", "_ao_name", "_ao_rad", "_position","_flatPos", "_ao_iniText", "_mission_complete", "_mission_new"];
+private ["_Playertext", "_NumOfPlayers", "_ao_select", "_ao_mkr", "_trig", "_trig_rt", "_log_pos", "_ao_task", "_mkr_text", "_ao_name", "_ao_rad", "_position","_flatPos", "_ao_iniText", "_mission_complete", "_mission_new", "_ao_ai_skill_array"];
 
 
 
@@ -39,8 +39,7 @@ _log_pos			= 0;
 _mkr_text 			= "";
 _ao_name 			= "";
 _ao_rad 			= 350;
-
-
+_ao_ai_skill_array  = [0.3,0.5,0.3,0.7,0.5,1,0.8,0.5,0.5,0.5] // [aimingAccuracy, aimingShake, aimingSpeed, spotDistance, spotTime, courage, commanding, general, endurance, reloadSpeed] 
 
 
 //////////////// Count all playable Blufor Units /////////////////////////////////////////////////////////////////////////////////
@@ -188,7 +187,7 @@ if ( _ao_select == "shamali") then {
 									_log_pos   			= log_shamali;
 									//_ao_rad    			= 150;
 									//_mkr_text 	 	=
-									_ao_name   			= "Samali";
+									_ao_name   			= "Shamali";
 									//_ao_array_member 	= "shamali";
 									
 									sleep 1;
@@ -320,10 +319,10 @@ if ( _ao_select == "sakhe") then {
 
 //////////////// Spawn Enemy AI in AO ////////////////////////////////////////////////////////////////////////////////////	
 
-		nul = [_log_pos,2,true,2,[6,6],_ao_rad,"default",nil,nil,nil] execVM "LV\fillHouse.sqf";
-		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],false,[20,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
-		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[5,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
-		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,true,2,[6,6],_ao_rad,_ao_ai_skill_array,nil,nil,nil] execVM "LV\fillHouse.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],false,[20,0],[0,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[5,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
 
 //////////////// creates a visible marker for the ao //////////////////////////////////////////////////////////////////////////		
 
@@ -461,11 +460,11 @@ trig_rt setpos (getpos _log_pos);
 //////////////// Spawn AI in Capturable Bunker /////////////////////////////////////////////////////////////////////////////////////////// 
 
 		sleep 0.1;
-		nul = [captureBunker1,2,5,[true,false],[false,false,false],true,[4,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [captureBunker1,2,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
 		sleep 0.1;
-		nul = [captureBunker2,2,5,[true,false],[false,false,false],true,[4,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [captureBunker2,2,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
 		sleep 0.1;
-		nul = [captureBunker3,2,5,[true,false],[false,false,false],true,[4,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [captureBunker3,2,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
 
 
 
