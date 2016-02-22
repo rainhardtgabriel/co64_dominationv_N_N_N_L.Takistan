@@ -313,6 +313,14 @@ class Params
 		default = 3;
 	};
 
+	class tf47_param_mainCount
+	{
+		title = "Amount of mains until mission is finished";
+		values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+		default = 2;
+		code = "tf47_param_MainCount = %1";
+	};
+
 };
 
 // ============================================================================================
@@ -324,12 +332,12 @@ class CfgDebriefing
 {
 	class End1
 	{
-		title = "Ending #1";
+		title = "MISSION COMPLETED";
 		subtitle = "";
-		description = "*** Insert debriefing #1 here. ***";
-		// pictureBackground = "";
-		// picture = "";
-		// pictureColor[] = {0.0,0.3,0.6,1};
+		description = "Congratulations! Any attemp of the enemy to hold key locations in the area were stopped by you, so that the mountains of Takistan are now safe for the moment.";
+//		pictureBackground = "loading.jpg";
+//		picture = "loading.jpg";
+		pictureColor[] = {0.0,0.3,0.6,1};
 	};
 
 	class End2
@@ -545,11 +553,14 @@ class CfgFunctions
 		{
 			file = "functions";
 			class introShot;
+			class outroShot;
 			class prepareFOBlocal;
 			class buildFOB;
 			class buildFOBlocal;
 			class removeFOB;
 			class isFlatEmpty;
+			class spawnIED;
+			class typeText;
 		};
 		class Whitelist {
 			file = "tf47CoreScripts";
@@ -594,6 +605,11 @@ class CfgRemoteExec
         {
             allowedTargets=2;
             jip = 0;
+        };
+        class tf47_fnc_outroShot
+        {
+        	allowedTargets=1;
+        	jip = 0;
         };
     }; 
     class Commands
@@ -734,6 +750,27 @@ titles[] = {0, ""};
 		sound[] = {"\sounds\buildingFOB.ogg",1,1.0};
 		titles[]={};
 	};
+
+	class preintro
+	{
+		name="preintro";
+		sound[] = {"\sounds\preintro.ogg",1,1.0};
+		titles[]={};
+	};
+
+	class intro
+	{
+		name="intro";
+		sound[] = {"\sounds\intro.ogg",1,1.0};
+		titles[]={};
+	};
+
+	class outro
+	{
+		name="outro";
+		sound[] = {"\sounds\outro.ogg",1,1.0};
+		titles[]={};
+	};
 };
 class CfgMusic
 {
@@ -748,13 +785,6 @@ class CfgMusic
 	{
 		name = "";
 		sound[] = {"\MKY\sounds\m0nkey_snowfall.ogg", db+0, 1.0};
-	};
-
-	class intro
-	{
-		name="intro";
-		sound[] = {"\sounds\intro.ogg",1,1.0};
-		titles[]={};
 	};
 };
 
