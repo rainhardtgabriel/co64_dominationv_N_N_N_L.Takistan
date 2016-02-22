@@ -29,7 +29,7 @@ _side_trig setTriggerStatements ["offizier in thislist;",
 								[""Sidemission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; 
 								[""tsk3"", true, ['Find the enemy Officer. Capture him and bring him to Base for further Interrogation.','Side Mission: Officer Hideout',""Side Mission""],
 								getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
-								[""tf47_changetickets"", [WEST, 5, ticketcount]] call CBA_fnc_globalEvent;
+								[""tf47_changetickets"", [WEST, 2, 5]] call CBA_fnc_globalEvent;
 								deletevehicle thisTrigger; deletevehicle side_trig2" , ""];
 
 sleep 1;

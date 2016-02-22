@@ -350,7 +350,7 @@ ao_endText = format
 		_trig = createTrigger 					["EmptyDetector", getPos _log_pos];   
 		_trig setTriggerArea 					[_ao_rad, _ao_rad, 0, false];  
 		_trig setTriggerActivation 				["EAST", "notpresent", true];   
-		_trig setTriggerStatements 				["this", "0 = execVM ""AOscripts\militarizeAO.sqf""; [ao_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; [""mission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; [""tsk1"", true, ['Seize the Village held by hostile forces','Seize the AO',""Main Mission""],getMarkerPos ""ao_mkr1"", ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; deletevehicle thisTrigger; AOcount = AOcount + 1" , ""];
+		_trig setTriggerStatements 				["this", "0 = execVM ""AOscripts\militarizeAO.sqf""; [ao_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; [""mission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; [""tsk1"", true, ['Seize the Village held by hostile forces','Seize the AO',""Main Mission""],getMarkerPos ""ao_mkr1"", ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; [""tf47_changetickets"", [WEST, 2, 10]] call CBA_fnc_globalEvent; deletevehicle thisTrigger; AOcount = AOcount + 1" , ""];
 		
 		
 //////////////// Hint for active Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 

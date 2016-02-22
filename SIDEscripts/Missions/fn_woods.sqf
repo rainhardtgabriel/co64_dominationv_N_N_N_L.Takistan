@@ -42,6 +42,6 @@ _side_trig setTriggerStatements 			["this",
 											[""tsk5"", true, ['Find the enemy Camp and eliminate all enemy Soldiers!','Side Mission: Woods',""Side Mission""],
 											getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
 											[[""Tent1"",""Tent2"",""Tent3"",""CampFire""]] call tf47_fnc_cleanside;
-											[""tf47_changetickets"", [WEST, 5, ticketcount]] call CBA_fnc_globalEvent; deletevehicle thisTrigger" , ""];
+											[""tf47_changetickets"", [WEST, 2, 5]] call CBA_fnc_globalEvent;
 
 [_side_log_pos,_side_rad,_side_name]

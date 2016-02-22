@@ -57,7 +57,7 @@ _side_trig setTriggerStatements ["(!alive CapVeh1) && (pilot1 in thislist)",
 								[side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 
 								[""Sidemission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; 
 								[""tsk2"", true, ['Find the Attack Helicopter captured by enemy troops. Find and capture the missing pilot held as hostage','Side Mission: Gamsar',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
-								[""tf47_changetickets"", [WEST, 5, ticketcount]] call CBA_fnc_globalEvent;
+								[""tf47_changetickets"", [WEST, 2, 5]] call CBA_fnc_globalEvent;
 								[[""CapVeh1"",""pilot1""]] call tf47_fnc_cleanside;
 								deletevehicle thisTrigger; deletevehicle side_trig2" , ""];
 
