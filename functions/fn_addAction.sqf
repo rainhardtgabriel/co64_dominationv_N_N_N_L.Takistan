@@ -11,5 +11,3 @@ parameter: [object, text ,code]
 params ["_object", "_text", "_code"];
 
 _object addAction [_text, _code];
-
-hint "yo";
