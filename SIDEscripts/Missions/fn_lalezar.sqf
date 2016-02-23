@@ -1,3 +1,4 @@
+
 private ["_side_log_pos","_side_rad","_side_name","_side_trig", "_side_ai_skill_array"];
 
 _side_log_pos   	    = log_lalezar;
@@ -43,7 +44,7 @@ _side_trig setTriggerStatements ["!alive cache1",
 								[""tsk4"", true, ['Find the power transformer running the oil reservoir pumps','Side Mission: Lalezar',""Side Mission""],
 								getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
 								[""tf47_changetickets"", [WEST, 2, 5]] call CBA_fnc_globalEvent;
-								[[""cache1""]] call tf47_fnc_cleanside;
+								[[cache1]] call tf47_fnc_cleanside;
 								deletevehicle thisTrigger" , ""];
 
 //////////////// moves sandstorm trigger to side ///////////////////////////////////////////////////////////////////////////		

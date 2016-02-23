@@ -5,11 +5,11 @@ Author:
 
 Last modified: 
 
-	14/02/2016
+	23/02/2016
 
 Description:
 
-	
+	[[<Objects>],bool] call tf47_fnc_cleanside
 	
 Notes:
 	
@@ -20,7 +20,7 @@ private ["_objects","_sandstorm"];
 params ["_objects",["_sandstorm", false]];
 
 {
-	if (alive _x) then {
+	if !(_x == objNull) then {
 		deleteVehicle _x;
 	};
 } forEach _objects;

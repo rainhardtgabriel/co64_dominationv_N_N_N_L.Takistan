@@ -565,6 +565,7 @@ class CfgFunctions
 			class checkPos;
 			class addAction;
 		};
+		#include "SIDEscripts\Missions\Missions.hpp"
 	};
 	
 		//#include "tf47CoreScripts\UMenu\Functions.hpp"
