@@ -6,7 +6,7 @@ class Header
 {
 	gameType = Coop;
 	minPlayers = 1;
-	maxPlayers = 64;
+	maxPlayers = 42;
 };
 
 // ============================================================================================
@@ -28,7 +28,7 @@ overviewPicture = "intro\pics\taskforce47.paa";
 // F3 - Debug Console
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-enableDebugConsole = 1;
+enableDebugConsole = 2;
 
 // ============================================================================================
 
@@ -36,10 +36,10 @@ enableDebugConsole = 1;
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 respawn = 3;
-respawndelay = 20;
+respawndelay = 10;
 respawnOnStart = 0;
-RespawnDialog = 1;										// default = 1. show respawn timer and scoreboard when killed.
-respawnTemplates[] = {"f_JIP"};  						// possible types are "f_JIP"
+RespawnDialog = 0;										// default = 1. show respawn timer and scoreboard when killed.
+respawnTemplates[] = {"f_JIP"};
 
 // ============================================================================================
 
@@ -151,7 +151,7 @@ class Params
             title = "$STR_f_param_loadouts";
             values[] = {0,1,2};
             texts[] = {"Light","Medium","Heavy"};
-            default = 2;
+            default = 1;
             code = "f_param_backpacks = %1";
     };
 	
@@ -264,7 +264,7 @@ class Params
 	};
 */
 
-
+/*
 	class f_param_AISkill_OPFOR
 	{
 		title = "$STR_f_param_AISkill_OPFOR";
@@ -273,7 +273,7 @@ class Params
 		default = 1;
 		code = "f_param_AISkill_OPFOR = %1";
 	};
-
+*/
 
 /*
 	class f_param_AISkill_INDP
@@ -310,8 +310,9 @@ class Params
 		title = "Sand Particle EFX strength";
 		values[] = {0,1,2,3,4};
 		texts[] = {"Random","Light","Moderate","Heavy","Disabled"};
-		default = 3;
+		default = 1;
 	};
+
 
 	class tf47_param_mainCount
 	{
@@ -561,30 +562,13 @@ class CfgFunctions
 			class isFlatEmpty;
 			class spawnIED;
 			class typeText;
-		};
-        #include "SIDEscripts\Missions\Missions.hpp"
-        
-		class Whitelist {
-			file = "tf47CoreScripts";
-			//class vehicleOnEnter;
-			class addGetInEvent;
-			class addGetOutEvent;
-		};
-
-		class Helpers {
-			file = "tf47CoreScripts\helper";
-			class allowDamage;
-			class setDamage;
-			class setFuel;
-			class lock;
-			class setVehicleVarName;
-			class callVehicleRespawn;
-			class changePlayerSide;
-			class isStable;
+			class checkPos;
+			class addAction;
 		};
 	};
 	
-		/*#include "tf47CoreScripts\tf47CfgFunctions.hpp"	disabled because of errors keep file in folder*/
+		//#include "tf47CoreScripts\UMenu\Functions.hpp"
+        //#include "tf47CoreScripts\tf47CfgFunctions.hpp"	
 };
 
 class CfgRemoteExec
@@ -611,6 +595,11 @@ class CfgRemoteExec
         class tf47_fnc_outroShot
         {
         	allowedTargets=1;
+        	jip = 0;
+        };
+        class tf47_fnc_addAction
+        {
+        	allowedTargets=0;
         	jip = 0;
         };
     }; 
@@ -655,7 +644,7 @@ class RscTitles
 
    			style =48;
 
-   			colorBackground[] = {0, 0, 0, 0};
+   			colorBackground[] = {0, 0, 0, 1};
 
    			colorText[] = {1, 1, 1, 1};
 
@@ -664,6 +653,104 @@ class RscTitles
    			size = 0;
 
 	  	  	text="loading.jpg";
+
+			x=0;
+
+	  	  	y=-0.2;
+
+	  	  	w=1;
+
+	  	  	h=1.3;
+
+		};
+
+	};
+
+	class intro2
+
+	{
+
+	  	idd=-1;
+
+	  	movingEnable=0;
+
+	  	duration=4.2;
+
+	  	fadein=1;
+
+	  	fadeout=1.5;
+
+	  	name="intro";
+
+	  	controls[]={"title1"};
+
+	  	class title1: RscPicture
+
+		{
+   			type =0;
+
+   			idc = -1;
+
+   			style =48;
+
+   			colorBackground[] = {0, 0, 0, 1};
+
+   			colorText[] = {1, 1, 1, 1};
+
+   			font = "PuristaMedium";
+
+   			size = 0;
+
+	  	  	text="loading.jpg";
+
+			x=0;
+
+	  	  	y=-0.2;
+
+	  	  	w=1;
+
+	  	  	h=1.3;
+
+		};
+
+	};
+
+	class outro
+
+	{
+
+	  	idd=-1;
+
+	  	movingEnable=0;
+
+	  	duration=4;
+
+	  	fadein=1;
+
+	  	fadeout=1.5;
+
+	  	name="outro";
+
+	  	controls[]={"title1"};
+
+	  	class title1: RscPicture
+
+		{
+   			type =0;
+
+   			idc = -1;
+
+   			style =48;
+
+   			colorBackground[] = {0, 0, 0, 1};
+
+   			colorText[] = {1, 1, 1, 1};
+
+   			font = "PuristaMedium";
+
+   			size = 0;
+
+	  	  	text="outro.paa";
 
 			x=0;
 

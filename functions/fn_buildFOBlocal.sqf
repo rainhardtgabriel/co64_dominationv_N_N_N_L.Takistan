@@ -6,6 +6,6 @@ for [{_i=0}, {_i<4}, {_i=_i+1}] do
     sleep 4.5;
 };
 
-sleep 5;
+sleep 10;
 
 hint composeText ["Bau abgeschlossen.", lineBreak, lineBreak, "Construction finished."];

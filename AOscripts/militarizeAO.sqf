@@ -28,7 +28,7 @@ tf47_var_mainCount = tf47_var_mainCount + 1;
 
 //////////////// Declare Variables  /////////////////////////////////////////////////////////////////////////////////////////////
 
-private ["_Playertext", "_NumOfPlayers", "_ao_select", "_ao_mkr", "_trig", "_trig_rt", "_log_pos", "_ao_task", "_mkr_text", "_ao_name", "_ao_rad", "_position","_flatPos", "_ao_iniText", "_mission_complete", "_mission_new", "_ao_ai_skill_array"];
+private ["_Playertext", "_NumOfPlayers", "_ao_select", "_ao_mkr", "_trig", "_trig_rt", "_log_pos", "_ao_task", "_mkr_text", "_ao_name", "_ao_rad", "_position","_flatPos", "_ao_iniText", "_mission_complete", "_mission_new"];
 
 
 
@@ -39,7 +39,8 @@ _log_pos			= 0;
 _mkr_text 			= "";
 _ao_name 			= "";
 _ao_rad 			= 350;
-_ao_ai_skill_array  = [0.3,0.5,0.3,0.7,0.5,1,0.8,0.5,0.5,0.5]; // [aimingAccuracy, aimingShake, aimingSpeed, spotDistance, spotTime, courage, commanding, general, endurance, reloadSpeed] 
+
+
 
 
 //////////////// Count all playable Blufor Units /////////////////////////////////////////////////////////////////////////////////
@@ -50,40 +51,37 @@ _NumOfPlayers = west countSide playableUnits;
 //////////////// Random Selects the AO  //////////////////////////////////////////////////////////////////////////////////////////		
 
 _oldAO = getMarkerPos "ao_mkr1";
+sleep 1;
 _newAO = _oldAO;
 
 while {_oldAO distance _newAO < 3000} do
 {
-	_ao_select = [
-				    "timurkulay","chadarakht","gamarud","gamsar","imarat","zavarak","karachinar","ravanay","nagara","shamali","airfield",
-				    "rasman","bastam","falar","mulladost","nur","feruz", "jilavur","chak","landay","shukurkalay","chaman","sakhe"
-				 ] call BIS_fnc_selectRandom;
+	_ao_select = tf47_var_AOCollection call BIS_fnc_selectRandom;
 	_newAO = call compile format["log_%1", _ao_select];
-
 };
+
+tf47_var_AOCollection = tf47_var_AOCollection - [_ao_select];
 
 //////////////// Deletes/Moves all remaining Marker/Object/Trigger ////////////////////////////////////////////////////////////////////
 
+		{
+			deleteVehicle _x;
+			sleep 0.1;
+		} forEach tf47_var_AOObjects;
+
+		tf47_var_AOObjects = [];
+
 		"ao_mkr1" setmarkerpos [0,0,0];
-		sleep 1;
-		if (alive  radiotower) then {deletevehicle radiotower;};
 		sleep 1;
 		[trig_rt setpos [0,0,0]] call BIS_fnc_MP;
 		sleep 1;
-		if (alive helipad) then {deletevehicle helipad;};
-		sleep 0.1;
-		if (alive captureBunker1) then {deletevehicle captureBunker1;};
-		sleep 0.1;
-		if (alive captureBunker2) then {deletevehicle captureBunker2;};
-		sleep 0.1;
-		if (alive captureBunker3) then {deletevehicle captureBunker3;};
-		sleep 0.1;
+
         deleteMarker "BunkerMarker1";
 		sleep 0.1;
         deleteMarker "BunkerMarker2";
 		sleep 0.1;
         deleteMarker "BunkerMarker3";
-	//	sleep 30;	
+		sleep 30;	
 
 
 //////////////// AO is timurkulay ////////////////////////////////////////////////////////////////////////////////////////////////		
@@ -319,10 +317,10 @@ if ( _ao_select == "sakhe") then {
 
 //////////////// Spawn Enemy AI in AO ////////////////////////////////////////////////////////////////////////////////////	
 
-		nul = [_log_pos,2,true,2,[6,6],_ao_rad,_ao_ai_skill_array,nil,nil,nil] execVM "LV\fillHouse.sqf";
-		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],false,[20,0],[0,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
-		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[5,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
-		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,true,2,[6,6],_ao_rad,"default",nil,nil,nil] execVM "LV\fillHouse.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],false,[20,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[5,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
 
 //////////////// creates a visible marker for the ao //////////////////////////////////////////////////////////////////////////		
 
@@ -351,8 +349,18 @@ ao_endText = format
 		_trig setTriggerArea 					[_ao_rad, _ao_rad, 0, false];  
 		_trig setTriggerActivation 				["EAST", "notpresent", true];   
 		_trig setTriggerStatements 				["this", "0 = execVM ""AOscripts\militarizeAO.sqf""; [ao_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; [""mission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; [""tsk1"", true, ['Seize the Village held by hostile forces','Seize the AO',""Main Mission""],getMarkerPos ""ao_mkr1"", ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; [""tf47_changetickets"", [WEST, 2, 10]] call CBA_fnc_globalEvent; deletevehicle thisTrigger; AOcount = AOcount + 1" , ""];
-		
-		
+
+Leave a comment
+Attach files by dragging & dropping or  Dateien auswählen selecting them.
+ Styling with Markdown is supported Comment Cancel
+  		
+  		
+  //////////////// Hint for active Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
+
+  		
+  		
+  //////////////// Hint for active Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
+
 //////////////// Hint for active Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
 
 _ao_iniText = format
@@ -378,7 +386,7 @@ sleep 0.1;
 	_r = random 150;
 	_phi = random 360;
 	_flatPos = [((getPos _log_pos) select 0) + _r*sin(_phi),((getPos _log_pos) select 1) + _r*cos(_phi)];
-	while {[_flatPos, 0, 15, 15, 1, []] call tf47_fnc_isFlatEmpty == 0} do
+	while {[_flatPos, 10, 1.5] call tf47_fnc_checkPos == 0} do
 	{
 		_r = random 150;
 		_phi = random 360;
@@ -390,6 +398,7 @@ sleep 0.1;
 	radiotower setVectorUp [0,0,1];
 	radiotowerAlive = true;
 	
+	tf47_var_AOObjects pushBack radiotower;
 	
 //////////////// create 2 ai patrol around radiotower /////////////////////////////////////////////////////////////////////////
 
@@ -411,60 +420,71 @@ sleep 0.1;
 	waitUntil { sleep 0.5; alive helipad };
 	helipadAlive = true;
 
-		
+	tf47_var_AOObjects pushBack helipad;
+
 //////////////// moves reinforcement trigger to the ao ///////////////////////////////////////////////////////////////////////////		
 
 sleep 1;
 
 trig_rt setpos (getpos _log_pos);	
-		
-	
+
+
 //////////////// Add Capturable Bunker /////////////////////////////////////////////////////////////////////////////////////////// 
 
-		_r = random 200;
-		_phi = random 360;
+		_r = 40 + random 150;
+		_phi = 0;
 		_flatBunkerpos = [((getPos _log_pos) select 0) + _r*sin(_phi),((getPos _log_pos) select 1) + _r*cos(_phi)];
-		while {(count (_flatBunkerpos nearRoads 10) > 0) || ((getMarkerPos "base_spawn_1") distance _flatBunkerpos < 1000) || ([_flatBunkerpos, 0, 12, 12, 1, []] call tf47_fnc_isFlatEmpty == 0)} do
+		while {[_flatBunkerpos, 5, 3] call tf47_fnc_checkPos == 0} do
 		{
-			_rx = _r + random 100;
-			_phi = _phi + random 5;
+			_rx = 40 + random 150;
+			_phi = _phi + random 0.5;
 			_flatBunkerpos = [((getPos _log_pos) select 0) + _rx*sin(_phi),((getPos _log_pos) select 1) + _rx*cos(_phi)];
 		};
 
 		captureBunker1 = [_flatBunkerpos,5,"Land_fortified_nest_big_EP1", 30, east] call compileFinal preprocessFileLineNumbers "dyncap\createCaptureLocation1.sqf";
 
+		tf47_var_AOObjects pushBack captureBunker1;
+
+		sleep 1;
+
 		_r = random 200;
-		_phi = random 360;
+		_phi = _phi + 90;
 		_flatBunkerpos = [((getPos _log_pos) select 0) + _r*sin(_phi),((getPos _log_pos) select 1) + _r*cos(_phi)];
-		while {(count (_flatBunkerpos nearRoads 10) > 0) || ((getMarkerPos "base_spawn_1") distance _flatBunkerpos < 1000) || ([_flatBunkerpos, 0, 12, 12, 1, []] call tf47_fnc_isFlatEmpty == 0)} do
+		while {[_flatBunkerpos, 5, 3] call tf47_fnc_checkPos == 0} do
 		{
 			_rx = _r + random 100;
-			_phi = _phi + random 5;
+			_phi = _phi + random 0.5;
 			_flatBunkerpos = [((getPos _log_pos) select 0) + _rx*sin(_phi),((getPos _log_pos) select 1) + _rx*cos(_phi)];
 		};
 
 		captureBunker2 = [_flatBunkerpos,5,"Land_fortified_nest_big_EP1", 30, east] call compileFinal preprocessFileLineNumbers "dyncap\createCaptureLocation2.sqf";
 
+		tf47_var_AOObjects pushBack captureBunker2;
+
+		sleep 1;
+
 		_r = random 200;
-		_phi = random 360;
+		_phi = _phi + 90;
 		_flatBunkerpos = [((getPos _log_pos) select 0) + _r*sin(_phi),((getPos _log_pos) select 1) + _r*cos(_phi)];
-		while {(count (_flatBunkerpos nearRoads 10) > 0) || ((getMarkerPos "base_spawn_1") distance _flatBunkerpos < 1000) || ([_flatBunkerpos, 0, 12, 12, 1, []] call tf47_fnc_isFlatEmpty == 0)} do
+		while {[_flatBunkerpos, 5, 3] call tf47_fnc_checkPos == 0} do
 		{
 			_r = random 300;
-			_phi = _phi + random 5;
+			_phi = _phi + random 0.5;
 			_flatBunkerpos = [((getPos _log_pos) select 0) + _r*sin(_phi),((getPos _log_pos) select 1) + _r*cos(_phi)];
 		};
 
 		captureBunker3 = [_flatBunkerpos,5,"Land_fortified_nest_big_EP1", 30, east] call compileFinal preprocessFileLineNumbers "dyncap\createCaptureLocation3.sqf";
 
+		tf47_var_AOObjects pushBack captureBunker3;
+
 //////////////// Spawn AI in Capturable Bunker /////////////////////////////////////////////////////////////////////////////////////////// 
 
 		sleep 0.1;
-		nul = [captureBunker1,2,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [captureBunker1,2,5,[true,false],[false,false,false],true,[4,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
 		sleep 0.1;
-		nul = [captureBunker2,2,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [captureBunker2,2,5,[true,false],[false,false,false],true,[4,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
 		sleep 0.1;
-		nul = [captureBunker3,2,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [captureBunker3,2,5,[true,false],[false,false,false],true,[4,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
 
 
 

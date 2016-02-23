@@ -31,17 +31,17 @@ _camera camPrepareFOV 0.75;
 _camera camPrepareBank -10;
 _camera camCommitPrepared 30;
 
-sleep 9;
+sleep 2;
 
-[
+_text = [
 	[
-		["[TF47] Domination","<t align = 'center' shadow = '1' size = '2.0' font='PuristaBold'>%1</t><br/>", 0.06],
-		["a mission made by","<t align = 'center' shadow = '1' size = '0.7'>%1</t><br/>", 0.04],
-		["[TF47] Sepp [MISFIT]","<t align = 'center' shadow = '1' size = '0.7'>%1</t><br/>", 0.01],
-		["[TF47] Raini [MISFIT]","<t align = 'center' shadow = '1' size = '0.7'>%1</t><br/>", 0.01],
-		["[TF47] Rampagé [FORECON]","<t align = 'center' shadow = '1' size = '0.7'>%1</t><br/>", 0.01],
-		["[TF47] Lucke [MISFIT]","<t align = 'center' shadow = '1' size = '0.7'>%1</t><br/>", 0.01],
-		["[TF47] Fred [MISFIT]","<t align = 'center' shadow = '1' size = '0.7'>%1</t><br/>", 0.01],
-		["[TF47] BlackPixxel [MISFIT]","<t align = 'center' shadow = '1' size = '0.7'>%1</t>", 0.01]
+		[" ","<t align = 'center' shadow = '1' size = '2.0' font='PuristaMedium'>%1</t><br/><br/>", 0.06],
+		["CONGRATULATIONS!","<t align = 'center' shadow = '1' size = '2.0' font='PuristaMedium'>%1</t><br/><br/>", 0.06],
+		["","<t align = 'center' shadow = '1' size = '1.7' font='PuristaBold'>%1</t><br/><br/>", 0.06],
+		["Opfor was defeated!","<t align = 'center' shadow = '1' size = '1.4' font='PuristaMedium'>%1</t><br/><br/>", 0.06]
 	]
 ] spawn TF47_fnc_typeText;
+
+sleep 11;
+
+titleRsc ["outro","PLAIN"];

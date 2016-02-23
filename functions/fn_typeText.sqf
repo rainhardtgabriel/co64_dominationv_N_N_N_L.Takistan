@@ -23,8 +23,8 @@
 	] spawn BIS_fnc_typeText;
 */
 
-#define DELAY_CHARACTER	0.01;
-#define DELAY_CURSOR	0.03;
+#define DELAY_CHARACTER	0.06;
+#define DELAY_CURSOR	0.04;
 
 private["_data","_posX","_posY","_rootFormat","_toDisplay"];
 private["_blocks","_block","_blockCount","_blockNr","_blockArray","_blockText","_blockTextF","_blockTextF_","_blockFormat","_formats","_inputData","_processedTextF","_char","_cursorInvis","_blinkCounts","_blinkCount"];
@@ -71,8 +71,6 @@ _processedTextF  = "";
 	_blockTextF  = "";
 	_blockTextF_ = "";
 
-	_delay = _x select 2;
-
 	{
 		_char = _x;
 
@@ -114,7 +112,7 @@ _processedTextF  = "";
 }
 forEach _blocks;
 
-sleep 3;
+sleep 8;
 
 //clean the screen
 ["", _posX, _posY, 5, 0, 0, 90] spawn BIS_fnc_dynamicText;
