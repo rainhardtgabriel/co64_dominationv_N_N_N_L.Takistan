@@ -16,7 +16,7 @@ if (isNil{_type}) then {} else {
 			}; 
 			case "guard" : {
 	waitUntil {	_object getVariable ["f_var_assignGear_done", true];};
-					_object addAction ["<t color='#990000'>Please equip me fast!</t>","SelectGear = [player,1] execVM 'f\JIP\f_JIP_reinforcementOptions.sqf';",nil,1,true,false];
+					_object addAction ["<t color='#990000'>Please equip me fast!</t>","[player] execVM 'tf47CoreScripts\equipment\fastequipment.sqf';",nil,1,true,false];
 				    _object disableAI "MOVE";
 				    _object disableAI "COVER";
 				    _object disableAI "AUTOTARGET";
