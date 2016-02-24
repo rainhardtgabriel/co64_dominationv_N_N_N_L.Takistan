@@ -350,17 +350,7 @@ ao_endText = format
 		_trig setTriggerActivation 				["EAST", "notpresent", true];   
 		_trig setTriggerStatements 				["this", "0 = execVM ""AOscripts\militarizeAO.sqf""; [ao_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; [""mission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; [""tsk1"", true, ['Seize the Village held by hostile forces','Seize the AO',""Main Mission""],getMarkerPos ""ao_mkr1"", ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; [""tf47_changetickets"", [WEST, 2, 10]] call CBA_fnc_globalEvent; deletevehicle thisTrigger; AOcount = AOcount + 1" , ""];
 
-Leave a comment
-Attach files by dragging & dropping or  Dateien auswählen selecting them.
- Styling with Markdown is supported Comment Cancel
-  		
-  		
-  //////////////// Hint for active Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
-
-  		
-  		
-  //////////////// Hint for active Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
-
+ 		
 //////////////// Hint for active Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
 
 _ao_iniText = format
