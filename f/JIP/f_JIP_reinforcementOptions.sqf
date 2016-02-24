@@ -8,9 +8,7 @@ private ["_unit","_textAction","_grp","_joinDistance","_loadout","_checkparam"];
 
 // ====================================================================================
 
-//Check if Script was called from arsenal
-
-_checkparam = _this select 1;// expects 1
+_unit = player;
 
 // ALLOW PLAYER TO SELECT GROUP
 // Using a dialog we allow the player to select the group s/he is going to [re-]join.
@@ -34,8 +32,11 @@ if (f_var_JIP_GearMenu) then {
 	createDialog "KitPicker";
 	waitUntil {f_var_JIP_state == 3};
 
+
 	_loadout = (player getVariable "f_var_JIP_loadout");
+	_unit setVariable ["f_var_assignGear",_loadout,true];
 	[_loadout,player] call f_fnc_assignGear;
+
 };
 
 // ====================================================================================
@@ -44,7 +45,7 @@ if (f_var_JIP_GearMenu) then {
 // We remove the action to the player's action menu.
 // NB This is on the assumption that the player has made positive selections and not
 // cancelled the menu.
-if ((!isNil "_checkparam") && (_checkparam == 1)) exitWith {["JIP",["Have a good Day Sir"]] call BIS_fnc_showNotification; SelectGear = nil;};
+
 player removeAction F3_JIP_reinforcementOptionsAction;
 F3_JIP_reinforcementOptionsAction = nil;
 
