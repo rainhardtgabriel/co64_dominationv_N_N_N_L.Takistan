@@ -1,6 +1,20 @@
 # Operation Conflict Resolve #
 
-
+## ACE3 Advanced Medical Settings ##
+||Name 						||Type 		||Description 															||Default value
+||Enabled for 				||Option 	||Select what units the advanced medical system will be enabled for.	||Players only
+||Enable Advanced wounds 	||Boolean 	||Allow reopening of bandaged wounds? 									||Yes
+||Vehicle Crashes 			||Boolean 	||Do units take damage from a vehicle crash? 							||Yes
+||Allow PAK 				||Option 	||Who can use the PAK for full heal? 									||Medics only
+||Remove PAK on use 		||Boolean 	||Should the PAK be removed on usage? 									||Yes
+||Condition PAK 			||Option 	||When can the PAK be used? 											||Stable
+||Locations PAK 			||Option 	||Where can the PAK be used? 											||facility
+||Allow Surgical kit 		||Option 	||Who can use the Surgical Kit? 										||Medics only
+||Remove Surgical kit 		||Boolean 	||Should Surgical Kit be removed on usage? 								||No
+||Locations Surgical Kit 	||Option 	||Where can the Surgical Kit be used? 									||Vehicles & facility
+||Condition Surgical Kit 	||Option 	||When can the Surgical Kit be used? 									||Anytime
+||Heal hitpoints 			||Boolean 	||Heal fully bandaged hitpoints. 										||No
+||Pain suppression 			||Boolean	||Pain is only temporarily suppressed not removed. 						||No
 
 
 ## F3[TF47] README ##
