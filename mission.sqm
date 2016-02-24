@@ -178,7 +178,7 @@ class Mission
 		forecastWind=0.099999994;
 		forecastWaves=0.099999994;
 		forecastLightnings=0.099999994;
-		year=1995;
+		year=2005;
 		month=8;
 		day=18;
 		hour=8;
@@ -1340,7 +1340,7 @@ class Mission
 				name="trig_sandstorm";
 				condition="player in thislist;";
 				onActivation="[[[[1,1,100],"""",true], ""MKY\MKY_Sand_Snow_Init.sqf""], ""BIS_fnc_execVM"", true] call BIS_fnc_MP;";
-				onDeactivation="[{0 = [] call MKY_fnc_Exit_Sand;},""BIS_fnc_spawn"",true,true] call BIS_fnc_MP;";
+				onDeactivation="[{0 = [] call MKY_fnc_Exit_Sand;},""BIS_fnc_call"",true,true] call BIS_fnc_MP;";
 				sizeA=500;
 				sizeB=500;
 				timeout[]={1,2,5};

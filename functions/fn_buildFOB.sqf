@@ -50,7 +50,12 @@ Using orientation of objects: yes
 
 */
 
-private ["_location","_dir"];
+if (tf47_var_FOBStatus == 1) exitWith {};
+
+tf47_var_FOBStatus = 1;
+publicVariable "tf47_var_FOBStatus";
+
+private ["_location","_dir","_comp"];
 
 params ["_location","_dir"];
 
@@ -74,12 +79,12 @@ _comp = [
 [_location, _dir-40, _comp] call BIS_fnc_ObjectsMapper;
 */
 
-while {count ( [(_location select 0) + 8*sin(180-_dir),(_location select 1) + 8*cos(180-_dir)] nearEntities ["Man", 15]) >0 } do
+while {count ( [(_location select 0) + 8*sin(90+_dir),(_location select 1) + 8*cos(90+_dir)] nearEntities ["Man", 15]) >0 } do
 {
 	{
 		if (_x distance fobtable < 15) then
 		{
-			(composeText ["Bitte entfernen sie sich von der Baustelle.", lineBreak, lineBreak, "Please leave the construction site."]) remoteExecCall ["hint", _x];
+			(composeText ["Bitte entfernen Sie sich von der Baustelle.", lineBreak, lineBreak, "Please leave the construction site."]) remoteExecCall ["hint", _x];
 		};
 	} forEach allPlayers;
 
@@ -94,7 +99,7 @@ while {count ( [(_location select 0) + 8*sin(180-_dir),(_location select 1) + 8*
 } forEach allPlayers;
 
 _comp = [
-	["Land_fortified_nest_small_EP1",[3.26953,0.386719,0],129.891,1,0,[],"fob2","",true,false], 
+	["Land_fortified_nest_small_EP1",[3.26953,0.386719,0],129.891,1,0,[],"fob2","this setvariable ['ace_medical_isMedicalFacility', true];",true,false], 
 	["Land_HBarrier_3_F",[1.55811,-4.50293,0],313.531,1,0,[0,-0],"fob3","",true,false], 
 	["Land_BagFence_Long_F",[-0.0742188,-5.68066,-0.000999451],137.5,1,0,[],"fob4","this setVectorUp (surfaceNormal (position this));",true,false], 
 	["Land_CncWall1_F",[0.736328,-5.73633,0],157.065,1,0,[0,-0],"fob5","",true,false], 
@@ -150,4 +155,14 @@ fobmarker = createMarker ["fobmarker",_location];
 fobmarker setMarkerText "F.O.B. Knight";
 fobmarker setMarkerType "Faction_CUP_NATO";
 
-fobtable addAction ["F.O.B. abbauen", "remoteExec ['tf47_fnc_removeFOB', 2];"];
+deleteVehicle fobtable;
+
+//[_location, _dir-40, [["Land_Workbench_01_F",[3.4,-4.45,0],310.891,1,0,[],"fobtable","this addAction ['remove F.O.B.', '[] remoteExec [""tf47_fnc_removeFOB"", 2];'];",true,false]]] call BIS_fnc_ObjectsMapper;
+[_location, _dir-40, [["Land_Workbench_01_F",[3.4,-4.45,0],310.891,1,0,[],"fobtable","",true,false]]] call BIS_fnc_ObjectsMapper;
+
+hint "addaction";
+
+[fobtable, "remove F.O.B.", "[] remoteExec [""tf47_fnc_removeFOB"", 2];"] remoteExecCall ["tf47_fnc_addAction", 0];
+
+tf47_var_FOBStatus = 2;
+publicVariable "tf47_var_FOBStatus";
