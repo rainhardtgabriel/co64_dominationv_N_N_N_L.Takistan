@@ -343,7 +343,7 @@ class Mission
 			dataType="Marker";
 			position[]={9570.6025,413.50558,1478.0874};
 			name="markerServerInfoCh2";
-			text="Ch.:2 31 MHz Ground to Ground";
+			text="Ch.:2 Ground Communication Net";
 			type="mil_dot";
 			colorName="ColorOrange";
 			id=15;
@@ -353,7 +353,7 @@ class Mission
 			dataType="Marker";
 			position[]={9571.6309,424.79431,1418.9218};
 			name="markerServerInfoCh3";
-			text="Ch.:3 32 MHz Air to Ground";
+			text="Ch.:3 Tactical Air Direction Net";
 			type="mil_dot";
 			colorName="ColorOrange";
 			id=16;
@@ -363,7 +363,7 @@ class Mission
 			dataType="Marker";
 			position[]={9571.3779,444.13297,1357.7991};
 			name="markerServerInfoCh4";
-			text="Ch.:4 33 MHz Air to Air";
+			text="Ch.:4 Air Control Net";
 			type="mil_dot";
 			colorName="ColorOrange";
 			id=17;
@@ -373,7 +373,7 @@ class Mission
 			dataType="Marker";
 			position[]={9571.6943,406.05167,1536.96};
 			name="markerServerInfoCh1";
-			text="Ch.:1 30 MHz Radio Tests";
+			text="Ch.:1 Radio Tests";
 			type="mil_dot";
 			colorName="ColorOrange";
 			id=18;
@@ -413,7 +413,7 @@ class Mission
 			dataType="Marker";
 			position[]={9575.3789,315.80453,191.72589};
 			name="reqChanAir";
-			text="Rotary/Fixed Wing have to be on Frq. 32 & 33 at all times";
+			text="Rotary/Fixed Wing have to be on Ch.2 & 3 at all times";
 			type="mil_dot";
 			colorName="ColorOrange";
 			id=22;
@@ -485,7 +485,7 @@ class Mission
 			dataType="Marker";
 			position[]={9574.4404,282.58115,123.10864};
 			name="reqChanArmor";
-			text="Armored Vehicles have to be on Frq. 31 at all times";
+			text="Armored Vehicles have to be on Ch.2 at all times";
 			type="mil_dot";
 			colorName="ColorOrange";
 			id=29;
@@ -495,7 +495,7 @@ class Mission
 			dataType="Marker";
 			position[]={9571.0371,395.17126,971.0799};
 			name="reqChanGround";
-			text="Squad Leaders have to be on Frq. 31 at all times";
+			text="Squad Leaders have to be on Ch.2 at all times";
 			type="mil_dot";
 			colorName="ColorOrange";
 			id=30;
@@ -742,7 +742,7 @@ class Mission
 			dataType="Marker";
 			position[]={9572.8779,465.09653,1297.575};
 			name="markerServerInfoCh7_1";
-			text="Ch.:5 34MHz TOC/CCT";
+			text="Ch.:5 Command and Control Net";
 			type="mil_dot";
 			colorName="ColorOrange";
 			id=56;
