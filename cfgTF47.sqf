@@ -215,31 +215,35 @@ _allslots = [];
 // Mission Control Slots:                       		15 Tickets
 // Zeus Slot:                                           100 Tickets
  
-_infantryTicketsDefault = 2;
+_infantryTicketsDefault = 1;
+_infantryLeadTicketsDefault = 2;
+_MedicTicketsDefault = 3;
+_tankcrewTicketsDefault = 4;
+_pilotTicketsDefault = 5;
 _infantryTicketsData = [
 
         // Platoon Lead
-		["UnitNATO_CO",6],	["UnitNATO_DC",6],
+		["UnitNATO_CO",_infantryLeadTicketsDefault],	["UnitNATO_DC",_infantryLeadTicketsDefault],
         //Squad Lead
-        ["UnitNATO_ASL_SL",5],	["UnitNATO_BSL_SL",5],	["UnitNATO_CSL_SL",5],
+        ["UnitNATO_ASL_SL",_infantryLeadTicketsDefault],	["UnitNATO_BSL_SL",_infantryLeadTicketsDefault],	["UnitNATO_CSL_SL",_infantryLeadTicketsDefault],
 		//Fireteam Lead
-		      ["UnitNATO_A1_FTL",4],  ["UnitNATO_A2_FTL",4],  ["UnitNATO_A3_FTL",4],  ["UnitNATO_B1_FTL",4],  ["UnitNATO_B2_FTL",4],  ["UnitNATO_B3_FTL",4],  ["UnitNATO_C1_FTL",4],	["UnitNATO_C2_FTL",4],	["UnitNATO_C3_FTL",4],   
+		      ["UnitNATO_A1_FTL",_infantryLeadTicketsDefault],  ["UnitNATO_A2_FTL",_infantryLeadTicketsDefault],  ["UnitNATO_A3_FTL",_infantryLeadTicketsDefault],  ["UnitNATO_B1_FTL",_infantryLeadTicketsDefault],  ["UnitNATO_B2_FTL",_infantryLeadTicketsDefault],  ["UnitNATO_B3_FTL",_infantryLeadTicketsDefault],  ["UnitNATO_C1_FTL",_infantryLeadTicketsDefault],	["UnitNATO_C4_FTL",_infantryLeadTicketsDefault],	["UnitNATO_C3_FTL",_infantryLeadTicketsDefault],   
         // Medics
-        ["UnitNATO_ASL_M",3],	["UnitNATO_BSL_M",3],	["UnitNATO_CSL_M",3],	["UnitNATO_CO_M",3],
+        ["UnitNATO_ASL_M",_MedicTicketsDefault],	["UnitNATO_BSL_M",_MedicTicketsDefault],	["UnitNATO_CSL_M",_MedicTicketsDefault],	["UnitNATO_CO_M",_MedicTicketsDefault],
 	    // SPZ Crew
-	    ["UnitNATO_TNK1_C", 10],	["UnitNATO_TNK1_G", 10],	["UnitNATO_TNK1_D", 10],	["UnitNATO_IFV_C", 10],	        ["UnitNATO_IFV_G", 10],	        ["UnitNATO_IFV_D", 10],
+	    ["UnitNATO_TNK1_C", _tankcrewTicketsDefault],	["UnitNATO_TNK1_G", _tankcrewTicketsDefault],	["UnitNATO_TNK1_D", _tankcrewTicketsDefault],	["UnitNATO_IFV_C", _tankcrewTicketsDefault],	        ["UnitNATO_IFV_G", _tankcrewTicketsDefault],	        ["UnitNATO_IFV_D", _tankcrewTicketsDefault],
 		
         // Transport Rotary Wing
-        ["UnitNATO_TH1_P", 10],         ["UnitNATO_TH1_CP", 10],        ["UnitNATO_TH1_G1",10],          ["UnitNATO_TH1_G2",10],        ["UnitNATO_TH2_P", 10],         ["UnitNATO_TH2_CP", 10],         ["UnitNATO_TH2_G1",10],        ["UnitNATO_TH2_G2",10],
+        ["UnitNATO_TH1_P", _pilotTicketsDefault],         ["UnitNATO_TH1_CP", _pilotTicketsDefault],        ["UnitNATO_TH1_G1",_pilotTicketsDefault],          ["UnitNATO_TH1_G2",_pilotTicketsDefault],        ["UnitNATO_TH2_P", _pilotTicketsDefault],         ["UnitNATO_TH2_CP", _pilotTicketsDefault],         ["UnitNATO_TH2_G1",_pilotTicketsDefault],        ["UnitNATO_TH2_G2",_pilotTicketsDefault],
        
 	// Attack Rotary Wing
-        ["UnitNATO_AH1_P", 10],            ["UnitNATO_AH1_CP", 10],
+        ["UnitNATO_AH1_P", _pilotTicketsDefault],            ["UnitNATO_AH1_CP", _pilotTicketsDefault],
 	   
         // Fixed Wing
-        ["UnitNATO_AFW1_P", 10],	     ["UnitNATO_AFW2_P", 10],
+        ["UnitNATO_AFW1_P", _pilotTicketsDefault],	     ["UnitNATO_AFW2_P", _pilotTicketsDefault],
        
         // CCT, JTAC, TOWER
-        ["UnitNATO_DC_D", 10]
+        ["UnitNATO_DC_D", _infantryLeadTicketsDefault]
  
 ];
 _infantryTickets = [_infantryTicketsData, _infantryTicketsDefault] call CBA_fnc_hashCreate;
