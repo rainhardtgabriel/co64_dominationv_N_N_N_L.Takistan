@@ -15,8 +15,12 @@ _marker setMarkerType "mil_objective";
 _marker setMarkerSize [0.50, 0.50];
 _marker setMarkerColor "ColorRed";
 
+_dir = getDir (nearestBuilding _location);
+
 _captureBuilding = _buildingType createVehicle _location;
 waitUntil {alive _captureBuilding};
+
+_captureBuilding setDir _dir;
 
 _captureBuilding allowDamage false;
 _captureBuilding setVariable ["isBeingCaptured", false, true];
