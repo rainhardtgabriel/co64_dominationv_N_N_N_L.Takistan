@@ -318,8 +318,8 @@ if (isServer) then {
                                                 hint parseText format["<t color=""#FF0000"">BLUFOR is out of Tickets,<br/>the Mission is lost!</t>"];
                                                 sleep 10;
                                                 hint parseText format["<t color=""#FF0000"">BLUFOR is out of Tickets,<br/>the Mission is lost!</t>"];
-                                                endmission "LOSER";
                                         }] call cba_fnc_globalExecute;
+                                        [2,false] call f_fnc_mpEnd;
                                 };
                         };
 
@@ -480,9 +480,9 @@ if (isServer) then {
         _startComment = format["%1", TF47_MISSIONINFO];
         ["tf47_changetickets", [WEST, 1, 0, _startComment]] call CBA_fnc_globalEvent;
 
-        // Show current Tickets every 5 Minutes
+        // Show current Tickets every 10 Minutes
         while {true} do {
-                sleep 300;
+                sleep 600;
                 ["tf47_showTickets", WEST] call cba_fnc_globalEvent;
         };
 };

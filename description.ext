@@ -351,9 +351,9 @@ class CfgDebriefing
 
 	class End2
 	{
-		title = "Ending #2";
+		title = "MISSION LOST";
 		subtitle = "";
-		description = "*** Insert debriefing #2 here. ***";
+		description = "What a Mess! The Enemy forced us to withdrawal and the Takistani Army will make all those suffer, who supported our Cause. You have blood on your Hands Soldier!";
 		// pictureBackground = "";
 		// picture = "";
 		// pictureColor[] = {0.0,0.3,0.6,1};
