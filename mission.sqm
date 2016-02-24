@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2068;
+		nextID=2073;
 	};
 	class MarkerIDProvider
 	{
@@ -17,9 +17,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={8091.8135,300.56387,2040.5321};
-		dir[]={0.19089527,-0.30451041,-0.93331236};
-		up[]={0.061044041,0.95244801,-0.29846427};
-		aside[]={-0.97982591,1.7867133e-006,-0.20041744};
+        dir[]={0.19089527,-0.30451041,-0.93331236};
+        up[]={0.061044041,0.95244801,-0.29846427};
+        aside[]={-0.97982591,1.7867133e-006,-0.20041744};
 	};
 };
 binarizationWanted=0;
@@ -189,7 +189,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1787;
+		items=1789;
 		class Item0
 		{
 			dataType="Marker";
@@ -1298,7 +1298,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={8215.8877,295.39716,2181.624};
-			angle=-0.29429796;
+			angle=-0.2942979;
 			class Attributes
 			{
 				onActivation="gt1 animate [""Door_1_rot"", 1];";
@@ -32980,6 +32980,84 @@ class Mission
 			};
 			id=2067;
 			type="Land_BarGate_F";
+		};
+		class Item1787
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8268.0645,296.32407,2115.1169};
+				angles[]={0,4.9954991,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="equipmentarea = [this,""radiobox""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+			};
+			id=2071;
+			type="Box_NATO_Ammo_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[4,4,4]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1788
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8256.2471,296.33197,2167.4561};
+				angles[]={6.2816415,4.9954991,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="equipmentarea = [this,""radiobox""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+			};
+			id=2072;
+			type="Box_NATO_Ammo_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[4,4,4]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
