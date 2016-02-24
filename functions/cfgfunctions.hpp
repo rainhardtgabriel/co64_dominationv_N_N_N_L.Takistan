@@ -10,3 +10,12 @@ class SEPP
         class globalSound {};
 	};
 };
+class CleanUp
+{
+	tag="TF47_AreaCleanUp";
+	class functions
+	{
+		file = "functions";
+		class cleanMarkedPosition {};
+	};
+}

@@ -33,7 +33,7 @@ _unit setVariable ["RespawnSystemActive", true, true];
 [[_unit, _licenceType], "tf47_fnc_addGetInEvent", true, true] spawn BIS_fnc_MP;
 [[_unit, _licenceType], "tf47_fnc_addGetOutEvent", true, true] spawn BIS_fnc_MP;
 /*
-if(typeOf _unit == "RHS_UH60M_MEV2" or typeOf _unit == "B_Slingload_01_Medevac_F" or typeOf _unit == "B_Truck_01_medical_F") then {
+if(typeOf _unit == "CUP_B_UH60M_Unarmed_FFV_US" or typeOf _unit == "B_Slingload_01_Medevac_F" or typeOf _unit == "B_Truck_01_medical_F") then {
 	_nop = [_unit] execVM "scripts\tf47\medicContainerLoadout.sqf";
 };
 */

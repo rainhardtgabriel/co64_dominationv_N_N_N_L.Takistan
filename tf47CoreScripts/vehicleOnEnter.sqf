@@ -30,7 +30,7 @@ _player = _params select 2;
 _playerSlot = format["%1", _player];
 /*
 // Let Dustoff become Dustoff
-if(typeOf _vehicle == "RHS_UH60M_MEV2") then {
+if(typeOf _vehicle == "CUP_B_UH60M_Unarmed_FFV_US") then {
 	[[_player,civilian],"tf47_fnc_changePlayerSide"] call BIS_fnc_MP;
 };
 */

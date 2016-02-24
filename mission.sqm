@@ -1298,7 +1298,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={8215.8877,295.39716,2181.624};
-			angle=-0.29429799;
+			angle=-0.29429796;
 			class Attributes
 			{
 				onActivation="gt1 animate [""Door_1_rot"", 1];";

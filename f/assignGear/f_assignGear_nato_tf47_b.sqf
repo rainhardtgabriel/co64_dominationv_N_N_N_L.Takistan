@@ -29,7 +29,7 @@ case "cfr":
 	if (_loadout <= 1) then {
 		_unit addBackpack _bagsmall;
 		clearMagazineCargoGlobal (unitBackpack _unit);
-		(unitBackpack _unit) addMagazineGlobal [_carbinemag,6];
+		(unitBackpack _unit) addMagazineCargoGlobal [_carbinemag,6];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 3];
 		(unitBackpack _unit) addItemCargoGlobal [_firstaid, 4];
 	};
