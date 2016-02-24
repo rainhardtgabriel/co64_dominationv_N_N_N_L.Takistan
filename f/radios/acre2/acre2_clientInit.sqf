@@ -179,4 +179,12 @@ switch true do {
 	};
 };
 
+[] spawn {
+	while {!(["getPluginVersion", ","] call acre_sys_rpc_fnc_callRemoteProcedure)} do {
+		titleText ["You have to use ACRE2 on this Server and have to be on ts.armasim.de.","BLACK"];
+		sleep 300;
+	};
+};
+
+
 
