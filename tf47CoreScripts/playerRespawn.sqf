@@ -1,7 +1,9 @@
 _thislist = _this select 0;
 
 {
-	_unit = _x;
-	["r",_unit] call f_fnc_assignGear;
+	["JIP",["Your standard Gear was selected."]] call BIS_fnc_showNotification;
+
+	_loadout = (player getVariable "f_var_assignGear");
+	[_loadout,player] call f_fnc_assignGear;
 
 } forEach _thislist;
