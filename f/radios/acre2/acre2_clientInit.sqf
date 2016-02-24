@@ -183,7 +183,8 @@ switch true do {
 	while {true} do {
 		if(!(["getPluginVersion", ","] call acre_sys_rpc_fnc_callRemoteProcedure)) then {
 			titleText ["You have to use ACRE2 on this Server and have to be on ts.armasim.de.","BLACK"];
-		else {
+			sleep 10;
+		} else {
 			titleText ["","PLAIN"];  
 			sleep 300;
 		};

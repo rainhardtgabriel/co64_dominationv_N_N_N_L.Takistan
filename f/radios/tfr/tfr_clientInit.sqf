@@ -43,6 +43,7 @@ if(alive player) then {
 			("Radio Communication - Public I" != [player] call TFAR_fnc_getTeamSpeakChannelName) ||
 			!([player] call TFAR_fnc_isTeamSpeakPluginEnabled)) then {
 			titleText ["You have to use TFAR on this Server and have to be on ts.armasim.de.","BLACK"];
+			sleep 10;
 		} else {
 			titleText ["","PLAIN"];  
 			sleep 300;
