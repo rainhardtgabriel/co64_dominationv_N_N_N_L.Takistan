@@ -413,7 +413,7 @@ class Mission
 			dataType="Marker";
 			position[]={9575.3789,315.80453,191.72589};
 			name="reqChanAir";
-			text="Rotary/Fixed Wing have to be on Ch.2 & 3 at all times";
+			text="Rotary/Fixed Wing have to be on Ch.3 & 4 at all times";
 			type="mil_dot";
 			colorName="ColorOrange";
 			id=22;
