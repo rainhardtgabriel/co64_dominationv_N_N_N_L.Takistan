@@ -309,7 +309,7 @@ _mod_backpacks = [
 "U_IG_leader", 	//Guerilla Uniform 	 			 		
 "C_Marshal_F" 	//Marshal
 ];
-_items_no_radio = [
+_mod_items = [
 "ItemWatch",
 "ItemCompass",
 "ItemGPS",
