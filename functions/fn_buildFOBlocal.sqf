@@ -1,4 +1,4 @@
-hint "Please stay away from the construction site.";
+hint composeText ["Bau gestartet. Bitte bleiben Sie von der Baustelle entfernt.", lineBreak, lineBreak, "Construction started. Please stay away until it is finished."];
 
 for [{_i=0}, {_i<4}, {_i=_i+1}] do
 {
@@ -6,4 +6,6 @@ for [{_i=0}, {_i<4}, {_i=_i+1}] do
     sleep 4.5;
 };
 
-hint composeText ["Aufbau abgeschlossen.", lineBreak, lineBreak, "Construction finished."];
+sleep 10;
+
+hint composeText ["Bau abgeschlossen.", lineBreak, lineBreak, "Construction finished."];

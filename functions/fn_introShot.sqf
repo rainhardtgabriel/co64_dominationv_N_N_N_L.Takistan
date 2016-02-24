@@ -48,6 +48,7 @@ if (_fade) then {
 	titleCut ["", "BLACK FADED", 10e10];
 };
 
+titlecut ["","BLACK OUT",0];
 
 cameraEffectEnableHUD true;
 
@@ -118,11 +119,19 @@ _camera camPreparePos [8157.05,2105.99,2.69];
 _camera camPrepareFOV 0.489;
 _camera camCommitPrepared 0;
 
+waituntil {!isnil "bis_fnc_init"};
+
 titleRsc ["intro","PLAIN"];
 
-playMusic "intro";
+titlecut ["","BLACK IN",4];
 
-sleep 7;
+playSound "preintro";
+
+sleep 6.5;
+
+playSound "intro";
+
+sleep 0.25;
 
 _camera cameraeffect ["internal", "back"];
 
