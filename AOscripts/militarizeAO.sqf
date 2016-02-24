@@ -394,7 +394,7 @@ sleep 0.1;
 //////////////// create 2 ai patrol around radiotower /////////////////////////////////////////////////////////////////////////
 
 		sleep 0.1;
-		nul = [radiotower,2,20,[true,false],[false,false,false],false,[2,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";	
+		nul = [radiotower,2,20,[true,false],[false,false,false],false,[2,0],[0,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";	
 	
 		
 //////////////// create a helipad /////////////////////////////////////////////////////////////////////////////////////////////
