@@ -25,7 +25,7 @@ waitUntil { !isNil "cfgTF47" };
 call cfgTF47;
 
 if(!isMultiplayer) then {
-        TF47_MISSIONID = 99;
+        TF47_MISSIONID = 94;
 };
 
 if (!isDedicated) then {
