@@ -12,7 +12,7 @@ class SEPP
 };
 class CleanUp
 {
-	tag="TF47_AreaCleanUp";
+	tag= "TF47_AreaCleanUp";
 	class functions
 	{
 		file = "functions";
@@ -21,7 +21,7 @@ class CleanUp
 };
 class VehicleReplacement
 {
-	tag="TF47_VehicleReplacement";
+	tag= "TF47_VehicleReplacement";
 	class functions 
 	{
 		file = "functions";

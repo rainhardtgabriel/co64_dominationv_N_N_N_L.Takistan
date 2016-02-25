@@ -1,6 +1,5 @@
+private ["_pos","_dir","_vehiclestring","_veh"];
 params ["_pos","_dir","_vehiclestring"];
-private ["_pos","_dir","_vehiclestring"];
-veh = _vehiclestring createVehicle _pos;
-veh setDir _dir;
-veh;
-
+_veh = createVehicle [_vehiclestring, _pos, [], 0, "CAN_COLLIDE"];
+_veh setDir _dir;
+_veh
