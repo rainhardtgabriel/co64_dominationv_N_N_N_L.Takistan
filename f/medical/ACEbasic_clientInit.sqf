@@ -10,12 +10,16 @@ private ["_typeOfUnit","_unit"];
 _typeOfUnit = player getVariable "f_var_assignGear";
 _unit = this select 0;
 // Remove pre-assigned medical items
-{player removeItems _x} forEach ["ACE_fieldDressing","ACE_morphine","ACE_epinephrine","ACE_bloodIV"];
+{player removeItems _x} forEach ["ACE_Maptools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_Flashlight_XL50","ACE_fieldDressing","ACE_morphine","ACE_epinephrine","ACE_bloodIV"];
 
 // Add basic items to all units
 player addItem "ACE_EarPlugs";
 {player addItem "ACE_fieldDressing"} forEach [1,2,3,4,5,6,7,9,10];
 player addItem "ACE_morphine";
+player addItemtoUniform "ACE_Maptools"; 	// Add Maptools
+player addItemtoUniform "ACE_IR_Strobe_Item"; // Add IR Strobe
+player addItemtoUniform "ACE_CableTie"; // Add Cable Ties
+player addItemToUniform "ACE_Flashlight_XL50"; // Add ACE Flashlights
 
 if (_typeOfUnit == "m") then
 {

@@ -1,9 +1,14 @@
 private ["_side_log_pos","_side_rad","_side_name","_side_trig", "_side_ai_skill_array"];
 
+
+_find_woods = selectBestPlaces [[6685.715, 9674.075], 7000, "2*forest - 10*houses", 1, 1];
+_random_woods_area = (_find_woods select 0) select 0;
+log_woods setpos _random_woods_area;
+
 _side_log_pos   			= log_woods;
 _side_rad    				= 150;
 //_mkr_text 	 			=
-_side_name   				= "Valley of Death";
+_side_name   				= "In the Woods";
 _side_ai_skill_array  = [0.3,0.5,0.3,0.7,0.5,1,0.8,0.5,0.5,0.5]; // [aimingAccuracy, aimingShake, aimingSpeed, spotDistance, spotTime, courage, commanding, general, endurance, reloadSpeed] 
 
 

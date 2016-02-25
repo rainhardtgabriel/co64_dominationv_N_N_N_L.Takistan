@@ -168,6 +168,12 @@ if (_faction in _ind_g_faction) then {
 
 // ====================================================================================
 
+// If Unit is Player recalculate Medical Components
+
+if(isPlayer _unit) then {
+	[] execVM "f\medical\medical_init.sqf";
+} else {};
+
 // This variable simply tracks the progress of the gear assignation process, for other
 // scripts to reference.
 
