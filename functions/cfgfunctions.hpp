@@ -18,4 +18,13 @@ class CleanUp
 		file = "functions";
 		class cleanMarkedPosition {};
 	};
-}
+};
+class VehicleReplacement
+{
+	tag="TF47_VehicleReplacement";
+	class functions 
+	{
+		file = "functions";
+		class replaceVehicle {};
+	};
+};

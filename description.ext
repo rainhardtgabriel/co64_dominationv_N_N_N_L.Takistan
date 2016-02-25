@@ -176,6 +176,18 @@ class Params
 			default = 3;
 			code = "f_param_uniforms = %1";
 	};
+
+// TF47 - Vehicle Mod Selector
+// This Parameter will select the Vehicles that will spawn in Base
+
+	class tf47_param_vehiclemod
+	{
+			title = "Vehicle Mod(s)";
+			values[] = {0,1};
+			texts[] = {"Vanilla","CUP"};
+			default = 1;
+			code = "tf47_param_vehiclemod = %1";
+	};
 // ============================================================================================
 
 // F3 - Radio Systems Support
