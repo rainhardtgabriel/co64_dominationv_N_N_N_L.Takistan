@@ -40,7 +40,7 @@ _mkr_text 			= "";
 _ao_name 			= "";
 _ao_rad 			= 350;
 
-_ao_ai_skill_array  = [0.3,0.5,0.3,0.7,0.5,1,0.8,0.5,0.5,0.5] // [aimingAccuracy, aimingShake, aimingSpeed, spotDistance, spotTime, courage, commanding, general, endurance, reloadSpeed];
+_ao_ai_skill_array  = [0.3,0.5,0.3,0.7,0.5,1,0.8,0.5,0.5,0.5]; // [aimingAccuracy, aimingShake, aimingSpeed, spotDistance, spotTime, courage, commanding, general, endurance, reloadSpeed];
 
 
 //////////////// Count all playable Blufor Units /////////////////////////////////////////////////////////////////////////////////
@@ -81,7 +81,7 @@ tf47_var_AOCollection = tf47_var_AOCollection - [_ao_select];
         deleteMarker "BunkerMarker2";
 		sleep 0.1;
         deleteMarker "BunkerMarker3";
-		sleep 30;	
+//		sleep 30;	
 
 
 //////////////// AO is timurkulay ////////////////////////////////////////////////////////////////////////////////////////////////		
@@ -321,7 +321,7 @@ if ( _ao_select == "sakhe") then {
  		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],false,[20,0],[0,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
  		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[5,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
  		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
-  
+ 		[getPos _log_pos, 200, 1000, round (1 + random 3)] call tf47_fnc_sniperTeam;
 
 //////////////// creates a visible marker for the ao //////////////////////////////////////////////////////////////////////////		
 
@@ -340,16 +340,6 @@ ao_endText = format
 		"<t align='center' size='1.5'>Mission Completed!</t><br/><t size='1' align='center' color='#01DF01'>%1</t><br/>____________________<br/>Congratulations, you've managed to Seize %1!<br/><br/> Outstanding work, Soldiers!",
 		_ao_name
 	];
-
-
-//////////////// create trigger at the ao ////////////////////////////////////////////////////////////////////////////////////////			
-		
-		sleep 1;
-		
-		_trig = createTrigger 					["EmptyDetector", getPos _log_pos];   
-		_trig setTriggerArea 					[_ao_rad, _ao_rad, 0, false];  
-		_trig setTriggerActivation 				["EAST", "notpresent", true];   
-		_trig setTriggerStatements 				["this", "0 = execVM ""AOscripts\militarizeAO.sqf""; [ao_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; [""mission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; [""tsk1"", true, ['Seize the Village held by hostile forces','Seize the AO',""Main Mission""],getMarkerPos ""ao_mkr1"", ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; [""tf47_changetickets"", [WEST, 2, 10]] call CBA_fnc_globalEvent; deletevehicle thisTrigger; AOcount = AOcount + 1" , ""];
 
 
 //////////////// Hint for active Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
@@ -394,7 +384,7 @@ sleep 0.1;
 //////////////// create 2 ai patrol around radiotower /////////////////////////////////////////////////////////////////////////
 
 		sleep 0.1;
-		nul = [radiotower,2,20,[true,false],[false,false,false],false,[2,0],[0,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";	
+		nul = [radiotower,2,20,[true,false],[false,false,false],false,[2,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";	
 	
 		
 //////////////// create a helipad /////////////////////////////////////////////////////////////////////////////////////////////
@@ -482,3 +472,13 @@ trig_rt setpos (getpos _log_pos);
 //////////////// Spawn new IED's /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		[round (random 3)] call tf47_fnc_spawnIED;
+
+
+//////////////// create trigger at the ao ////////////////////////////////////////////////////////////////////////////////////////			
+		
+		sleep 1;
+		
+		_trig = createTrigger 					["EmptyDetector", getPos _log_pos, false];
+		_trig setTriggerArea 					[_ao_rad, _ao_rad, 0, false];
+		_trig setTriggerActivation 				["EAST", "notpresent", true];
+		_trig setTriggerStatements 				["this && !(alive radiotower) && (captureBunker1 getVariable ""owner"" == west) && (captureBunker2 getVariable ""owner"" == west) && (captureBunker3 getVariable ""owner"" == west)", "0 = execVM ""AOscripts\militarizeAO.sqf""; [ao_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; [""mission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; [""tsk1"", true, ['Seize the Village held by hostile forces','Seize the AO',""Main Mission""],getMarkerPos ""ao_mkr1"", ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; [""tf47_changetickets"", [WEST, 2, 10]] call CBA_fnc_globalEvent; deletevehicle thisTrigger; AOcount = AOcount + 1" , ""];
