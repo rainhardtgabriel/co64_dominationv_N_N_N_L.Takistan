@@ -542,6 +542,7 @@ class CfgFunctions
 			class typeText;
 			class checkPos;
 			class addAction;
+			class sniperTeam;
 		};
 		#include "SIDEscripts\Missions\Missions.hpp"
 	};
