@@ -60,7 +60,7 @@ _statusMarkerData = [
         ["goose1",           ["callsign_goose1",        "b_plane",      "ColorBrown",           "GOOSE",        false]],
         ["manticore1",       ["callsign_manticore1",    "b_air",        "ColorOrange",          "MANTICORE",    false]],
         ["firefly1",         ["callsign_firefly1",      "b_air",        "ColorOrange",          "FIREFLY",      false]],
-        // ["thunderbird1",     ["callsign_thunderbird1",       "b_plane",                      "ColorOrange",          "THUNDERBIRD",                                                                                                  false]],
+        ["thunderbird1",     ["callsign_thunderbird1",  "b_plane",      "ColorOrange",          "THUNDERBIRD",  false]],
         ["falcon1",          ["callsign_falcon1",       "b_plane",      "ColorOrange",          "FALCON-01",    false]],
         ["falcon2",          ["callsign_falcon2",       "b_plane",      "ColorOrange",          "FALCON-02",    false]],
         ["Albatros",         ["callsign_albatros",      "b_plane",      "ColorBrown",           "ALBATROS",     false]],

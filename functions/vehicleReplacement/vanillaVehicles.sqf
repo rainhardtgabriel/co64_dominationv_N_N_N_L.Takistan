@@ -1,25 +1,27 @@
 //Small Vehicles
-_quad = "B_Quadbike01_F";//veh= [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM "tf47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true]; 
-_bike ="CUP_B_M1030"; // veh = [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM 47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true];
+_quad = "B_Quadbike_01_F";//veh= [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM "tf47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true]; 
+_bike = "CUP_B_M1030"; // veh = [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM 47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true];
 _tractor = "CUP_B_TowingTractor_USMC"; //veh = [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 //Medium Vehicles
 _hmmwv_transport = "CUP_B_HMMWV_Transport_USA";
+_hmmwv_toc = "CUP_B_HMMWV_Unarmed_USMC";
 _hmmwv_m2 ="CUP_B_HMMWV_M2_USMC"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _hmmwv_mk19 ="CUP_B_HMMWV_MK19_USMC"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _hmmwv_tow ="CUP_B_HMMWV_TOW_USMC"; //veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _hmmwv_mk19_crows = "CUP_B_HMMWV_Crows_MK19_USA"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _hmmwv_avenger = "CUP_B_HMMWV_Avenger_USA"; //  veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_rg31_m2 = "CUP_RG31E_M2"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_dingo_m2 = "CUP_DINGO_DES"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_dingo_gl = "CUP_DINGO_GL_DES"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_rg31_m2 = "CUP_RG31_M2"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_dingo_m2 = "CUP_B_Dingo_GER_Des"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_dingo_gl = "CUP_B_Dingo_GL_CZ_Des"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _landrover_gb = "CUP_B_LR_MG_GB_W"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_landrover_cz = "CUP_B_LR_MG_CZ_W"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_landrover_transport = "CUP_B_LR_Transport_CZ_D";//veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 5] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_landrover_cz = "CUP_B_LR_Special_Des_CZ_D"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_landrover_transport ="CUP_B_LR_Transport_CZ_D";//veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 5] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _jackal2_gmg = "CUP_B_Jackal2_GMG_GB_D"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _jackal2_l2a1= "CUP_B_Jackal2_L2A1_GB_D"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_ambulance = "CUP_B_HMMWV_Ambulance_USA";
 //Trucks
-_refuel = "B_Truck_01_fuel_F"; // veh = [this, 2700, 7200, "Fuel2", "mil_dot", "ColorBlue", WEST, "", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_reammo = "B_Truck_01_ammo_F"; // veh = [this, 2700, 7200, "Fuel2", "mil_dot", "ColorBlue", WEST, "", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_refuel = "B_Truck_01_Fuel_F"; // veh = [this, 2700, 7200, "Fuel2", "mil_dot", "ColorBlue", WEST, "", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_reammo = "B_Truck_01_Ammo_F"; // veh = [this, 2700, 7200, "Fuel2", "mil_dot", "ColorBlue", WEST, "", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _repair = "B_Truck_01_Repair_F"; // veh = [this, 2700, 7200, "Fuel2", "mil_dot", "ColorBlue", WEST, "", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _transport = "B_Truck_01_covered_F"; // veh = [this, 2700, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 8] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 //Tanks
@@ -50,3 +52,8 @@ _albatros = "CUP_B_C130J_USMC"; // veh = [this, 2700, 0, "ALBATROS", "b_plane", 
 _thunderbird = "CUP_B_A10_AT_USA"; // veh = [this, 2700, 0, "THUNDERBIRD", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _wasp01 = "CUP_B_AV8B_AGM_USMC"; // veh = [this, 2700, 0, "WASP-01", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _wasp02 = "CUP_B_AV8B_GBU12_USMC"; // veh = [this, 2700, 0, "WASP-02", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+//Base Defense
+_basedef_tank = _rhino01;
+_basedef_avenger = _hmmwv_avenger;
+_basedef_static_aa = "CUP_WV_B_CRAM";
+_basedef_static_mg = "CUP_B_M2StaticMG_USMC";
