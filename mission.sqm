@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2246;
+		nextID=2247;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8254.5195,325.9455,2066.3147};
-		dir[]={-0.51304728,-0.50092298,0.69707114};
-		up[]={-0.29693639,0.86548018,0.40344381};
-		aside[]={0.80539984,4.1432213e-007,0.59277588};
+		pos[]={8465.1855,312.89502,1920.7206};
+		dir[]={-0.053670704,-0.32055932,0.94577795};
+		up[]={-0.018163253,0.94721222,0.32007954};
+		aside[]={0.99847174,-5.5356759e-007,0.056660373};
 	};
 };
 binarizationWanted=0;
@@ -155,7 +155,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1773;
+		items=1767;
 		class Item0
 		{
 			dataType="Marker";
@@ -25165,14 +25165,14 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=1;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8439.6113,296.0191,1958.0815};
-						angles[]={0.0032018756,1.2921929,0.0015822123};
+						position[]={8460.9951,299.33838,1946.1531};
+						angles[]={0,1.2921895,0.051155601};
 					};
 					side="West";
 					flags=2;
@@ -25184,19 +25184,6 @@ class Mission
 					};
 					id=1773;
 					type="B_Soldier_F";
-				};
-				class Item1
-				{
-					dataType="Waypoint";
-					position[]={8454.709,296.83746,1961.757};
-					type="GetInNearest";
-					combatMode="RED";
-					expCond="vehiclespawned";
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=1774;
 				};
 			};
 			class Attributes
@@ -29506,76 +29493,6 @@ class Mission
 		};
 		class Item1755
 		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=4;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={8181.9819,296.30634,2231.7449};
-					};
-					side="West";
-					flags=3;
-					class Attributes
-					{
-					};
-					id=2196;
-					type="B_crew_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={8184.5386,296.47733,2231.6824};
-					};
-					side="West";
-					flags=1;
-					class Attributes
-					{
-					};
-					id=2197;
-					type="B_crew_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={8188.0317,296.67792,2231.0581};
-					};
-					side="West";
-					flags=1;
-					class Attributes
-					{
-					};
-					id=2198;
-					type="B_crew_F";
-				};
-				class Item3
-				{
-					dataType="Waypoint";
-					position[]={8158.7231,295.90311,2237.4729};
-					type="GetInNearest";
-					expCond="vehiclespawned";
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=2199;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=2195;
-		};
-		class Item1756
-		{
 			dataType="Marker";
 			position[]={8238.7305,297.74268,2228.2063};
 			name="mkr_spawn_veh_80";
@@ -29584,7 +29501,7 @@ class Mission
 			angle=34.999996;
 			id=2200;
 		};
-		class Item1757
+		class Item1756
 		{
 			dataType="Group";
 			side="West";
@@ -29654,7 +29571,7 @@ class Mission
 			};
 			id=2201;
 		};
-		class Item1758
+		class Item1757
 		{
 			dataType="Marker";
 			position[]={8469.7031,297.27039,1933.1113};
@@ -29664,157 +29581,17 @@ class Mission
 			angle=34.999996;
 			id=2206;
 		};
-		class Item1759
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=4;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={8463.4375,296.98727,1904.8337};
-					};
-					side="West";
-					flags=3;
-					class Attributes
-					{
-					};
-					id=2208;
-					type="B_crew_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={8465.9941,297.23221,1904.7712};
-					};
-					side="West";
-					flags=1;
-					class Attributes
-					{
-					};
-					id=2209;
-					type="B_crew_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={8469.4873,297.61838,1904.147};
-					};
-					side="West";
-					flags=1;
-					class Attributes
-					{
-					};
-					id=2210;
-					type="B_crew_F";
-				};
-				class Item3
-				{
-					dataType="Waypoint";
-					position[]={8469.5752,297.25885,1932.795};
-					type="GetInNearest";
-					expCond="vehiclespawned";
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=2211;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=2207;
-		};
-		class Item1760
+		class Item1758
 		{
 			dataType="Marker";
 			position[]={7655.5073,343.78125,1370.7542};
 			name="mkr_spawn_veh_82";
 			text="_basedef_tank";
 			type="Empty";
-			angle=228.60786;
+			angle=228.60779;
 			id=2212;
 		};
-		class Item1761
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=4;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7691.9756,347.25143,1380.4633};
-					};
-					side="West";
-					flags=3;
-					class Attributes
-					{
-					};
-					id=2214;
-					type="B_crew_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7694.5322,347.38318,1380.4008};
-					};
-					side="West";
-					flags=1;
-					class Attributes
-					{
-					};
-					id=2215;
-					type="B_crew_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7698.0254,347.62573,1379.7765};
-					};
-					side="West";
-					flags=1;
-					class Attributes
-					{
-					};
-					id=2216;
-					type="B_crew_F";
-				};
-				class Item3
-				{
-					dataType="Waypoint";
-					position[]={7655.52,343.76944,1370.7111};
-					type="GetInNearest";
-					expCond="vehiclespawned";
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=2217;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=2213;
-		};
-		class Item1762
+		class Item1759
 		{
 			dataType="Marker";
 			position[]={7646.7236,343.32043,1382.2788};
@@ -29824,134 +29601,7 @@ class Mission
 			angle=251.51498;
 			id=2218;
 		};
-		class Item1763
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=4;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7679.0723,341.63599,1401.4387};
-					};
-					side="West";
-					flags=3;
-					class Attributes
-					{
-					};
-					id=2220;
-					type="B_crew_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7681.6289,341.48718,1401.3762};
-					};
-					side="West";
-					flags=1;
-					class Attributes
-					{
-					};
-					id=2221;
-					type="B_crew_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7685.1221,341.48947,1400.752};
-					};
-					side="West";
-					flags=1;
-					class Attributes
-					{
-					};
-					id=2222;
-					type="B_crew_F";
-				};
-				class Item3
-				{
-					dataType="Waypoint";
-					position[]={7646.6948,343.30209,1382.277};
-					type="GetInNearest";
-					expCond="vehiclespawned";
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=2223;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=2219;
-		};
-		class Item1764
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=3;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={8140.4312,449.40814,1238.434};
-					};
-					side="West";
-					flags=3;
-					class Attributes
-					{
-						skill=1;
-					};
-					id=2226;
-					type="B_crew_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={8142.9873,448.94217,1238.371};
-					};
-					side="West";
-					flags=1;
-					class Attributes
-					{
-						skill=1;
-					};
-					id=2227;
-					type="B_crew_F";
-				};
-				class Item2
-				{
-					dataType="Waypoint";
-					position[]={8126.2451,452.30194,1262.054};
-					type="GetInNearest";
-					expCond="vehiclespawned";
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=2229;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=2225;
-		};
-		class Item1765
+		class Item1760
 		{
 			dataType="Marker";
 			position[]={7730.5991,296.04001,1676.4548};
@@ -29961,7 +29611,7 @@ class Mission
 			angle=236.089;
 			id=2230;
 		};
-		class Item1766
+		class Item1761
 		{
 			dataType="Marker";
 			position[]={7781.5635,296.04001,1703.5804};
@@ -29971,17 +29621,17 @@ class Mission
 			angle=235;
 			id=2237;
 		};
-		class Item1767
+		class Item1762
 		{
 			dataType="Marker";
 			position[]={8339.3643,296.04001,2033.8646};
 			name="mkr_spawn_veh_86";
 			text="_basedef_static_aa";
 			type="Empty";
-			angle=56.08897;
+			angle=56.088951;
 			id=2238;
 		};
-		class Item1768
+		class Item1763
 		{
 			dataType="Marker";
 			position[]={8454.7178,296.33792,1961.7677};
@@ -29991,7 +29641,7 @@ class Mission
 			angle=74.037003;
 			id=2239;
 		};
-		class Item1769
+		class Item1764
 		{
 			dataType="Marker";
 			position[]={8445.4834,296.10254,1939.0099};
@@ -30001,7 +29651,7 @@ class Mission
 			angle=59.115982;
 			id=2240;
 		};
-		class Item1770
+		class Item1765
 		{
 			dataType="Object";
 			class PositionInfo
@@ -30017,52 +29667,7 @@ class Mission
 			id=2241;
 			type="Land_fortified_nest_small_EP1";
 		};
-		class Item1771
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=2;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7696.7925,296.04144,1613.8538};
-						angles[]={0,4.2216382,0};
-					};
-					side="West";
-					flags=2;
-					class Attributes
-					{
-						skill=0.60000002;
-						lock="UNLOCKED";
-						init="this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];this allowDamage false";
-					};
-					id=2243;
-					type="B_Soldier_F";
-				};
-				class Item1
-				{
-					dataType="Waypoint";
-					position[]={7682.8179,296.539,1606.983};
-					type="GetInNearest";
-					combatMode="RED";
-					expCond="vehiclespawned";
-					class Effects
-					{
-					};
-					showWP="NEVER";
-					id=2244;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=2242;
-		};
-		class Item1772
+		class Item1766
 		{
 			dataType="Marker";
 			position[]={7682.8115,296.04001,1606.9705};
