@@ -239,6 +239,7 @@ f_var_cachingAggressiveness = 1;
 // TF47 - Respawn Vehicle
 // ======================================================================
 
+vehiclespawned = false;
 vehiclespawnscript = [] execVM "vehiclereplacement.sqf";
 
 // ======================== TF47 Stuff ===================================
