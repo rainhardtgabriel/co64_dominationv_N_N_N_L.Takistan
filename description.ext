@@ -116,8 +116,7 @@ class cfgNotifications
 		priority = 5;
 	};
 	class GEAR {
-		title= "REARM"
-		description="%1";
+		title= "REARM";		description="%1";
 		iconPicture = "\A3\ui_f\data\map\markers\nato\b_support.paa";
 		duration = 3;
 		priority = 5;
@@ -175,6 +174,18 @@ class Params
 			texts[] = {"Vanilla","RHS Woodland","RHS Desert","CUP Woodland"};
 			default = 3;
 			code = "f_param_uniforms = %1";
+	};
+
+// TF47 - Vehicle Mod Selector
+// This Parameter will select the Vehicles that will spawn in Base
+
+	class tf47_param_vehiclemod
+	{
+			title = "Vehicle Mod(s)";
+			values[] = {0,1};
+			texts[] = {"Vanilla","CUP"};
+			default = 1;
+			code = "tf47_param_vehiclemod = %1";
 	};
 // ============================================================================================
 
