@@ -236,6 +236,12 @@ f_var_cachingAggressiveness = 1;
 
 [] execVM "f\medical\medical_init.sqf";
 
+// TF47 - Respawn Vehicle
+// ======================================================================
+
+vehiclespawned = false;
+vehiclespawnscript = [] execVM "vehiclereplacement.sqf";
+
 // ======================== TF47 Stuff ===================================
 
 waitUntil { isServer || !isNull player };
@@ -280,3 +286,4 @@ sleep 0.5;
 ListOfBaseCleanMarker = ["BaseCleanMarker_0","BaseCleanMarker_1","BaseCleanMarker_2","BaseCleanMarker_3"];
 [ListOfBaseCleanMarker,600] spawn TF47_AreaCleanUp_fnc_cleanMarkedPosition;
 sleep 0.1;
+

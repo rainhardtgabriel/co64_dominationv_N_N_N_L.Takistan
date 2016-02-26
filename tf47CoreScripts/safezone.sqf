@@ -30,8 +30,15 @@ waitUntil {!isNull player};
 player addEventHandler ["Fired", {	
 	if ({(_this select 0) distance getMarkerPos (_x select 0) < _x select 1} count SAFETY_ZONES > 0) then
 	{
+		_player = _this select 0;
+		_player setVariable["TF47_SAFEZONE_COUNTER", (_player getVariable["TF47_SAFEZONE_COUNTER", 0]) + 1];
+		_counter = _player getVariable["TF47_SAFEZONE_COUNTER", 0];
+		if(_counter >= 6) then {
+			// bye bye
+			endMission "LOSER";
+		};
 		deleteVehicle (_this select 6);
-		titleText [MESSAGE, "PLAIN", 3];
+		hint MESSAGE;
 	};
 	/*if (({(_this select 0) hasWeapon _x} count ["B_sniper_F","B_spotter_F"] > 0)) then {
 		if (({(_this select 0) isKindOf _x} count ["CUP_Weapon_srifle_AS50","CUP_Weapon_arifle_Mk20"] < 1)) then {
