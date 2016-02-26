@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=129;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2241;
+		nextID=2246;
 	};
 	class MarkerIDProvider
 	{
-		nextID=189;
+		nextID=190;
 	};
 	class Camera
 	{
@@ -155,7 +155,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1770;
+		items=1773;
 		class Item0
 		{
 			dataType="Marker";
@@ -25171,8 +25171,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8423.8369,296.04144,1957.1874};
-						angles[]={0,1.2921929,0};
+						position[]={8439.6113,296.0191,1958.0815};
+						angles[]={0.0032018756,1.2921929,0.0015822123};
 					};
 					side="West";
 					flags=2;
@@ -25191,6 +25191,7 @@ class Mission
 					position[]={8454.709,296.83746,1961.757};
 					type="GetInNearest";
 					combatMode="RED";
+					expCond="vehiclespawned";
 					class Effects
 					{
 					};
@@ -29558,8 +29559,9 @@ class Mission
 				class Item3
 				{
 					dataType="Waypoint";
-					position[]={8158.7227,295.90308,2237.4727};
+					position[]={8158.7231,295.90311,2237.4729};
 					type="GetInNearest";
+					expCond="vehiclespawned";
 					class Effects
 					{
 					};
@@ -29639,6 +29641,7 @@ class Mission
 					dataType="Waypoint";
 					position[]={8238.415,297.69675,2227.72};
 					type="GetInNearest";
+					expCond="vehiclespawned";
 					class Effects
 					{
 					};
@@ -29716,8 +29719,9 @@ class Mission
 				class Item3
 				{
 					dataType="Waypoint";
-					position[]={8469.5752,297.25885,1932.7949};
+					position[]={8469.5752,297.25885,1932.795};
 					type="GetInNearest";
+					expCond="vehiclespawned";
 					class Effects
 					{
 					};
@@ -29737,7 +29741,7 @@ class Mission
 			name="mkr_spawn_veh_82";
 			text="_basedef_tank";
 			type="Empty";
-			angle=228.60789;
+			angle=228.60786;
 			id=2212;
 		};
 		class Item1761
@@ -29795,8 +29799,9 @@ class Mission
 				class Item3
 				{
 					dataType="Waypoint";
-					position[]={7655.5205,343.76965,1370.7107};
+					position[]={7655.52,343.76944,1370.7111};
 					type="GetInNearest";
+					expCond="vehiclespawned";
 					class Effects
 					{
 					};
@@ -29874,8 +29879,9 @@ class Mission
 				class Item3
 				{
 					dataType="Waypoint";
-					position[]={7646.6948,343.30194,1382.2769};
+					position[]={7646.6948,343.30209,1382.277};
 					type="GetInNearest";
+					expCond="vehiclespawned";
 					class Effects
 					{
 					};
@@ -29930,8 +29936,9 @@ class Mission
 				class Item2
 				{
 					dataType="Waypoint";
-					position[]={8126.2451,452.30194,1262.0537};
+					position[]={8126.2451,452.30194,1262.054};
 					type="GetInNearest";
+					expCond="vehiclespawned";
 					class Effects
 					{
 					};
@@ -29971,7 +29978,7 @@ class Mission
 			name="mkr_spawn_veh_86";
 			text="_basedef_static_aa";
 			type="Empty";
-			angle=56.088978;
+			angle=56.08897;
 			id=2238;
 		};
 		class Item1768
@@ -29993,6 +30000,77 @@ class Mission
 			type="Empty";
 			angle=59.115982;
 			id=2240;
+		};
+		class Item1770
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7683.2109,297.04144,1606.0587};
+				angles[]={6.2816033,1.0095832,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=2241;
+			type="Land_fortified_nest_small_EP1";
+		};
+		class Item1771
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7696.7925,296.04144,1613.8538};
+						angles[]={0,4.2216382,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];this allowDamage false";
+					};
+					id=2243;
+					type="B_Soldier_F";
+				};
+				class Item1
+				{
+					dataType="Waypoint";
+					position[]={7682.8179,296.539,1606.983};
+					type="GetInNearest";
+					combatMode="RED";
+					expCond="vehiclespawned";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=2244;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2242;
+		};
+		class Item1772
+		{
+			dataType="Marker";
+			position[]={7682.8115,296.04001,1606.9705};
+			name="mkr_spawn_veh_89";
+			text="_basedef_static_mg";
+			type="Empty";
+			angle=241.88199;
+			id=2245;
 		};
 	};
 };
