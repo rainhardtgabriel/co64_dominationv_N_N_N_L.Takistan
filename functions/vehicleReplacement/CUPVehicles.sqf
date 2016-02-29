@@ -36,9 +36,9 @@ _tiger03 = "CUP_B_M1126_ICV_MK19_Desert"; // veh = [this, 2700, 0, "TIGER-03", "
 _gator01 = "CUP_B_LAV25M240_USMC"; // veh = [this, 2700, 0, "GATOR-01", "b_mech_inf", "ColorOrange", WEST, "larmor", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _gator02 = "CUP_B_LAV25_USMC"; // veh = [this, 2700, 0, "GATOR-02", "b_mech_inf", "ColorOrange", WEST, "larmor", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 //Helicopters
-_butterfly01 ="B_Heli_Light_01_F"; // veh = [this, 1800, 0, "BUTTERFLY-01", "b_air", "ColorBrown", WEST, "rottrans", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_butterfly02 ="B_Heli_Light_01_F"; // veh = [this, 1800, 0, "BUTTERFLY-02", "b_air", "ColorBrown", WEST, "rottrans", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_firefly = "B_Heli_Light_01_armed_F"; // veh = [this, 2700, 0, "FIREFLY", "b_air", "ColorOrange", WEST, "rotatk", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_butterfly01 ="MELB_MH6M"; // veh = [this, 1800, 0, "BUTTERFLY-01", "b_air", "ColorBrown", WEST, "rottrans", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_butterfly02 ="MELB_MH6M"; // veh = [this, 1800, 0, "BUTTERFLY-02", "b_air", "ColorBrown", WEST, "rottrans", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_firefly = "MELB_AH6M_L"; // veh = [this, 2700, 0, "FIREFLY", "b_air", "ColorOrange", WEST, "rotatk", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _griffin = "CUP_B_UH1Y_UNA_USMC"; // veh = [this, 2700, 0, "GRIFFIN", "b_air", "ColorBrown", WEST, "rottrans", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "GRIFFIN", "b_air", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 _manticore = "CUP_B_AH1Z_Escort"; // veh = [this, 2700, 0, "MANTICORE", "b_air", "ColorOrange", WEST, "rotatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _pelican = "CUP_B_CH47F_USA"; // veh = [this, 3600, 0, "PELICAN", "b_air", "ColorBrown", WEST, "rottrans", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "PLECAN", "b_air", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
