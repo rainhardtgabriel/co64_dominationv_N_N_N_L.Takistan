@@ -64,6 +64,23 @@ if (isNil{_type}) then {} else {
 					_object allowDamage false;
 					_object enableSimulationGlobal false;
 			};
+			case "radiobox" : {
+				clearWeaponCargoGlobal _object;
+				clearMagazineCargoGlobal _object;
+				clearItemCargoGlobal _object;
+				_object allowDamage false;
+				[_object] spawn {
+					while{true} do {
+						_object = _this select 0;
+						clearItemCargoGlobal _object;
+						_object addItemCargoGlobal ["ACRE_PRC343", 100];
+						_object addItemCargoGlobal ["ACRE_PRC148", 100];
+						_object addItemCargoGlobal ["ACRE_PRC152", 100];
+						_object addItemCargoGlobal ["ACRE_PRC117F", 100];
+						sleep 3600;
+					};
+				};
+			};
 			default { _object enableSimulationGlobal false;}; 
 		};
 	};

@@ -47,9 +47,9 @@ f_radios_settings_acre2_language_indfor = ["english"];
 // Channels names
 // first item in the array will correspond to the first channel
 // note these only work if f_radios_settings_acre2_disableFrequencySplit is set to false
-f_radios_settings_acre2_groups_blufor = ["Test","Ground-Ground","Ground-Air","AIR","Godfather","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-ray","Yankee","Zulu"];
+f_radios_settings_acre2_groups_blufor = ["Radio Tests","Ground Communication Net","Tactical Air Direction Net","Air Control Net","Command and Control Net","Fire Direction Net","Logistics Control Net","Unallocated","Unallocated","Unallocated","Unallocated","Unallocated","Unallocated","Unallocated","Platoon Net","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-ray","Yankee","Zulu"];
 f_radios_settings_acre2_groups_opfor = ["Alpha","Bravo","Charlie","Delta","Echo","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-ray","Yankee","Zulu"];
-f_radios_settings_acre2_groups_indfor = ["Test","Ground-Ground","Ground-Air","AIR","Godfather","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-ray","Yankee","Zulu"];
+f_radios_settings_acre2_groups_indfor = f_radios_settings_acre2_groups_blufor;
 
 // ====================================================================================
 // MISC ACRE2 settings, these are all set the ACRE2 defaults
