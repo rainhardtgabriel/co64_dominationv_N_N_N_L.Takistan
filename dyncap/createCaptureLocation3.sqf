@@ -22,6 +22,8 @@ waitUntil {alive _captureBuilding};
 
 _captureBuilding setDir _dir;
 
+_captureBuilding setVehiclePosition [_location, [], 0, "NONE"];
+
 _captureBuilding allowDamage false;
 _captureBuilding setVariable ["isBeingCaptured", false, true];
 _captureBuilding setVariable ["owner", _side, true];

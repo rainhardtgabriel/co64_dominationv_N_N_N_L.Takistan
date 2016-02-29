@@ -48,8 +48,10 @@ _baseCleanupMarkers = [["respawn_west","respawn_west_1",200]];
 //              see mcmarker.sqf and mcmarkerchange.sqf for details
 _statusMarkersInit = false;
 _statusMarkerData = [
-        //["a_1",              ["mc1marker",                           "b_hq",                         "ColorGreen",           "CCT - Command and Control ""SPECTRE""",                                                true]],
-        //["a_2",              ["mc2marker",                           "b_hq",                         "ColorGreen",           "CCT - Fliegerleitoffizier ""TOPMAN""",                                                 true]]
+        ["UnitNATO_CO",      ["mc1marker",              "b_hq",         "ColorGreen",       "CCT - Command and Control ""GODFATHER""",true]],
+        ["UnitNATO_DC",      ["mc2marker",              "b_hq",         "ColorGreen",       "CCT - ""TOPMAN""",true]],
+        ["UnitNATO_DC_D",    ["mc3marker",              "b_hq",         "ColorGreen",       "TOC - ""TOWER""",true]],
+        ["evileye1",         ["callsign_evileye1",      "b_uav",        "ColorYellow",           "EVILEYE",     false]],
         ["raven1",           ["callsign_raven1",        "b_air",        "ColorBrown",           "RAVEN-01",     false]],
         ["raven2",           ["callsign_raven2",        "b_air",        "ColorBrown",           "RAVEN-02",     false]],
         ["dustoff",          ["callsign_dustoff",       "b_air",        "ColorRED",           "DUSTOFF",     false]],
@@ -60,10 +62,11 @@ _statusMarkerData = [
         ["goose1",           ["callsign_goose1",        "b_plane",      "ColorBrown",           "GOOSE",        false]],
         ["manticore1",       ["callsign_manticore1",    "b_air",        "ColorOrange",          "MANTICORE",    false]],
         ["firefly1",         ["callsign_firefly1",      "b_air",        "ColorOrange",          "FIREFLY",      false]],
-        // ["thunderbird1",     ["callsign_thunderbird1",       "b_plane",                      "ColorOrange",          "THUNDERBIRD",                                                                                                  false]],
+        ["thunderbird1",     ["callsign_thunderbird1",  "b_plane",      "ColorOrange",          "THUNDERBIRD",  false]],
+        ["evileye1",         ["callsign_evileye1",      "b_uav",        "ColorYellow",          "EVILEYE",      false]],
         ["falcon1",          ["callsign_falcon1",       "b_plane",      "ColorOrange",          "FALCON-01",    false]],
         ["falcon2",          ["callsign_falcon2",       "b_plane",      "ColorOrange",          "FALCON-02",    false]],
-        ["Albatros",         ["callsign_albatros",      "b_plane",      "ColorBrown",           "ALBATROS",     false]],
+        ["albatros",         ["callsign_albatros",      "b_plane",      "ColorBrown",           "ALBATROS",     false]],
         ["rhino1",           ["callsign_rhino1",        "b_armor",      "ColorOrange",          "RHINO-01",     false]],
         ["rhino2",           ["callsign_rhino2",        "b_armor",      "ColorOrange",          "RHINO-02",     false]],
         ["lion1",            ["callsign_lion1",         "b_armor",      "ColorOrange",          "LION-01",      false]],
@@ -129,6 +132,8 @@ _vehicleRestrictionData = [
         ["wasp1",                          [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P"],                 []]],
         //Fixed Wing Attack Harrier AV8B AGM
         ["wasp2",                          [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P"],                 []]],	
+        //Fixed Wing Attack Thunderbird
+        ["thunderbird1",                   [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P"],                 []]],
 
         // Tank M1A1 Rhino
         ["rhino1",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"]]],

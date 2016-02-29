@@ -336,10 +336,11 @@ if (_isMan) then {
 	_unit linkItem "ItemCompass";	// Add and equip a compass
 	_unit linkItem "ItemRadio";		// Add and equip A3's default radio
 	_unit linkItem "ItemWatch";		// Add and equip a watch
+	_unit addItemToUniform "ACE_EarPlugs"; // add Earplugs
 	_unit addItemtoUniform "ACE_Maptools"; 	// Add Maptools
-	_unit addItemtoVest "ACE_IR_Strobe_Item"; // Add IR Strobe
-    _unit addItemtoVest "ACE_CableTie"; // Add Cable Ties
-	_unit addItemToVest "ACE_Flashlight_XL50"; // Add ACE Flashlights
+	_unit addItemtoUniform "ACE_IR_Strobe_Item"; // Add IR Strobe
+	_unit addItemtoUniform "ACE_CableTie"; // Add Cable Ties
+	_unit addItemToUniform "ACE_Flashlight_XL50"; // Add ACE Flashlights
 	//_unit linkItem "ItemGPS"; 	// Add and equip a GPS
 
 };
@@ -1018,8 +1019,8 @@ switch (_typeofUnit) do
 // ====================================================================================
 // If this is an ammobox, check medical component settings and if needed run converter script.
 
-if (!_isMan) then
-	{
+if (!_isMan) then{
+	
 	switch(f_var_medical) do
 		{
 				
