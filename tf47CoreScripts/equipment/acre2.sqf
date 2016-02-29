@@ -1,4 +1,4 @@
-_radioitems = [
+_items_radios = [
 	// "ACRE_PRC343",
 	// "ACRE_PRC148",
 	// "ACRE_PRC152",

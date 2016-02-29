@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2260;
+		nextID=2254;
 	};
 	class MarkerIDProvider
 	{
@@ -152,7 +152,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1763;
+		items=1767;
 		class Item0
 		{
 			dataType="Marker";
@@ -29351,7 +29351,7 @@ class Mission
 			name="mkr_spawn_veh_82";
 			text="_basedef_tank";
 			type="Empty";
-			angle=228.60767;
+			angle=228.60764;
 			id=2212;
 		};
 		class Item1752
@@ -29463,7 +29463,7 @@ class Mission
 			{
 				init="equipmentarea = [this,""radiobox""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
-			id=2071;
+			id=2248;
 			type="Box_NATO_Ammo_F";
 			class CustomAttributes
 			{
@@ -29502,7 +29502,7 @@ class Mission
 			{
 				init="equipmentarea = [this,""radiobox""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
-			id=2072;
+			id=2249;
 			type="Box_NATO_Ammo_F";
 			class CustomAttributes
 			{
@@ -29527,6 +29527,46 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item1763
+		{
+			dataType="Marker";
+			position[]={8150.1191,296.12735,2039.7073};
+			name="callsign_evileye";
+			text="EVILEYE";
+			type="b_uav";
+			colorName="ColorBlack";
+			id=2250;
+		};
+		class Item1764
+		{
+			dataType="Marker";
+			position[]={8193.873,296.04001,2058.7739};
+			name="callsign_thunderbird1";
+			text="THUNDERBIRD";
+			type="b_plane";
+			colorName="ColorBlack";
+			id=2251;
+		};
+		class Item1765
+		{
+			dataType="Marker";
+			position[]={8247.5801,296.04001,2054.7598};
+			name="mkr_spawn_veh_92";
+			text="_bike";
+			type="Empty";
+			angle=147.341;
+			id=2252;
+		};
+		class Item1766
+		{
+			dataType="Marker";
+			position[]={8252.1963,296.04001,2057.3745};
+			name="mkr_spawn_veh_93";
+			text="_bike";
+			type="Empty";
+			angle=147.341;
+			id=2253;
 		};
 	};
 };
