@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2728;
+		nextID=2729;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8336.123,319.98071,1879.7205};
-		dir[]={-0.69169945,-0.62623113,-0.36004946};
-		up[]={-0.55557108,0.7795167,-0.28918937};
-		aside[]={-0.46177268,1.3274621e-006,0.88713855};
+		pos[]={8070.0859,329.04541,1978.752};
+		dir[]={0.22801618,-0.58247787,-0.780366};
+		up[]={0.16339681,0.81272429,-0.55921358};
+		aside[]={-0.95998412,7.4057607e-007,-0.28048861};
 	};
 };
 binarizationWanted=0;
@@ -154,7 +154,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=2087;
+		items=2088;
 		class Item0
 		{
 			dataType="Marker";
@@ -1095,12 +1095,12 @@ class Mission
 		class Item97
 		{
 			dataType="Trigger";
-			position[]={8021.8281,296.04001,1706.3009};
-			angle=1.0471982;
+			position[]={8021.8281,296.04001,1706.301};
+			angle=1.0471976;
 			class Attributes
 			{
 				condition="Local player and player in thislist";
-				onActivation="ret = [""AV-8B Harrier II"", ""Callsign: WASP-02""] spawn BIS_fnc_infoText;";
+				onActivation="ret = [wasp2,""WASP-02""] execVM ""Base\VehicleTextinfo.sqf""";
 				sizeA=20;
 				sizeB=9;
 				interuptable=1;
@@ -1115,12 +1115,12 @@ class Mission
 		class Item98
 		{
 			dataType="Trigger";
-			position[]={8042.5239,296.04001,1718.5326};
-			angle=1.0471982;
+			position[]={8042.5239,296.04001,1718.533};
+			angle=1.0471976;
 			class Attributes
 			{
 				condition="Local player and player in thislist";
-				onActivation="ret = [""AV-8B Harrier II"", ""Callsign: WASP-01""] spawn BIS_fnc_infoText;";
+				onActivation="ret = [wasp1,""WASP-01""] execVM ""Base\VehicleTextinfo.sqf""";
 				sizeA=20;
 				sizeB=9;
 				interuptable=1;
@@ -1139,7 +1139,7 @@ class Mission
 			class Attributes
 			{
 				condition="Local player and player in thislist";
-				onActivation="ret = [""AH-1Z Viper"", ""Callsign: MANTICORE""] spawn BIS_fnc_infoText;";
+				onActivation="ret = [manticore1,""MANTICORE""] execVM ""Base\VehicleTextinfo.sqf""";
 				sizeA=15;
 				sizeB=10;
 				interuptable=1;
@@ -1421,12 +1421,12 @@ class Mission
 		class Item114
 		{
 			dataType="Trigger";
-			position[]={7989.2095,296.04001,1675.6542};
+			position[]={7989.209,296.04001,1675.6541};
 			angle=1.0471976;
 			class Attributes
 			{
 				condition="Local player and player in thislist";
-				onActivation="ret = [""C130 J"", ""Callsign: ALBATROS""] spawn BIS_fnc_infoText;";
+				onActivation="ret = [albatros1,""ALBATROS-01""] execVM ""Base\VehicleTextinfo.sqf""";
 				sizeA=30;
 				sizeB=30;
 				interuptable=1;
@@ -1440,12 +1440,12 @@ class Mission
 		class Item115
 		{
 			dataType="Trigger";
-			position[]={8069.5962,296.04001,1735.4607};
+			position[]={8069.5962,296.04001,1735.4611};
 			angle=1.0471976;
 			class Attributes
 			{
 				condition="Local player and player in thislist";
-				onActivation="ret = [""MV22"", ""Callsign: GOOSE""] spawn BIS_fnc_infoText;";
+				onActivation="ret = [goose1,""GOOSE""] execVM ""Base\VehicleTextinfo.sqf""";
 				sizeA=20;
 				sizeB=15;
 				interuptable=1;
@@ -1459,12 +1459,12 @@ class Mission
 		class Item116
 		{
 			dataType="Trigger";
-			position[]={8094.8135,296.04001,1747.6356};
+			position[]={8094.813,296.04001,1747.636};
 			angle=1.0471976;
 			class Attributes
 			{
 				condition="Local player and player in thislist";
-				onActivation="ret = [""CH47"", ""Callsign: PELICAN""] spawn BIS_fnc_infoText;";
+				onActivation="ret = [pelican1,""PELICAN""] execVM ""Base\VehicleTextinfo.sqf""";
 				sizeA=18;
 				sizeB=10;
 				interuptable=1;
@@ -1478,12 +1478,12 @@ class Mission
 		class Item117
 		{
 			dataType="Trigger";
-			position[]={8230.5713,296.04001,2044.4542};
-			angle=1.0651176;
+			position[]={8230.5713,296.04001,2044.454};
+			angle=1.0651221;
 			class Attributes
 			{
 				condition="Local player and player in thislist";
-				onActivation="ret = [""UH-60M"", ""Callsign: DUSTOFF""] spawn BIS_fnc_infoText;";
+				onActivation="ret = [dustoff,""DUSTOFF""] execVM ""Base\VehicleTextinfo.sqf""";
 				sizeA=15;
 				sizeB=10;
 				interuptable=1;
@@ -1497,12 +1497,12 @@ class Mission
 		class Item118
 		{
 			dataType="Trigger";
-			position[]={8115.2397,296.04001,1755.693};
-			angle=1.0651176;
+			position[]={8115.2402,296.04001,1755.693};
+			angle=1.0651221;
 			class Attributes
 			{
 				condition="Local player and player in thislist";
-				onActivation="ret = [""UH-60L"", ""Callsign: RAVEN-02""] spawn BIS_fnc_infoText;";
+				onActivation="ret = [raven2,""RAVEN-02""] execVM ""Base\VehicleTextinfo.sqf""";
 				sizeA=15;
 				sizeB=10;
 				interuptable=1;
@@ -1516,12 +1516,12 @@ class Mission
 		class Item119
 		{
 			dataType="Trigger";
-			position[]={8138.0454,296.04001,1768.8124};
+			position[]={8138.0449,296.04001,1768.812};
 			angle=1.0471976;
 			class Attributes
 			{
 				condition="Local player and player in thislist";
-				onActivation="ret = [""UH-60L"", ""Callsign: RAVEN-01""] spawn BIS_fnc_infoText;";
+				onActivation="ret = [raven1,""RAVEN-01""] execVM ""Base\VehicleTextinfo.sqf""";
 				sizeA=15;
 				sizeB=10;
 				interuptable=1;
@@ -1540,7 +1540,7 @@ class Mission
 			class Attributes
 			{
 				condition="Local player and player in thislist";
-				onActivation="ret = [""UH-1Y"", ""Callsign: GRIFFIN""] spawn BIS_fnc_infoText;";
+				onActivation="ret = [griffin1,""GRIFFIN-01""] execVM ""Base\VehicleTextinfo.sqf""";
 				sizeA=15;
 				sizeB=10;
 				interuptable=1;
@@ -28479,7 +28479,7 @@ class Mission
 			class Attributes
 			{
 				condition="Local player and player in thislist";
-				onActivation="ret = [""AH6"", ""Callsign: Firefly""] spawn BIS_fnc_infoText;";
+				onActivation="ret = [firefly1,""FIREFLY-01""] execVM ""Base\VehicleTextinfo.sqf""";
 				sizeA=10;
 				sizeB=10;
 				interuptable=1;
@@ -28498,7 +28498,7 @@ class Mission
 			class Attributes
 			{
 				condition="Local player and player in thislist";
-				onActivation="ret = [""MH6"", ""Callsign: Butterfly-02""] spawn BIS_fnc_infoText;";
+				onActivation="ret = [littlebird1,""LITTLEBIRD-01""] execVM ""Base\VehicleTextinfo.sqf""";
 				sizeA=10;
 				sizeB=10;
 				interuptable=1;
@@ -28517,7 +28517,7 @@ class Mission
 			class Attributes
 			{
 				condition="Local player and player in thislist";
-				onActivation="ret = [""MH6"", ""Callsign: Butterfly 01""] spawn BIS_fnc_infoText;";
+				onActivation="ret = [littlebird2,""LITTLEBIRD-02""] execVM ""Base\VehicleTextinfo.sqf""";
 				sizeA=10;
 				sizeB=10;
 				interuptable=1;
@@ -28745,7 +28745,7 @@ class Mission
 			name="mkr_spawn_veh_82";
 			text="_basedef_tank";
 			type="Empty";
-			angle=228.60732;
+			angle=228.60722;
 			id=2212;
 		};
 		class Item1719
@@ -28888,13 +28888,13 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8274.75,298.26501,2065.3083};
+				position[]={8274.75,298.26501,2065.3081};
 				angles[]={0,1.0681241,0};
 			};
 			side="Empty";
 			class Attributes
 			{
-				init="this allowDamage false;createVehicleCrew this;";
+				init="this allowDamage false;createVehicleCrew this;this engineOn true;";
 				name="troop_transport";
 			};
 			id=2261;
@@ -33259,7 +33259,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8115.688,297.12503,1906.4736};
+				position[]={8116.4819,297.12509,1905.1064};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -33276,7 +33276,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8113.2729,297.12503,1910.8804};
+				position[]={8113.981,297.12506,1909.53};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -33293,7 +33293,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8120.3979,296.89664,1897.8722};
+				position[]={8121.2891,296.89661,1896.5946};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -33310,7 +33310,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8117.9824,297.12503,1902.2789};
+				position[]={8118.9111,297.12506,1900.7122};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -33327,7 +33327,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8125.1733,297.05499,1889.5173};
+				position[]={8126.1719,296.62476,1888.0581};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -33344,7 +33344,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8122.7568,296.62503,1893.9237};
+				position[]={8123.4131,296.62476,1892.5944};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -33361,7 +33361,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8130.1807,297.62503,1880.7292};
+				position[]={8131.1699,296.98776,1879.2465};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -33378,7 +33378,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8127.7646,297.62097,1885.136};
+				position[]={8128.7642,296.62476,1883.5305};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -33395,7 +33395,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8135.0522,297.35593,1871.8944};
+				position[]={8135.9629,297.0806,1870.5083};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -33412,7 +33412,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8132.6362,297.54922,1876.3011};
+				position[]={8133.5981,296.90134,1874.8693};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -33429,7 +33429,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8137.3462,297.17245,1867.6997};
+				position[]={8138.2285,297.17221,1866.139};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -33446,7 +33446,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8106.0947,296.62503,1923.877};
+				position[]={8106.5,297.0311,1922.8678};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -33463,7 +33463,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8103.6797,296.62503,1928.2837};
+				position[]={8104.0518,297.07516,1927.2695};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -33480,7 +33480,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8110.8047,296.62503,1915.2755};
+				position[]={8111.5244,297.09567,1913.9531};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -33497,7 +33497,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8108.3892,296.62503,1919.6823};
+				position[]={8109.0273,297.04123,1918.3568};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -33514,7 +33514,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8101.3486,296.62503,1932.4595};
+				position[]={8101.6792,297.2135,1931.6726};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -34487,7 +34487,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8108.8853,297.41446,1900.7535};
+				position[]={8108.478,297.13947,1900.8306};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -34504,7 +34504,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8106.4702,297.60095,1905.1603};
+				position[]={8106.4702,297.0874,1905.1603};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -34538,7 +34538,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8111.1797,297.43915,1896.5588};
+				position[]={8110.8716,297.384,1896.7507};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -34555,7 +34555,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8118.3706,297.4613,1883.7972};
+				position[]={8118.3706,296.97412,1883.7972};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -34589,7 +34589,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8123.3779,298.03134,1875.0092};
+				position[]={8123.3779,296.98071,1875.0092};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -34606,7 +34606,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8120.9619,298.02728,1879.4159};
+				position[]={8120.9619,296.93646,1879.4159};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -34623,7 +34623,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8128.2495,297.76224,1866.1743};
+				position[]={8128.2495,296.97473,1866.1743};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -34640,7 +34640,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8125.8335,297.95554,1870.5811};
+				position[]={8125.8335,296.88101,1870.5811};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -34657,7 +34657,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8130.5435,297.57877,1861.9796};
+				position[]={8130.5435,296.99774,1861.9796};
 				angles[]={0,2.6388288,0};
 			};
 			side="Empty";
@@ -34816,12 +34816,12 @@ class Mission
 		class Item2077
 		{
 			dataType="Trigger";
-			position[]={7933.4043,296.04001,1659.6649};
+			position[]={7933.4038,296.04001,1659.665};
 			angle=1.0471976;
 			class Attributes
 			{
 				condition="Local player and player in thislist";
-				onActivation="ret = [""A-10"", ""Callsign: THUNDERBIRD""] spawn BIS_fnc_infoText;";
+				onActivation="ret = [thunderbird1,""THUNDERBIRD-01""] execVM ""Base\VehicleTextinfo.sqf""";
 				sizeA=15;
 				sizeB=15;
 				interuptable=1;
@@ -34925,14 +34925,17 @@ class Mission
 		class Item2085
 		{
 			dataType="Trigger";
-			position[]={8277.5713,296.04001,2070.5239};
+			position[]={8275.3223,296.04001,2067.4441};
 			angle=1.012867;
 			class Attributes
 			{
-				condition="this && troop_transport in thislist";
-				onActivation="red = [1] spawn BaseTransport;";
-				sizeA=10;
-				sizeB=15;
+				condition="troop_transport in thislist";
+				onActivation="red = [1] spawn BaseTransport;troop_transport setFuel 1;";
+				sizeA=5;
+				sizeB=10;
+				timeout[]={10,15,20};
+				interuptable=1;
+				repeatable=1;
 				activationBy="WEST";
 				isRectangle=1;
 			};
@@ -34943,17 +34946,39 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={8307.3926,296.04001,1864.791};
-			angle=0.99335414;
+			angle=0.0173373;
 			class Attributes
 			{
-				condition="this && troop_transport in thislist";
+				condition="troop_transport in thislist";
 				onActivation="red = [2] spawn BaseTransport;";
 				sizeA=10;
-				sizeB=15;
+				sizeB=10;
+				timeout[]={10,15,20};
+				interuptable=1;
+				repeatable=1;
 				activationBy="WEST";
 				isRectangle=1;
 			};
 			id=2727;
+			type="EmptyDetector";
+		};
+		class Item2087
+		{
+			dataType="Trigger";
+			position[]={8167.5298,296.04001,2009.213};
+			angle=1.0651221;
+			class Attributes
+			{
+				condition="Local player and player in thislist";
+				onActivation="ret = [evileye1,""EVILEYE""] execVM ""Base\VehicleTextinfo.sqf""";
+				sizeA=15;
+				sizeB=10;
+				interuptable=1;
+				repeatable=1;
+				activationBy="WEST";
+				isRectangle=1;
+			};
+			id=2728;
 			type="EmptyDetector";
 		};
 	};
