@@ -238,7 +238,7 @@ f_var_cachingAggressiveness = 1;
 
 //TF47 Basetransport
 
-BaseTransport = compile preprocessFile "BaseTransport.sqf";
+BaseTransport = compile preprocessFile "Base\BaseTransport.sqf";
 
 // ======================== TF47 Stuff ===================================
 
