@@ -193,6 +193,7 @@ if ( _ao_select == "shamali") then {
 };
 
 //////////////// AO is airfield ////////////////////////////////////////////////////////////////////////////////////////////////		
+/*
 if ( _ao_select == "airfield") then {
 									_log_pos   			= log_airfield;
 									//_ao_rad    			= 300;
@@ -200,7 +201,7 @@ if ( _ao_select == "airfield") then {
 									sleep 1;
 									
 };
-
+*/
 //////////////// AO is rasman ////////////////////////////////////////////////////////////////////////////////////////////////		
 if ( _ao_select == "rasman") then {
 									_log_pos   			= log_rasman;
