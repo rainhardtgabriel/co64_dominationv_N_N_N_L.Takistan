@@ -25,7 +25,7 @@ _newObject1 setDir ((getDir _newObject) - 100);
 _newObject1 setPos (getpos _newObject1);
 // _newObject1 setVectorDirAndUp [[-0.752788,0.658084,-0.01534], [0.00479631,0.0287867,0.999574]];
 sleep 2;
-_newUnit = createVehicle [_type, [_xx - 5,_yy - 3,_zz], [], 0, 'CAN_COLLIDE'];
+_newUnit = createVehicle [_type, [_xx - 5,_yy - 3,_zz], [], 0, 'NONE'];
 _newUnit setFuel 0;
 // _newUnit = createVehicle ['pook_9K331_TAK', [_xx,_yy - 6,_zz], [], 0, 'CAN_COLLIDE'];
 (driver _newUnit) disableAI "MOVE";
