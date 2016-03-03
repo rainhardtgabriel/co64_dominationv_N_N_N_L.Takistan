@@ -8,18 +8,18 @@ class EditorData
 	toggles=33;
 	class ItemIDProvider
 	{
-		nextID=3215;
+		nextID=3222;
 	};
 	class MarkerIDProvider
 	{
-		nextID=210;
+		nextID=217;
 	};
 	class Camera
 	{
-		pos[]={8094.1372,332.97476,1936.0598};
-		dir[]={0.35332495,-0.60347706,-0.71499437};
-		up[]={0.2674056,0.79721773,-0.54113269};
-		aside[]={-0.89661115,1.2684031e-006,-0.4430798};
+		pos[]={7160.9258,328.0087,7505.2129};
+		dir[]={0.6520108,-0.37682569,-0.6579507};
+		up[]={0.26524818,0.92628312,-0.26766345};
+		aside[]={-0.71031034,-3.2277603e-007,-0.70389986};
 	};
 };
 binarizationWanted=0;
@@ -154,7 +154,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1902;
+		items=1907;
 		class Item0
 		{
 			dataType="Marker";
@@ -28217,7 +28217,7 @@ class Mission
 			name="mkr_spawn_veh_82";
 			text="_basedef_tank";
 			type="Empty";
-			angle=228.60699;
+			angle=228.60698;
 			id=2212;
 		};
 		class Item1685
@@ -28818,7 +28818,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={8275.2656,296.04001,2066.801};
-			angle=-2.1259682;
+			angle=-2.125968;
 			class Attributes
 			{
 				condition="troop_transport in thislist";
@@ -28838,7 +28838,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={8300.2578,296.04001,1872.3521};
-			angle=-2.1658313;
+			angle=-2.1658311;
 			class Attributes
 			{
 				condition="troop_transport in thislist";
@@ -31732,8 +31732,48 @@ class Mission
 			type="mil_arrow";
 			colorName="ColorBlack";
 			a=0.60000002;
-			angle=150.56099;
+			angle=150.56097;
 			id=3214;
+		};
+		class Item1902
+		{
+			dataType="Marker";
+			position[]={5253.8003,83.040001,10995.252};
+			name="sam";
+			type="Empty";
+			id=3217;
+		};
+		class Item1903
+		{
+			dataType="Marker";
+			position[]={6430.5503,339.64279,4841.5029};
+			name="sam_1";
+			type="Empty";
+			id=3218;
+		};
+		class Item1904
+		{
+			dataType="Marker";
+			position[]={10744.957,195.87631,9761.0996};
+			name="sam_2";
+			type="Empty";
+			id=3219;
+		};
+		class Item1905
+		{
+			dataType="Marker";
+			position[]={746.81421,519.88306,7640.3848};
+			name="sam_3";
+			type="Empty";
+			id=3220;
+		};
+		class Item1906
+		{
+			dataType="Marker";
+			position[]={7231.5073,261.60461,7424.0176};
+			name="sam_4";
+			type="Empty";
+			id=3221;
 		};
 	};
 	class Connections
