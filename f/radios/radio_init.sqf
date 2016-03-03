@@ -12,17 +12,17 @@ waitUntil{!isNil "f_var_radios"};
 
 // If any radio system selected
 if(f_var_radios != 0) then {
+	
+	switch (f_var_radios) do {
+		// ACRE 2
+		case 1: {
+			[] execVM "f\radios\acre2\acre2_init.sqf";
+		};
 
-  switch (f_var_radios) do {
-  // ACRE 2
-  case 1: {
-    [] execVM "f\radios\acre2\acre2_init.sqf";
-  };
-
-  // TFR
-  case 2: {
-    [] execVM "f\radios\tfr\tfr_init.sqf";
-  };
+		// TFR
+		case 2: {
+			[] execVM "f\radios\tfr\tfr_init.sqf";
+		};
+	};
 };
-
 // ====================================================================================

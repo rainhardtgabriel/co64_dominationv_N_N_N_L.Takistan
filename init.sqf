@@ -236,6 +236,10 @@ f_var_cachingAggressiveness = 1;
 
 [] execVM "f\medical\medical_init.sqf";
 
+//TF47 Basetransport
+
+BaseTransport = compile preprocessFile "Base\BaseTransport.sqf";
+
 // ======================== TF47 Stuff ===================================
 
 waitUntil { isServer || !isNull player };
