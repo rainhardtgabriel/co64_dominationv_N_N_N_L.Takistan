@@ -181,7 +181,7 @@ switch true do {
 
 [] spawn {
 	while {true} do {
-		if(!(["getPluginVersion", ","] call acre_sys_rpc_fnc_callRemoteProcedure)) then {
+		if(!(["getPluginVersion", ","] call acre_sys_rpc_fnc_callRemoteProcedure) && !(serverCommandAvailable "#kick")) then {
 			titleText ["You have to use ACRE2 on this Server and have to be on ts.armasim.de.","BLACK"];
 			sleep 10;
 		} else {
