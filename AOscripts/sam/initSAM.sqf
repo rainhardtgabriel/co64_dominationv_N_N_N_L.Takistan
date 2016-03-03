@@ -24,16 +24,16 @@ _prioPos = _flatPos;
 
 [_prioPos] execVM "AOscripts\sam\buildSA20.sqf";
 
-_sa3Pos = getPos ((_flatPos nearRoads 150) select 0);
-_sa3Pos2 = _sa3Pos;
-while {(_sa3Pos distance _sa3Pos2) < 300} do {
-	_sa3Pos2 = getPos ((_flatPos nearRoads 400) select 0);
-	hint "test";
-};
+// _sa3Pos = getPos ((_flatPos nearRoads 150) select 0);
+// _sa3Pos2 = _sa3Pos;
+// while {(_sa3Pos distance _sa3Pos2) < 300} do {
+	// _sa3Pos2 = getPos ((_flatPos nearRoads 400) select 0);
+	// hint "test";
+// };
 
 
-[_sa3Pos,"pook_sa3_tracked_tak"] execVM "AOscripts\sam\buildSingleSam.sqf";
-[_sa3Pos2,"pook_sa3_tracked_tak"] execVM "AOscripts\sam\buildSingleSam.sqf";
+// [_sa3Pos,"pook_sa3_tracked_tak"] execVM "AOscripts\sam\buildSingleSam.sqf";
+// [_sa3Pos2,"pook_sa3_tracked_tak"] execVM "AOscripts\sam\buildSingleSam.sqf";
 /*
 	
 //////////////// Hint for completed Side Mission /////////////////////////////////////////////////////////////////////////////////////////// 

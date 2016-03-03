@@ -8,10 +8,7 @@ _zz = _input select 2;
 _newObject = createVehicle ['Land_fort_artillery_nest_EP1', [_xx,_yy,_zz], [], 0, 'CAN_COLLIDE']; 
 _newObject setPos [_xx,_yy,_zz];
 
-_newUnit = createVehicle ['pook_SA20_static_TAK', [_xx,_yy - 10,_zz], [], 0, 'NONE'];
-_newUnit allowDamage false;
-_newUnit setVehicleLock "LOCKED";
-_newUnit allowDamage true;
+
 
 _newObject = createVehicle ['pook_Land_fort_rampart_DES', [_xx - 13.5,_yy - 0.5,_zz], [], 0, 'CAN_COLLIDE'];
 _newObject setDir ((getDir _newObject) - 225);
@@ -100,3 +97,16 @@ _newObject setDir ((getDir _newObject) - 67.5);
 
 _newObject2 = createVehicle ['pook_camonet_land_east_FARP5', [_xx - 14,_yy - 31,_zz + 2], [], 0, 'CAN_COLLIDE']; 
 _newObject2 allowDamage false;
+
+
+_newUnit = createVehicle ['pook_SA20_static_TAK', [_xx,_yy - 10,_zz], [], 0, 'NONE'];
+_newUnit allowDamage false;
+_newUnit setVehicleLock "LOCKED";
+_newUnit allowDamage true;
+
+_newUnit = createVehicle ['pook_SA20_static_TAK', [0,0,10000], [], 0, 'NONE'];
+_newUnit allowDamage false;
+_newUnit setDir ((getDir _newUnit) + 184);
+_newUnit setPos [_xx,_yy - 40,_zz];
+_newUnit setVehicleLock "LOCKED";
+_newUnit allowDamage true;
