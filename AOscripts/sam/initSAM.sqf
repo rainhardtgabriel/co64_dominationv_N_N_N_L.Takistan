@@ -1,28 +1,47 @@
 _aoPos = _this select 0;
-	
+
+_samMarkers = ["sam","sam_1","sam_2","sam_3"];
+
+_dist = [[]];
+
+for "_i" from 0 to ((count _samMarkers) -1)  do {
+	_curMarker = (_samMarkers select _i);
+	_dist pushBack ((getMarkerPos _curMarker) distance _aoPos);
+};
+_dist sort true;
+
+_sitePos = _dist select 0;
+_sitePos2 = 0;
+// hint str _sitePos;
+for "_i" from 0 to ((count _samMarkers) -1)  do {
+	if(((getMarkerPos (_samMarkers select _i)) distance _aoPos) == _sitePos) then {
+		_sitePos2 = (_samMarkers select _i);
+	};
+};
+_sitePos2 = getMarkerPos _sitePos2;
 sleep 10;
 
-hint "test";
+// hint "test";
 	
-_flatPos = [0,0,0];
-_accepted = false;
-while {!_accepted} do {
-	_flatPos = [[[] call BIS_fnc_worldArea],["water","out"]] call BIS_fnc_randomPos;
-	_flatPos = getPos ((_flatPos nearRoads 2000) select 0);
-	if ((_flatPos distance (getMarkerPos "respawn_west")) > 1700 && ((_flatPos distance _aoPos) > 1200) && ((_flatPos distance _aoPos) < 2500) && (((getPos (nearestBuilding _flatPos)) distance _flatPos) > 150))  then {
-		_accepted = true;
-		_flatPos = [(_flatPos select 0) + 15,(_flatPos select 1) + 15,_flatPos select 2];
-	};
-	hint str _accepted;
-};
+// _flatPos = [0,0,0];
+// _accepted = false;
+// while {!_accepted} do {
+	// _flatPos = [[[] call BIS_fnc_worldArea],["water","out"]] call BIS_fnc_randomPos;
+	// _flatPos = getPos ((_flatPos nearRoads 2000) select 0);
+	// if ((_flatPos distance (getMarkerPos "respawn_west")) > 1700 && ((_flatPos distance _aoPos) > 1200) && ((_flatPos distance _aoPos) < 2500) && (((getPos (nearestBuilding _flatPos)) distance _flatPos) > 150))  then {
+		// _accepted = true;
+		// _flatPos = [(_flatPos select 0) + 15,(_flatPos select 1) + 15,_flatPos select 2];
+	// };
+	// hint str _accepted;
+// };
 
-_prioPos = _flatPos;
+// _prioPos = _flatPos;
 //////////////// creates a task/show notification for the ao ///////////////////////////////////////////////////////////////////////////////////////		
 
-["tsk9", true, ["A hostile SAM Site consisting of SA-3s, SA-15s, SA-17s, SA-19s and SA-20s has been spotted near the Main Target. Destroy it!","Priority Mission: SAM Site","Priority Mission"],_prioPos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
+["tsk9", true, ["A hostile SAM Site consisting of SA-3s, SA-15s, SA-17s, SA-19s and SA-20s has been spotted near the Main Target. Destroy it!","Priority Mission: SAM Site","Priority Mission"],_sitePos2, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
 
 
-[_prioPos] execVM "AOscripts\sam\buildSA20.sqf";
+[_sitePos2] execVM "AOscripts\sam\buildSA20.sqf";
 
 
 // _sa3Pos = getPos ((_flatPos nearRoads 150) select 0);

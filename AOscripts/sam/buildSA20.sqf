@@ -65,11 +65,11 @@ _newObject2 allowDamage false;
 _newObject = createVehicle ['Land_fort_artillery_nest_EP1', [_xx,_yy - 45,_zz], [], 0, 'CAN_COLLIDE']; 
 _newObject setDir ((getDir _newObject) + 180);
 
-_newUnit = createVehicle ['pook_SA20_static_TAK', [_xx,_yy - 40,_zz], [], 0, 'NONE'];
-_newUnit allowDamage false;
-_newUnit setDir ((getDir _newUnit) + 184);
-_newUnit setVehicleLock "LOCKED";
-_newUnit allowDamage true;
+// _newUnit = createVehicle ['pook_SA20_static_TAK', [_xx,_yy - 40,_zz], [], 0, 'NONE'];
+// _newUnit allowDamage false;
+// _newUnit setDir ((getDir _newUnit) + 184);
+// _newUnit setVehicleLock "LOCKED";
+// _newUnit allowDamage true;
 
 _newObject = createVehicle ['pook_Land_fort_rampart_DES', [_xx + 13.5,_yy + 0.5  - 40,_zz], [], 0, 'CAN_COLLIDE'];
 _newObject setDir ((getDir _newObject) - 225 - 180);
