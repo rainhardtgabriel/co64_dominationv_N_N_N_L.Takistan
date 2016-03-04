@@ -362,7 +362,7 @@ sleep 0.1;
 
 ["mission_new"] remoteExec ["SEPP_fnc_globalsound",0,false];
 
-[_log_pos] execVM "AOscripts\sam\initSAM.sqf";
+[_log_pos] execVM "AOscripts\initSAM.sqf";
 	        
 //////////////// create a radiotower /////////////////////////////////////////////////////////////////////////////////////////////
 
