@@ -19,7 +19,7 @@ for "_i" from 0 to ((count _samMarkers) -1)  do {
 	};
 };
 _sitePos2 = getMarkerPos _sitePos2;
-sleep 10;
+sleep 5;
 
 // hint "test";
 	
@@ -43,7 +43,53 @@ sleep 10;
 
 [_sitePos2] execVM "AOscripts\sam\buildSA20.sqf";
 
+_nextPos = [];
 
+[_nextPos] execVM "AOscripts\sam\buildSupply.sqf";
+sleep 5;
+_nextPos = _sitePos2 findEmptyPosition [50, 175];
+[_nextPos,"pook_P12_RU"] execVM "AOscripts\sam\buildSingleSam.sqf";
+sleep 5;
+
+_nextPos = _sitePos2 findEmptyPosition [50, 250];
+[_nextPos,"pook_sa3_tracked_tak"] execVM "AOscripts\sam\buildSingleSam.sqf";
+sleep 5;
+_nextPos = _sitePos2 findEmptyPosition [50, 250];
+[_nextPos,"pook_sa3_tracked_tak"] execVM "AOscripts\sam\buildSingleSam.sqf";
+sleep 5;
+_nextPos = _sitePos2 findEmptyPosition [50, 250];
+[_nextPos,"pook_9k332_tak"] execVM "AOscripts\sam\buildSingleSam.sqf";
+sleep 5;
+_nextPos = _sitePos2 findEmptyPosition [50, 250];
+[_nextPos,"pook_9k332_tak"] execVM "AOscripts\sam\buildSingleSam.sqf";
+
+
+for "_i" from 0 to 3 do {
+	_nextPos = _sitePos2 findEmptyPosition [50, 500];
+	_newUnit = "pook_sa19_tak" createVehicle _nextPos;
+	_newGroup = createGroup east;
+	_newUnit setskill 1;
+	createVehicleCrew _newUnit;
+	(crew _newUnit) join _newGroup;
+	[_newGroup,_sitePos2, 500] call BIS_fnc_taskPatrol;
+	sleep 10;
+};
+for "_i" from 0 to 1 do {
+	_nextPos = _sitePos2 findEmptyPosition [50, 500];
+	_newUnit = "cup_o_btr60_tk" createVehicle _nextPos;
+	_newGroup = createGroup east;
+	_newUnit setskill 1;
+	createVehicleCrew _newUnit;
+	(crew _newUnit) join _newGroup;
+	[_newGroup,_sitePos2, 500] call BIS_fnc_taskPatrol;
+	sleep 10;
+};
+sleep 10;
+_newGroup = [_nextPos,east, (configfile >> "CfgGroups" >> "East" >> "CUP_O_TK" >> "Infantry" >> "CUP_O_TK_InfantrySquad")] call BIS_fnc_spawnGroup;
+[_newGroup,_sitePos2, 300] call BIS_fnc_taskPatrol;
+sleep 10;
+_newGroup = [_nextPos,east, ["CUP_O_TK_Commander","CUP_O_TK_Officer,CUP_O_TK_Soldier,CUP_O_TK_Soldier"]] call BIS_fnc_spawnGroup;
+[_newGroup,_sitePos2, 50] call BIS_fnc_taskPatrol;
 // _sa3Pos = getPos ((_flatPos nearRoads 150) select 0);
 // _sa3Pos2 = _sa3Pos;
 // while {(_sa3Pos distance _sa3Pos2) < 300} do {
