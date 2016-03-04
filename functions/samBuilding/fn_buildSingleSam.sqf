@@ -86,5 +86,8 @@ if(_type == "pook_P12_RU") then {
 	_newVehicle animate ['camonet',0];
 };
 
+diag_log "-------------DEBUG SINGLE SAM ___-";
+diag_log _allObjects;
+
 // return all created Objects
 _allObjects;

@@ -25,51 +25,56 @@ sleep 5;
 
 ["tsk9", true, ["A hostile SAM Site consisting of SA-3s, SA-15s, SA-19s and SA-20s has been spotted near the Main Target. Destroy it!","Priority Mission: SAM Site","Priority Mission"],_sitePos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
 
-_allObjects = [];
+_allObjectsArr = [];
 _nextPos = [];
 
-_allObjects pushBack ([_sitePos] call TF47_SamBuilding_fnc_buildSA20);
+_allObjectsArr + ([_sitePos] call TF47_SamBuilding_fnc_buildSA20);
 sleep 5;
 
 // Supply
 _nextPos = [_sitePos, 50, 160, 400] call TF47_SamBuilding_fnc_findSamPosition;
 if(((count _nextPos) != 0)) then {
-	_allObjects pushBack ([_nextPos] call TF47_SamBuilding_fnc_buildSupply);
+	_allObjectsArr + ([_nextPos] call TF47_SamBuilding_fnc_buildSupply);
 };
 sleep 5;
 
 // P-12 Radar
 _nextPos = [_sitePos, 50, 175, 400] call TF47_SamBuilding_fnc_findSamPosition;
 if(((count _nextPos) != 0)) then {
-	_allObjects pushBack ([_nextPos,"pook_P12_RU"] call TF47_SamBuilding_fnc_buildSingleSam);
+	_allObjectsArr + ([_nextPos,"pook_P12_RU"] call TF47_SamBuilding_fnc_buildSingleSam);
 };
 sleep 5;
 
 // SA-3 (mobile)
 _nextPos = [_sitePos, 50, 250, 500] call TF47_SamBuilding_fnc_findSamPosition;
 if(((count _nextPos) != 0)) then {
-	_allObjects pushBack ([_nextPos,"pook_sa3_tracked_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
+	_allObjectsArr + ([_nextPos,"pook_sa3_tracked_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
 };
 sleep 5;
 
 _nextPos = [_sitePos, 50, 250, 500] call TF47_SamBuilding_fnc_findSamPosition;
 if(((count _nextPos) != 0)) then {
-	_allObjects pushBack ([_nextPos,"pook_sa3_tracked_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
+	_allObjectsArr + ([_nextPos,"pook_sa3_tracked_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
 };
 sleep 5;
 
 // SA-15 
 _nextPos = [_sitePos, 50, 250, 500] call TF47_SamBuilding_fnc_findSamPosition;
 if(((count _nextPos) != 0)) then {
-	_allObjects pushBack ([_nextPos,"pook_9k332_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
+	_allObjectsArr + ([_nextPos,"pook_9k332_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
+	diag_log "-------------DEBUG SAMreturn-";
+	diag_log _allObjectsArr;
 };
 sleep 5;
 
 _nextPos = [_sitePos, 50, 250, 500] call TF47_SamBuilding_fnc_findSamPosition;
 if(((count _nextPos) != 0)) then {
-	_allObjects pushBack ([_nextPos,"pook_9k332_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
+	_allObjectsArr + ([_nextPos,"pook_9k332_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
 };
 sleep 5;
+
+diag_log "-------------DEBUG SAM ___-";
+diag_log _allObjectsArr;
 
 // 4x SA-19 patrol
 for "_i" from 0 to 3 do {
@@ -78,7 +83,7 @@ for "_i" from 0 to 3 do {
 	_newGroup = createGroup east;
 	_newVehicle setskill 1;
 	createVehicleCrew _newVehicle;
-	_allObjects pushBack _newVehicle;
+	_allObjectsArr pushBack _newVehicle;
 	(crew _newVehicle) join _newGroup;
 	[_newGroup,_sitePos, 500] call BIS_fnc_taskPatrol;
 	sleep 10;
@@ -91,7 +96,7 @@ for "_i" from 0 to 1 do {
 	_newGroup = createGroup east;
 	_newVehicle setskill 1;
 	createVehicleCrew _newVehicle;
-	_allObjects pushBack _newVehicle;
+	_allObjectsArr pushBack _newVehicle;
 	(crew _newVehicle) join _newGroup;
 	[_newGroup,_sitePos, 500] call BIS_fnc_taskPatrol;
 	sleep 10;
@@ -102,20 +107,20 @@ sleep 10;
 // 1x Squad
 _newGroup = [_nextPos,east, (configfile >> "CfgGroups" >> "East" >> "CUP_O_TK" >> "Infantry" >> "CUP_O_TK_InfantrySquad")] call BIS_fnc_spawnGroup;
 [_newGroup,_sitePos, 300] call BIS_fnc_taskPatrol;
-_allObjects pushBack _newGroup;
+_allObjectsArr pushBack _newGroup;
 sleep 10;
 
 // 1x HQ
 _newGroup = [_nextPos,east, ["CUP_O_TK_Commander","CUP_O_TK_Officer,CUP_O_TK_Soldier,CUP_O_TK_Soldier"]] call BIS_fnc_spawnGroup;
 [_newGroup,_sitePos, 50] call BIS_fnc_taskPatrol;
-_allObjects pushBack _newGroup;
+_allObjectsArr pushBack _newGroup;
 
 // Show global target start hint
 
 _side_iniText = format
 	[
 		"<t align='center' size='1.5'>New Priority Mission available!</t><br/><t size='1' align='center' color='#0040FF'>%1</t>",
-		_side_name
+		"A hostile SAM Site consisting of SA-3s, SA-15s, SA-19s and SA-20s has been spotted near the Main Target. Destroy it!"
 	];
 [_side_iniText] remoteExec ["SEPP_fnc_globalHint",0,false];
 
@@ -125,6 +130,50 @@ _side_iniText = format
 sleep 0.1;
 
 ["Sidemission_new"] remoteExec ["SEPP_fnc_globalsound",0,false];
+
+// get the vehicles
+
+
+_refuel = [];
+_reammo = [];
+
+diag_log "-------------DEBUG SAM";
+diag_log _allObjectsArr;
+
+_allVehicles = [];
+_allGroups = [];
+// manage the site
+{
+	if(typeName _x == "GROUP") then {
+		_allGroups pushBack _x;
+	} else {
+		switch (typeOf _x) do {
+			case "cup_o_ural_refuel_tka" : {
+				_refuel = _x;
+			};
+			case "cup_o_ural_reammo_tka" : {
+				_reammo = _x;
+			};
+		};
+		if(_x isKindOf "Land" || ((typeOf _x) == "pook_P12_RU") || ((typeOf _x) == "pook_sa3_tracked_tak")) then {
+			_allVehicles pushBack _x;
+		};
+	};
+} forEach _allObjectsArr;
+
+diag_log _allVehicles;
+
+{
+	_x deleteVehicleCrew (driver _x);
+	_x deleteVehicleCrew (gunner _x);
+	_x deleteVehicleCrew (commander _x);
+	deleteVehicle _x;
+} forEach _allVehicles;
+
+
+// watch the site
+
+// clean up the site
 
 
 
