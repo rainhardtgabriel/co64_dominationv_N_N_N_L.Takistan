@@ -41,7 +41,7 @@ if(_type != "pook_P12_RU") then {
 	_allObjects pushBack _newNest;
 	_newNest = createVehicle ['pook_Land_fort_artillery_nest_DES', [_xx,_yy,_zz], [], 0, 'CAN_COLLIDE'];  
 	_newNest setPos [_xx - 5,_yy + 4, _zz];  
-	_newNest setDir ((getDir _newNest) - 100);
+	_newNest setDir 350;
 	_newNest setPos (getpos _newNest);
 	_allObjects pushBack _newNest;
 	sleep 2;

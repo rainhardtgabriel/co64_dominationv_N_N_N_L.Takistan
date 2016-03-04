@@ -33,40 +33,40 @@ sleep 5;
 
 // Supply
 _nextPos = [_sitePos, 50, 160, 400] call TF47_SamBuilding_fnc_findSamPosition;
-if(((count _nextPos) == 0)) then {
+if(((count _nextPos) != 0)) then {
 	_allObjects pushBack ([_nextPos] call TF47_SamBuilding_fnc_buildSupply);
 };
 sleep 5;
 
 // P-12 Radar
 _nextPos = [_sitePos, 50, 175, 400] call TF47_SamBuilding_fnc_findSamPosition;
-if(((count _nextPos) == 0)) then {
+if(((count _nextPos) != 0)) then {
 	_allObjects pushBack ([_nextPos,"pook_P12_RU"] call TF47_SamBuilding_fnc_buildSingleSam);
 };
 sleep 5;
 
 // SA-3 (mobile)
 _nextPos = [_sitePos, 50, 250, 500] call TF47_SamBuilding_fnc_findSamPosition;
-if(((count _nextPos) == 0)) then {
+if(((count _nextPos) != 0)) then {
 	_allObjects pushBack ([_nextPos,"pook_sa3_tracked_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
 };
 sleep 5;
 
 _nextPos = [_sitePos, 50, 250, 500] call TF47_SamBuilding_fnc_findSamPosition;
-if(((count _nextPos) == 0)) then {
+if(((count _nextPos) != 0)) then {
 	_allObjects pushBack ([_nextPos,"pook_sa3_tracked_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
 };
 sleep 5;
 
 // SA-15 
 _nextPos = [_sitePos, 50, 250, 500] call TF47_SamBuilding_fnc_findSamPosition;
-if(((count _nextPos) == 0)) then {
+if(((count _nextPos) != 0)) then {
 	_allObjects pushBack ([_nextPos,"pook_9k332_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
 };
 sleep 5;
 
 _nextPos = [_sitePos, 50, 250, 500] call TF47_SamBuilding_fnc_findSamPosition;
-if(((count _nextPos) == 0)) then {
+if(((count _nextPos) != 0)) then {
 	_allObjects pushBack ([_nextPos,"pook_9k332_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
 };
 sleep 5;

@@ -35,7 +35,7 @@ _add = 0;
 
 // search for empty pos unitl threshold is reached
 // xor ((a || b) && !(a && b))
-while {((((count _foundPos) == 0) || ((_maxDist + _add) < _threshold)) && !(((count _foundPos) == 0) && ((_maxDist + _add) < _threshold)))} do {
+while {!((((count _foundPos) == 0) || ((_maxDist + _add) < _threshold)) && !(((count _foundPos) == 0) && ((_maxDist + _add) < _threshold)))} do {
 	_foundPos = _startPos findEmptyPosition [_minDist, (_maxDist + _add)];
 	_add = _add + 5;
 };
