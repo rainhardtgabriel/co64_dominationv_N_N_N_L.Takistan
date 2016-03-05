@@ -1,3 +1,7 @@
+// TODO
+// prevent respawning too soon
+// spawn not every main
+// dont spawn when there is no cup
 
 _aoPos = _this select 0;
 _samMarkers = ["sam","sam_1","sam_2","sam_3"];
@@ -184,9 +188,13 @@ _side_endText = format
 	];
 [_side_endText] remoteExec ["SEPP_fnc_globalHint",0,false];
 
- ["Sidemission_complete"] remoteExec ["SEPP_fnc_globalsound",0,false]; 
+["Sidemission_complete"] remoteExec ["SEPP_fnc_globalsound",0,false]; 
 
- ["tsk20", true, ["A hostile SAM Site consisting of SA-3s, SA-15s, SA-19s and SA-20s has been spotted near the Main Target. Destroy it!","Priority Mission: SAM Site","Priority Mission"],_sitePos, "SUCCEEDED", 1, true, true,"",true] call BIS_fnc_setTask;
+["tsk20", true, ["A hostile SAM Site consisting of SA-3s, SA-15s, SA-19s and SA-20s has been spotted near the Main Target. Destroy it!","Priority Mission: SAM Site","Priority Mission"],_sitePos, "SUCCEEDED", 1, true, true,"",true] call BIS_fnc_setTask;
+
+sleep 10;
+
+["tf47_changetickets", [WEST, 2, 15]] call CBA_fnc_globalEvent;
  
 // diag_log _allVehicles;
 
