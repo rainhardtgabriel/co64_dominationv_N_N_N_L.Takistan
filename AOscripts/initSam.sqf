@@ -28,48 +28,46 @@ sleep 5;
 _allObjectsArr = [];
 _nextPos = [];
 
-_allObjectsArr + ([_sitePos] call TF47_SamBuilding_fnc_buildSA20);
+_allObjectsArr = _allObjectsArr + ([_sitePos] call TF47_SamBuilding_fnc_buildSA20);
 sleep 5;
 
 // Supply
 _nextPos = [_sitePos, 50, 160, 400] call TF47_SamBuilding_fnc_findSamPosition;
 if(((count _nextPos) != 0)) then {
-	_allObjectsArr + ([_nextPos] call TF47_SamBuilding_fnc_buildSupply);
+	_allObjectsArr = _allObjectsArr + ([_nextPos] call TF47_SamBuilding_fnc_buildSupply);
 };
 sleep 5;
 
 // P-12 Radar
 _nextPos = [_sitePos, 50, 175, 400] call TF47_SamBuilding_fnc_findSamPosition;
 if(((count _nextPos) != 0)) then {
-	_allObjectsArr + ([_nextPos,"pook_P12_RU"] call TF47_SamBuilding_fnc_buildSingleSam);
+	_allObjectsArr = _allObjectsArr + ([_nextPos,"pook_P12_RU"] call TF47_SamBuilding_fnc_buildSingleSam);
 };
 sleep 5;
 
 // SA-3 (mobile)
 _nextPos = [_sitePos, 50, 250, 500] call TF47_SamBuilding_fnc_findSamPosition;
 if(((count _nextPos) != 0)) then {
-	_allObjectsArr + ([_nextPos,"pook_sa3_tracked_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
+	_allObjectsArr = _allObjectsArr + ([_nextPos,"pook_sa3_tracked_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
 };
 sleep 5;
 
 _nextPos = [_sitePos, 50, 250, 500] call TF47_SamBuilding_fnc_findSamPosition;
 if(((count _nextPos) != 0)) then {
-	_allObjectsArr + ([_nextPos,"pook_sa3_tracked_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
+	_allObjectsArr = _allObjectsArr + ([_nextPos,"pook_sa3_tracked_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
 };
 sleep 5;
 
 // SA-15 
 _nextPos = [_sitePos, 50, 250, 500] call TF47_SamBuilding_fnc_findSamPosition;
 if(((count _nextPos) != 0)) then {
-	_allObjectsArr + ([_nextPos,"pook_9k332_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
-	diag_log "-------------DEBUG SAMreturn-";
-	diag_log _allObjectsArr;
+	_allObjectsArr = _allObjectsArr + ([_nextPos,"pook_9k332_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
 };
 sleep 5;
 
 _nextPos = [_sitePos, 50, 250, 500] call TF47_SamBuilding_fnc_findSamPosition;
 if(((count _nextPos) != 0)) then {
-	_allObjectsArr + ([_nextPos,"pook_9k332_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
+	_allObjectsArr = _allObjectsArr + ([_nextPos,"pook_9k332_tak"] call TF47_SamBuilding_fnc_buildSingleSam);
 };
 sleep 5;
 
@@ -144,7 +142,7 @@ _allVehicles = [];
 _allGroups = [];
 // manage the site
 {
-	if(typeName _x == "GROUP") then {
+	if((typeName _x) == "GROUP") then {
 		_allGroups pushBack _x;
 	} else {
 		switch (typeOf _x) do {
@@ -161,15 +159,24 @@ _allGroups = [];
 	};
 } forEach _allObjectsArr;
 
-diag_log _allVehicles;
+// diag_log _allVehicles;
 
-{
-	_x deleteVehicleCrew (driver _x);
-	_x deleteVehicleCrew (gunner _x);
-	_x deleteVehicleCrew (commander _x);
-	deleteVehicle _x;
-} forEach _allVehicles;
+// {
+	// _x deleteVehicleCrew (driver _x);
+	// _x deleteVehicleCrew (gunner _x);
+	// _x deleteVehicleCrew (commander _x);
+	// deleteVehicle _x;
+// } forEach _allVehicles;
 
+// {
+	// if((typeName _x) != "GROUP") then {
+		// deleteVehicle _x;
+	// } else {
+		// {
+			// deleteVehicle _x;
+		// } forEach (units _x);
+	// };
+// } forEach _allObjectsArr;
 
 // watch the site
 

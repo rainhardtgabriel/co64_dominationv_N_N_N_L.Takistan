@@ -53,9 +53,11 @@ _allObjects pushBack _newNest;
 
 // create the c&c radar
 _newVehicle = createVehicle ['pook_9S36_TAK', [_xx + 5,_yy - 25,_zz], [], 0, 'NONE'];
+_newVehicle setVehicleLock "LOCKED";
 _allObjects pushBack _newVehicle;
 
 _newVehicle = createVehicle ['pook_PU12_TAK', [_xx - 5,_yy - 25,_zz], [], 0, 'NONE'];
+_newVehicle setVehicleLock "LOCKED";
 _allObjects pushBack _newVehicle;
 
 // create camonets
