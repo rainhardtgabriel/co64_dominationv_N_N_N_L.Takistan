@@ -23,7 +23,7 @@ sleep 5;
 
 //////////////// creates a task/show notification for the ao ///////////////////////////////////////////////////////////////////////////////////////		
 
-["tsk9", true, ["A hostile SAM Site consisting of SA-3s, SA-15s, SA-19s and SA-20s has been spotted near the Main Target. Destroy it!","Priority Mission: SAM Site","Priority Mission"],_sitePos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
+["tsk20", true, ["A hostile SAM Site consisting of SA-3s, SA-15s, SA-19s and SA-20s has been spotted near the Main Target. Destroy it!","Priority Mission: SAM Site","Priority Mission"],_sitePos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
 
 _allObjectsArr = [];
 _nextPos = [];
@@ -83,7 +83,7 @@ for "_i" from 0 to 3 do {
 	createVehicleCrew _newVehicle;
 	_allObjectsArr pushBack _newVehicle;
 	(crew _newVehicle) join _newGroup;
-	[_newGroup,_sitePos, 500] call BIS_fnc_taskPatrol;
+	[_newGroup,_sitePos, 300] call BIS_fnc_taskPatrol;
 	sleep 10;
 };
 
@@ -96,7 +96,7 @@ for "_i" from 0 to 1 do {
 	createVehicleCrew _newVehicle;
 	_allObjectsArr pushBack _newVehicle;
 	(crew _newVehicle) join _newGroup;
-	[_newGroup,_sitePos, 500] call BIS_fnc_taskPatrol;
+	[_newGroup,_sitePos, 300] call BIS_fnc_taskPatrol;
 	sleep 10;
 };
 
@@ -159,6 +159,35 @@ _allGroups = [];
 	};
 } forEach _allObjectsArr;
 
+{
+	_x addEventHandler ["Fired",{ _veh = (_this select 0); if((getDammage _reammo) > 0.95) then {_veh setVehicleAmmo 1;};}];
+} forEach _allVehicles;
+
+_allAlive = true;
+
+// optimize this at some point
+while {_allAlive} do {
+	_allAlive = false;
+	{
+		if((getDammage _x) <= 0.95) then {
+			_allAlive = true;
+			hint ("alive" + (str _x));
+		};
+	} forEach _allVehicles;
+	sleep 60;
+};
+
+_side_endText = format
+	[
+		"<t align='center' size='1.5'>Priority Mission Completed!</t><br/><t size='1' align='center' color='#0040FF'>%1</t><br/>____________________<br/>Congratulations!<br/><br/> Outstanding work, Soldiers!",
+		"Those SAMs won't shoot down any aircrafts anymore!"
+	];
+[_side_endText] remoteExec ["SEPP_fnc_globalHint",0,false];
+
+ ["Sidemission_complete"] remoteExec ["SEPP_fnc_globalsound",0,false]; 
+
+ ["tsk20", true, ["A hostile SAM Site consisting of SA-3s, SA-15s, SA-19s and SA-20s has been spotted near the Main Target. Destroy it!","Priority Mission: SAM Site","Priority Mission"],_sitePos, "SUCCEEDED", 1, true, true,"",true] call BIS_fnc_setTask;
+ 
 // diag_log _allVehicles;
 
 // {
@@ -168,15 +197,20 @@ _allGroups = [];
 	// deleteVehicle _x;
 // } forEach _allVehicles;
 
-// {
-	// if((typeName _x) != "GROUP") then {
-		// deleteVehicle _x;
-	// } else {
-		// {
-			// deleteVehicle _x;
-		// } forEach (units _x);
-	// };
-// } forEach _allObjectsArr;
+{
+	if((typeName _x) != "GROUP") then {
+		deleteVehicle _x;
+	} else {
+		{
+			deleteVehicle _x;
+		} forEach (units _x);
+	};
+} forEach _allObjectsArr;
+{
+	if ((_x distance _sitePos) <= 500) then {
+		deleteVehicle _x;
+	};
+} forEach allDead;
 
 // watch the site
 

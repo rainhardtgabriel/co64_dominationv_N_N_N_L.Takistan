@@ -37,8 +37,11 @@ _add = 0;
 // xor ((a || b) && !(a && b))
 while {!((((count _foundPos) == 0) || ((_maxDist + _add) < _threshold)) && !(((count _foundPos) == 0) && ((_maxDist + _add) < _threshold)))} do {
 	// _foundPos = _startPos findEmptyPosition [_minDist, (_maxDist + _add)];
-	[_startPos, _minDist, (_maxDist + _add),7, 20, 0, 0] call BIS_fnc_findSafePos;
+	_foundPos = [_startPos, _minDist, (_maxDist + _add),7, 20, 0, 0] call BIS_fnc_findSafePos;
 	_add = _add + 5;
 };
+
+_foundPos = [(_foundPos select 0), (_foundPos select 1), 0];
+
 // return the found posScreenToWorld
 _foundPos;
