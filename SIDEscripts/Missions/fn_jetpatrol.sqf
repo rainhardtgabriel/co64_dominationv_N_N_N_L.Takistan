@@ -140,3 +140,6 @@ _side_trig1 setTriggerStatements    ["(!alive JetVeh1) && (!alive JetVeh2) && (!
                                     [""tf47_changetickets"", [WEST, 2, 0]] call CBA_fnc_globalEvent;
                                     [[]] call tf47_fnc_cleanside;
                                     deletevehicle thisTrigger" , ""];
+// give back parameters for Global Hint 
+
+[_side_log_pos,_side_rad,_side_name]
