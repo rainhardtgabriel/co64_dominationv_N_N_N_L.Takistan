@@ -28,3 +28,16 @@ class VehicleReplacement
 		class replaceVehicle {};
 	};
 };
+class SamBuilding
+{
+	tag= "TF47_SamBuilding";
+	class functions 
+	{
+		file = "functions\samBuilding";
+		class buildSingleSam {};
+		class buildSupply {};
+		class buildCCRadar {};
+		class buildSA20 {};
+		class findSamPosition {};
+	};
+}

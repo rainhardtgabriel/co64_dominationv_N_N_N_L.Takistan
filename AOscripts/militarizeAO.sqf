@@ -362,7 +362,11 @@ sleep 0.1;
 
 ["mission_new"] remoteExec ["SEPP_fnc_globalsound",0,false];
 
-	        
+// SAM Mod needs CUP
+if(tf47_param_vehiclemod == 1) then {
+	[_log_pos] execVM "AOscripts\initSAM.sqf";
+};
+			
 //////////////// create a radiotower /////////////////////////////////////////////////////////////////////////////////////////////
 
 	_r = random 150;

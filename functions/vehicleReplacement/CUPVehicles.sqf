@@ -56,6 +56,6 @@ _wasp02 = "CUP_B_AV8B_GBU12_USMC"; // veh = [this, 2700, 0, "WASP-02", "b_plane"
 _evileye = "CUP_USMC_MQ9";
 //Base Defense
 _basedef_tank = _rhino01;
-_basedef_avenger = _hmmwv_avenger;
-_basedef_static_aa = "CUP_WV_B_CRAM";
+_basedef_avenger = "pook_MIM104_PAC2Battery";
+_basedef_static_aa = "pook_cram";
 _basedef_static_mg = "CUP_B_M2StaticMG_USMC";
