@@ -75,9 +75,6 @@ if(((count _nextPos) != 0)) then {
 };
 sleep 5;
 
-diag_log "-------------DEBUG SAM ___-";
-diag_log _allObjectsArr;
-
 // 4x SA-19 patrol
 for "_i" from 0 to 3 do {
 	_nextPos = _sitePos findEmptyPosition [50, 500];
@@ -139,9 +136,6 @@ sleep 0.1;
 _refuel = [];
 _reammo = [];
 
-diag_log "-------------DEBUG SAM";
-diag_log _allObjectsArr;
-
 _allVehicles = [];
 _allGroups = [];
 // manage the site
@@ -175,7 +169,6 @@ while {_allAlive} do {
 	{
 		if((getDammage _x) <= 0.95) then {
 			_allAlive = true;
-			hint ("alive" + (str _x));
 		};
 	} forEach _allVehicles;
 	sleep 60;
