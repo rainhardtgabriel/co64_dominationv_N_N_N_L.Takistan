@@ -5,21 +5,21 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=33;
+	toggles=161;
 	class ItemIDProvider
 	{
-		nextID=3222;
+		nextID=3231;
 	};
 	class MarkerIDProvider
 	{
-		nextID=217;
+		nextID=218;
 	};
 	class Camera
 	{
-		pos[]={7160.9258,328.0087,7505.2129};
-		dir[]={0.6520108,-0.37682569,-0.6579507};
-		up[]={0.26524818,0.92628312,-0.26766345};
-		aside[]={-0.71031034,-3.2277603e-007,-0.70389986};
+		pos[]={8008.3579,307.69019,2013.9886};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -154,7 +154,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1907;
+		items=1913;
 		class Item0
 		{
 			dataType="Marker";
@@ -28217,7 +28217,7 @@ class Mission
 			name="mkr_spawn_veh_82";
 			text="_basedef_tank";
 			type="Empty";
-			angle=228.60698;
+			angle=228.60696;
 			id=2212;
 		};
 		class Item1685
@@ -28818,7 +28818,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={8275.2656,296.04001,2066.801};
-			angle=-2.125968;
+			angle=-2.1259677;
 			class Attributes
 			{
 				condition="troop_transport in thislist";
@@ -28838,7 +28838,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={8300.2578,296.04001,1872.3521};
-			angle=-2.1658311;
+			angle=-2.1658309;
 			class Attributes
 			{
 				condition="troop_transport in thislist";
@@ -31732,7 +31732,7 @@ class Mission
 			type="mil_arrow";
 			colorName="ColorBlack";
 			a=0.60000002;
-			angle=150.56097;
+			angle=150.56096;
 			id=3214;
 		};
 		class Item1902
@@ -31774,6 +31774,120 @@ class Mission
 			name="sam_4";
 			type="Empty";
 			id=3221;
+		};
+		class Item1907
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8007.103,296.61734,2026.835};
+				angles[]={0.0015882496,5.7595863,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.2;
+				init="null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
+				name="tyreSpawnSign";
+				description="Lamp";
+			};
+			id=3222;
+			type="Infostand_2_EP1";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1908
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8004.0186,296.03375,2025.4886};
+				angles[]={0.012798273,5.7595868,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				name="tyrespawn_1";
+			};
+			id=3223;
+			type="Sr_border";
+		};
+		class Item1909
+		{
+			dataType="Marker";
+			position[]={8004.0063,296.03424,2025.4502};
+			name="tyreSpawnMarker";
+			text="Tyre Spawn";
+			type="n_maint";
+			colorName="ColorWEST";
+			id=3224;
+		};
+		class Item1910
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8006.0313,296.29483,2030.3007};
+				angles[]={0.0015822123,0,0.011198638};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3225;
+			type="Misc_TyreHeapEP1";
+		};
+		class Item1911
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8003.0601,296.47614,2029.3357};
+				angles[]={0.0015822123,0,0.011198638};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3226;
+			type="Land_tires_EP1";
+		};
+		class Item1912
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8000.6699,296.46811,2028.9625};
+				angles[]={0.012798273,0,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3227;
+			type="Land_tires_EP1";
 		};
 	};
 	class Connections
