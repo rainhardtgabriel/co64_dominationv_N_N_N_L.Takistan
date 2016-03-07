@@ -248,11 +248,16 @@ switch (_mkrtext) do  {
 		_veh allowDamage false;
 		_veh setFuel 0;
 		createVehicleCrew _veh;
+		(driver _veh) disableAI "MOVE";
+		(gunner _veh) disableAI "MOVE";
+		(commander _veh) disableAI "MOVE";
+		_veh setFuel 0;
 	};
 	case "_basedef_static_aa":{
 		_veh = [_mkrpos,_mkrdir,_basedef_static_aa] call TF47_VehicleReplacement_fnc_replaceVehicle;
 		_veh addeventhandler ["fired", {(_this select 0) setvehicleammo 1}];
 		_veh allowDamage false;
+		createVehicleCrew _veh;
 	};
 	case "_basedef_static_mg":{
 		_veh = [_mkrpos,_mkrdir,_basedef_static_mg] call TF47_VehicleReplacement_fnc_replaceVehicle;
@@ -261,7 +266,10 @@ switch (_mkrtext) do  {
 		createVehicleCrew _veh;
 	};
 	default { 
-	hintC format ["Replacement did not work for Vehicle : %1 at Pos : %2",_mkrText,_mkrpos]; 
+		if (((getMarkerPos _mkrname select 0) == 0) && ((getMarkerPos _mkrname select 1) == 0) && ((getMarkerPos _mkrname select 2) == 0)) then {
+			} else {
+			hintC format ["Replacement did not work for Vehicle : %1 at Pos : %2",_mkrText,_mkrpos]; 
+			};
 		};
 	};//close switch case
 deleteMarker _mkrname;
