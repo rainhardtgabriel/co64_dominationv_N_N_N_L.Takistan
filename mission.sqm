@@ -1327,7 +1327,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={7992.6372,296.04001,2003.6851};
-			angle=-2.0672724;
+			angle=-2.0672722;
 			class Attributes
 			{
 				condition="(""LandVehicle"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
@@ -11971,6 +11971,7 @@ class Mission
 			{
 				skill=0.2;
 				init="null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
+				name="tyreSpawnSign";
 				description="Lamp";
 			};
 			id=905;
@@ -28191,7 +28192,7 @@ class Mission
 			name="mkr_spawn_veh_82";
 			text="_basedef_tank";
 			type="Empty";
-			angle=228.60693;
+			angle=228.60692;
 			id=2212;
 		};
 		class Item1682
