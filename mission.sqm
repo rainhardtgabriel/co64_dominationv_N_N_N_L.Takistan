@@ -420,7 +420,7 @@ class Mission
 		class Item26
 		{
 			dataType="Marker";
-			position[]={8230.4443,296.04001,2040.188};
+			position[]={8206.9463,296.04001,2031.7804};
 			name="callsign_dustoff";
 			text="DUSTOFF";
 			type="b_air";
