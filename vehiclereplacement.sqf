@@ -241,12 +241,15 @@ switch (_mkrtext) do  {
 		_veh allowDamage false;
 		_veh setFuel 0;
 		createVehicleCrew _veh;
+		(driver _veh) disableAI "MOVE";
+		(gunner _veh) disableAI "MOVE";
+		(commander _veh) disableAI "MOVE";
+		_veh setFuel 0;
 	};
 	case "_basedef_avenger":{
 		_veh = [_mkrpos,_mkrdir,_basedef_avenger] call TF47_VehicleReplacement_fnc_replaceVehicle;
 		_veh addeventhandler ["fired", {(_this select 0) setvehicleammo 1}];
 		_veh allowDamage false;
-		_veh setFuel 0;
 		createVehicleCrew _veh;
 		(driver _veh) disableAI "MOVE";
 		(gunner _veh) disableAI "MOVE";
