@@ -118,7 +118,7 @@ _allObjectsArr pushBack _newGroup;
 
 _side_iniText = format
 	[
-		"<t align='center' size='1.5'>New Priority Mission available!</t><br/><t size='1' align='center' color='#0040FF'>%1</t>",
+		"<t align='center' size='1.5'>New Priority Mission available!</t><br/><t size='1' align='center' color='#994044'>%1</t>",
 		"A hostile SAM Site consisting of SA-3s, SA-15s, SA-19s and SA-20s has been spotted near the Main Target. Destroy it!"
 	];
 [_side_iniText] remoteExec ["SEPP_fnc_globalHint",0,false];

@@ -1,3 +1,15 @@
+/*
+*	@description
+*		Safes Mod Classnames
+* 	@Tested with :
+* 		ToDo
+*
+*	@category   ToDo
+* 	@package    vehiclereplacement.sqf
+* 	@author     [TF47] Raini
+* 	@website	http://armasim.de/
+* 	@version    0.1a
+*/
 //Small Vehicles
 _quad = "B_Quadbike_01_F";//veh= [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM "tf47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true]; 
 _bike = "B_Quadbike_01_F"; // veh = [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM 47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true];
