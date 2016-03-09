@@ -5,7 +5,7 @@
 // SERVER CHECK
 // Make sure that the script is only run on the server
 
-if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
+if !(isServer) exitWith {};
 
 // ====================================================================================
 
