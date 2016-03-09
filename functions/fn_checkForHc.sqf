@@ -20,7 +20,7 @@
 _ret = false;
 if(headlessClientActive && isMultiplayer) then {
     if(!isServer && !hasInterface) then {
-		_ret = _true;
+		_ret = true;
     };
 } else {
     if(isServer) then {
