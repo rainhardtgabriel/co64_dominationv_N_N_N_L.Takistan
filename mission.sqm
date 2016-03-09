@@ -5,21 +5,21 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=33;
+	toggles=161;
 	class ItemIDProvider
 	{
-		nextID=3229;
+		nextID=3271;
 	};
 	class MarkerIDProvider
 	{
-		nextID=217;
+		nextID=220;
 	};
 	class Camera
 	{
-		pos[]={8240.8027,329.83331,2006.0342};
-		dir[]={-0.44068867,-0.55870128,0.70263493};
-		up[]={-0.29685906,0.82936782,0.47331181};
-		aside[]={0.84718627,-3.259629e-007,0.53135121};
+		pos[]={8035.144,333.81458,1925.979};
+		dir[]={0.32147735,-0.41661835,0.85045803};
+		up[]={0.14737351,0.90899068,0.38986647};
+		aside[]={0.93549711,-1.9420404e-006,-0.35362381};
 	};
 };
 binarizationWanted=0;
@@ -91,7 +91,8 @@ addons[]=
 	"A3_Characters_F_EPC",
 	"A3_Structures_F_Civ_Lamps",
 	"A3_weapons_F_FIA",
-	"A3_Weapons_F_NATO"
+	"A3_Weapons_F_NATO",
+	"A3_Structures_F_System"
 };
 randomSeed=14170574;
 class ScenarioData
@@ -156,7 +157,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1905;
+		items=1947;
 		class Item0
 		{
 			dataType="Marker";
@@ -528,7 +529,7 @@ class Mission
 		class Item36
 		{
 			dataType="Marker";
-			position[]={8204.4268,296.04001,2129.0327};
+			position[]={8204.9473,296.04001,2128.6116};
 			name="clp_1_1";
 			text="Vehice Service";
 			type="n_service";
@@ -538,7 +539,7 @@ class Mission
 		class Item37
 		{
 			dataType="Marker";
-			position[]={8225.9121,296.04083,1801.2751};
+			position[]={8227.1445,296.04001,1803.4747};
 			name="clp_2";
 			text="Aircraft Service";
 			type="n_service";
@@ -891,7 +892,7 @@ class Mission
 		class Item76
 		{
 			dataType="Marker";
-			position[]={7987.2734,296.04001,1830.675};
+			position[]={8227.2666,296.04001,1801.2664};
 			name="clp_2_1";
 			text="Helicopter Service";
 			type="o_service";
@@ -1176,14 +1177,14 @@ class Mission
 		class Item101
 		{
 			dataType="Trigger";
-			position[]={8229.8398,296.04001,1804.4911};
-			angle=1.0334107;
+			position[]={8220.7744,296.04001,1799.885};
+			angle=2.6042058;
 			class Attributes
 			{
 				condition="(""Plane"" countType thislist  > 0) && count (thislist unitsBelowHeight 2) > 0";
 				onActivation="0=[thislist, asp1, ""Plane""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
-				sizeA=10;
-				sizeB=10;
+				sizeA=15;
+				sizeB=15;
 				interuptable=1;
 				repeatable=1;
 				activationBy="WEST";
@@ -1231,17 +1232,18 @@ class Mission
 		class Item104
 		{
 			dataType="Trigger";
-			position[]={7987.5381,296.04001,1830.2222};
-			angle=-3.1250122;
+			position[]={8221.0635,296.04001,1800.182};
+			angle=2.6345744;
 			class Attributes
 			{
 				condition="(""helicopter"" countType thislist  > 0) && count (thislist unitsBelowHeight 2) > 0";
 				onActivation="0=[thislist, helipad_rep, ""helicopter""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
-				sizeA=5;
-				sizeB=5;
+				sizeA=10;
+				sizeB=10;
 				interuptable=1;
 				repeatable=1;
 				activationBy="WEST";
+				isRectangle=1;
 			};
 			id=104;
 			type="EmptyDetector";
@@ -1658,8 +1660,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7987.439,296.04001,1830.2981};
-				angles[]={0,5.7339087,0};
+				position[]={8221.0078,296.04007,1799.4634};
+				angles[]={0,1.283319,0};
 			};
 			side="Empty";
 			class Attributes
@@ -10807,8 +10809,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8226.4258,302.96863,1802.8654};
-				angles[]={0,1.0145233,0};
+				position[]={8220.3408,296.04001,1799.5238};
 			};
 			side="Empty";
 			class Attributes
@@ -10818,6 +10819,29 @@ class Mission
 			};
 			id=829;
 			type="HeliH";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item672
 		{
@@ -11929,8 +11953,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7987.4165,296.04001,1830.3052};
-				angles[]={0,5.7500715,0};
+				position[]={8220.668,296.04001,1799.7358};
+				angles[]={0,1.0376825,0};
 			};
 			side="Empty";
 			class Attributes
@@ -28454,7 +28478,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8243.1865,296.0405,2182.8459};
+						position[]={8238.8975,295.96423,2181.448};
+						angles[]={6.2799835,4.1887903,0.015998369};
 					};
 					side="Civilian";
 					flags=2;
@@ -30785,7 +30810,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8240.208,296.56879,1804.1079};
+				position[]={8244.8555,296.64951,1801.0269};
 			};
 			side="Empty";
 			class Attributes
@@ -30799,7 +30824,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8240.9072,296.56876,1806.3817};
+				position[]={8241.7998,296.64951,1800.2159};
 			};
 			side="Empty";
 			class Attributes
@@ -31849,6 +31874,621 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item1905
+		{
+			dataType="Marker";
+			position[]={7992.7817,296.04001,2003.7537};
+			name="tyreSpawnMarker";
+			text="Spare Part Station";
+			type="b_service";
+			colorName="ColorWEST";
+			id=3229;
+		};
+		class Item1906
+		{
+			dataType="Marker";
+			position[]={8174.8491,296.04001,2112.4563};
+			name="clp_1_2";
+			text="Vehice Service";
+			type="n_service";
+			colorName="ColorBlack";
+			id=3230;
+		};
+		class Item1907
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8298.5771,296.03229,1813.1914};
+				angles[]={0,2.6179938,6.2816033};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3231;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1908
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8293.5703,296.04001,1821.6388};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3232;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1909
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8288.0322,296.04001,1830.5414};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3233;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1910
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8282.6152,296.04001,1839.0947};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3234;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1911
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8274.4639,296.04001,1835.5479};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3235;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1912
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8279.8555,296.04001,1827.7018};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3236;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1913
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8285.3184,296.04001,1819.8829};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3237;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1914
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8291.7129,296.03717,1810.7218};
+				angles[]={6.2816033,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3238;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1915
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8277.2402,296.04001,1810.4323};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3239;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1916
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8281.7061,296.03232,1802.8251};
+				angles[]={6.2816033,2.6179938,6.278389};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3240;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1917
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8274.0762,296.01511,1797.6451};
+				angles[]={0,2.6179938,6.2816033};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3241;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1918
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8268.7725,296.03864,1805.3596};
+				angles[]={0,2.6179938,6.2816033};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3242;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1919
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8260.5986,296.04004,1800.9447};
+				angles[]={0,2.6179938,6.2816033};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3243;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1920
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8267.2354,296.01187,1793.1318};
+				angles[]={0,2.6179938,6.2816033};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3244;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1921
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8128.2539,296.04001,1864.1875};
+				angles[]={0,2.6179938,6.2816033};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3245;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1922
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8137.7217,296.04001,1868.5897};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3246;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1923
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8134.0059,296.04001,1875.7521};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3247;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1924
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8125.5083,296.04001,1870.3517};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3248;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1925
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8119.9585,296.04001,1879.172};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3249;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1926
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8128.772,296.04001,1883.4991};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3250;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1927
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8124.8408,296.04001,1890.8636};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3251;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1928
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8116.8701,296.04001,1885.3153};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3252;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1929
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8111.9331,296.51599,1894.0166};
+				angles[]={6.2033563,2.6179938,0.079829417};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3253;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1930
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8120.2432,296.04001,1897.653};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3254;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1931
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8117.3291,296.04001,1904.9272};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3255;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1932
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8108.666,296.43341,1898.917};
+				angles[]={0.079829417,2.6179938,6.2033563};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3256;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1933
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8105.0103,296.05753,1906.0311};
+				angles[]={0.079829417,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3257;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1934
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8113.3735,296.04001,1909.9081};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3258;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1935
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8101.7964,296.04001,1911.0953};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3259;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1936
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8110.9321,296.04001,1915.4355};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3260;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1937
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8028.0796,296.04001,1678.5439};
+				angles[]={0,2.6179938,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3261;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1938
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8025.103,296.03992,1685.129};
+				angles[]={0,2.6179938,6.2816033};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3262;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1939
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8033.0151,296.03998,1688.4414};
+				angles[]={0,2.6179938,6.2816033};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3263;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1940
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8037.3184,296.03998,1680.6953};
+				angles[]={0,2.6179938,6.2816033};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3264;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1941
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8032.2173,296.04028,1674.223};
+				angles[]={0,2.6179938,6.2816033};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3265;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1942
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8027.3555,296.04019,1671.8527};
+				angles[]={0,2.6179938,6.2816033};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3266;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1943
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8021.0552,296.03992,1674.0194};
+				angles[]={0,2.6179938,6.2816033};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3267;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1944
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8016.1226,296.03998,1680.6042};
+				angles[]={0,2.6179938,6.2816033};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3268;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1945
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8101.335,296.04004,1749.2654};
+				angles[]={0,2.6179938,6.2816033};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3269;
+			type="Land_ClutterCutter_large_F";
+		};
+		class Item1946
+		{
+			dataType="Marker";
+			position[]={8248.3662,296.12076,1810.0173};
+			name="mkr_spawn_veh_91";
+			text="_refuel";
+			type="Empty";
+			angle=62.999996;
+			id=3270;
 		};
 	};
 	class Connections
