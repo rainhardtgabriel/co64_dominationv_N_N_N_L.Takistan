@@ -4,7 +4,7 @@
 * 	@params none
 *
 *	@returns:
-*		all created objects
+*		nothing
 * 	@example: 
 * 		[] call checkForHc; - checks for the headlessclient
 *
