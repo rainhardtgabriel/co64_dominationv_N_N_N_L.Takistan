@@ -265,13 +265,33 @@ execVM format ["%1serverEvents.sqf", _pathToScripts];
 execVM format ["%1mapMarkerInit.sqf", _pathToScripts];
 
 // ======================== Mission init ================================
+headlessClientActive = if(isNil "headlessClient") then {False} else {True};
+publicVariable "headlessClientActive";
 
-[] execVM "AOscripts\AOstart.sqf";
-sleep 0.1;
-[] execVM "SIDEscripts\SIDEstart.sqf";
-sleep 0.1;
-[] execVM "TacAds\createpowerstations.sqf";
-sleep 0.1;
+// Spawn units on the HC if hes active
+// otherwise spawn him on the server
+if(headlessClientActive && isMultiplayer) then {
+    if(!isServer && !hasInterface) then {
+        diag_log "HeadlessClient: Spawning the AI on the HeadlessClient!";
+		[] execVM "AOscripts\AOstart.sqf";
+		sleep 0.1;
+		[] execVM "SIDEscripts\SIDEstart.sqf";
+		sleep 0.1;
+		[] execVM "TacAds\createpowerstations.sqf";
+		sleep 0.1;
+    };
+} else { 
+    if(isServer) then {
+        diag_log "HeadlessClient: Spawning the AI on the Server!";
+		[] execVM "AOscripts\AOstart.sqf";
+		sleep 0.1;
+		[] execVM "SIDEscripts\SIDEstart.sqf";
+		sleep 0.1;
+		[] execVM "TacAds\createpowerstations.sqf";
+		sleep 0.1;
+    };
+};
+
 if ((paramsArray select 0) != 4) then {
 	// define the global sand parameter array
 	//[fog,overcast,use ppEfx,allow rain,force wind,vary fog,use wind audio,EFX strength]
