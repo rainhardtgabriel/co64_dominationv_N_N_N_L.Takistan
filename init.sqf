@@ -248,6 +248,7 @@ publicVariable "headlessClientActive";
 // otherwise spawn him on the server
 if(headlessClientActive && isMultiplayer) then {
     if(!isServer && !hasInterface) then {
+		tf47_var_iedTracker = [];
 		tf47_var_mainCount = 0;
 
 		tf47_var_AOCollection = [
@@ -262,6 +263,8 @@ if(headlessClientActive && isMultiplayer) then {
 		sleep 0.1;
 		[] execVM "TacAds\createpowerstations.sqf";
 		sleep 0.1;
+		vehiclespawnscript = [] execVM "vehiclereplacement.sqf";
+		sleep 0.1;
     };
 } else { 
     if(isServer) then {
@@ -271,6 +274,8 @@ if(headlessClientActive && isMultiplayer) then {
 		[] execVM "SIDEscripts\SIDEstart.sqf";
 		sleep 0.1;
 		[] execVM "TacAds\createpowerstations.sqf";
+		sleep 0.1;
+		vehiclespawnscript = [] execVM "vehiclereplacement.sqf";
 		sleep 0.1;
     };
 };
@@ -312,9 +317,3 @@ sleep 0.5;
 ListOfBaseCleanMarker = ["BaseCleanMarker_0","BaseCleanMarker_1","BaseCleanMarker_2","BaseCleanMarker_3"];
 [ListOfBaseCleanMarker,600] spawn TF47_AreaCleanUp_fnc_cleanMarkedPosition;
 sleep 0.1;
-
-// TF47 - Respawn Vehicle
-// ======================================================================
-if(([] call TF47_Helper_fnc_checkForHc)) then {
-	vehiclespawnscript = [] execVM "vehiclereplacement.sqf";
-};
