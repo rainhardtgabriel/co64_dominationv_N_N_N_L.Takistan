@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=161;
+	toggles=33;
 	class ItemIDProvider
 	{
-		nextID=3271;
+		nextID=3272;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8035.144,333.81458,1925.979};
+		pos[]={7991.7642,390.88998,1879.5052};
 		dir[]={0.32147735,-0.41661835,0.85045803};
 		up[]={0.14737351,0.90899068,0.38986647};
 		aside[]={0.93549711,-1.9420404e-006,-0.35362381};
@@ -157,7 +157,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1947;
+		items=1948;
 		class Item0
 		{
 			dataType="Marker";
@@ -1178,7 +1178,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={8220.7744,296.04001,1799.885};
-			angle=2.6042058;
+			angle=2.6042051;
 			class Attributes
 			{
 				condition="(""Plane"" countType thislist  > 0) && count (thislist unitsBelowHeight 2) > 0";
@@ -1233,7 +1233,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={8221.0635,296.04001,1800.182};
-			angle=2.6345744;
+			angle=2.6345739;
 			class Attributes
 			{
 				condition="(""helicopter"" countType thislist  > 0) && count (thislist unitsBelowHeight 2) > 0";
@@ -32489,6 +32489,18 @@ class Mission
 			type="Empty";
 			angle=62.999996;
 			id=3270;
+		};
+		class Item1947
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={953.74701,474.19818,79.856003};
+			};
+			name="headlessClient";
+			isPlayable=1;
+			id=3271;
+			type="HeadlessClient_F";
 		};
 	};
 	class Connections

@@ -27,6 +27,7 @@
 			class callVehicleRespawn;
 			class changePlayerSide;
 			class isStable;
+			class checkForHc;
 		};
 
 

@@ -40,4 +40,13 @@ class SamBuilding
 		class buildSA20 {};
 		class findSamPosition {};
 	};
-}
+};
+class Helper
+{
+	tag = "TF47_Helper";
+	class functions
+	{
+		file = "functions";
+		class checkForHc {};
+	};
+};
