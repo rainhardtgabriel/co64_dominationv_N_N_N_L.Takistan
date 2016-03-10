@@ -1,15 +1,27 @@
-// TODO
-// prevent respawning too soon
-// spawn not every main
-// dont spawn when there is no cup
-
 _aoPos = _this select 0;
-_samMarkers = ["sam","sam_1","sam_2","sam_3"];
+if(isNil "samMarkers") then {
+	samMarkers = ["sam","sam_1","sam_2","sam_3"];
+};
+
+samTaskMsg = ["A hostile SAM Site consisting of SA-3s, SA-15s, SA-19s and SA-20s has been spotted near the Main Target. Destroy it!","Priority Mission: SAM Site","Priority Mission"];
+
+_samInitText = format
+	[
+		"<t align='center' size='1.5'>New Priority Mission available!</t><br/><t size='1' align='center' color='#994044'>%1</t>",
+		"A hostile SAM Site consisting of SA-3s, SA-15s, SA-19s and SA-20s has been spotted near the Main Target. Destroy it!"
+	];
+
+samEndText = format
+	[
+		"<t align='center' size='1.5'>Priority Mission Completed!</t><br/><t size='1' align='center' color='#0040FF'>%1</t><br/>____________________<br/>Congratulations!<br/><br/> Outstanding work, Soldiers!",
+		"Those SAMs won't shoot down any aircrafts anymore!"
+	];
+
 _dist = [[]];
 
 // BEST Algorithm ever 
-for "_i" from 0 to ((count _samMarkers) -1)  do {
-	_curMarker = (_samMarkers select _i);
+for "_i" from 0 to ((count samMarkers) -1) do {
+	_curMarker = (samMarkers select _i);
 	_dist pushBack ((getMarkerPos _curMarker) distance _aoPos);
 };
 _dist sort true;
@@ -17,17 +29,21 @@ _dist sort true;
 _closestPos = _dist select 0;
 _closestMarker = 0;
 
-for "_i" from 0 to ((count _samMarkers) -1)  do {
-	if(((getMarkerPos (_samMarkers select _i)) distance _aoPos) == _closestPos) then {
-		_closestMarker = (_samMarkers select _i);
+for "_i" from 0 to ((count samMarkers) -1) do {
+	if(((getMarkerPos (samMarkers select _i)) distance _aoPos) == _closestPos) then {
+		_closestMarker = (samMarkers select _i);
 	};
 };
+
+for "_i" from 0 to ((count samMarkers) -1) do {
+	if(_closestMarker == (samMarkers select _i)) then {
+		samMarkers deleteAt _i;
+	};
+};
+
 _sitePos = getMarkerPos _closestMarker;
+
 sleep 5;
-
-//////////////// creates a task/show notification for the ao ///////////////////////////////////////////////////////////////////////////////////////		
-
-["tsk20", true, ["A hostile SAM Site consisting of SA-3s, SA-15s, SA-19s and SA-20s has been spotted near the Main Target. Destroy it!","Priority Mission: SAM Site","Priority Mission"],_sitePos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
 
 _allObjectsArr = [];
 _nextPos = [];
@@ -75,8 +91,8 @@ if(((count _nextPos) != 0)) then {
 };
 sleep 5;
 
-// 4x SA-19 patrol
-for "_i" from 0 to 3 do {
+// 2x SA-19 patrol
+for "_i" from 0 to 1 do {
 	_nextPos = _sitePos findEmptyPosition [50, 500];
 	_newVehicle = "pook_sa19_tak" createVehicle _nextPos;
 	_newGroup = createGroup east;
@@ -84,55 +100,42 @@ for "_i" from 0 to 3 do {
 	createVehicleCrew _newVehicle;
 	_allObjectsArr pushBack _newVehicle;
 	(crew _newVehicle) join _newGroup;
-	[_newGroup,_sitePos, 300] call BIS_fnc_taskPatrol;
+	[_newGroup,_sitePos, 150] call BIS_fnc_taskPatrol;
 	sleep 10;
 };
 
-// 2x BTR-60 patrol
-for "_i" from 0 to 1 do {
-	_nextPos = _sitePos findEmptyPosition [50, 500];
-	_newVehicle = "cup_o_btr60_tk" createVehicle _nextPos;
-	_newGroup = createGroup east;
-	_newVehicle setskill 1;
-	createVehicleCrew _newVehicle;
-	_allObjectsArr pushBack _newVehicle;
-	(crew _newVehicle) join _newGroup;
-	[_newGroup,_sitePos, 300] call BIS_fnc_taskPatrol;
-	sleep 10;
-};
+// 1x BTR-60 patrol
 
+_nextPos = _sitePos findEmptyPosition [50, 500];
+_newVehicle = "cup_o_btr60_tk" createVehicle _nextPos;
+_newGroup = createGroup east;
+_newVehicle setskill 1;
+createVehicleCrew _newVehicle;
+_allObjectsArr pushBack _newVehicle;
+(crew _newVehicle) join _newGroup;
+[_newGroup,_sitePos, 100] call BIS_fnc_taskPatrol;
 sleep 10;
 
 // 1x Squad
 _newGroup = [_nextPos,east, (configfile >> "CfgGroups" >> "East" >> "CUP_O_TK" >> "Infantry" >> "CUP_O_TK_InfantrySquad")] call BIS_fnc_spawnGroup;
-[_newGroup,_sitePos, 300] call BIS_fnc_taskPatrol;
+[_newGroup,_sitePos, 100] call BIS_fnc_taskPatrol;
 _allObjectsArr pushBack _newGroup;
 sleep 10;
 
 // 1x HQ
-_newGroup = [_nextPos,east, ["CUP_O_TK_Commander","CUP_O_TK_Officer,CUP_O_TK_Soldier,CUP_O_TK_Soldier"]] call BIS_fnc_spawnGroup;
+_newGroup = [_nextPos,east, ["CUP_O_TK_Commander","CUP_O_TK_Officer","CUP_O_TK_Soldier","CUP_O_TK_Soldier"]] call BIS_fnc_spawnGroup;
 [_newGroup,_sitePos, 50] call BIS_fnc_taskPatrol;
 _allObjectsArr pushBack _newGroup;
 
 // Show global target start hint
-
-_side_iniText = format
-	[
-		"<t align='center' size='1.5'>New Priority Mission available!</t><br/><t size='1' align='center' color='#994044'>%1</t>",
-		"A hostile SAM Site consisting of SA-3s, SA-15s, SA-19s and SA-20s has been spotted near the Main Target. Destroy it!"
-	];
-[_side_iniText] remoteExec ["SEPP_fnc_globalHint",0,false];
-
-	
-// Sound for Hint for active Main Mission 
+["tskSam", true, samTaskMsg,_sitePos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
+[_samInitText] remoteExec ["SEPP_fnc_globalHint",0,false];
 
 sleep 0.1;
-
+// Sound for Hint for active Main Mission 
 ["Sidemission_new"] remoteExec ["SEPP_fnc_globalsound",0,false];
 
 // get the vehicles
-
-
 _refuel = [];
 _reammo = [];
 
@@ -161,86 +164,35 @@ _allGroups = [];
 	_x addEventHandler ["Fired",{ _veh = (_this select 0); if((getDammage _reammo) > 0.95) then {_veh setVehicleAmmo 1;};}];
 } forEach _allVehicles;
 
-_allAlive = true;
 
-// optimize this at some point
-while {_allAlive} do {
-	_allAlive = false;
-	{
-		if((getDammage _x) <= 0.95) then {
-			_allAlive = true;
-		};
-	} forEach _allVehicles;
-	sleep 60;
-};
+samSitePos = _sitePos;
+allObjectsAtSamSite = _allObjectsArr;
 
-_side_endText = format
-	[
-		"<t align='center' size='1.5'>Priority Mission Completed!</t><br/><t size='1' align='center' color='#0040FF'>%1</t><br/>____________________<br/>Congratulations!<br/><br/> Outstanding work, Soldiers!",
-		"Those SAMs won't shoot down any aircrafts anymore!"
-	];
-[_side_endText] remoteExec ["SEPP_fnc_globalHint",0,false];
-
-["Sidemission_complete"] remoteExec ["SEPP_fnc_globalsound",0,false]; 
-
-["tsk20", true, ["A hostile SAM Site consisting of SA-3s, SA-15s, SA-19s and SA-20s has been spotted near the Main Target. Destroy it!","Priority Mission: SAM Site","Priority Mission"],_sitePos, "SUCCEEDED", 1, true, true,"",true] call BIS_fnc_setTask;
-
-sleep 10;
-
-["tf47_changetickets", [WEST, 2, 15]] call CBA_fnc_globalEvent;
- 
-// diag_log _allVehicles;
-
-// {
-	// _x deleteVehicleCrew (driver _x);
-	// _x deleteVehicleCrew (gunner _x);
-	// _x deleteVehicleCrew (commander _x);
-	// deleteVehicle _x;
-// } forEach _allVehicles;
-
+cleanUpSam = compile "
 {
-	if((typeName _x) != "GROUP") then {
+	if((typeName _x) != 'GROUP') then {
 		deleteVehicle _x;
 	} else {
 		{
 			deleteVehicle _x;
 		} forEach (units _x);
 	};
-} forEach _allObjectsArr;
+} forEach allObjectsAtSamSite;
 {
-	if ((_x distance _sitePos) <= 500) then {
+	if ((_x distance samSitePos) <= 500) then {
 		deleteVehicle _x;
 	};
 } forEach allDead;
+";
 
-// watch the site
-
-// clean up the site
-
-
-
-// _sa3Pos = getPos ((_flatPos nearRoads 150) select 0);
-// _sa3Pos2 = _sa3Pos;
-// while {(_sa3Pos distance _sa3Pos2) < 300} do {
-	// _sa3Pos2 = getPos ((_flatPos nearRoads 400) select 0);
-	// hint "test";
-// };
-
-
-// [_sa3Pos,"pook_sa3_tracked_tak"] execVM "AOscripts\sam\buildSingleSam.sqf";
-// [_sa3Pos2,"pook_sa3_tracked_tak"] execVM "AOscripts\sam\buildSingleSam.sqf";
-
-/*
-	
-//////////////// Hint for completed Side Mission /////////////////////////////////////////////////////////////////////////////////////////// 
-
-side_endText = format
-	[
-		"<t align='center' size='1.5'>Side Mission Completed!</t><br/><t size='1' align='center' color='#0040FF'>%1</t><br/>____________________<br/>Congratulations!<br/><br/> Outstanding work, Soldiers!",
-		_side_name
-	];
-
-
-	
-//////////////// Hint for active Side Mission /////////////////////////////////////////////////////////////////////////////////////////// 
-*/
+// trigger for complete mission
+_samTrigger = createTrigger 		["EmptyDetector",_sitePos];   
+_samTrigger setTriggerArea 		    [400, 400, 0, false];  
+_samTrigger setTriggerActivation    ["EAST", "NOT PRESENT", false];   
+_samTrigger setTriggerStatements    ["this", 
+                                    "[samEndText] remoteExec ['SEPP_fnc_globalHint',0,false];
+									['Sidemission_complete'] remoteExec ['SEPP_fnc_globalsound',0,false]; 
+									['tskSam', true, samTaskMsg,samSitePos, 'SUCCEEDED', 1, true, true,'',true] call BIS_fnc_setTask;
+									['tf47_changetickets', [WEST, 2, 15]] call CBA_fnc_globalEvent;
+									[] call cleanUpSam;
+                                    deletevehicle thisTrigger" , ""];
