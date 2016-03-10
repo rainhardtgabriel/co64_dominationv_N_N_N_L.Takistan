@@ -278,6 +278,8 @@ if(headlessClientActive && isMultiplayer) then {
 
 // ======================== TF47 Stuff ===================================
 
+[] call tf47_core_umenu_ft_fnc_enableMenu;
+
 waitUntil { isServer || !isNull player };
 cfgTF47 = compile preprocessFileLineNumbers "cfgTF47.sqf";
 private "_pathToScripts";

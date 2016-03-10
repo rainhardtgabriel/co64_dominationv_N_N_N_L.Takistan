@@ -403,7 +403,7 @@ class CfgRespawnTemplates
 
 class CfgFunctions
 {
-
+#include "tf47CoreScripts\umenu\Functions.hpp"
 #include "functions\cfgfunctions.hpp"			// Integrated Sepp Functions
 
 	class F // Defines the "owner"
@@ -595,6 +595,8 @@ class CfgRemoteExec
 };
 
 #include "dyncap\Defines.hpp"
+
+#include "tf47corescripts\umenu\Dialogs.hpp"
 
 class RscTitles
 {
