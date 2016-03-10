@@ -49,7 +49,7 @@ _baseCleanupMarkers = [["respawn_west","respawn_west_1",200]];
 _statusMarkersInit = false;
 _statusMarkerData = [
         ["UnitNATO_CO",      ["mc1marker",              "b_hq",         "ColorGreen",       "CCT - Command and Control ""GODFATHER""",true]],
-        ["UnitNATO_DC",      ["mc2marker",              "b_hq",         "ColorGreen",       "CCT - ""TOPMAN""",true]],
+        ["UnitNATO_DC",      ["mc2marker",              "b_hq",         "ColorGreen",       "CCT - Joint Terminal Attack Controller ""TOPMAN""",true]],
         ["UnitNATO_DC_D",    ["mc3marker",              "b_hq",         "ColorGreen",       "TOC - ""TOWER""",true]],
         ["evileye1",         ["callsign_evileye1",      "b_uav",        "ColorYellow",           "EVILEYE",     false]],
         ["raven1",           ["callsign_raven1",        "b_air",        "ColorBrown",           "RAVEN-01",     false]],
@@ -196,11 +196,10 @@ _vehicleRestrictions = [_vehicleRestrictionData, []] call CBA_fnc_hashCreate;
 // --- SECURE SLOTS ---------------------------------------------------------------------------------------------------------------------------------
 // Slot Name, Whitelist ID
 _secureSlots = [
-        ["UnitNATO_CO", 3],     // CCT Command and Control
-        ["UnitNATO_DC_D", 3]      // CCT 1st JTAC
-        //["mc3",1],    // Tower
-        //["Zeus1", 5], //Zeus 1
-        //["Zeus2", 5]  //Zeus 2
+        ["UnitNATO_CO", 3],		// CCT Command and Control
+        ["UnitNATO_DC", 3],     // CCT  JTAC
+		["UnitNATO_DC_D", 1],	// Tower 
+		["MissionObserver", 5]	// Mission Observer
 ];
  
 // --- ALL SLOTS ------------------------------------------------------------------------------------------------------------------------------------
