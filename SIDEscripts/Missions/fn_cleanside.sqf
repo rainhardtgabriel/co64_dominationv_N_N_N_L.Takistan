@@ -9,7 +9,7 @@ Last modified:
 
 Description:
 
-	[[<Objects>],bool] call tf47_fnc_cleanside
+	[[<Objects>],bool] spawn tf47_fnc_cleanside
 	
 Notes:
 	

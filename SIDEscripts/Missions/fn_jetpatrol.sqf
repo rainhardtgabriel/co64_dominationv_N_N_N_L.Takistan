@@ -138,7 +138,7 @@ _side_trig1 setTriggerStatements    ["(!alive JetVeh1) && (!alive JetVeh2) && (!
                                     [""tsk9"", true, ['Air Patrol. Be aware: Our latest Intel shows some enemy activities at Rasman Airfield!','Side Mission: Air Patrol',""Side Mission""],
                                     getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
                                     [""tf47_changetickets"", [WEST, 2, 0]] call CBA_fnc_globalEvent;
-                                    [[]] call tf47_fnc_cleanside;
+                                    [[]] spawn tf47_fnc_cleanside;
                                     deletevehicle thisTrigger" , ""];
 // give back parameters for Global Hint 
 
