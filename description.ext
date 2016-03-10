@@ -39,7 +39,7 @@ respawn = 3;
 respawndelay = 10;
 respawnOnStart = 0;
 RespawnDialog = 0;										// default = 1. show respawn timer and scoreboard when killed.
-respawnTemplates[] = {"f_JIP"};
+//respawnTemplates[] = {"f_JIP"};
 
 // ============================================================================================
 
