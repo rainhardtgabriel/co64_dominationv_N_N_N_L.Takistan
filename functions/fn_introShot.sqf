@@ -40,7 +40,6 @@ if (_mode == 0) then {
 private ["_fade"];
 _fade = [_this, 8, true, [true]] call BIS_fnc_param;
 
-
 if (_fade) then {
 	["TF47_fnc_introShot",false] call BIS_fnc_blackOut;
 } else {
@@ -48,7 +47,7 @@ if (_fade) then {
 	titleCut ["", "BLACK FADED", 10e10];
 };
 
-titlecut ["","BLACK OUT",0];
+//titlecut ["","BLACK OUT",0];
 
 cameraEffectEnableHUD true;
 
@@ -119,11 +118,13 @@ _camera camPreparePos [8157.05,2105.99,2.69];
 _camera camPrepareFOV 0.489;
 _camera camCommitPrepared 0;
 
-waituntil {!isnil "bis_fnc_init"};
+//waituntil {!([] call bis_fnc_isLoading)};
+
+sleep 3;
 
 titleRsc ["intro","PLAIN"];
 
-titlecut ["","BLACK IN",4];
+//titlecut ["","BLACK IN", 6];
 
 playSound "preintro";
 
