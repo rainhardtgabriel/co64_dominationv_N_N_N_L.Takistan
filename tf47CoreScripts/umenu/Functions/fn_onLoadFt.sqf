@@ -42,6 +42,12 @@ _typeMarker =  [["b_inf","Infantry"],["b_recon","Recon"],["b_mortar","Mortar"],
 _slotName = format ["%1", player];
 
 _typeArrays = switch true do {
+	case (["UnitNATO_AH", _slotName] call BIS_fnc_inString): {
+		[[["b_air","Helicopter (Attack)"]],["MANTICORE","FIREFLY"]];
+	};	
+	case (["UnitNATO_AFW", _slotName] call BIS_fnc_inString): {
+		[[["b_plane","Plane (Attack)"]],["THUNDERBIRD","WASP","EAGLE"]];
+	};	
 	case ((["UnitNATO_D", _slotName] call BIS_fnc_inString) || (["UnitNATO_C", _slotName] call BIS_fnc_inString)): {
 		[[["b_hq","Headquarters"]],["GODFATHER","TOPMAN","TOWER"]];
 	};
@@ -60,12 +66,6 @@ _typeArrays = switch true do {
 	case (["UnitNATO_TH", _slotName] call BIS_fnc_inString): {
 		[[["b_air","Helicopter (Trans.)"],["b_plane","Plane (Trans.)"]],["RAVEN-01","RAVEN-02","DUSTOFF","BUTTERFLY-01","BUTTERFLY-02","PELICAN","GRIFFIN","GOOSE","ALBATROS"]];
 	};
-	case (["UnitNATO_AH", _slotName] call BIS_fnc_inString): {
-		[[["b_air","Helicopter (Attack)"]],["MANTICORE","FIREFLY"]];
-	};	
-	case (["UnitNATO_AFW", _slotName] call BIS_fnc_inString): {
-		[[["b_plane","Plane (Attack)"]],["THUNDERBIRD","WASP","EAGLE"]];
-	};	
 };
 
 // Populate the combobox for the type
