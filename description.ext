@@ -546,6 +546,12 @@ class CfgFunctions
 			class sniperTeam;
 		};
 		#include "SIDEscripts\Missions\Missions.hpp"
+		class Whitelist {
+			file = "tf47CoreScripts";
+			//class vehicleOnEnter;
+			class addGetInEvent;
+			class addGetOutEvent;
+		};
 	};
 	
 		//#include "tf47CoreScripts\UMenu\Functions.hpp"
