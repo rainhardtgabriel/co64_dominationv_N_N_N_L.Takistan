@@ -1,13 +1,13 @@
 //Every Unit spawning gets introCamride
-if (hasInterface) then {[
+onPreloadFinished {
+	[
 	getPos player,
 	"[TF47] DOMINATION",
 	3,
 	10,
 	30,
 	1
-	] spawn TF47_fnc_introShot;
-	};
+	] spawn TF47_fnc_introShot; onPreloadFinished {};};
 
 if (tf47_var_FOBStatus == 2) then
 {
