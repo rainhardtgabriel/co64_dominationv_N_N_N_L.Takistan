@@ -544,6 +544,9 @@ class CfgFunctions
 			class checkPos;
 			class addAction;
 			class sniperTeam;
+			class nearPlayerDist;
+			class buildSubstation;
+			class lightOut;
 		};
 		#include "SIDEscripts\Missions\Missions.hpp"
 	};
