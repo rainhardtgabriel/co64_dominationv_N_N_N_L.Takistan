@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8264.6738,384.09158,2127.7646};
-		dir[]={-0.38987815,-0.78567332,0.48057261};
-		up[]={-0.49500805,0.61856711,0.61015809};
-		aside[]={0.77665746,-8.3867053e-007,0.63009089};
+		pos[]={8265.6943,303.34122,2063.7153};
+		dir[]={-0.23140134,-0.30103043,0.92512399};
+		up[]={-0.073052958,0.95360613,0.29206002};
+		aside[]={0.97012228,-1.1942757e-007,0.24265704};
 	};
 };
 binarizationWanted=0;
@@ -1237,8 +1237,8 @@ class Mission
 		class Item104
 		{
 			dataType="Trigger";
-			position[]={8201.043,296.66608,2229.1865};
-			angle=-0.30527726;
+			position[]={8200.4707,296.76395,2230.7546};
+			angle=-0.30527765;
 			class Attributes
 			{
 				onActivation="gt2 animate [""Door_1_rot"", 1];";
@@ -1256,8 +1256,8 @@ class Mission
 		class Item105
 		{
 			dataType="Trigger";
-			position[]={8215.8877,295.39716,2181.624};
-			angle=-0.29429784;
+			position[]={8216.1563,295.42096,2180.4875};
+			angle=-0.29429799;
 			class Attributes
 			{
 				onActivation="gt1 animate [""Door_1_rot"", 1];";
@@ -1980,8 +1980,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8200.8701,300.81363,2230.7461};
-				angles[]={6.2272482,2.9111218,6.2655835};
+				position[]={8199.9385,300.85599,2231.356};
+				angles[]={6.2208643,2.9111218,0.014394073};
 			};
 			side="Empty";
 			class Attributes
@@ -2272,8 +2272,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8215.5518,299.46423,2182.3474};
-				angles[]={0.014398213,2.8077984,0.01919602};
+				position[]={8216.2783,299.47665,2180.2834};
+				angles[]={0.0207968,2.8077984,0.0095994528};
 			};
 			side="Empty";
 			class Attributes
@@ -20329,7 +20329,7 @@ class Mission
 				onActivation="gt1_1 animate [""Door_1_rot"", 1];";
 				onDeactivation="gt1_1 animate [""Door_1_rot"", 0];";
 				sizeA=5;
-				sizeB=10;
+				sizeB=15;
 				interuptable=1;
 				repeatable=1;
 				activationBy="WEST";
@@ -20343,7 +20343,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8255.0283,300.0903,2082.0071};
+				position[]={8254.9053,300.0903,2082.0671};
 				angles[]={0,2.6697605,0};
 			};
 			side="Empty";
@@ -25406,7 +25406,7 @@ class Mission
 			position[]={9200.166,71.627617,12631.854};
 			name="patrolpoint_0";
 			type="Empty";
-			angle=164.99997;
+			angle=164.99994;
 			id=3273;
 		};
 		class Item1506
@@ -25415,7 +25415,7 @@ class Mission
 			position[]={7151.8755,41.153507,12744.757};
 			name="patrolpoint_1";
 			type="Empty";
-			angle=224.99997;
+			angle=224.99994;
 			id=3274;
 		};
 		class Item1507
@@ -25424,7 +25424,7 @@ class Mission
 			position[]={1017.9336,545.4375,10392.132};
 			name="patrolpoint_2";
 			type="Empty";
-			angle=119.99995;
+			angle=119.99993;
 			id=3275;
 		};
 		class Item1508
@@ -25433,7 +25433,7 @@ class Mission
 			position[]={2311.9636,42.382427,12581.487};
 			name="patrolpoint_3";
 			type="Empty";
-			angle=224.99997;
+			angle=224.99994;
 			id=3276;
 		};
 		class Item1509
@@ -25469,7 +25469,7 @@ class Mission
 			position[]={330.70679,252.92303,2831.3347};
 			name="patrolpoint_7";
 			type="Empty";
-			angle=89.999977;
+			angle=89.999962;
 			id=3280;
 		};
 		class Item1513
@@ -25478,7 +25478,7 @@ class Mission
 			position[]={148.81006,317.5303,5538.7368};
 			name="patrolpoint_8";
 			type="Empty";
-			angle=59.999969;
+			angle=59.999966;
 			id=3281;
 		};
 		class Item1514
@@ -25505,7 +25505,7 @@ class Mission
 			position[]={4640.979,12.423894,12596.043};
 			name="patrolpoint_11";
 			type="Empty";
-			angle=164.99995;
+			angle=164.99992;
 			id=3284;
 		};
 		class Item1517
@@ -25514,7 +25514,7 @@ class Mission
 			position[]={4790.3325,73.68187,11559.911};
 			name="patrolpoint_12";
 			type="Empty";
-			angle=89.999977;
+			angle=89.999962;
 			id=3285;
 		};
 		class Item1518
