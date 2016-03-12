@@ -261,8 +261,7 @@ if(headlessClientActive && isMultiplayer) then {
 		sleep 0.1;
 		[] execVM "SIDEscripts\SIDEstart.sqf";
 		sleep 0.1;
-		[] execVM "TacAds\createpowerstations.sqf";
-		sleep 0.1;
+
     };
 } else { 
     if(isServer) then {
@@ -271,7 +270,7 @@ if(headlessClientActive && isMultiplayer) then {
 		sleep 0.1;
 		[] execVM "SIDEscripts\SIDEstart.sqf";
 		sleep 0.1;
-		[] execVM "TacAds\createpowerstations.sqf";
+		[] execVM "TacAds\jetpatrolinit.sqf";
 		sleep 0.1;
     };
 };
