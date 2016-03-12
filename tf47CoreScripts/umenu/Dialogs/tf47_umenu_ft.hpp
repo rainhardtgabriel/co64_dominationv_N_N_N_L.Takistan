@@ -124,7 +124,7 @@ class tf47_umenu_ft_dialog
 			y = 0.63 * safezoneH + safezoneY;
 			w = 0.04125 * safezoneW;
 			h = 0.022 * safezoneH;
-			action = "closeDialog 0;"
+			action = "closeDialog 0;";
 		};
 		class tf47_umenu_ft_backbtn: tf47_umenu_base_rscbutton_main
 		{
