@@ -546,6 +546,7 @@ class CfgFunctions
 			class sniperTeam;
 		};
 		#include "SIDEscripts\Missions\Missions.hpp"
+		#include "Patrols\functions\functions.hpp"
 	};
 	
 		//#include "tf47CoreScripts\UMenu\Functions.hpp"

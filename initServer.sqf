@@ -12,3 +12,5 @@ tf47_var_AOCollection = [
 				    "rasman","bastam","falar","mulladost","nur","feruz", "jilavur","chak","landay","shukurkalay","chaman","sakhe"];
 
 tf47_var_AOObjects = [];
+
+[] execVM "Patrols\init.sqf";
