@@ -9,8 +9,13 @@ _side_ai_skill_array  = [0.3,0.5,0.3,0.7,0.5,1,0.8,0.5,0.5,0.5]; // [aimingAccur
 sleep 1;
 
 //////////////// create a cache /////////////////////////////////////////////////////////////////////////////////////////////
-
-_side_position = (getpos _side_log_pos) findEmptyPosition [5,30];
+_side_trig1 = createTrigger          ["EmptyDetector",[4619.848,9430.2,0]];   
+_side_trig1 setTriggerArea           [110, 30, 151.471, true];
+_side_trig1 setTriggerActivation     ["none", "notpresent", true]; 
+_side_trig1 setTriggerStatements      ["!alive cache1", 
+                                     "deletevehicle thisTrigger" , ""];
+ 
+_side_position = [ _side_trig1] call BIS_fnc_randomPosTrigger;
 cache1 = "CUP_TKBasicWeapons_EP1" createVehicle _side_position;
 waitUntil { sleep 0.5; alive cache1 };
 cache1 setVectorUp [0,0,1];
@@ -41,10 +46,11 @@ _side_trig setTriggerStatements ["!alive cache1",
 								"0 = execVM ""SIDEscripts\militarizeSideEast.sqf""; 
 								[side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 
 								[""Sidemission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; 
-								[""tsk4"", true, ['Find the power transformer running the oil reservoir pumps','Side Mission: Lalezar',""Side Mission""],
+								[""tsk4"", true, ['Find hidden weapons cache at Lalezar!','Side Mission: Lalezar',""Side Mission""],
 								getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
 								[""tf47_changetickets"", [WEST, 2, 5]] call CBA_fnc_globalEvent;
 								[[cache1]] spawn tf47_fnc_cleanside;
+                                trig_sandstorm setpos [0,0,0];
 								deletevehicle thisTrigger" , ""];
 
 //////////////// moves sandstorm trigger to side ///////////////////////////////////////////////////////////////////////////		
