@@ -9,6 +9,7 @@ tf47_var_mainCount = 0;
 
 tf47_var_AOCollection = [
 				    "timurkulay","chadarakht","gamarud","gamsar","imarat","zavarak","karachinar","ravanay","nagara","shamali","airfield",
-				    "rasman","bastam","falar","mulladost","nur","feruz", "jilavur","chak","landay","shukurkalay","chaman","sakhe"];
+				    "rasman","bastam","falar","mulladost","nur","feruz", "jilavur","chak","landay","shukukurlay","chaman","sakhe"];
 
 tf47_var_AOObjects = [];
+tf47_var_AOUnits = [];

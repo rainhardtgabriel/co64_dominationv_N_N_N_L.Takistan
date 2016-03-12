@@ -69,7 +69,13 @@ tf47_var_AOCollection = tf47_var_AOCollection - [_ao_select];
 			sleep 0.1;
 		} forEach tf47_var_AOObjects;
 
+		{
+			deleteVehicle _x;
+			sleep 0.1;
+		} forEach tf47_var_AOUnits;
+
 		tf47_var_AOObjects = [];
+		tf47_var_AOUnits = [];
 
 		"ao_mkr1" setmarkerpos [0,0,0];
 		sleep 1;
@@ -83,6 +89,7 @@ tf47_var_AOCollection = tf47_var_AOCollection - [_ao_select];
         deleteMarker "BunkerMarker3";
 //		sleep 30;	
 
+diag_log format ["New Main Mission in: %1", _ao_select];
 
 //////////////// AO is timurkulay ////////////////////////////////////////////////////////////////////////////////////////////////		
 if ( _ao_select == "timurkulay") then {
@@ -121,7 +128,7 @@ if ( _ao_select == "gamarud") then {
 if ( _ao_select == "gamsar") then {
 									_log_pos   			= log_gamsar;
 									//_ao_rad    			= 350;
-									_ao_name   		= "Gamsar";								
+									_ao_name   		= "Garmsar";								
 									sleep 1;
 									
 };
@@ -290,7 +297,7 @@ if ( _ao_select == "landay") then {
 };
 
 //////////////// AO is shukurkalay ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "shukurkalay") then {
+if ( _ao_select == "shukukurlay") then {
 									_log_pos   			= log_shukukurlay;
 									//_ao_rad    			= 300;
 									_ao_name   			= "Shukukurlay";
@@ -319,10 +326,10 @@ if ( _ao_select == "sakhe") then {
 //////////////// Spawn Enemy AI in AO ////////////////////////////////////////////////////////////////////////////////////	
 
 		nul = [_log_pos,2,true,2,[6,6],_ao_rad,_ao_ai_skill_array,nil,nil,nil] execVM "LV\fillHouse.sqf";
- 		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],false,[20,0],[0,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
- 		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[5,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
- 		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
- 		[getPos _log_pos, 200, 1000, round (1 + random 3)] call tf47_fnc_sniperTeam;
+ 		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],false,[20,0],[0,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+ 		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[5,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+ 		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+ 		[getPos _log_pos, 200, 1000, round (1 + random 3), 1] call tf47_fnc_sniperTeam;
 
 //////////////// creates a visible marker for the ao //////////////////////////////////////////////////////////////////////////		
 
@@ -383,7 +390,16 @@ switch (tf47_param_vehiclemod) do {
 		_flatPos = [((getPos _log_pos) select 0) + _r*sin(_phi),((getPos _log_pos) select 1) + _r*cos(_phi)];
 	};
 
-	radiotower = "Land_TTowerBig_2_F" createVehicle _flatPos;
+
+	if (tf47_param_vehiclemod == 1) then
+	{
+		radiotower = "Land_Ind_IlluminantTower" createVehicle _flatPos;  // A3 Tower: "Land_TTowerBig_2_F"
+	}
+	else
+	{
+		radiotower = "Land_TTowerBig_2_F" createVehicle _flatPos;
+	};
+
 	waitUntil { sleep 0.5; alive radioTower };
 	radiotower setVectorUp [0,0,1];
 	radiotowerAlive = true;
@@ -393,7 +409,7 @@ switch (tf47_param_vehiclemod) do {
 //////////////// create 2 ai patrol around radiotower /////////////////////////////////////////////////////////////////////////
 
 		sleep 0.1;
-		nul = [radiotower,2,20,[true,false],[false,false,false],false,[2,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";	
+		nul = [radiotower,2,20,[true,false],[false,false,false],false,[2,0],[0,0],"default",nil,nil,nil,1] execVM "LV\militarize.sqf";	
 	
 		
 //////////////// create a helipad /////////////////////////////////////////////////////////////////////////////////////////////
@@ -470,11 +486,11 @@ trig_rt setpos (getpos _log_pos);
 //////////////// Spawn AI in Capturable Bunker /////////////////////////////////////////////////////////////////////////////////////////// 
 
 		sleep 0.1;
-		nul = [captureBunker1,2,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [captureBunker1,2,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
 		sleep 0.1;
-		nul = [captureBunker2,2,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [captureBunker2,2,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
 		sleep 0.1;
-		nul = [captureBunker3,2,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [captureBunker3,2,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
 
 
 
@@ -491,3 +507,9 @@ trig_rt setpos (getpos _log_pos);
 		_trig setTriggerArea 					[_ao_rad, _ao_rad, 0, false];
 		_trig setTriggerActivation 				["EAST", "notpresent", true];
 		_trig setTriggerStatements 				["this && !(alive radiotower) && (captureBunker1 getVariable ""owner"" == west) && (captureBunker2 getVariable ""owner"" == west) && (captureBunker3 getVariable ""owner"" == west)", "0 = execVM ""AOscripts\militarizeAO.sqf""; [ao_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; [""mission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; [""tsk1"", true, ['Seize the Village held by hostile forces','Seize the AO',""Main Mission""],getMarkerPos ""ao_mkr1"", ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; [""tf47_changetickets"", [WEST, 2, 10]] call CBA_fnc_globalEvent; deletevehicle thisTrigger; AOcount = AOcount + 1" , ""];
+
+		if ((date select 3 >= 20) || (date select 3 < 5) ) then {
+   			[] spawn tf47_fnc_buildSubstation;
+		};
+
+diag_log format ["Main Mission in %1 initialised", _ao_select];
