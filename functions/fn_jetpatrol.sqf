@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //																																  //
-//                      		***		ARMA3 SideMission-Script Jet Patrol - by Sepp	***						     			  //
+//                      		***		ARMA3 Takistan Script Jet Patrol - by Sepp	***						        			  //
 //																																  //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -8,14 +8,30 @@
 if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
 
 
-_side_log_pos   		= log_airfield;
-_side_rad    			= 100;
-_side_name   			= "Enemy Air Patrol";
+private ["_alert_log_pos","_alert_rad","_alert_name","_alert_iniText"];
+
+sleep (2400 +(random 600));
+
+_alert_log_pos   		= log_airfield;
+//_alert_rad    		= 100;
+_alert_name   			= "Enemy Air Patrol";
 
 
 //////////////// creates a task/show notification for the ao ///////////////////////////////////////////////////////////////////////////////////////		
 
-["tsk9", true, ["Air Patrol. Be aware: Our latest Intel shows some enemy activities at Rasman Airfield!","Side Mission: Air Patrol","Side Mission"],getPos _side_log_pos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
+["tsk9", true, ["Air Patrol. Be aware: Our latest Intel shows some enemy activities at Rasman Airfield!","Alert: Air Patrol","alert"],getPos _alert_log_pos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
+
+//////////////// Hint for active Alert Mission /////////////////////////////////////////////////////////////////////////////////////////// 
+
+_alert_iniText = format
+	[
+		"<t align='center' size='1.5'>ALERT!</t><br/><t size='1' align='center' color='#DAA520'>%1</t>",
+		_alert_name
+	];
+
+//-------------------------------------------- Show global target start hint
+
+[_alert_iniText] remoteExec ["SEPP_fnc_globalHint",0,false];
 
 
 //Creates marker for waypoints
@@ -128,18 +144,11 @@ sleep 1;
 {deleteMarker _x} 
 forEach ["PILOTsp1","SUsp1","SUsp2","SUsp3","WP_East1","WP_East1_2","WP_East1_3","WP_East2","WP_East3","WP_East4","WP_East5"];
 
-_side_trig1 = createTrigger 		["EmptyDetector", getPos _side_log_pos];   
+_side_trig1 = createTrigger 		["EmptyDetector", getPos _alert_log_pos];   
 _side_trig1 setTriggerArea 		    [0, 0, 0, false];  
 _side_trig1 setTriggerActivation    ["ANY", "present", false];   
-_side_trig1 setTriggerStatements    ["(!alive JetVeh1) && (!alive JetVeh2) && (!alive JetVeh3)", 
-                                    "0 = execVM ""SIDEscripts\militarizeSideEast.sqf""; 
-                                    [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false];  
-                                    [""Sidemission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; 
-                                    [""tsk9"", true, ['Air Patrol. Be aware: Our latest Intel shows some enemy activities at Rasman Airfield!','Side Mission: Air Patrol',""Side Mission""],
-                                    getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
-                                    [""tf47_changetickets"", [WEST, 2, 0]] call CBA_fnc_globalEvent;
-                                    [[]] spawn tf47_fnc_cleanside;
+_side_trig1 setTriggerStatements    [" !(alive JetVeh1) && !(alive JetVeh2) && !(alive JetVeh3)", 
+                                    "0 = execVM ""TacAds\jetpatrolinit.sqf"";
+                                    [""tsk9"", true, ['Air Patrol. Be aware: Our latest Intel shows some enemy activities at Rasman Airfield!','Alert Mission: Air Patrol',""Alert Mission""],
+                                    getPos _alert_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
                                     deletevehicle thisTrigger" , ""];
-// give back parameters for Global Hint 
-
-[_side_log_pos,_side_rad,_side_name]

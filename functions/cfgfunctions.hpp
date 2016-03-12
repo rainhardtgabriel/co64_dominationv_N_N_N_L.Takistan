@@ -8,6 +8,7 @@ class SEPP
 		class globalNotification {};
 		class globalSideChat {};
         class globalSound {};
+        class jetpatrol {};
 	};
 };
 class CleanUp

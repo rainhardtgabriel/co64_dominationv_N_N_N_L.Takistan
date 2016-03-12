@@ -6,5 +6,4 @@ class Side
 	class village;
 	class lalezar;
 	class woods;
-    class jetpatrol;
 };
