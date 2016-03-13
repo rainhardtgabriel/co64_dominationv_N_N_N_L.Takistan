@@ -71,3 +71,5 @@ _basedef_tank = _rhino01;
 _basedef_avenger = _hmmwv_avenger;
 _basedef_static_aa = "B_static_AA_F";
 _basedef_static_mg = "B_HMG_01_high_F";
+// Missile Box 
+_missilebox = "";

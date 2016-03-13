@@ -242,8 +242,8 @@ switch (_mkrtext) do  {
 		[[wasp1,"wasp1"],"setVehicleVarname"] call BIS_fnc_MP;
 		};
 	case "_eagle01" : 		{
-		eagle1 = [_mkrpos,_mkrdir,_wasp02] call TF47_VehicleReplacement_fnc_replaceVehicle;
-		spawnveh = [eagle1, _timeondestruction, _timeondesertion, "WASP-02", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		eagle1 = [_mkrpos,_mkrdir,_eagle01] call TF47_VehicleReplacement_fnc_replaceVehicle;
+		spawnveh = [eagle1, _timeondestruction, _timeondesertion, "EAGLE-01", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 		hNil = [eagle1, "EAGLE-01", "b_plane", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 		[[eagle1,"eagle1"],"setVehicleVarname"] call BIS_fnc_MP;
 		};

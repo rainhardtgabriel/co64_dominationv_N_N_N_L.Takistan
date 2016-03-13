@@ -72,4 +72,4 @@ _basedef_avenger = "pook_MIM104_PAC2Battery";
 _basedef_static_aa = "pook_cram";
 _basedef_static_mg = "CUP_B_M2StaticMG_USMC";
 // Missilebox
-_missilebox
+_missilebox = "FIR_Baseplate";
