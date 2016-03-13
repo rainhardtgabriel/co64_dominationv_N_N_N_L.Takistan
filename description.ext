@@ -549,12 +549,15 @@ class CfgFunctions
 			class lightOut;
 		};
 		#include "SIDEscripts\Missions\Missions.hpp"
+		#include "Patrols\functions\functions.hpp"
+
 		class Whitelist {
 			file = "tf47CoreScripts";
 			//class vehicleOnEnter;
 			class addGetInEvent;
 			class addGetOutEvent;
 		};
+
 	};
 	
 		//#include "tf47CoreScripts\UMenu\Functions.hpp"
