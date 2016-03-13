@@ -1,5 +1,5 @@
 _thislist = _this select 0;
-
+waitUntil{!isNull player};
 {
 	["JIP",["Your standard Gear was selected."]] call BIS_fnc_showNotification;
 

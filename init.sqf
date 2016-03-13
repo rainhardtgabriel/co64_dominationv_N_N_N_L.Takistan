@@ -240,7 +240,47 @@ f_var_cachingAggressiveness = 1;
 
 BaseTransport = compile preprocessFile "Base\BaseTransport.sqf";
 
+// ======================== Mission init ================================
+headlessClientActive = if(isNil "headlessClient") then {False} else {True};
+publicVariable "headlessClientActive";
+
+// Spawn units on the HC if hes active
+// otherwise spawn him on the server
+if(headlessClientActive && isMultiplayer) then {
+    if(!isServer && !hasInterface) then {
+		tf47_var_iedTracker = [];
+		tf47_var_mainCount = 0;
+
+		tf47_var_AOCollection = [
+							"timurkulay","chadarakht","gamarud","gamsar","imarat","zavarak","karachinar","ravanay","nagara","shamali",/*"airfield",*/
+							"rasman","bastam","falar","mulladost","nur","feruz", "jilavur","chak","landay","shukurkalay","chaman","sakhe"];
+
+		tf47_var_AOObjects = [];
+        diag_log "HeadlessClient: Spawning the AI on the HeadlessClient!";
+		[] execVM "AOscripts\AOstart.sqf";
+		sleep 0.1;
+		[] execVM "SIDEscripts\SIDEstart.sqf";
+		sleep 0.1;
+		[] execVM "Patrols\init.sqf";
+		sleep 0.1;
+    };
+} else { 
+    if(isServer) then {
+        diag_log "HeadlessClient: Spawning the AI on the Server!";
+		[] execVM "AOscripts\AOstart.sqf";
+		sleep 0.1;
+		[] execVM "SIDEscripts\SIDEstart.sqf";
+		sleep 0.1;
+		[] execVM "TacAds\jetpatrolinit.sqf";
+		sleep 0.1;
+		[] execVM "Patrols\init.sqf";
+		sleep 0.1;
+    };
+};
+
 // ======================== TF47 Stuff ===================================
+
+[] call tf47_core_umenu_ft_fnc_enableMenu;
 
 waitUntil { isServer || !isNull player };
 cfgTF47 = compile preprocessFileLineNumbers "cfgTF47.sqf";
@@ -264,14 +304,7 @@ execVM format ["%1serverEvents.sqf", _pathToScripts];
 // Special Markers
 execVM format ["%1mapMarkerInit.sqf", _pathToScripts];
 
-// ======================== Mission init ================================
 
-[] execVM "AOscripts\AOstart.sqf";
-sleep 0.1;
-[] execVM "SIDEscripts\SIDEstart.sqf";
-sleep 0.1;
-[] execVM "TacAds\createpowerstations.sqf";
-sleep 0.1;
 if ((paramsArray select 0) != 4) then {
 	// define the global sand parameter array
 	//[fog,overcast,use ppEfx,allow rain,force wind,vary fog,use wind audio,EFX strength]
@@ -285,7 +318,6 @@ ListOfBaseCleanMarker = ["BaseCleanMarker_0","BaseCleanMarker_1","BaseCleanMarke
 [ListOfBaseCleanMarker,600] spawn TF47_AreaCleanUp_fnc_cleanMarkedPosition;
 sleep 0.1;
 
-// TF47 - Respawn Vehicle
-// ======================================================================
-
+// Vehicle replacement
 vehiclespawnscript = [] execVM "vehiclereplacement.sqf";
+sleep 0.1;

@@ -49,6 +49,8 @@ if(((_roads select 0) distance _pos)<200)then{
 };
 _pos = [_pos1 select 0, _pos1 select 1, 0];
 
+if((_pos distance getMarkerPos "despawn_prev02") < 700) exitWith {diag_log format["Prevented that AI spawns at %1",(str _pos)];};
+
 sleep 0.5;
 
 _vehicle = createVehicle [_veh1, _pos, [], 0, "NONE"];

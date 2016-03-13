@@ -15,7 +15,7 @@ Notes:
 	
 	
 ______________________________________________*/
-if(!isServer) exitwith {};
+if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
 private ["_amount","_typs","_temp"];
 params [["_amount", 10],["_typs",[["inf", 1, 600],["wheeld", 2, 1200],["tracked", 4, 1800]]]];
 

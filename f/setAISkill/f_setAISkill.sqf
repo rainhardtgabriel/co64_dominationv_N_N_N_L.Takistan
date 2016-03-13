@@ -4,7 +4,7 @@
 
 // RUN THE SCRIPT ONLY SERVER SIDE
 
-if !(isServer) exitWith {};
+if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
 
 // ====================================================================================
 

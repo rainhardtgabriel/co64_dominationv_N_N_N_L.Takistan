@@ -31,12 +31,13 @@
 				NOTE: Keep it inside quotes, and if you need quotes in init commands, you MUST use ' or "" instead of ".
 				EXAMPLE: "hint 'this is hint';"
 	ID 			= 	number (if you want to delete units this script creates, you'll need ID number for them)DEFAULT: nil
+	missionType =  number (0 = dont care, 1 = main, 2 = side)												DEFAULT: 0
 
 EXAMPLE: 	nul = [this, 2, true, 2, 50, 1, 0.75, nil, nil, 9] execVM "LV\fillHouse.sqf";
 			spawns in nearest building east soldiers in 50% of possible building positions with skill 0.75,
 			and makes them patrol in & outside of that building
 */
-if (!isServer)exitWith{};
+if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
 private ["_blueMenArray3","_blueMenArray2","_BLUarrays","_redMenArray2","_OPFarrays","_greenMenArray","_grpId","_customInit","_center","_skls","_skills","_a","_buildings","_rat","_milHQ","_milGroup","_menArray","_i","_newPos","_i2","_unitType","_unit","_building","_sideOption","_blueMenArray","_redMenArray","_bPoss","_patrol","_pFile","_pType"];
 
 _center = if (count _this > 0) then { _this select 0;};	 
@@ -49,6 +50,7 @@ _skills = if (count _this > 6) then { _this select 6;} else {"default"};
 _milGroup = if (count _this > 7) then { _this select 7;} else {nil}; if(!isNil("_milGroup"))then{if(_milGroup == "nil0")then{_milGroup = nil;};};
 _customInit = if (count _this > 8) then { _this select 8;} else {nil}; if(!isNil("_customInit"))then{if(_customInit == "nil0")then{_customInit = nil;};};
 _grpId = if (count _this > 9) then { _this select 9;} else {nil};	 
+_missionType = if (count _this > 11) then { _this select 10; }else{0;}; 
 
 if(isNil("LV_ACskills"))then{LV_ACskills = compile preprocessFile "LV\LV_functions\LV_fnc_ACskills.sqf";};
 if(isNil("LV_vehicleInit"))then{LV_vehicleInit = compile preprocessFile "LV\LV_functions\LV_fnc_vehicleInit.sqf";};
@@ -126,6 +128,11 @@ while{_i2 < _rat}do{
     _unitType = _menArray select (floor(random(count _menArray)));
 	_unit = _milGroup createUnit [_unitType, _newPos, [], 0, "NONE"];
 	_unit setpos _newPos;  
+
+	if (_missionType == 1) then
+	{
+		tf47_var_AOUnits pushBack [_unit];
+	};
 	
 	if(typeName _skills != "STRING")then{_skls = [_unit,_skills] call LV_ACskills;};
 

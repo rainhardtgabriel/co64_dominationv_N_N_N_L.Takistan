@@ -180,9 +180,12 @@ if (_player == player) then {
 			//hint parseText format ["Entering Slot: %1", _position];
 		};
 
+		 // diag_log format["Position %1 licenceType %2 Vehicle %3",_position,_licenceType,_vehicle];
+		
 		if (_position == "driver") then {
 			if (_licenceType != "") then {
-				[_vehicle] execVM format["%1mapMarkerUpdate.sqf", _pathToScripts];
+				[[[_vehicle],format["%1mapMarkerUpdate.sqf", "tf47CoreScripts\"]],"execVM",2] call BIS_fnc_MP;
+				// [_vehicle] execVM format["%1mapMarkerUpdate.sqf", _pathToScripts];
 			};
 		};
 
