@@ -241,11 +241,11 @@ switch (_mkrtext) do  {
 		hNil = [wasp1, "WASP-01", "b_plane", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 		[[wasp1,"wasp1"],"setVehicleVarname"] call BIS_fnc_MP;
 		};
-	case "_wasp02" : 		{
-		wasp2 = [_mkrpos,_mkrdir,_wasp02] call TF47_VehicleReplacement_fnc_replaceVehicle;
-		spawnveh = [wasp2, _timeondestruction, _timeondesertion, "WASP-02", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-		hNil = [wasp2, "WASP-02", "b_plane", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
-		[[wasp2,"wasp2"],"setVehicleVarname"] call BIS_fnc_MP;
+	case "_eagle01" : 		{
+		eagle1 = [_mkrpos,_mkrdir,_wasp02] call TF47_VehicleReplacement_fnc_replaceVehicle;
+		spawnveh = [eagle1, _timeondestruction, _timeondesertion, "WASP-02", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		hNil = [eagle1, "EAGLE-01", "b_plane", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
+		[[eagle1,"eagle1"],"setVehicleVarname"] call BIS_fnc_MP;
 		};
 	case "_thunderbird" :	{
 		thunderbird1 = [_mkrpos,_mkrdir,_thunderbird] call TF47_VehicleReplacement_fnc_replaceVehicle;
