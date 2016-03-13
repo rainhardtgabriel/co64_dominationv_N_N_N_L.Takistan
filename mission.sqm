@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=3368;
+		nextID=3372;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7987.1069,432.15738,1581.7585};
-		dir[]={0.054592151,-0.82427019,0.56364298};
-		up[]={0.079464689,0.56616169,0.82044476};
-		aside[]={0.9953863,-7.2936018e-007,-0.096405864};
+		pos[]={8294.3945,312.32852,2111.8594};
+		dir[]={-0.29813701,-0.70814049,0.64013726};
+		up[]={-0.2989938,0.70601147,0.64197332};
+		aside[]={0.90655547,-3.9080624e-007,0.42222413};
 	};
 };
 binarizationWanted=0;
@@ -152,7 +152,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1527;
+		items=1529;
 		class Item0
 		{
 			dataType="Marker";
@@ -475,7 +475,7 @@ class Mission
 			type="mil_arrow";
 			colorName="ColorBlack";
 			a=0.60000002;
-			angle=60.108856;
+			angle=60.108852;
 			id=31;
 		};
 		class Item32
@@ -18733,7 +18733,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8287.5059,296.04144,2123.5786};
+						position[]={8287.5059,296.04144,2123.5791};
 						angles[]={0,5.7970939,0};
 					};
 					side="West";
@@ -18742,13 +18742,55 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpNATO_AFW2 = group this; [""pp"",this] call f_fnc_assignGear;";
+						init="GrpNATO_AFW = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_AFW2_P";
 						description="US Attack Fixed Wing Pilot";
 						isPlayable=1;
 					};
 					id=1925;
 					type="B_Pilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 			};
 			class Attributes
@@ -25507,7 +25549,7 @@ class Mission
 			type="mil_arrow";
 			colorName="ColorBlack";
 			a=0.60000002;
-			angle=241.13795;
+			angle=241.13791;
 			id=3360;
 		};
 		class Item1520
@@ -25538,7 +25580,7 @@ class Mission
 			type="mil_arrow";
 			colorName="ColorBlack";
 			a=0.60000002;
-			angle=146.47397;
+			angle=146.47394;
 			id=3363;
 		};
 		class Item1523
@@ -25551,7 +25593,7 @@ class Mission
 			colorName="ColorOrange";
 			a=8;
 			b=35;
-			angle=329.05453;
+			angle=329.05444;
 			id=3364;
 		};
 		class Item1524
@@ -25564,7 +25606,7 @@ class Mission
 			colorName="ColorOrange";
 			a=8;
 			b=35;
-			angle=329.0545;
+			angle=329.05441;
 			id=3365;
 		};
 		class Item1525
@@ -25574,7 +25616,7 @@ class Mission
 			name="mkr_spawn_veh_92";
 			text="_missilebox";
 			type="Empty";
-			angle=324.89612;
+			angle=324.89606;
 			id=3366;
 		};
 		class Item1526
@@ -25584,8 +25626,162 @@ class Mission
 			name="mkr_spawn_veh_93";
 			text="_missilebox";
 			type="Empty";
-			angle=269.97943;
+			angle=269.9794;
 			id=3367;
+		};
+		class Item1527
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8290.4189,296.04144,2122.7671};
+						angles[]={0,5.7970939,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="LIEUTENANT";
+						init="GrpNATO_AFW = group this; [""pp"",this] call f_fnc_assignGear;";
+						name="UnitNATO_AFW3_P";
+						description="US Attack Fixed Wing Pilot";
+						isPlayable=1;
+					};
+					id=3369;
+					type="B_Pilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=3368;
+		};
+		class Item1528
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8292.7305,296.04144,2122.7131};
+						angles[]={0,5.7970939,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="LIEUTENANT";
+						init="GrpNATO_AFW = group this; [""pp"",this] call f_fnc_assignGear;";
+						name="UnitNATO_AFW4_P";
+						description="US Attack Fixed Wing Pilot";
+						isPlayable=1;
+					};
+					id=3371;
+					type="B_Pilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=3370;
 		};
 	};
 };
