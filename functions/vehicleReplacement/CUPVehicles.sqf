@@ -62,8 +62,8 @@ _goose = "CUP_B_MV22_USMC"; // veh = [this, 2700, 0, "GOOSE", "b_air", "ColorBro
 _albatros = "CUP_B_C130J_USMC"; // veh = [this, 2700, 0, "ALBATROS", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "ALBATROS", "b_plane", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";if(isServer) then { clearBackpackCargoGlobal this; clearWeaponCargoGlobal this;          clearMagazineCargoGlobal this;         clearItemCargoGlobal this; };
 //Attack Planes
 _thunderbird = "CUP_B_A10_AT_USA"; // veh = [this, 2700, 0, "THUNDERBIRD", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_wasp01 = "CUP_B_AV8B_AGM_USMC"; // veh = [this, 2700, 0, "WASP-01", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_wasp02 = "CUP_B_AV8B_GBU12_USMC"; // veh = [this, 2700, 0, "WASP-02", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_wasp01 = "CUP_B_AV8B_GBU12_USMC"; // veh = [this, 2700, 0, "WASP-01", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_eagle01 = "CUP_B_AV8B_GBU12_USMC"; // veh = [this, 2700, 0, "WASP-02", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 // Drones
 _evileye = "CUP_USMC_MQ9";
 //Base Defense

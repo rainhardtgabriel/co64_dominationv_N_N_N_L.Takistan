@@ -63,7 +63,7 @@ _albatros = "B_Heli_Transport_03_unarmed_green_F"; // veh = [this, 2700, 0, "ALB
 //Attack Planes
 _thunderbird = "B_Plane_CAS_01_F"; // veh = [this, 2700, 0, "THUNDERBIRD", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _wasp01 = "B_Heli_Attack_01_F"; // veh = [this, 2700, 0, "WASP-01", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_wasp02 = "B_Heli_Attack_01_F"; // veh = [this, 2700, 0, "WASP-02", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_eagle01 = "B_Heli_Attack_01_F"; // veh = [this, 2700, 0, "WASP-02", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 // Drones
 _evileye = "B_UAV_02_CAS_F";
 //Base Defense
