@@ -1149,7 +1149,7 @@ class Mission
 			class Attributes
 			{
 				condition="(""LandVehicle"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
-				onActivation="0=[thislist, vsp1, ""LandVehicle""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
+				onActivation="{if(isPlayer _x) then {[[[thislist, vsp1, ""LandVehicle""],""vehicleService\vehicleServiceInit.sqf""],""execVM"",(owner _x)] call BIS_fnc_MP;};} forEach thisList;";
 				sizeA=5;
 				sizeB=5;
 				interuptable=1;
