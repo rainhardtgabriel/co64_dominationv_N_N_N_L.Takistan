@@ -20953,7 +20953,7 @@ class Mission
 			class Attributes
 			{
 				condition="Local player and player in thislist";
-				onActivation="ret = [littlebird1,""LITTLEBIRD-01""] execVM ""Base\VehicleTextinfo.sqf""";
+				onActivation="ret = [butterfly1,""BUTTERFLY-01""] execVM ""Base\VehicleTextinfo.sqf""";
 				sizeA=10;
 				sizeB=10;
 				interuptable=1;
@@ -20972,7 +20972,7 @@ class Mission
 			class Attributes
 			{
 				condition="Local player and player in thislist";
-				onActivation="ret = [littlebird2,""LITTLEBIRD-02""] execVM ""Base\VehicleTextinfo.sqf""";
+				onActivation="ret = [butterfly2,""BUTTERFLY-02""] execVM ""Base\VehicleTextinfo.sqf""";
 				sizeA=10;
 				sizeB=10;
 				interuptable=1;
