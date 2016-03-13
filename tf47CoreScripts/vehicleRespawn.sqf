@@ -269,7 +269,8 @@ while {_run} do
 		};
 
 		if (_hasname) then {
-			_unit setVehicleVarName _unitname;
+			// _unit setVehicleVarName _unitname;
+			[[_unit,_unitname],"setVehicleVarname"] call BIS_fnc_MP;
 			//_unit setVehicleInit format ["%1 = this; this setVehicleVarName ""%1""",_unitname];
 			//processInitCommands;
 		};
