@@ -1125,7 +1125,7 @@ class Mission
 			class Attributes
 			{
 				condition="(""LandVehicle"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
-				onActivation="0=[thislist, vsp1, ""LandVehicle""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
+				onActivation="{if(isPlayer _x) then {[[[thislist, vsp1, ""LandVehicle""],""vehicleService\vehicleServiceInit.sqf""],""execVM"",(owner _x)] call BIS_fnc_MP;};} forEach thisList;";
 				sizeA=5;
 				sizeB=5;
 				interuptable=1;
@@ -1144,7 +1144,7 @@ class Mission
 			class Attributes
 			{
 				condition="(""Plane"" countType thislist  > 0) && count (thislist unitsBelowHeight 2) > 0";
-				onActivation="0=[thislist, asp1, ""Plane""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
+				onActivation="{if(isPlayer _x) then {[[[thislist, asp1, ""Plane""],""vehicleService\vehicleServiceInit.sqf""],""execVM"",(owner _x)] call BIS_fnc_MP;};} forEach thisList;";
 				sizeA=15;
 				sizeB=15;
 				interuptable=1;
@@ -1163,7 +1163,7 @@ class Mission
 			class Attributes
 			{
 				condition="(""helicopter"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
-				onActivation="0=[thislist, helipad_spawn, ""helicopter""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
+				onActivation="{if(isPlayer _x) then {[[[thislist, helipad_spawn, ""Helicopter""],""vehicleService\vehicleServiceInit.sqf""],""execVM"",(owner _x)] call BIS_fnc_MP;};} forEach thisList;";
 				sizeA=5;
 				sizeB=5;
 				interuptable=1;
@@ -1181,7 +1181,7 @@ class Mission
 			class Attributes
 			{
 				condition="(""helicopter"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
-				onActivation="0=[thislist, manticore1hp, ""helicopter""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
+				onActivation="{if(isPlayer _x) then {[[[thislist, manticore1hp, ""Helicopter""],""vehicleService\vehicleServiceInit.sqf""],""execVM"",(owner _x)] call BIS_fnc_MP;};} forEach thisList;";
 				sizeA=5;
 				sizeB=5;
 				interuptable=1;
@@ -1199,7 +1199,7 @@ class Mission
 			class Attributes
 			{
 				condition="(""helicopter"" countType thislist  > 0) && count (thislist unitsBelowHeight 2) > 0";
-				onActivation="0=[thislist, helipad_rep, ""helicopter""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
+				onActivation="{if(isPlayer _x) then {[[[thislist, helipad_rep, ""Helicopter""],""vehicleService\vehicleServiceInit.sqf""],""execVM"",(owner _x)] call BIS_fnc_MP;};} forEach thisList;";
 				sizeA=10;
 				sizeB=10;
 				interuptable=1;
@@ -1256,7 +1256,7 @@ class Mission
 			class Attributes
 			{
 				condition="(""LandVehicle"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
-				onActivation="0=[thislist, vsp2, ""LandVehicle""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
+				onActivation="{if(isPlayer _x) then {[[[thislist, vsp2, ""LandVehicle""],""vehicleService\vehicleServiceInit.sqf""],""execVM"",(owner _x)] call BIS_fnc_MP;};} forEach thisList;";
 				sizeA=5;
 				sizeB=5;
 				interuptable=1;
@@ -1295,7 +1295,7 @@ class Mission
 			class Attributes
 			{
 				condition="(""LandVehicle"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
-				onActivation="0=[thislist, tyrespawn, ""LandVehicle""] execVM ""vehicleService\vehicleServiceInit.sqf"";";
+				onActivation="{if(isPlayer _x) then {[[[thislist, tyrespawn, ""LandVehicle""],""vehicleService\vehicleServiceInit.sqf""],""execVM"",(owner _x)] call BIS_fnc_MP;};} forEach thisList;";
 				sizeA=5;
 				sizeB=5;
 				interuptable=1;
