@@ -63,7 +63,7 @@ _albatros = "CUP_B_C130J_USMC"; // veh = [this, 2700, 0, "ALBATROS", "b_plane", 
 //Attack Planes
 _thunderbird = "CUP_B_A10_AT_USA"; // veh = [this, 2700, 0, "THUNDERBIRD", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _wasp01 = "CUP_B_AV8B_GBU12_USMC"; // veh = [this, 2700, 0, "WASP-01", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_eagle01 = "CUP_B_AV8B_GBU12_USMC"; // veh = [this, 2700, 0, "WASP-02", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_eagle01 = "FIR_F15E"; // veh = [this, 2700, 0, "WASP-02", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 // Drones
 _evileye = "CUP_USMC_MQ9";
 //Base Defense
@@ -71,3 +71,5 @@ _basedef_tank = _rhino01;
 _basedef_avenger = "pook_MIM104_PAC2Battery";
 _basedef_static_aa = "pook_cram";
 _basedef_static_mg = "CUP_B_M2StaticMG_USMC";
+// Missilebox
+_missilebox
