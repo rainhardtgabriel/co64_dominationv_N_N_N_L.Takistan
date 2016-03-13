@@ -67,7 +67,7 @@ These endings are available. To trigger an ending click on its link.<br/><br/>
 
 // SAFE START SECTION
 
-_briefing = _briefing + "
+_briefing = _briefing + ""; /*
 <font size='18'>SAFE START CONTROL</font><br/>
 |- <execute expression=""f_var_mission_timer = f_var_mission_timer + 1; publicVariable 'f_var_mission_timer'; hintsilent format ['Mission Timer: %1',f_var_mission_timer];"">
 Increase Safe Start timer by 1 minute</execute><br/>
@@ -93,7 +93,7 @@ Force safety on for all players</execute><br/>
 hintsilent 'Safety off!' "">
 Force safety off for all players</execute><br/><br/>
 ";
-
+*/
 // ====================================================================================
 
 // ADD ZEUS SUPPORT SECTION
