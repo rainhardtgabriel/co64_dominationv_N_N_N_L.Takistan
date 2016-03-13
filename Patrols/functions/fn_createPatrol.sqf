@@ -20,8 +20,9 @@ params["_typ","_timer"];
 
 _temp = [];
 _start = PatrolMarkers call BIS_fnc_selectRandom;
+PatrolMarkers = PatrolMarkers - [_start];
 _end = PatrolMarkers call BIS_fnc_selectRandom;
-PatrolMarkers = PatrolMarkers - [_start,_end];
+PatrolMarkers = PatrolMarkers - [_end];
 _startpos = getMarkerPos _start;
 _endpos = getMarkerPos _end;
 _startdir = markerDir _start;
@@ -53,7 +54,8 @@ switch (_typ) do {
 
 _group setBehaviour "CARELESS";
 _group setCombatMode "YELLOW";
-_group setSpeedMode "LIMITED";
-_group move _endpos;
+_group setSpeedMode "NORMAL";
+//_group move _endpos;
+[_group, _endpos] execVM "Patrols\delayedwaypoint.sqf";
 
-Patrols = Patrols + [[_typ,_group, _temp, _start, _end]];
+Patrols = Patrols + [[_typ,_timer,_group, _temp, _start, _end]];
