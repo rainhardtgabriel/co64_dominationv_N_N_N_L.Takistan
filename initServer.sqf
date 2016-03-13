@@ -14,5 +14,5 @@ tf47_var_AOCollection = [
 tf47_var_AOObjects = [];
 tf47_var_AOUnits = [];
 
-[] execVM "Patrols\init.sqf";
+
 
