@@ -63,9 +63,9 @@ _statusMarkerData = [
         ["manticore1",       ["manticore1marker",    "b_air",        "ColorOrange",          "MANTICORE",    false]],
         ["firefly1",         ["firefly1marker",      "b_air",        "ColorOrange",          "FIREFLY",      false]],
         ["thunderbird1",     ["thunderbirdmarker",  "b_plane",      "ColorOrange",          "THUNDERBIRD",  false]],
-        ["wasp1",          	 ["wasp1marker",       	"b_plane",      "ColorOrange",          "WASP-01",    false]],
-        ["wasp2",            ["wasp2marker",       	"b_plane",      "ColorOrange",          "EAGLE-01",    false]],
-        ["albatros1",         ["albatros1marker",      "b_plane",      "ColorBrown",           "ALBATROS",     false]],
+        ["wasp1",            ["wasp1marker",       	"b_plane",      "ColorOrange",          "WASP-01",    false]],
+        ["eagle1",           ["eagle1marker",       	"b_plane",      "ColorOrange",          "EAGLE-01",    false]],
+        ["albatros1",        ["albatros1marker",      "b_plane",      "ColorBrown",           "ALBATROS",     false]],
         ["rhino1",           ["rhino1marker",        "b_armor",      "ColorOrange",          "RHINO-01",     false]],
         ["rhino2",           ["rhino2marker",        "b_armor",      "ColorOrange",          "RHINO-02",     false]],
         ["lion1",            ["lion1marker",         "b_armor",      "ColorOrange",          "LION-01",      false]],
@@ -128,11 +128,11 @@ _vehicleRestrictionData = [
         ["albatros1",                       [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
 
         //Fixed Wing Attack Harrier AV8B GBU 12
-        ["wasp1",                          [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P"],                 []]],
+        ["wasp1",                          [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P","UnitNATO_AFW3_P","UnitNATO_AFW4_P"],                 []]],
         //Fixed Wing Attack Harrier AV8B AGM
-        ["wasp2",                          [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P"],                 []]],	
+        ["eagle1",                          [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P","UnitNATO_AFW3_P","UnitNATO_AFW4_P"],                 []]],	
         //Fixed Wing Attack Thunderbird
-        ["thunderbird1",                   [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P"],                 []]],
+        ["thunderbird1",                   [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P","UnitNATO_AFW3_P","UnitNATO_AFW4_P"],                 []]],
 
         // Tank M1A1 Rhino
         ["rhino1",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"]]],
@@ -243,7 +243,7 @@ _infantryTicketsData = [
         ["UnitNATO_AH1_P", _pilotTicketsDefault],            ["UnitNATO_AH1_CP", _pilotTicketsDefault],
 	   
         // Fixed Wing
-        ["UnitNATO_AFW1_P", _pilotTicketsDefault],	     ["UnitNATO_AFW2_P", _pilotTicketsDefault],
+        ["UnitNATO_AFW1_P", _pilotTicketsDefault],	     ["UnitNATO_AFW2_P", _pilotTicketsDefault],      ["UnitNATO_AFW3_P", _pilotTicketsDefault],         ["UnitNATO_AFW4_P", _pilotTicketsDefault], 
        
         // CCT, JTAC, TOWER
         ["UnitNATO_DC_D", _infantryLeadTicketsDefault]
