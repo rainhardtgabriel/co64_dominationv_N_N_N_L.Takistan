@@ -131,7 +131,7 @@ while{_i2 < _rat}do{
 
 	if (_missionType == 1) then
 	{
-		tf47_var_AOUnits pushBack [_unit];
+		tf47_var_AOUnits pushBack _unit;
 	};
 	
 	if(typeName _skills != "STRING")then{_skls = [_unit,_skills] call LV_ACskills;};

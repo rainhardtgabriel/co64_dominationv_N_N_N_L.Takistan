@@ -13,6 +13,7 @@ if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
 
 if (tf47_var_mainCount >= tf47_param_mainCount) then
 {
+	sleep 10;
 	remoteExec ['tf47_fnc_outroShot', 0];
 	sleep 22;
 	[1] call f_fnc_mpEnd;
@@ -87,7 +88,7 @@ tf47_var_AOCollection = tf47_var_AOCollection - [_ao_select];
         deleteMarker "BunkerMarker2";
 		sleep 0.1;
         deleteMarker "BunkerMarker3";
-//		sleep 30;	
+		sleep 30;	
 
 diag_log format ["New Main Mission in: %1", _ao_select];
 

@@ -168,7 +168,7 @@ if((_men select 0)||(_men select 1))then{
 
 		if (_missionType == 1) then
 		{
-			tf47_var_AOUnits pushBack [_unit];
+			tf47_var_AOUnits pushBack _unit;
 		};
 
 		if(!_still)then{
@@ -240,7 +240,7 @@ if((_vehicles select 0)||(_vehicles select 1)||(_vehicles select 2))then{
 
 					if (_missionType == 1) then
 					{
-						tf47_var_AOObjects pushBack [_vehicle];
+						tf47_var_AOObjects pushBack _vehicle;
 					};
 
 					_crew = [_vehicle, _milGroup] call BIS_fnc_spawnCrew;

@@ -30,7 +30,7 @@ for [{_i=1},{_i<=_number},{_i=_i+1}] do
 
 	if (_missionType == 1) then
 	{
-		tf47_var_AOUnits pushBack [_unit];
+		tf47_var_AOUnits pushBack _unit;
 	};
 
 	[_unit, [0.5,0.5,0.2,0.9,0.8,1,0.8,0.5,0.5,0.3]] call LV_ACskills;
