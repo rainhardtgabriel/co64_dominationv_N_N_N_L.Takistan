@@ -2,7 +2,7 @@
 onPreloadFinished {
 	[
 	getPos player,
-	"[TF47] DOMINATION",
+	"[TF47] SUPREMACY",
 	3,
 	10,
 	30,

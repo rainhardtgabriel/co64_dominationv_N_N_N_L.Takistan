@@ -6,7 +6,7 @@ class Header
 {
 	gameType = Coop;
 	minPlayers = 1;
-	maxPlayers = 44;
+	maxPlayers = 70;
 };
 
 // ============================================================================================
@@ -18,9 +18,9 @@ disabledAI = 1;
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 onLoadName = "[TF47] SUPREMACY";
-onLoadMission = "Made with F3, Dyncap, LV and MKY by TF47";
+onLoadMission = "Rules @ armasim.de";
 author = "TF47-Community";
-loadScreen = "intro\pics\conflict_resolve.paa";
+loadScreen = "intro\pics\taskforce47.paa";
 overviewPicture = "intro\pics\taskforce47.paa";
 
 // ============================================================================================
@@ -148,7 +148,7 @@ class Params
 	{
 			title = "Vehicle Mod(s)";
 			values[] = {0,1};
-			texts[] = {"Vanilla","CUP"};
+			texts[] = {"Vanilla","CUP-MELB-FIRF15-SAM"};
 			default = 1;
 			code = "tf47_param_vehiclemod = %1";
 	};
