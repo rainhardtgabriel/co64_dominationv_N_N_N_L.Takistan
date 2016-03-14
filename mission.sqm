@@ -1129,7 +1129,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={8220.7744,296.04001,1799.885};
-			angle=2.6042054;
+			angle=2.6042051;
 			class Attributes
 			{
 				condition="(""Plane"" countType thislist  > 0) && count (thislist unitsBelowHeight 2) > 0";
@@ -19670,7 +19670,7 @@ class Mission
 			name="mkr_spawn_veh_22";
 			text="_bike";
 			type="Empty";
-			angle=68.01741;
+			angle=68.017395;
 			id=2091;
 		};
 		class Item1128
@@ -25651,7 +25651,7 @@ class Mission
 			colorName="ColorGrey";
 			a=8;
 			b=35;
-			angle=329.05392;
+			angle=329.05389;
 			id=3364;
 		};
 		class Item1522
@@ -25664,7 +25664,7 @@ class Mission
 			colorName="ColorGrey";
 			a=8;
 			b=35;
-			angle=329.05392;
+			angle=329.05389;
 			id=3365;
 		};
 		class Item1523
@@ -25684,7 +25684,7 @@ class Mission
 			name="mkr_spawn_veh_93";
 			text="_missilebox";
 			type="Empty";
-			angle=108.35153;
+			angle=108.35152;
 			id=3367;
 		};
 		class Item1525
