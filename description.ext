@@ -6,7 +6,7 @@ class Header
 {
 	gameType = Coop;
 	minPlayers = 1;
-	maxPlayers = 42;
+	maxPlayers = 44;
 };
 
 // ============================================================================================
@@ -17,9 +17,9 @@ disabledAI = 1;
 // F3 - Loading Screen
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-onLoadName = "*** Insert mission name here. ***";
-onLoadMission = "Made with the F3 Mission Development Framework";
-author = "*** Insert mission author name here. ***";
+onLoadName = "[TF47] SUPREMACY";
+onLoadMission = "Made with F3, Dyncap, LV & MKY by TF47";
+author = "TF47-Community";
 loadScreen = "intro\pics\conflict_resolve.paa";
 overviewPicture = "intro\pics\taskforce47.paa";
 
