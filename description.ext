@@ -28,7 +28,7 @@ overviewPicture = "intro\pics\taskforce47.paa";
 // F3 - Debug Console
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-enableDebugConsole = 2;
+enableDebugConsole = 1;
 
 // ============================================================================================
 
