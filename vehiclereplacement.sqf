@@ -1,6 +1,8 @@
 private ["_timeondesertionsmall","_timeondestructionsmall","_timeondesertion","_timeondestruction","_mkrname","_mkrpos","_mkrdir","_mkrtext","_veh","_quad","_bike","_tractor","_unarmedcars","_hmmwv_toc","_hmmwv_transport","_hmmwv_m2","_hmmwv_mk19","_hmmwv_tow","_hmmwv_avenger","_hmmwv_mk19_crows","_rg31_m2","_dingo_m2","_dingo_gl","_landrover_cz","_landrover_gb","_landrover_transport","_dingo_cz","_jackal2_gmg","_jackal2_l2a1","_refuel","_reammo","_repair","_transport","_rhino01","_rhino02","_lion01","_lion02","_frog01","_tiger01","_tiger02","_tiger03","_gator01","_gator02","_butterfly01","_butterfly02","_firefly","_manticore","_griffin","_raven01","_raven02","_dustoff","_pelican","_goose","_albatros","_wasp01","_eagle01","_thunderbird","_evileye","_ambulance","_basedef_tank","_basedef_static_aa","_basedef_avenger","_basedef_static_mg","_missilebox"];
 
-if(!isServer) exitwith {hint "not the Server!";};
+if(!isServer) exitwith {
+	//hint "not the Server!";
+	};
 waitUntil {!isNil "tf47_param_vehiclemod"};
 switch (tf47_param_vehiclemod) do { 
 case 0 : { 
