@@ -114,25 +114,26 @@ publicVariable "headlessClientActive";
 
 // Spawn units on the HC if hes active
 // otherwise spawn him on the server
-if(headlessClientActive && isMultiplayer) then {
-    if(!isServer && !hasInterface) then {
-		tf47_var_iedTracker = [];
-		tf47_var_mainCount = 0;
 
-		tf47_var_AOCollection = [
-							"timurkulay","chadarakht","gamarud","gamsar","imarat","zavarak","karachinar","ravanay","nagara","shamali",/*"airfield",*/
-							"rasman","bastam","falar","mulladost","nur","feruz", "jilavur","chak","landay","shukurkalay","chaman","sakhe"];
+// if(headlessClientActive && isMultiplayer) then {
+    // if(!isServer && !hasInterface) then {
+		// tf47_var_iedTracker = [];
+		// tf47_var_mainCount = 0;
 
-		tf47_var_AOObjects = [];
-        diag_log "HeadlessClient: Spawning the AI on the HeadlessClient!";
-		[] execVM "AOscripts\AOstart.sqf";
-		sleep 0.1;
-		[] execVM "SIDEscripts\SIDEstart.sqf";
-		sleep 0.1;
-		[] execVM "Patrols\init.sqf";
-		sleep 0.1;
-    };
-} else { 
+		// tf47_var_AOCollection = [
+							// "timurkulay","chadarakht","gamarud","gamsar","imarat","zavarak","karachinar","ravanay","nagara","shamali",/*"airfield",*/
+							// "rasman","bastam","falar","mulladost","nur","feruz", "jilavur","chak","landay","shukurkalay","chaman","sakhe"];
+
+		// tf47_var_AOObjects = [];
+        // diag_log "HeadlessClient: Spawning the AI on the HeadlessClient!";
+		// [] execVM "AOscripts\AOstart.sqf";
+		// sleep 0.1;
+		// [] execVM "SIDEscripts\SIDEstart.sqf";
+		// sleep 0.1;
+		// [] execVM "Patrols\init.sqf";
+		// sleep 0.1;
+    // };
+// } else { 
     if(isServer) then {
         diag_log "HeadlessClient: Spawning the AI on the Server!";
 		[] execVM "AOscripts\AOstart.sqf";
@@ -144,7 +145,7 @@ if(headlessClientActive && isMultiplayer) then {
 		[] execVM "Patrols\init.sqf";
 		sleep 0.1;
     };
-};
+// };
 
 // ======================== TF47 Stuff ===================================
 
