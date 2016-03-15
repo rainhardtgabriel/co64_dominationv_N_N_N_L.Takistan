@@ -43,7 +43,7 @@ nul = [_side_log_pos,1,false,1,[1,0],100,"default",nil,"pilot1 = this; removeAll
 
 nul = [_side_log_pos,2,true,2,[2,2],_side_rad,_side_ai_skill_array,nil,nil,nil] execVM "LV\fillHouse.sqf";
 nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],false,[10,0],[0,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
-nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,true],true,[0,0],[1,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],true,[0,0],[1,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
 
 //////////////// create triggers at side mission ////////////////////////////////////////////////////////////////////////////////////////			
 
