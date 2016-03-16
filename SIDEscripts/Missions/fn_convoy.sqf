@@ -110,7 +110,7 @@ convoy_trig1 setTriggerStatements   [" !(alive my_convoy_vec1) && !(alive my_con
 									[""tsk11"", true, ['Find and Stop the Enemy Convoy!','Side Mission: Convoy',""Side Mission""],
 									getMarkerpos ""WP_Convoy_Start"", ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
 									[""tf47_changetickets"", [WEST, 2, 5]] call CBA_fnc_globalEvent; 
-                                    {deleteMarker _x} forEach [""WP_Convoy_Start"", ""WP_Convoy_End""]; 
+                                    {deleteMarker _x} forEach [""WP_Convoy_Start"", ""WP_Convoy_End""]; [[]] spawn tf47_fnc_cleanside;
                                     deletevehicle convoy_trig2; deletevehicle convoy_trig2; deletevehicle thisTrigger", ""];
                                     
 convoy_trig2 = createTrigger 		    ["EmptyDetector", getMarkerPos "WP_Convoy_End"];
@@ -122,7 +122,7 @@ convoy_trig2 setTriggerStatements 	["my_convoy_vec2 in thislist",
                                     [""Sidemission_failed""] remoteExec [""SEPP_fnc_globalsound"",0,false]; 
                                     [""tsk11"", true, ['Find and Stop the Enemy Convoy!','Side Mission: Convoy',""Side Mission""],
                                     getMarkerpos ""WP_Convoy_Start"", ""FAILED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
-                                    {deleteMarker _x} forEach [""WP_Convoy_Start"", ""WP_Convoy_End""]; 
+                                    {deleteMarker _x} forEach [""WP_Convoy_Start"", ""WP_Convoy_End""]; [[]] spawn tf47_fnc_cleanside;
                                     deletevehicle convoy_trig1; deletevehicle convoy_trig3; deletevehicle thisTrigger" , ""];      
 
 convoy_trig3 = createTrigger 		    ["EmptyDetector", getMarkerPos "WP_Convoy_End"];
@@ -134,7 +134,7 @@ convoy_trig3 setTriggerStatements 	["my_convoy_vec3 in thislist",
                                     [""Sidemission_failed""] remoteExec [""SEPP_fnc_globalsound"",0,false]; 
                                     [""tsk11"", true, ['Find and Stop the Enemy Convoy!','Side Mission: Convoy',""Side Mission""],
                                     getMarkerpos ""WP_Convoy_Start"", ""FAILED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
-                                    {deleteMarker _x} forEach [""WP_Convoy_Start"", ""WP_Convoy_End""]; 
+                                    {deleteMarker _x} forEach [""WP_Convoy_Start"", ""WP_Convoy_End""]; [[]] spawn tf47_fnc_cleanside;
                                     deletevehicle convoy_trig1; deletevehicle convoy_trig2; deletevehicle thisTrigger" , ""];                                          
 
                                     
