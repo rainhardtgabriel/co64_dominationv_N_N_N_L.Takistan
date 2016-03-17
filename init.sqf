@@ -190,3 +190,5 @@ sleep 0.1;
 // Vehicle replacement
 vehiclespawnscript = [] execVM "vehiclereplacement.sqf";
 sleep 0.1;
+nobushesscript = [] execVM "BASE\nobushes.sqf";
+sleep 0.1;
