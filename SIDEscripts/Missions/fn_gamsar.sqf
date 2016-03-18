@@ -1,24 +1,22 @@
 private ["_side_log_pos","_side_rad","_side_name","_side_trig","_side_position","_side_flatPos", "_side_ai_skill_array","_heliside_loc","_heliside_loc_select"];
 
+_ao = getMarkerPos "ao_mkr1";
+_oldSide = getMarkerPos "side_mkr1";
 
-_heliside_loc = ["marker1", "marker2","marker3","marker4"];
-_heliside_loc_select = _heliside_loc call BIS_fnc_selectRandom;
-
-switch (_heliside_loc_select) do { 
-	case "marker1" : { 
-	log_gamsar_side setpos [10422.568,6422.94,0]; // Garmsar
-	}; 
-	case "marker2" : {
-	log_gamsar_side setpos [2627.28,5100.469,0]; // Jilavur
-	};
-    case "marker3" : {
-	log_gamsar_side setpos [5191.505,6073.532,0]; // Feruz Abad
-	};
-    case "marker4" : {
-	log_gamsar_side setpos [6046.559,10471.909,0]; // Rasman
-	};
-	default {}; 
-};
+_pilotside = [
+    [10422.568,6422.94,0], // Garmsar
+    [2627.28,5100.469,0], // Jilavur
+    [5191.505,6073.532,0], // Feruz Abad
+    [6046.559,10471.909,0]  // Rasman
+    ];
+_pilotside = _pilotside call BIS_fnc_arrayShuffle;
+{
+    _newSide = _x;
+    if ((_oldSide distance _newSide > 1500) && (_ao distance _newSide > 1500)) then
+    {
+        log_gamsar_side setpos _newSide;
+    };
+} forEach _pilotside;
 
 _side_log_pos   	= log_gamsar_side;
 _side_rad    		= 100;
@@ -76,6 +74,11 @@ nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],false,[10,0],[0
 nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],true,[0,0],[1,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
 
 
+//////////////// makes pilot handcuffed ///////////////////////////////////////////////////////////////////////////////////////////////////
+sleep 1;
+ if (f_var_medical >= 1) then {[pilot1, true] call ACE_captives_fnc_setHandcuffed;};
+
+ 
 //////////////// create marker for HeliReturnPoint ////////////////////////////////////////////////////////////////////////////////////////
 	
 _markerreturn    = createMarker ["HeliReturn",     [8222.997,1776.622,0]]; //Loy Manara Airfield
@@ -121,4 +124,8 @@ heli_side_trig setTriggerStatements ["(triggeractivated heli_side_trig3) && (tri
 								[""tf47_changetickets"", [WEST, 2, 5]] call CBA_fnc_globalEvent;
 								[[CapVeh1,pilot1]] spawn tf47_fnc_cleanside;
 								deletevehicle heli_side_trig2; deletevehicle heli_side_trig3; deletevehicle heli_side_trig4; deletevehicle thisTrigger" , ""];
+                                
+//////////////// makes pilot handcuffed ///////////////////////////////////////////////////////////////////////////////////////////////////
+sleep 1;
+ if (f_var_medical >= 1) then {[pilot1, true] call ACE_captives_fnc_setHandcuffed;};
 [_side_log_pos,_side_rad,_side_name]
