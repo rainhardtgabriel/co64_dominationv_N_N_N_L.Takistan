@@ -4,12 +4,12 @@ by: "[TF47] TaskForce 47"
 
 spawns sniper teams at overwatch position
 
-parameter: [AOCenter, mindist, maxdist, number]
+parameter: [AOCenter, mindist, maxdist, number, missionType]
 ------------------------------------------------------------------------------------
 */
 
-private ["_AOCenter","_minDist","_maxDist","_number","_pos","_unit","_group"];
-params ["_AOCenter","_minDist","_maxDist","_number"];
+private ["_AOCenter","_minDist","_maxDist","_number","_pos","_unit","_group","_missionType"];
+params ["_AOCenter","_minDist","_maxDist","_number","_missionType"];
 
 for [{_i=1},{_i<=_number},{_i=_i+1}] do
 {
@@ -26,6 +26,11 @@ for [{_i=1},{_i<=_number},{_i=_i+1}] do
 	else
 	{
 		_unit = _group createUnit ["CUP_O_TK_Sniper", _pos, [], 0, "NONE"];
+	};
+
+	if (_missionType == 1) then
+	{
+		tf47_var_AOUnits pushBack _unit;
 	};
 
 	[_unit, [0.5,0.5,0.2,0.9,0.8,1,0.8,0.5,0.5,0.3]] call LV_ACskills;

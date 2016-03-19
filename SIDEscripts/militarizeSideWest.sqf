@@ -9,7 +9,7 @@
 
 private ["_side_Playertext", "_side_select", "_side_mkr", "_side_trig", "_side_log_pos", "_side_mkr_text", "_side_name", "_side_rad", "_side_position","_side_flatPos", "_side_iniText","_side_missions","_side_details"];
 
-_side_missions = ["lalezar", "woods"];
+_side_missions = ["lalezar", "woods","convoy"];
 
 		
 //////////////// Random Selects the AO  //////////////////////////////////////////////////////////////////////////////////////////		
@@ -24,7 +24,10 @@ switch (_side_select) do {
 	}; 
 	case "woods" : {
 	_side_details = [] call tf47_fnc_woods;
-	}; 
+	};
+    case "convoy" : {
+	_side_details = [] call tf47_fnc_convoy;
+	};
 	default {}; 
 };
 

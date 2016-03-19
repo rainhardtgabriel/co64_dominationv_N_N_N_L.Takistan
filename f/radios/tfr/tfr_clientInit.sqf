@@ -37,3 +37,16 @@ if(alive player) then {
 };
 
 // ====================================================================================
+[] spawn {
+	while {true} do {
+		if((("ArmaSIM" != [player] call TFAR_fnc_getTeamSpeakServerName) || 
+			("Radio Communication - Public I" != [player] call TFAR_fnc_getTeamSpeakChannelName) ||
+			!([player] call TFAR_fnc_isTeamSpeakPluginEnabled)) && !(serverCommandAvailable "#kick")) then {
+			titleText ["You have to use TFAR on this Server and have to be on ts.armasim.de.","BLACK"];
+			sleep 10;
+		} else {
+			titleText ["","PLAIN"];  
+			sleep 300;
+		}:
+	};
+};

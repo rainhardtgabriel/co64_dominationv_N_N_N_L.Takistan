@@ -1,8 +1,15 @@
 private ["_side_log_pos","_side_rad","_side_name","_side_trig", "_side_ai_skill_array"];
 
+_ao = getMarkerPos "ao_mkr1";
+_oldSide = getMarkerPos "side_mkr1";
+_random_woods_area = _oldSide;
 
-_find_woods = selectBestPlaces [[6685.715, 9674.075], 7000, "2*forest - 10*houses", 1, 1];
-_random_woods_area = (_find_woods select 0) select 0;
+while {(_oldSide distance _random_woods_area < 1500) || (_ao distance _random_woods_area < 1500)} do
+{
+    _find_woods = selectBestPlaces [[6685.715, 9674.075], 7000, "2*forest - 10*houses", 1, 1];
+    _random_woods_area = (_find_woods select 0) select 0;
+};
+
 log_woods setpos _random_woods_area;
 
 _side_log_pos   			= log_woods;
@@ -46,7 +53,7 @@ _side_trig setTriggerStatements 			["this",
 											[""Sidemission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; 
 											[""tsk5"", true, ['Find the enemy Camp and eliminate all enemy Soldiers!','Side Mission: Woods',""Side Mission""],
 											getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
-											[[Tent1,Tent2,Tent3,CampFire]] call tf47_fnc_cleanside;
+											[[Tent1,Tent2,Tent3,CampFire]] spawn tf47_fnc_cleanside;
 											[""tf47_changetickets"", [WEST, 2, 5]] call CBA_fnc_globalEvent;", ""];
 
 [_side_log_pos,_side_rad,_side_name]

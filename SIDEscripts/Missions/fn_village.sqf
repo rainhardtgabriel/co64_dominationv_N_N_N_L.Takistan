@@ -7,8 +7,16 @@ _side_rad    			= 100;
 _side_name   			= "Officer's Hideout";
 _side_ai_skill_array  = [0.3,0.5,0.3,0.7,0.5,1,0.8,0.5,0.5,0.5]; // [aimingAccuracy, aimingShake, aimingSpeed, spotDistance, spotTime, courage, commanding, general, endurance, reloadSpeed] 
 
-_find_village = selectBestPlaces [[6685.715, 9674.075], 7000, "houses + forest + hills", 1, 1];
+_ao = getMarkerPos "ao_mkr1";
+_oldSide = getMarkerPos "side_mkr1";
+_random_village_area = _oldSide;
+
+while {(_oldSide distance _random_village_area < 1500) || (_ao distance _random_village_area < 1500)} do
+{
+_find_village = selectBestPlaces [[6685.715, 9674.075], 7000, "houses + forest", 1, 1];
 _random_village_area = (_find_village select 0) select 0;
+};
+
 log_village setpos _random_village_area;
 sleep 1;
 
@@ -33,7 +41,7 @@ _side_trig setTriggerStatements ["offizier in thislist;",
 								[""tsk3"", true, ['Find the enemy Officer. Capture him and bring him to Base for further Interrogation.','Side Mission: Officer Hideout',""Side Mission""],
 								getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
 								[""tf47_changetickets"", [WEST, 2, 5]] call CBA_fnc_globalEvent;
-								[[offizier]] call tf47_fnc_cleanside;
+								[[offizier]] spawn tf47_fnc_cleanside;
 								deletevehicle thisTrigger; deletevehicle side_trig2" , ""];
 
 sleep 1;
@@ -46,7 +54,7 @@ side_trig2 setTriggerStatements ["!alive offizier", "0 = execVM ""SIDEscripts\mi
 								[""Sidemission_failed""] remoteExec [""SEPP_fnc_globalsound"",0,false]; 
 								[""tsk3"", true, ['Find the enemy Officer. Capture him and bring him to Base for further Interrogation.','Side Mission: Officer Hideout',""Side Mission""],
 								getPos _side_log_pos, ""FAILED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
-								[[offizier]] call tf47_fnc_cleanside;
+								[[offizier]] spawn tf47_fnc_cleanside;
 								deletevehicle thisTrigger" , ""];
 
 [_side_log_pos,_side_rad,_side_name]

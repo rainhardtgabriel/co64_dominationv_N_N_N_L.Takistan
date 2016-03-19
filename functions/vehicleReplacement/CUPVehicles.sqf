@@ -1,3 +1,15 @@
+/*
+*	@description
+*		Safes Mod Classnames
+* 	@Tested with :
+* 		ToDo
+*
+*	@category   ToDo
+* 	@package    vehiclereplacement.sqf
+* 	@author     [TF47] Raini
+* 	@website	http://armasim.de/
+* 	@version    0.1a
+*/
 //Small Vehicles
 _quad = "B_Quadbike_01_F";//veh= [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM "tf47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true]; 
 _bike = "CUP_B_M1030"; // veh = [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM 47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true];
@@ -36,13 +48,13 @@ _tiger03 = "CUP_B_M1126_ICV_MK19_Desert"; // veh = [this, 2700, 0, "TIGER-03", "
 _gator01 = "CUP_B_LAV25M240_USMC"; // veh = [this, 2700, 0, "GATOR-01", "b_mech_inf", "ColorOrange", WEST, "larmor", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _gator02 = "CUP_B_LAV25_USMC"; // veh = [this, 2700, 0, "GATOR-02", "b_mech_inf", "ColorOrange", WEST, "larmor", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 //Helicopters
-_butterfly01 ="B_Heli_Light_01_F"; // veh = [this, 1800, 0, "BUTTERFLY-01", "b_air", "ColorBrown", WEST, "rottrans", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_butterfly02 ="B_Heli_Light_01_F"; // veh = [this, 1800, 0, "BUTTERFLY-02", "b_air", "ColorBrown", WEST, "rottrans", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_firefly = "B_Heli_Light_01_armed_F"; // veh = [this, 2700, 0, "FIREFLY", "b_air", "ColorOrange", WEST, "rotatk", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_butterfly01 ="MELB_MH6M"; // veh = [this, 1800, 0, "BUTTERFLY-01", "b_air", "ColorBrown", WEST, "rottrans", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_butterfly02 ="MELB_MH6M"; // veh = [this, 1800, 0, "BUTTERFLY-02", "b_air", "ColorBrown", WEST, "rottrans", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_firefly = "MELB_AH6M_L"; // veh = [this, 2700, 0, "FIREFLY", "b_air", "ColorOrange", WEST, "rotatk", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _griffin = "CUP_B_UH1Y_UNA_USMC"; // veh = [this, 2700, 0, "GRIFFIN", "b_air", "ColorBrown", WEST, "rottrans", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "GRIFFIN", "b_air", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 _manticore = "CUP_B_AH1Z_Escort"; // veh = [this, 2700, 0, "MANTICORE", "b_air", "ColorOrange", WEST, "rotatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _pelican = "CUP_B_CH47F_USA"; // veh = [this, 3600, 0, "PELICAN", "b_air", "ColorBrown", WEST, "rottrans", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "PLECAN", "b_air", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
-_dustoff = "CUP_B_UH60M_Unarmed_FFV_US"; // veh = [this, 2700, 0, "DUSTOFF", "b_air", "ColorRed", WEST, "rottrans", 30] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "DUSTOFF", "b_air", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
+_dustoff = "CUP_B_UH60M_Unarmed_FFV_MEV_US"; // veh = [this, 2700, 0, "DUSTOFF", "b_air", "ColorRed", WEST, "rottrans", 30] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "DUSTOFF", "b_air", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 _raven02 = "CUP_B_UH60L_FFV_US"; // veh = [this, 2700, 0, "RAVEN-02", "b_air", "ColorBrown", WEST, "rottrans", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "RAVEN-02", "b_air", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 _raven01 = "CUP_B_UH60L_FFV_US"; // veh = [this, 2700, 0, "RAVEN-01", "b_air", "ColorBrown", WEST, "rottrans", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "RAVEN-01", "b_air", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 //Transport Planes
@@ -50,12 +62,14 @@ _goose = "CUP_B_MV22_USMC"; // veh = [this, 2700, 0, "GOOSE", "b_air", "ColorBro
 _albatros = "CUP_B_C130J_USMC"; // veh = [this, 2700, 0, "ALBATROS", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "ALBATROS", "b_plane", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";if(isServer) then { clearBackpackCargoGlobal this; clearWeaponCargoGlobal this;          clearMagazineCargoGlobal this;         clearItemCargoGlobal this; };
 //Attack Planes
 _thunderbird = "CUP_B_A10_AT_USA"; // veh = [this, 2700, 0, "THUNDERBIRD", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_wasp01 = "CUP_B_AV8B_AGM_USMC"; // veh = [this, 2700, 0, "WASP-01", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_wasp02 = "CUP_B_AV8B_GBU12_USMC"; // veh = [this, 2700, 0, "WASP-02", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_wasp01 = "CUP_B_AV8B_GBU12_USMC"; // veh = [this, 2700, 0, "WASP-01", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_eagle01 = "FIR_F15E"; // veh = [this, 2700, 0, "WASP-02", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 // Drones
 _evileye = "CUP_USMC_MQ9";
 //Base Defense
 _basedef_tank = _rhino01;
-_basedef_avenger = _hmmwv_avenger;
-_basedef_static_aa = "CUP_WV_B_CRAM";
+_basedef_avenger = "pook_MIM104_PAC2Battery";
+_basedef_static_aa = "pook_cram";
 _basedef_static_mg = "CUP_B_M2StaticMG_USMC";
+// Missilebox
+_missilebox = "FIR_Baseplate";

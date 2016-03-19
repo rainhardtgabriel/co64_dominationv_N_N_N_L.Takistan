@@ -1,3 +1,15 @@
+/*
+*	@description
+*		Safes Mod Classnames
+* 	@Tested with :
+* 		ToDo
+*
+*	@category   ToDo
+* 	@package    vehiclereplacement.sqf
+* 	@author     [TF47] Raini
+* 	@website	http://armasim.de/
+* 	@version    0.1a
+*/
 //Small Vehicles
 _quad = "B_Quadbike_01_F";//veh= [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM "tf47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true]; 
 _bike = "B_Quadbike_01_F"; // veh = [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM 47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true];
@@ -51,7 +63,7 @@ _albatros = "B_Heli_Transport_03_unarmed_green_F"; // veh = [this, 2700, 0, "ALB
 //Attack Planes
 _thunderbird = "B_Plane_CAS_01_F"; // veh = [this, 2700, 0, "THUNDERBIRD", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _wasp01 = "B_Heli_Attack_01_F"; // veh = [this, 2700, 0, "WASP-01", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_wasp02 = "B_Heli_Attack_01_F"; // veh = [this, 2700, 0, "WASP-02", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_eagle01 = "B_Heli_Attack_01_F"; // veh = [this, 2700, 0, "WASP-02", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 // Drones
 _evileye = "B_UAV_02_CAS_F";
 //Base Defense
@@ -59,3 +71,5 @@ _basedef_tank = _rhino01;
 _basedef_avenger = _hmmwv_avenger;
 _basedef_static_aa = "B_static_AA_F";
 _basedef_static_mg = "B_HMG_01_high_F";
+// Missile Box 
+_missilebox = "";

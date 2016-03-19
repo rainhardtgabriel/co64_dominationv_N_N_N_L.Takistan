@@ -49,34 +49,33 @@ _baseCleanupMarkers = [["respawn_west","respawn_west_1",200]];
 _statusMarkersInit = false;
 _statusMarkerData = [
         ["UnitNATO_CO",      ["mc1marker",              "b_hq",         "ColorGreen",       "CCT - Command and Control ""GODFATHER""",true]],
-        ["UnitNATO_DC",      ["mc2marker",              "b_hq",         "ColorGreen",       "CCT - ""TOPMAN""",true]],
+        ["UnitNATO_DC",      ["mc2marker",              "b_hq",         "ColorGreen",       "CCT - Joint Terminal Attack Controller ""TOPMAN""",true]],
         ["UnitNATO_DC_D",    ["mc3marker",              "b_hq",         "ColorGreen",       "TOC - ""TOWER""",true]],
         ["evileye1",         ["callsign_evileye1",      "b_uav",        "ColorYellow",           "EVILEYE",     false]],
-        ["raven1",           ["callsign_raven1",        "b_air",        "ColorBrown",           "RAVEN-01",     false]],
-        ["raven2",           ["callsign_raven2",        "b_air",        "ColorBrown",           "RAVEN-02",     false]],
-        ["dustoff",          ["callsign_dustoff",       "b_air",        "ColorRED",           "DUSTOFF",     false]],
-        ["butterfly1",       ["callsign_butterfly1",    "b_air",        "ColorBrown",           "BUTTERFLY-01", false]],
-        ["butterfly2",       ["callsign_butterfly2",    "b_air",        "ColorBrown",           "BUTTERFLY-02", false]],
-        ["pelican1",         ["callsign_pelican1",      "b_air",        "ColorBrown",           "PELICAN",      false]],
-        ["griffin1",         ["callsign_griffin1",      "b_air",        "ColorBrown",           "GRIFFIN-01",   false]],
-        ["goose1",           ["callsign_goose1",        "b_plane",      "ColorBrown",           "GOOSE",        false]],
-        ["manticore1",       ["callsign_manticore1",    "b_air",        "ColorOrange",          "MANTICORE",    false]],
-        ["firefly1",         ["callsign_firefly1",      "b_air",        "ColorOrange",          "FIREFLY",      false]],
-        ["thunderbird1",     ["callsign_thunderbird1",  "b_plane",      "ColorOrange",          "THUNDERBIRD",  false]],
-        ["evileye1",         ["callsign_evileye1",      "b_uav",        "ColorYellow",          "EVILEYE",      false]],
-        ["falcon1",          ["callsign_falcon1",       "b_plane",      "ColorOrange",          "FALCON-01",    false]],
-        ["falcon2",          ["callsign_falcon2",       "b_plane",      "ColorOrange",          "FALCON-02",    false]],
-        ["albatros",         ["callsign_albatros",      "b_plane",      "ColorBrown",           "ALBATROS",     false]],
-        ["rhino1",           ["callsign_rhino1",        "b_armor",      "ColorOrange",          "RHINO-01",     false]],
-        ["rhino2",           ["callsign_rhino2",        "b_armor",      "ColorOrange",          "RHINO-02",     false]],
-        ["lion1",            ["callsign_lion1",         "b_armor",      "ColorOrange",          "LION-01",      false]],
-        ["lion2",            ["callsign_lion2",         "b_armor",      "ColorOrange",          "LION-02",      false]],
-        ["frog1",            ["callsign_frog1",         "b_armor",      "ColorOrange",          "FROG-01",      false]],        
-        ["tiger1",           ["callsign_tiger1",        "b_mech_inf",   "ColorOrange",          "TIGER-01",     false]],
-        ["tiger2",           ["callsign_tiger2",        "b_mech_inf",   "ColorOrange",          "TIGER-02",     false]],
-        ["tiger3",           ["callsign_tiger3",        "b_mech_inf",   "ColorOrange",          "TIGER-03",     false]],
-        ["gator1",           ["callsign_gator1",        "b_mech_inf",   "ColorOrange",          "GATOR-01",     false]],
-        ["gator2",           ["callsign_gator2",        "b_mech_inf",   "ColorOrange",          "GATOR-02",     false]]
+        ["raven1",           ["raven1marker",        "b_air",        "ColorBrown",           "RAVEN-01",     false]],
+        ["raven2",           ["raven2marker",        "b_air",        "ColorBrown",           "RAVEN-02",     false]],
+        ["dustoff",          ["dustoffmarker",       "b_air",        "ColorRED",           "DUSTOFF",     false]],
+        ["butterfly1",       ["butterfly1marker",    "b_air",        "ColorBrown",           "BUTTERFLY-01", false]],
+        ["butterfly2",       ["butterfly2marker",    "b_air",        "ColorBrown",           "BUTTERFLY-02", false]],
+        ["pelican1",         ["pelican1marker",      "b_air",        "ColorBrown",           "PELICAN",      false]],
+        ["griffin1",         ["griffin1marker",      "b_air",        "ColorBrown",           "GRIFFIN-01",   false]],
+        ["goose1",           ["goose1marker",        "b_plane",      "ColorBrown",           "GOOSE",        false]],
+        ["manticore1",       ["manticore1marker",    "b_air",        "ColorOrange",          "MANTICORE",    false]],
+        ["firefly1",         ["firefly1marker",      "b_air",        "ColorOrange",          "FIREFLY",      false]],
+        ["thunderbird1",     ["thunderbirdmarker",  "b_plane",      "ColorOrange",          "THUNDERBIRD",  false]],
+        ["wasp1",            ["wasp1marker",       	"b_plane",      "ColorOrange",          "WASP-01",    false]],
+        ["eagle1",           ["eagle1marker",       	"b_plane",      "ColorOrange",          "EAGLE-01",    false]],
+        ["albatros1",        ["albatros1marker",      "b_plane",      "ColorBrown",           "ALBATROS",     false]],
+        ["rhino1",           ["rhino1marker",        "b_armor",      "ColorOrange",          "RHINO-01",     false]],
+        ["rhino2",           ["rhino2marker",        "b_armor",      "ColorOrange",          "RHINO-02",     false]],
+        ["lion1",            ["lion1marker",         "b_armor",      "ColorOrange",          "LION-01",      false]],
+        ["lion2",            ["lion2marker",         "b_armor",      "ColorOrange",          "LION-02",      false]],
+        ["frog1",            ["frog1marker",         "b_armor",      "ColorOrange",          "FROG-01",      false]],        
+        ["tiger1",           ["tiger1marker",        "b_mech_inf",   "ColorOrange",          "TIGER-01",     false]],
+        ["tiger2",           ["tiger2marker",        "b_mech_inf",   "ColorOrange",          "TIGER-02",     false]],
+        ["tiger3",           ["tiger3marker",        "b_mech_inf",   "ColorOrange",          "TIGER-03",     false]],
+        ["gator1",           ["gator1marker",        "b_mech_inf",   "ColorOrange",          "GATOR-01",     false]],
+        ["gator2",           ["gator2marker",        "b_mech_inf",   "ColorOrange",          "GATOR-02",     false]]
 ];
 _statusMarkers = [_statusMarkerData, []] call CBA_fnc_hashCreate;
  
@@ -129,11 +128,11 @@ _vehicleRestrictionData = [
         ["albatros1",                       [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
 
         //Fixed Wing Attack Harrier AV8B GBU 12
-        ["wasp1",                          [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P"],                 []]],
+        ["wasp1",                          [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P","UnitNATO_AFW3_P","UnitNATO_AFW4_P"],                 []]],
         //Fixed Wing Attack Harrier AV8B AGM
-        ["wasp2",                          [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P"],                 []]],	
+        ["eagle1",                          [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P","UnitNATO_AFW3_P","UnitNATO_AFW4_P"],                 []]],	
         //Fixed Wing Attack Thunderbird
-        ["thunderbird1",                   [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P"],                 []]],
+        ["thunderbird1",                   [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P","UnitNATO_AFW3_P","UnitNATO_AFW4_P"],                 []]],
 
         // Tank M1A1 Rhino
         ["rhino1",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"]]],
@@ -196,11 +195,10 @@ _vehicleRestrictions = [_vehicleRestrictionData, []] call CBA_fnc_hashCreate;
 // --- SECURE SLOTS ---------------------------------------------------------------------------------------------------------------------------------
 // Slot Name, Whitelist ID
 _secureSlots = [
-        ["UnitNATO_CO", 3],     // CCT Command and Control
-        ["UnitNATO_DC_D", 3]      // CCT 1st JTAC
-        //["mc3",1],    // Tower
-        //["Zeus1", 5], //Zeus 1
-        //["Zeus2", 5]  //Zeus 2
+        ["UnitNATO_CO", 3],		// CCT Command and Control
+        ["UnitNATO_DC", 3],     // CCT  JTAC
+		["UnitNATO_DC_D", 1],	// Tower 
+		["MissionObserver", 5]	// Mission Observer
 ];
  
 // --- ALL SLOTS ------------------------------------------------------------------------------------------------------------------------------------
@@ -245,7 +243,7 @@ _infantryTicketsData = [
         ["UnitNATO_AH1_P", _pilotTicketsDefault],            ["UnitNATO_AH1_CP", _pilotTicketsDefault],
 	   
         // Fixed Wing
-        ["UnitNATO_AFW1_P", _pilotTicketsDefault],	     ["UnitNATO_AFW2_P", _pilotTicketsDefault],
+        ["UnitNATO_AFW1_P", _pilotTicketsDefault],	     ["UnitNATO_AFW2_P", _pilotTicketsDefault],      ["UnitNATO_AFW3_P", _pilotTicketsDefault],         ["UnitNATO_AFW4_P", _pilotTicketsDefault], 
        
         // CCT, JTAC, TOWER
         ["UnitNATO_DC_D", _infantryLeadTicketsDefault]

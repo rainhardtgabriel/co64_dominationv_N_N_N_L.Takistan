@@ -106,7 +106,9 @@ MKY_fnc_Exit_Sand = {
 	deleteVehicle objSandS;
 	deleteVehicle objSandE;
 	deleteVehicle objSandW;
-	deleteVehicle objEmitterHost;
+	if(!isNil "objEmitterHost") then {
+		deleteVehicle objEmitterHost;
+	};
 	objEmitterHost = nil;
 	varEnableSand = false;
 	(true);

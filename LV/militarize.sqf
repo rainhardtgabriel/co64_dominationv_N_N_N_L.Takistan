@@ -35,10 +35,11 @@
 				NOTE: Keep it inside quotes, and if you need quotes in init commands, you MUST use ' or "" instead of ".
 				EXAMPLE: "hint 'this is hint';"
 	ID 			= 	number (if you want to delete units this script creates, you'll need ID number for them) 		DEFAULT: nil
+	missionType =  number (0 = dont care, 1 = main, 2 = side)														DEFAULT: 0
 
-EXAMPLE: nul = [this,2,50,[true,true],[true,false,true],false,[10,0],0.1,[0.2,0.2,0.2,0.85,0.9,0.75,0.1,0.6,1,1],nil,nil,13] execVM "LV\militarize.sqf";
+EXAMPLE: nul = [this,2,50,[true,true],[true,false,true],false,[10,0],0.1,[0.2,0.2,0.2,0.85,0.9,0.75,0.1,0.6,1,1],nil,nil,13,1] execVM "LV\militarize.sqf";
 */
-if (!isServer)exitWith{};
+if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
 private ["_greenMenArray","_grpId","_customInit","_cPos","_skls","_skills","_dir","_range","_unitType","_unit","_radius","_men","_vehicles","_still","_centerPos","_menAmount","_vehAmount","_milHQ","_milGroup","_menArray","_blueMenArray","_redMenArray","_yellowMenArray","_side","_pos","_yellowCarArray","_allUnitsArray","_menRatio","_vehRatio","_diveArray","_validPos","_side","_driver","_whichOne","_vehicle","_crew","_thisArray","_smokesAndChems","_doorHandling","_BLUdivers","_OPFdivers","_INDdivers"];
 
 //Extra options:
@@ -58,6 +59,7 @@ _skills = if (count _this > 8) then { _this select 8; }else{"default";};
 _milGroup = if (count _this > 9) then { _this select 9; }else{nil;}; if(!isNil("_milGroup"))then{if(_milGroup == "nil0")then{_milGroup = nil;};};
 _customInit = if (count _this > 10) then { _this select 10; }else{nil;}; if(!isNil("_customInit"))then{if(_customInit == "nil0")then{_customInit = nil;};};
 _grpId = if (count _this > 11) then { _this select 11; }else{nil;}; 
+_missionType = if (count _this > 12) then { _this select 12; }else{0;}; 
 
 if(_cPos in allMapMarkers)then{
 	_centerPos = getMarkerPos _cPos;
@@ -164,6 +166,11 @@ if((_men select 0)||(_men select 1))then{
 		_unit = _milGroup createUnit [_unitType, _pos, [], 0, "NONE"];
 		_unit setPos _pos;
 
+		if (_missionType == 1) then
+		{
+			tf47_var_AOUnits pushBack _unit;
+		};
+
 		if(!_still)then{
 			if(_unitType in _menArray)then{
 				nul = [_unit,_cPos,_radius,_doorHandling] execVM "LV\patrol-vD.sqf";
@@ -229,7 +236,13 @@ if((_vehicles select 0)||(_vehicles select 1)||(_vehicles select 2))then{
 			}else{
 				if(!surfaceIsWater _pos)then{
 					_unitType = _yellowCarArray select (floor(random(count _yellowCarArray)));
-					_vehicle = createVehicle [_unitType, _pos, [], 0, "NONE"]; 
+					_vehicle = createVehicle [_unitType, _pos, [], 0, "NONE"];
+
+					if (_missionType == 1) then
+					{
+						tf47_var_AOObjects pushBack _vehicle;
+					};
+
 					_crew = [_vehicle, _milGroup] call BIS_fnc_spawnCrew;
 					_driver = driver _vehicle;
 					if(!_still)then{nul = [_driver,_pos] execVM 'LV\patrol-vE.sqf';};

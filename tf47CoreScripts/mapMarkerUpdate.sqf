@@ -36,6 +36,8 @@ _text = _statusMarkersLine select 3;
 _isslot = _statusMarkersLine select 4;
 _isonline = false;
 
+if(isNil {(call compile _unitname)}) exitWith {};
+
 _unit = objNull;
 call compile format["_unit = %1;", _unitname];
 
