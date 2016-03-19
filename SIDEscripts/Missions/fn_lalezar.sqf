@@ -1,37 +1,25 @@
-
 private ["_side_log_pos","_side_rad","_side_name","_side_trig", "_side_ai_skill_array","_cacheside_loc_select","_cacheside_loc","_trigx","_trigy","_trigz"];
 
-_cacheside_loc = ["marker1", "marker2","marker3","marker4"];
-_cacheside_loc_select = _cacheside_loc call BIS_fnc_selectRandom;
+_ao = getMarkerPos "ao_mkr1";
+_oldSide = getMarkerPos "side_mkr1";
 
-switch (_cacheside_loc_select) do { 
-	case "marker1" : { 
-	log_lalezar setpos [4620.073,9428.168,0]; // Lalezear
-    _trigx = 110;
-    _trigy = 30;
-    _trigz = 151.698;
-	}; 
-	case "marker2" : {
-	log_lalezar setpos [3652.415,8596.474,0]; // Gospandi
-    _trigx = 72;
-    _trigy = 20;
-    _trigz = 107.04;
-	};
-    case "marker3" : {
-	log_lalezar setpos [9384.178,10010.58,0]; // Sagram
-    _trigx = 50;
-    _trigy = 40;
-    _trigz = 29.703;    
-	};
-    case "marker4" : {
-	log_lalezar setpos [8683.315,11393.894,0]; // Par-e Siah oilfield
-    _trigx = 18;
-    _trigy = 18;
-    _trigz = 0;	
+_cacheside = [
+    [[4620.073,9428.168,0], 110, 30, 151.698], // Lalezear
+    [[3652.415,8596.474,0], 72, 20, 107.04], // Gospandi
+    [[9384.178,10010.58,0], 50, 40, 29.703], // Sagram
+    [[8683.315,11393.894,0], 18, 18, 0] // Par-e Siah oilfield
+    ];
+_cacheside = _cacheside call BIS_fnc_arrayShuffle;
+{
+    _newSide = _x select 0;
+    if ((_oldSide distance _newSide > 1500) && (_ao distance _newSide > 1500)) then
+    {
+        log_lalezar setpos _newSide;
+        _trigx = _x select 1;
+        _trigy = _x select 2;
+        _trigz = _x select 3;
     };
-	default {}; 
-};
-
+} forEach _cacheside;
 
 _side_log_pos   	    = log_lalezar;
 _side_rad    		    = 150;

@@ -23,7 +23,7 @@ if (_sandstorm) then {
 	trig_sandstorm setpos [0,0,0];
 };
 
-"side_mkr1" setmarkerpos [0,0,0];
+//"side_mkr1" setmarkerpos [0,0,0];
 sleep 30;
 {
 	if !(_x == objNull) then {
