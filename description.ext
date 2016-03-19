@@ -1,5 +1,4 @@
 // ============================================================================================
-
 // F3 - Mission Header
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
@@ -7,7 +6,7 @@ class Header
 {
 	gameType = Coop;
 	minPlayers = 1;
-	maxPlayers = 457;
+	maxPlayers = 70;
 };
 
 // ============================================================================================
@@ -18,10 +17,10 @@ disabledAI = 1;
 // F3 - Loading Screen
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-onLoadName = "*** Insert mission name here. ***";
-onLoadMission = "Made with the F3 Mission Development Framework";
-author = "*** Insert mission author name here. ***";
-loadScreen = "intro\pics\conflict_resolve.paa";
+onLoadName = "[TF47] SUPREMACY";
+onLoadMission = "Rules @ armasim.de";
+author = "TF47-Community";
+loadScreen = "intro\pics\taskforce47.paa";
 overviewPicture = "intro\pics\taskforce47.paa";
 
 // ============================================================================================
@@ -29,7 +28,7 @@ overviewPicture = "intro\pics\taskforce47.paa";
 // F3 - Debug Console
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-enableDebugConsole = 2;
+enableDebugConsole = 1;
 
 // ============================================================================================
 
@@ -40,6 +39,7 @@ respawn = 3;
 respawndelay = 10;
 respawnOnStart = 0;
 RespawnDialog = 0;										// default = 1. show respawn timer and scoreboard when killed.
+//respawnTemplates[] = {"f_JIP"};
 
 // ============================================================================================
 
@@ -71,42 +71,6 @@ class cfgNotifications
 		priority = 9;
 	};
 
-	// Notifications for the F3 Safe Start Component
-	class SafeStart
-	{
-		title = "SAFE START";
-		description = "%1";
-		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
-		duration = 10;
-		priority = 0;
-	};
-	class SafeStartMissionStarting
-	{
-		title = "SAFE START";
-		description = "%1";
-		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
-		duration = 3;
-		priority = 1;
-	};
-
-	// Notification for the F3 Authorised Crew Component
-	class UnauthorisedCrew {
-		title= "NON-AUTHORISED CREW!";
-		description= "%1";
-		iconPicture = "\A3\ui_f\data\map\markers\military\warning_ca.paa";
-		duration = 3;
-		priority = 5;
-	};
-
-	// Notification for the F3 Mapclick Teleport component
-	class MapClickTeleport {
-		title= "NOTE";
-		description= "%1";
-		iconPicture = "\A3\ui_f\data\map\markers\military\start_ca.paa";
-		duration = 3;
-		priority = 5;
-	};
-
 	// Notification for the F3 JIP Component
 	class JIP {
 		title= "REINFORCEMENTS";
@@ -114,6 +78,14 @@ class cfgNotifications
 		iconPicture = "\A3\ui_f\data\map\markers\military\flag_ca.paa";
 		duration = 3;
 		priority = 5;
+	};
+	class GEAR {
+		title= "REARM";		
+		description="%1";
+		iconPicture = "\A3\ui_f\data\map\markers\nato\b_support.paa";
+		duration = 3;
+		priority = 5;
+
 	};
 };
 
@@ -167,6 +139,18 @@ class Params
 			texts[] = {"Vanilla","RHS Woodland","RHS Desert","CUP Woodland"};
 			default = 3;
 			code = "f_param_uniforms = %1";
+	};
+
+// TF47 - Vehicle Mod Selector
+// This Parameter will select the Vehicles that will spawn in Base
+
+	class tf47_param_vehiclemod
+	{
+			title = "Vehicle Mod(s)";
+			values[] = {0,1};
+			texts[] = {"Vanilla","CUP-MELB-FIRF15-SAM"};
+			default = 1;
+			code = "tf47_param_vehiclemod = %1";
 	};
 // ============================================================================================
 
@@ -313,6 +297,15 @@ class Params
 		default = 1;
 	};
 
+
+	class tf47_param_mainCount
+	{
+		title = "Amount of mains until mission is finished";
+		values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+		default = 2;
+		code = "tf47_param_MainCount = %1";
+	};
+
 };
 
 // ============================================================================================
@@ -324,64 +317,23 @@ class CfgDebriefing
 {
 	class End1
 	{
-		title = "Ending #1";
+		title = "MISSION COMPLETED";
 		subtitle = "";
-		description = "*** Insert debriefing #1 here. ***";
-		// pictureBackground = "";
-		// picture = "";
-		// pictureColor[] = {0.0,0.3,0.6,1};
+		description = "Congratulations! Any attemp of the enemy to hold key locations in the area were stopped by you, so that the mountains of Takistan are now safe for the moment.";
+//		pictureBackground = "loading.jpg";
+//		picture = "loading.jpg";
+		pictureColor[] = {0.0,0.3,0.6,1};
 	};
 
 	class End2
 	{
-		title = "Ending #2";
+		title = "MISSION LOST";
 		subtitle = "";
-		description = "*** Insert debriefing #2 here. ***";
+		description = "What a Mess! The Enemy forced us to withdrawal and the Takistani Army will make all those suffer, who supported our Cause. You have blood on your Hands Soldier!";
 		// pictureBackground = "";
 		// picture = "";
 		// pictureColor[] = {0.0,0.3,0.6,1};
 	};
-
-	class End3
-	{
-		title = "Ending #3";
-		subtitle = "";
-		description = "*** Insert debriefing #3 here. ***";
-		// pictureBackground = "";
-		// picture = "";
-		// pictureColor[] = {0.0,0.3,0.6,1};
-	};
-
-	class End4
-	{
-		title = "Ending #4";
-		subtitle = "";
-		description = "*** Insert debriefing #4 here. ***";
-		// pictureBackground = "";
-		// picture = "";
-		// pictureColor[] = {0.0,0.3,0.6,1};
-	};
-
-	class End5
-	{
-		title = "Ending #5";
-		subtitle = "";
-		description = "*** Insert debriefing #5 here. ***";
-		// pictureBackground = "";
-		// picture = "";
-		// pictureColor[] = {0.0,0.3,0.6,1};
-	};
-
-	class End6
-	{
-		title = "Ending #6";
-		subtitle = "";
-		description = "*** Insert debriefing #6 here. ***";
-		// pictureBackground = "";
-		// picture = "";
-		// pictureColor[] = {0.0,0.3,0.6,1};
-	};
-
 };
 
 // ============================================================================================
@@ -391,16 +343,6 @@ class CfgDebriefing
 
 class CfgRespawnTemplates
 {
-	// F3 Spectator Script
-	class f_Spectator
-	{
-		onPlayerRespawn = "f_fnc_CamInit";
-	};
-  	//Overwrite Vanilla Seagull
-    class Seagull
-    {
-        onPlayerRespawn = "";
-    };
 	// F3 JIP Menu
 	class f_JIP
 	{
@@ -425,7 +367,7 @@ class CfgRespawnTemplates
 
 class CfgFunctions
 {
-
+#include "tf47CoreScripts\umenu\Functions.hpp"
 #include "functions\cfgfunctions.hpp"			// Integrated Sepp Functions
 
 	class F // Defines the "owner"
@@ -474,48 +416,10 @@ class CfgFunctions
 			class gCache {};
 			class gUncache {};
 		};
-		class groupMarkers {
-			file = "f\groupMarkers";
-			class localGroupMarker{};
-			class localSpecialistMarker{};
-		};
-		class authorisedCrew
-		{
-			file = "f\authorisedCrew";
-			class authorisedCrewCheck {};
-		};
-		class FTMemberMarkers
-		{
-			file = "f\FTMemberMarkers";
-			class SetLocalFTMemberMarkers{};
-			class GetMarkerColor{};
-			class LocalFTMarkerSync{};
-		};
 		class bodyRemoval
 		{
 			file = "f\removeBody";
 			class removeBody{};
-		};
-		class setAISkill
-		{
-			file = "f\setAISKill";
-			class setAISKill{};
-		};
-		class mapClickTeleport
-		{
-			file = "f\mapClickTeleport";
-			class mapClickTeleportUnit{};
-			class mapClickTeleportGroup{};
-		};
-		class nametag
-		{
-			file = "f\nametag";
-			class drawNameTag{};
-		};
-		class preMount
-		{
-			file = "f\preMount";
-			class mountGroups{};
 		};
 		class zeus
 		{
@@ -540,24 +444,241 @@ class CfgFunctions
 			class tfr_setRadioFrequencies{};
 			class tfr_configureSpectatorChat{};
 		};
-		class safeStart
+	};
+	
+	class tf47 
+	{
+		tag = "tf47";
+		class intro
 		{
-			file = "f\safeStart";
-			class safety{};
+			file = "functions";
+			class introShot;
+			class outroShot;
+			class prepareFOBlocal;
+			class buildFOB;
+			class buildFOBlocal;
+			class removeFOB;
+			class isFlatEmpty;
+			class spawnIED;
+			class typeText;
+			class checkPos;
+			class addAction;
+			class sniperTeam;
+			class nearPlayerDist;
+			class buildSubstation;
+			class lightOut;
+		};
+		#include "SIDEscripts\Missions\Missions.hpp"
+		#include "Patrols\functions\functions.hpp"
+
+		class Whitelist {
+			file = "tf47CoreScripts";
+			//class vehicleOnEnter;
+			class addGetInEvent;
+			class addGetOutEvent;
 		};
 
 	};
-	
 	
 		//#include "tf47CoreScripts\UMenu\Functions.hpp"
         //#include "tf47CoreScripts\tf47CfgFunctions.hpp"	
 };
 
+class CfgRemoteExec
+{        
+    class Functions
+    {
+        mode = 2;
+        jip = 1;
+        class tf47_fnc_buildFOB
+        {
+            allowedTargets=2; // can target anyone (default)
+            jip = 0; // sending jip messages is disabled for this function (overrides settings in the Functions class)
+        };
+        class tf47_fnc_buildFOBlocal
+        {
+            allowedTargets=1;
+            jip = 0;
+        };
+        class tf47_fnc_removeFOB
+        {
+            allowedTargets=2;
+            jip = 0;
+        };
+        class tf47_fnc_outroShot
+        {
+        	allowedTargets=1;
+        	jip = 0;
+        };
+        class tf47_fnc_addAction
+        {
+        	allowedTargets=0;
+        	jip = 0;
+        };
+    }; 
+    class Commands
+    {
+        class hint
+        {
+        	allowedTargets=1;
+        	jip=0;
+        };
+	}; 
+};
 
 #include "dyncap\Defines.hpp"
 
+#include "tf47corescripts\umenu\Dialogs.hpp"
+
 class RscTitles
 {
+	class intro
+
+	{
+
+	  	idd=-1;
+
+	  	movingEnable=0;
+
+	  	duration=4.2;
+
+	  	fadein=1;
+
+	  	fadeout=1.5;
+
+	  	name="intro";
+
+	  	controls[]={"title1"};
+
+	  	class title1: RscPicture
+
+		{
+   			type =0;
+
+   			idc = -1;
+
+   			style =48;
+
+   			colorBackground[] = {0, 0, 0, 1};
+
+   			colorText[] = {1, 1, 1, 1};
+
+   			font = "PuristaMedium";
+
+   			size = 0;
+
+	  	  	text="loading.jpg";
+
+			x=0;
+
+	  	  	y=-0.2;
+
+	  	  	w=1;
+
+	  	  	h=1.3;
+
+		};
+
+	};
+
+	class intro2
+
+	{
+
+	  	idd=-1;
+
+	  	movingEnable=0;
+
+	  	duration=4.2;
+
+	  	fadein=1;
+
+	  	fadeout=1.5;
+
+	  	name="intro";
+
+	  	controls[]={"title1"};
+
+	  	class title1: RscPicture
+
+		{
+   			type =0;
+
+   			idc = -1;
+
+   			style =48;
+
+   			colorBackground[] = {0, 0, 0, 1};
+
+   			colorText[] = {1, 1, 1, 1};
+
+   			font = "PuristaMedium";
+
+   			size = 0;
+
+	  	  	text="loading.jpg";
+
+			x=0;
+
+	  	  	y=-0.2;
+
+	  	  	w=1;
+
+	  	  	h=1.3;
+
+		};
+
+	};
+
+	class outro
+
+	{
+
+	  	idd=-1;
+
+	  	movingEnable=0;
+
+	  	duration=4;
+
+	  	fadein=1;
+
+	  	fadeout=1.5;
+
+	  	name="outro";
+
+	  	controls[]={"title1"};
+
+	  	class title1: RscPicture
+
+		{
+   			type =0;
+
+   			idc = -1;
+
+   			style =48;
+
+   			colorBackground[] = {0, 0, 0, 1};
+
+   			colorText[] = {1, 1, 1, 1};
+
+   			font = "PuristaMedium";
+
+   			size = 0;
+
+	  	  	text="outro.paa";
+
+			x=0;
+
+	  	  	y=-0.2;
+
+	  	  	w=1;
+
+	  	  	h=1.3;
+
+		};
+
+	};
+
 	class CapProgressBar
 	{
 		idd = -1;
@@ -595,7 +716,7 @@ class RscTitles
 class CfgSounds
 {
 
-sounds[] = {mission_new, mission_complete};
+sounds[] = {mission_new, mission_complete,sidemission_complete,sidemission_new,sidemission_failed};
 
 class mission_new
 {
@@ -621,6 +742,39 @@ name = "sidemission_new";
 sound[] = {\sounds\sidemission_new.ogg, 1.9, 1.0};
 titles[] = {0, ""};
 };
+class sidemission_failed
+{
+name = "sidemission_failed";
+sound[] = {\sounds\sidemission_failed.ogg, 1.9, 1.0};
+titles[] = {0, ""};
+};
+	class buildingFOB
+	{
+		name="buildingFOB";
+		sound[] = {"\sounds\buildingFOB.ogg",1,1.0};
+		titles[]={};
+	};
+
+	class preintro
+	{
+		name="preintro";
+		sound[] = {"\sounds\preintro.ogg",1,1.0};
+		titles[]={};
+	};
+
+	class intro
+	{
+		name="intro";
+		sound[] = {"\sounds\intro.ogg",1,1.0};
+		titles[]={};
+	};
+
+	class outro
+	{
+		name="outro";
+		sound[] = {"\sounds\outro.ogg",1,1.0};
+		titles[]={};
+	};
 };
 class CfgMusic
 {
@@ -638,16 +792,786 @@ class CfgMusic
 	};
 };
 
-// ============================================================================================
-
-// F3 - Custom Insignia
-
-class CfgUnitInsignia {
-	#include "f\assignGear\insignia\define.hpp"
+// =============== ACE3 Settings =================================================================
+class ACE_Settings {
+	class ace_common_forceAllSettings {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_common_checkPBOsAction {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_common_checkPBOsCheckAll {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_common_checkPBOsWhitelist {
+		value = "[]";
+		typeName = "STRING";
+		force = 1;
+	};
+	class ace_finger_enabled {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_finger_maxRange {
+		value = 4;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_frag_Enabled {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_frag_SpallEnabled {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_frag_ReflectionsEnabled {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_frag_maxTrack {
+		value = 500;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_frag_MaxTrackPerFrame {
+		value = 50;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_frag_EnableDebugTrace {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_hitreactions_minDamageToTrigger {
+		value = 0.1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_interaction_EnableTeamManagement {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_laserpointer_enabled {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_magazinerepack_TimePerAmmo {
+		value = 1.5;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_magazinerepack_TimePerMagazine {
+		value = 2;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_magazinerepack_TimePerBeltLink {
+		value = 8;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_map_BFT_Interval {
+		value = 1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_map_BFT_Enabled {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_map_BFT_HideAiGroups {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_map_BFT_ShowPlayerNames {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_map_mapIllumination {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_map_mapGlow {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_map_mapShake {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_map_mapLimitZoom {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_map_mapShowCursorCoordinates {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_map_DefaultChannel {
+		value = -1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_map_gestures_enabled {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_map_gestures_maxRange {
+		value = 7;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_map_gestures_interval {
+		value = 0.03;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_map_gestures_GroupColorConfigurations {
+		
+		typeName = "ARRAY";
+		force = 1;
+	};
+	class ace_map_gestures_GroupColorConfigurationMapping {
+		
+		typeName = "ARRAY";
+		force = 1;
+	};
+	class ace_maptools_EveryoneCanDrawOnBriefing {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_level {
+		value = 2;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_medicSetting {
+		value = 2;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_increaseTrainingInLocations {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_enableFor {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_enableOverdosing {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_bleedingCoefficient {
+		value = 1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_painCoefficient {
+		value = 1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_enableAirway {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_enableFractures {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_enableAdvancedWounds {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_enableVehicleCrashes {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_enableScreams {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_playerDamageThreshold {
+		value = 1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_AIDamageThreshold {
+		value = 1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_enableUnconsciousnessAI {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_remoteControlledAI {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_preventInstaDeath {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_enableRevive {
+		value = 1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_maxReviveTime {
+		value = 1800;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_amountOfReviveLives {
+		value = -1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_allowDeadBodyMovement {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_allowLitterCreation {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_litterCleanUpDelay {
+		value = 1800;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_medicSetting_basicEpi {
+		value = 1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_medicSetting_PAK {
+		value = 1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_medicSetting_SurgicalKit {
+		value = 1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_consumeItem_PAK {
+		value = 1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_consumeItem_SurgicalKit {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_useLocation_basicEpi {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_useLocation_PAK {
+		value = 2;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_useLocation_SurgicalKit {
+		value = 3;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_useCondition_PAK {
+		value = 1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_useCondition_SurgicalKit {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_keepLocalSettingsSynced {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_healHitPointAfterAdvBandage {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_painIsOnlySuppressed {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_allowUnconsciousAnimationOnTreatment {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_moveUnitsFromGroupOnUnconscious {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_medical_delayUnconCaptive {
+		value = 3;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_menu_allow {
+		value = 1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_medical_menu_maxRange {
+		value = 3;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_microdagr_MapDataAvailable {
+		value = 2;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_mk6mortar_airResistanceEnabled {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_mk6mortar_allowComputerRangefinder {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_mk6mortar_allowCompass {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_mk6mortar_useAmmoHandling {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_nametags_showCursorTagForVehicles {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_nametags_playerNamesViewDistance {
+		value = 5;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_nametags_playerNamesMaxAlpha {
+		value = 0.8;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_nightvision_disableNVGsWithSights {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_overheating_overheatingDispersion {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_overheating_unJamOnreload {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_overheating_unJamFailChance {
+		value = 0.1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_rearm_level {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_refuel_rate {
+		value = 1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_repair_engineerSetting_Repair {
+		value = 1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_repair_engineerSetting_Wheel {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_repair_repairDamageThreshold {
+		value = 0.6;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_repair_repairDamageThreshold_Engineer {
+		value = 0.4;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_repair_consumeItem_ToolKit {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_repair_fullRepairLocation {
+		value = 2;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_repair_engineerSetting_fullRepair {
+		value = 2;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_repair_addSpareParts {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_repair_wheelRepairRequiredItems {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_respawn_SavePreDeathGear {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_respawn_RemoveDeadBodiesDisconnected {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_respawn_BodyRemoveTimer {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_sitting_enable {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_spectator_filterUnits {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_spectator_filterSides {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_spectator_restrictModes {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_spectator_restrictVisions {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_switchunits_EnableSwitchUnits {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_switchunits_SwitchToWest {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_switchunits_SwitchToEast {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_switchunits_SwitchToIndependent {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_switchunits_SwitchToCivilian {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_switchunits_EnableSafeZone {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_switchunits_SafeZoneRadius {
+		value = 100;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_vehiclelock_DefaultLockpickStrength {
+		value = 10;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_vehiclelock_LockVehicleInventory {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_vehiclelock_VehicleStartingLockState {
+		value = -1;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_viewdistance_enabled {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_viewdistance_limitViewDistance {
+		value = 20000;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_weather_enableServerController {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_weather_useACEWeather {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_weather_syncRain {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_weather_syncWind {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_weather_syncMisc {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_weather_serverUpdateInterval {
+		value = 60;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_winddeflection_enabled {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_winddeflection_vehicleEnabled {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_winddeflection_simulationInterval {
+		value = 0.05;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_winddeflection_simulationRadius {
+		value = 3000;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_zeus_zeusAscension {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_zeus_zeusBird {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_zeus_remoteWind {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_zeus_radioOrdnance {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_zeus_revealMines {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_zeus_autoAddObjects {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_captives_allowHandcuffOwnSide {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_captives_requireSurrender {
+		value = 2;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_captives_allowSurrender {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_cargo_enable {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_explosives_RequireSpecialist {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_explosives_PunishNonSpecialists {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_explosives_ExplodeOnDefuse {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_hearing_EnableCombatDeafness {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_hearing_EarplugsVolume {
+		value = 0.5;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_hearing_UnconsciousnessVolume {
+		value = 0.4;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_hearing_enabledForZeusUnits {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_hearing_autoAddEarplugsToUnits {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_advanced_ballistics_enabled {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_advanced_ballistics_simulateForSnipers {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_advanced_ballistics_simulateForGroupMembers {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_advanced_ballistics_simulateForEveryone {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_advanced_ballistics_disabledInFullAutoMode {
+		value = 0;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_advanced_ballistics_ammoTemperatureEnabled {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_advanced_ballistics_barrelLengthInfluenceEnabled {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_advanced_ballistics_bulletTraceEnabled {
+		value = 1;
+		typeName = "BOOL";
+		force = 1;
+	};
+	class ace_advanced_ballistics_simulationInterval {
+		value = 0;
+		typeName = "SCALAR";
+		force = 1;
+	};
+	class ace_advanced_ballistics_simulationRadius {
+		value = 1500;
+		typeName = "SCALAR";
+		force = 1;
+	};
 };
-
-// =============== TF47 Stuff =================================================================
-
-
-//#include "ZadeServicePoint\include\description.hpp"
-//#include "tf47CoreScripts\UMenu\Description.hpp"

@@ -119,3 +119,77 @@ if(_typeOfUnit != "NIL") then {
 
   };
 };
+
+waitUntil { ([] call acre_api_fnc_isInitialized) };
+
+_slotName = format ["%1", player];
+
+switch true do {
+	// Alpha 
+	case (["UnitNATO_A", _slotName] call BIS_fnc_inString): {
+		// SQL
+		if(player hasWeapon "ACRE_PRC152") then {
+			[(["ACRE_PRC152"] call acre_api_fnc_getRadioByType), 15] call acre_api_fnc_setRadioChannel;
+		};
+		[(["ACRE_PRC343"] call acre_api_fnc_getRadioByType), 1] call acre_api_fnc_setRadioChannel;
+	};
+	// Bravo
+	case (["UnitNATO_B", _slotName] call BIS_fnc_inString): {
+		// SQL
+		if(player hasWeapon "ACRE_PRC152") then {
+			[(["ACRE_PRC152"] call acre_api_fnc_getRadioByType), 15] call acre_api_fnc_setRadioChannel;
+		};
+		[(["ACRE_PRC343"] call acre_api_fnc_getRadioByType), 2] call acre_api_fnc_setRadioChannel;
+	};
+	// Charlie
+	case (["UnitNATO_C", _slotName] call BIS_fnc_inString): {
+		// SQL
+		if(player hasWeapon "ACRE_PRC152") then {
+			[(["ACRE_PRC152"] call acre_api_fnc_getRadioByType), 15] call acre_api_fnc_setRadioChannel;
+		};
+		[(["ACRE_PRC343"] call acre_api_fnc_getRadioByType), 3] call acre_api_fnc_setRadioChannel;
+	};
+	// Sniper
+	case (["UnitNATO_ST", _slotName] call BIS_fnc_inString): {
+		[(["ACRE_PRC343"] call acre_api_fnc_getRadioByType), 4] call acre_api_fnc_setRadioChannel;
+	};	
+	// IFV
+	case (["UnitNATO_IFV", _slotName] call BIS_fnc_inString): {
+		[(["ACRE_PRC343"] call acre_api_fnc_getRadioByType), 5] call acre_api_fnc_setRadioChannel;
+	};	
+	// Tank
+	case (["UnitNATO_TNK1", _slotName] call BIS_fnc_inString): {
+		[(["ACRE_PRC343"] call acre_api_fnc_getRadioByType), 6] call acre_api_fnc_setRadioChannel;
+	};
+	// Transport 1
+	case (["UnitNATO_TH1", _slotName] call BIS_fnc_inString): {
+		[(["ACRE_PRC343"] call acre_api_fnc_getRadioByType), 7] call acre_api_fnc_setRadioChannel;
+	};	
+	// Transport 2
+	case (["UnitNATO_TH2", _slotName] call BIS_fnc_inString): {
+		[(["ACRE_PRC343"] call acre_api_fnc_getRadioByType), 8] call acre_api_fnc_setRadioChannel;
+	};
+	// Attack 1
+	case (["UnitNATO_AH1", _slotName] call BIS_fnc_inString): {
+		[(["ACRE_PRC343"] call acre_api_fnc_getRadioByType), 9] call acre_api_fnc_setRadioChannel;
+	};
+	// Attack Fixed Wing
+	case (["UnitNATO_AFW", _slotName] call BIS_fnc_inString): {
+		[(["ACRE_PRC343"] call acre_api_fnc_getRadioByType), 10] call acre_api_fnc_setRadioChannel;
+	};
+};
+
+[] spawn {
+	while {true} do {
+		if(!(["getPluginVersion", ","] call acre_sys_rpc_fnc_callRemoteProcedure) && !(serverCommandAvailable "#kick")) then {
+			titleText ["You have to use ACRE2 on this Server and have to be on ts.armasim.de.","BLACK"];
+			sleep 10;
+		} else {
+			titleText ["","PLAIN"];  
+			sleep 300;
+		};
+	};
+};
+
+
+

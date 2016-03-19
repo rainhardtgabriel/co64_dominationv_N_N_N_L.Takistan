@@ -5,7 +5,7 @@ _pos = _this select 0;
 _side = _this select 1;
 
 _BLUveh = ["B_MRAP_01_F","B_MRAP_01_hmg_F","B_MRAP_01_gmg_F","B_Quadbike_01_F","B_Truck_01_transport_F","B_Truck_01_covered_F","B_APC_Tracked_01_rcws_F","B_APC_Tracked_01_AA_F","B_APC_Wheeled_01_cannon_F","B_MBT_01_cannon_F","B_MBT_01_arty_F","B_MBT_01_mlrs_F"];
-_OPFveh = ["CUP_O_M113_TKA","CUP_O_ZSU23_TK","CUP_O_T72_TKA"];
+_OPFveh = ["CUP_O_M113_TKA","CUP_O_ZSU23_TK","CUP_O_T72_TKA","CUP_O_UAZ_MG_TKA","CUP_O_UAZ_MG_TKA","CUP_O_UAZ_MG_TKA","CUP_O_UAZ_SPG9_TKA","CUP_O_UAZ_SPG9_TKA","CUP_O_UAZ_SPG9_TKA"];
 _INDveh = ["I_MRAP_03_F","I_MRAP_03_gmg_F","I_MRAP_03_hmg_F","I_Quadbike_01_F","I_Truck_02_transport_F","I_Truck_02_covered_F","I_APC_Wheeled_03_cannon_F","I_APC_Wheeled_03_cannon_F","I_APC_Wheeled_03_cannon_F"];
 
 _men = [];
@@ -48,6 +48,8 @@ if(((_roads select 0) distance _pos)<200)then{
 	_pos1 = [_pos,0,200,5,0,1,0] call BIS_fnc_findSafePos;
 };
 _pos = [_pos1 select 0, _pos1 select 1, 0];
+
+if((_pos distance getMarkerPos "despawn_prev02") < 700) exitWith {diag_log format["Prevented that AI spawns at %1",(str _pos)];};
 
 sleep 0.5;
 

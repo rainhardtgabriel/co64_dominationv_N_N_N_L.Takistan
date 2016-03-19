@@ -1,4 +1,4 @@
-if (!isServer) exitWith {};
+if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
 
 [] call compileFinal preprocessFileLineNumbers "dyncap\dyncap_fn.sqf";
 

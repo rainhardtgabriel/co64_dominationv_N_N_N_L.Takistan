@@ -16,7 +16,7 @@ _type = _this select 2;
 		
 	} else { if (player != _drv) then {
 		// not the driver
-	
+
 	} else { if (!(_veh isKindOf _type)) then {
 		// wrong type		
 

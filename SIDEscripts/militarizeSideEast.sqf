@@ -1,132 +1,41 @@
-//////////////// Exit if not server /////////////////////////////////////////////////////////////////////////////////////////////
-if(!isServer) exitwith {};
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//																																  //
+//                      		***		ARMA3 Domination-Like-Script v1.0 - by Sepp	***											  //
+//																																  //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //////////////// Declare Variables  /////////////////////////////////////////////////////////////////////////////////////////////
 
-private ["_side_Playertext", "_side_select", "_side_mkr", "_side_trig", "_side_log_pos", "_side_mkr_text", "_side_name", "_side_rad", "_side_position","_side_flatPos", "_side_iniText"];
+private ["_side_select", "_side_mkr", "_side_trig", "_side_log_pos", "_side_mkr_text", "_side_name", "_side_rad", "_side_position","_side_flatPos", "_side_iniText","_side_missions","_side_details"];
 
+_side_missions = ["gamsar","village"];
 
-
-_side_select			= "";
-_side_mkr				= "";
-_side_side_trig			= "";
-_side_mkr_text 			= "";
-_side_log_pos		    = 0;
-_side_name 				= "";
-_side_rad 				= 200;
-
-
-//////////////// Count all playable Blufor Units /////////////////////////////////////////////////////////////////////////////////
-
-_NumOfPlayers = west countSide playableUnits;
-
-
-//////////////// Deletes/Moves all remaining Marker/Object/Trigger ////////////////////////////////////////////////////////////////////
-
-		"side_mkr1" setmarkerpos [0,0,0];
-		sleep 1;
-		if (alive  powertrans) then {deletevehicle powertrans;};
-		if (alive Tent1) then {deletevehicle Tent1;};
-		if (alive Tent2) then {deletevehicle Tent2;};
-		if (alive Tent3) then {deletevehicle Tent3;};
-		sleep 60;
-		
 		
 //////////////// Random Selects the AO  //////////////////////////////////////////////////////////////////////////////////////////		
-_side_select = ["gamsar", "village"] call BIS_fnc_selectRandom;
+_side_select = _side_missions call BIS_fnc_selectRandom;
 
+sleep 30;
 
-//"valley","mine"
-
-
-
-
-//////////////// Side is Lalezar ////////////////////////////////////////////////////////////////////////////////////////////////		
-
-
-if ( _side_select == "gamsar") then {
-									_side_log_pos   	= log_gamsar_side;
-									_side_rad    		= 150;
-									//_mkr_text  		=
-									_side_name   		= "Gamsar Military Base";
-																	
-									sleep 1;
-
-									//////////////// create a CapVeh1 /////////////////////////////////////////////////////////////////////////////////////////////
-
-									_side_position = [[[getPos _side_log_pos, 50],_side_trig],["water","out"]] call BIS_fnc_randomPos;
-									_side_flatPos = _side_position isFlatEmpty[3, 1, 0.5, 30, 0, false];
-	
-									while {(count _side_flatPos) < 1} do {
-									_side_position = [[[getPos _side_log_pos,50],_side_trig],["water","out"]] call BIS_fnc_randomPos;
-									_side_flatPos = _side_position isFlatEmpty[3, 1, 0.5, 30, 0, false];
-									};
-	
-									while {IsOnRoad _side_flatPos} do {
-									_side_position = [[[getPos _side_log_pos, 50],_side_trig],["water","out"]] call BIS_fnc_randomPos;
-									_side_flatPos = _side_position isFlatEmpty[3, 1, 0.5, 30, 0, false];
-									};
-									CapVeh1 = "CUP_B_AH1_BAF" createVehicle _side_flatPos;
-									waitUntil { sleep 0.5; alive CapVeh1 };
-									CapVeh1 setVectorUp [0,0,1];
-									CapVeh1 setDamage 0.95;
-									CapVeh1Alive = true;									
-									
-									//////////////// create 2 ai patrol around CapVeh1 /////////////////////////////////////////////////////////////////////////
-
-									sleep 0.1;
-									nul = [powertrans,2,20,[true,false],[false,false,false],false,[2,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";	
-	
-									nul = [_side_log_pos,2,true,2,[2,2],_side_rad,"default",nil,nil,nil] execVM "LV\fillHouse.sqf";
-									nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],false,[10,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
-									nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,true],true,[0,0],[1,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
-
-									//////////////// create trigger at side mission ////////////////////////////////////////////////////////////////////////////////////////			
-		
-									sleep 1;
-		
-									_side_trig = createTrigger 					["EmptyDetector", getPos _side_log_pos];   
-									_side_trig setTriggerArea 					[_side_rad, _side_rad, 0, false];  
-									_side_trig setTriggerActivation 			["EAST", "notpresent", true];   
-									_side_trig setTriggerStatements 			["this", "0 = execVM ""SIDEscripts\militarizeSideWest.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; deletevehicle thisTrigger" , ""];
-		
-									
+switch (_side_select) do { 
+	case "gamsar" : {
+	_side_details = [] call tf47_fnc_gamsar;
+	}; 
+	case "village" : {
+	_side_details = [] call tf47_fnc_village;
+	}; 
+	default {}; 
 };
 
-
-//////////////// Side is Valley ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _side_select == "village") then {
-									_side_log_pos   		= log_village;
-									_side_rad    			= 100;
-									//_mkr_text 	 		=
-									_side_name   			= "Officer's Hideout";
-									
-									
-									sleep 1;
-
-									nul = [_side_log_pos,2,true,2,[2,2],_side_rad,"default",nil,nil,nil] execVM "LV\fillHouseOfficer.sqf";
-									
-									
-									//////////////// create trigger at side mission ////////////////////////////////////////////////////////////////////////////////////////			
-		
-									sleep 1;
-		
-									_side_trig = createTrigger 					["EmptyDetector", getPos _side_log_pos];   
-									_side_trig setTriggerArea 					[_side_rad, _side_rad, 0, false];  
-									_side_trig setTriggerActivation 			["EAST", "notpresent", true];   
-									_side_trig setTriggerStatements 			["this", "0 = execVM ""SIDEscripts\militarizeSideWest.sqf""; [side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 0 = execVM ""sounds\sidemissionComplete.sqf""; deletevehicle thisTrigger" , ""];
-		
-
-									
-};
-
+_side_log_pos = _side_details select 0;
+_side_rad = _side_details select 1;
+_side_name = _side_details select 2;
 		
 //////////////// moves a visible marker to the side mission //////////////////////////////////////////////////////////////////////////		
 
-		"side_mkr1" setmarkerpos getpos _side_log_pos;
+"side_mkr1" setmarkerpos getpos _side_log_pos;
 		
 		
-//////////////// Hint for completed Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
+//////////////// Hint for completed Side Mission /////////////////////////////////////////////////////////////////////////////////////////// 
 
 side_endText = format
 	[
@@ -134,8 +43,16 @@ side_endText = format
 		_side_name
 	];
 
+//////////////// Hint for failed Side Mission /////////////////////////////////////////////////////////////////////////////////////////// 
 
-//////////////// Hint for active Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
+side_endText_fail = format
+	[
+		"<t align='center' size='1.5'>Side Mission Failed!</t><br/><t size='1' align='center' color='#FF0000'>%1</t><br/>____________________<br/>Well, that escalated quickly!<br/><br/> I mean, this got out of Hands fast!",
+		_side_name
+	];
+	
+	
+//////////////// Hint for active Side Mission /////////////////////////////////////////////////////////////////////////////////////////// 
 
 _side_iniText = format
 	[
@@ -143,15 +60,13 @@ _side_iniText = format
 		_side_name
 	];
 
-	//-------------------------------------------- Show global target start hint
-	
-	[_side_iniText] remoteExec ["SEPP_fnc_globalHint",0,false];
+//-------------------------------------------- Show global target start hint
+
+[_side_iniText] remoteExec ["SEPP_fnc_globalHint",0,false];
 
 	
 //////////////// Sound for Hint for active Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
 
 sleep 0.1;
 
-[] execVM "sounds\sidemissionNew.sqf";
- 
-//[playSound "sidemission_new"] call BIS_fnc_MP;
+["Sidemission_new"] remoteExec ["SEPP_fnc_globalsound",0,false];

@@ -1,9 +1,28 @@
-# F3[TF47] README #
+# Operation Conflict Resolve #
+
+## ACE3 Advanced Medical Settings ##
+||Name 						||Type 		||Description 															||Default value
+||Enabled for 				||Option 	||Select what units the advanced medical system will be enabled for.	||Players only
+||Enable Advanced wounds 	||Boolean 	||Allow reopening of bandaged wounds? 									||Yes
+||Vehicle Crashes 			||Boolean 	||Do units take damage from a vehicle crash? 							||Yes
+||Allow PAK 				||Option 	||Who can use the PAK for full heal? 									||Medics only
+||Remove PAK on use 		||Boolean 	||Should the PAK be removed on usage? 									||Yes
+||Condition PAK 			||Option 	||When can the PAK be used? 											||Stable
+||Locations PAK 			||Option 	||Where can the PAK be used? 											||facility
+||Allow Surgical kit 		||Option 	||Who can use the Surgical Kit? 										||Medics only
+||Remove Surgical kit 		||Boolean 	||Should Surgical Kit be removed on usage? 								||No
+||Locations Surgical Kit 	||Option 	||Where can the Surgical Kit be used? 									||Vehicles & facility
+||Condition Surgical Kit 	||Option 	||When can the Surgical Kit be used? 									||Anytime
+||Heal hitpoints 			||Boolean 	||Heal fully bandaged hitpoints. 										||No
+||Pain suppression 			||Boolean	||Pain is only temporarily suppressed not removed. 						||No
+
+
+## F3[TF47] README ##
 
 This Version is an adapted Version of the Original F3 Mission Developement Framework by Ferstaberinde.
 It was changed for the Needs of Taskforce 47 Community and with the Permission of Fer published by Raini(raini@taskforce47.de) for the Purpose of Mission Developement within the Taskforce47 Community.
 
-If there are any Bugs within this MissionFramework please Report to Developement Team at http://www.taskforce47.de
+If there are any Bugs within this MissionFramework please Report to Developement Team at http://www.armasim.de
 Since there have been made a view changes in the scripts don't ask ferstaberinde to help you.
 
 We don't recommend using this Framework if you are completely new to missionbuiling within ARMA3.
@@ -19,7 +38,7 @@ This Work is based on
 
 
 
-## README CONTENTS ##
+## README CONTENTS F3 ##
 
 01. VERSION HISTORY
 02. CREDITS
@@ -244,13 +263,13 @@ For Bug-Reports or any Issues with this Version of the Framework, that is based 
 
 [TF47]Raini[Misfit]
 
-@ http://www.taskforce47.de
+@ http://www.armasim.de
 
 
 
 ## 08. INSTALLATION ##
 
-To begin using the Software, move the [TF47]F3.Altis folder into one of the following directories:
+To begin using the Software, move the co64_domination_N_N_N_L.Takistan folder into one of the following directories:
 
 * \My Documents\Arma 3\MPMissions\
 * \My Documents\Arma 3 Other Profiles\YourPlayerName\MPMissions\
@@ -265,9 +284,22 @@ We hope you will enjoy making and updating missions for Arma 3 with F3!
 
 Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
+## 09.b NOTES ##
+
+Please report Bugs in mission scripts on the github Issues.
+
+Please don't redistribute the Mission without letting the Authors know.
 
 
 ## 10. CHANGE HISTORY ##
+
+### Operation Conflict Resolve ###
+Version | Date
+
+DEV 0-2-5 | 04 JAN 2015
+
+*Removed some unnecesary Stuff of the Mission Framework that is not used in this Mission.
+
 
 ### F3 Change History ###
 

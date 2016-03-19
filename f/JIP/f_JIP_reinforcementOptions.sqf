@@ -4,9 +4,11 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_unit","_textAction","_grp","_joinDistance","_loadout"];
+private ["_unit","_textAction","_grp","_joinDistance","_loadout","_checkparam"];
 
 // ====================================================================================
+
+_unit = player;
 
 // ALLOW PLAYER TO SELECT GROUP
 // Using a dialog we allow the player to select the group s/he is going to [re-]join.
@@ -30,8 +32,11 @@ if (f_var_JIP_GearMenu) then {
 	createDialog "KitPicker";
 	waitUntil {f_var_JIP_state == 3};
 
+
 	_loadout = (player getVariable "f_var_JIP_loadout");
+	_unit setVariable ["f_var_assignGear",_loadout,true];
 	[_loadout,player] call f_fnc_assignGear;
+
 };
 
 // ====================================================================================
@@ -61,5 +66,3 @@ if (_grp != group player) then {
 		["JIP",[format ["Selection successful. Get within %2m of %1 to link up.",name leader _grp,_joinDistance]]] call BIS_fnc_showNotification;
 	};
 };
-
-

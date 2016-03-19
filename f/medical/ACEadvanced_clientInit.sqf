@@ -11,16 +11,21 @@ _typeOfUnit = player getVariable "f_var_assignGear";
 
 
 // Remove pre-assigned medical items
-{player removeItems _x} forEach ["ACE_tourniquet","ACE_fieldDressing","ACE_morphine","ACE_epinephrine","ACE_packingBandage","ACE_salineIV_250"];
+{player removeItems _x} forEach ["ACE_Maptools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_Flashlight_XL50","ACE_EarPlugs","ACE_personalAidKit","ACE_tourniquet","ACE_fieldDressing","ACE_morphine","ACE_epinephrine","ACE_packingBandage","ACE_fieldDressing","ACE_salineIV_250"];
 
-// Add basic items to all units
+// Add basic items to all units in 3 Line System
 player addItemToUniform "ACE_EarPlugs";
-player addItemToUniform "ACE_personalAidKit";
 player addItemToUniform "ACE_tourniquet";
-{player addItemToUniform "ACE_packingBandage"} forEach [1,2,3,4,5];
+{player addItemToUniform "ACE_morphine"} forEach [1,2];
+{player addItemToUniform "ACE_epinephrine"} forEach [1,2];
+{player addItemToUniform "ACE_fieldDressing"} forEach [1,2,3,4,5];
 {player addItemToUniform "ACE_elasticBandage"} forEach [1,2,3,4,5];
-{player addItemToUniform "ACE_morphine";} forEach [1,2];
-{player addItemToUniform "ACE_epinephrine";} forEach [1,2];
+player addItemtoUniform "ACE_Maptools"; 	// Add Maptools
+player addItemtoUniform "ACE_IR_Strobe_Item"; // Add IR Strobe
+player addItemtoUniform "ACE_CableTie"; // Add Cable Ties
+player addItemToUniform "ACE_Flashlight_XL50"; // Add ACE Flashlights
+// Backpacks
+player addItemToBackpack "ACE_personalAidKit"; // add this one to Backpack
 
 if (_typeOfUnit == "m") then
 {

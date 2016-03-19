@@ -209,7 +209,7 @@ _RAT = "tf47_at4_heat";
 // Medium AT
 _MAT = "tf47_m3maaws";
 _MATmag1 = "tf47_m3maaws_HE";
-_MATmag2 = "tf47_m3maaws_HE";
+_MATmag2 = "tf47_m3maaws_HEAT";
 
 // Surface Air
 _SAM = "CUP_launch_FIM92Stinger";
@@ -218,7 +218,7 @@ _SAMmag = "CUP_Stinger_M";
 // Heavy AT
 _HAT = "tf47_m3maaws";
 _HATmag1 = "tf47_m3maaws_HE";
-_HATmag2 = "tf47_m3maaws_HE";
+_HATmag2 = "tf47_m3maaws_HEAT";
 
 // Sniper
 _SNrifle = "CUP_srifle_M107_Base";
@@ -252,7 +252,7 @@ _specOp = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
-_baseUniform = ["CUP_U_B_USMC_MARPAT_WDL_Sleeves"];
+_baseUniform = ["CUP_U_B_USMC_Officer"];
 _baseHelmet = ["CUP_H_USMC_HelmetWDL"];
 _baseGlasses = ["G_Combat"];
 
@@ -336,9 +336,11 @@ if (_isMan) then {
 	_unit linkItem "ItemCompass";	// Add and equip a compass
 	_unit linkItem "ItemRadio";		// Add and equip A3's default radio
 	_unit linkItem "ItemWatch";		// Add and equip a watch
+	_unit addItemToUniform "ACE_EarPlugs"; // add Earplugs
 	_unit addItemtoUniform "ACE_Maptools"; 	// Add Maptools
-	_unit addItemtoVest "ACE_IR_Strobe_Item"; // Add IR Strobe
-	_unit addItemToVest "ACE_Flashlight_XL50"; // Add ACE Flashlights
+	_unit addItemtoUniform "ACE_IR_Strobe_Item"; // Add IR Strobe
+	_unit addItemtoUniform "ACE_CableTie"; // Add Cable Ties
+	_unit addItemToUniform "ACE_Flashlight_XL50"; // Add ACE Flashlights
 	//_unit linkItem "ItemGPS"; 	// Add and equip a GPS
 
 };
@@ -691,7 +693,7 @@ switch (_typeofUnit) do
 		{_unit addmagazine _pistolmag; }		forEach [1,2,3,4];
 		_unit addweapon _pistol;
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
-		_attachments = [_scope3];
+		_attachments = [_scope4];
 	};
 
 // LOADOUT: SPOTTER
@@ -1017,8 +1019,8 @@ switch (_typeofUnit) do
 // ====================================================================================
 // If this is an ammobox, check medical component settings and if needed run converter script.
 
-if (!_isMan) then
-	{
+if (!_isMan) then{
+	
 	switch(f_var_medical) do
 		{
 				

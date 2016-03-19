@@ -23,7 +23,7 @@ if (!isDedicated && !(group player getVariable ["f_cacheExcl", false])) then {
 // ====================================================================================
 
 // Rest of the Script is only run server-side
-if !(isServer) exitWith {};
+if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
 
 // ====================================================================================
 

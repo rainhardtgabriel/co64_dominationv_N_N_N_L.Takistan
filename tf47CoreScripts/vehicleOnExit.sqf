@@ -28,10 +28,11 @@ _position = _params select 1;
 _player = _params select 2;
 
 // Let Dustoff become Dustoff
-if(typeOf _vehicle == "RHS_UH60M_MEV2") then {
+if(typeOf _vehicle == "CUP_B_UH60M_Unarmed_FFV_US") then {
 	[[_player,west],"tf47_fnc_changePlayerSide"] call BIS_fnc_MP;
 };
 
 if (_position == "driver") then {
-	[_vehicle] execVM format["%1mapMarkerUpdate.sqf", _pathToScripts];
+	// [_vehicle] execVM format["%1mapMarkerUpdate.sqf", _pathToScripts];
+	[[[_vehicle],format["%1mapMarkerUpdate.sqf", "tf47CoreScripts\"]],"execVM",2] call BIS_fnc_MP;
 };

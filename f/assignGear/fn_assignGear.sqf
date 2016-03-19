@@ -28,14 +28,6 @@ if(count _this > 2) then
 
 // ====================================================================================
 
-// INSIGNIA
-// This block will give units insignia on their uniforms.
-[_unit,_typeofUnit] spawn {
-	#include "f_assignInsignia.sqf"
-};
-
-// ====================================================================================
-
 // DECIDE IF THE SCRIPT SHOULD RUN
 // Depending on locality the script decides if it should run
 
@@ -167,6 +159,12 @@ if (_faction in _ind_g_faction) then {
 					
 
 // ====================================================================================
+
+// If Unit is Player recalculate Medical Components
+
+if(isPlayer _unit) then {
+	[] execVM "f\medical\medical_init.sqf";
+} else {};
 
 // This variable simply tracks the progress of the gear assignation process, for other
 // scripts to reference.

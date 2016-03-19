@@ -254,7 +254,7 @@ while {_run} do
         };
 		
 		// In Arma 3 brauchen Drohnen eine AI Crew
-		if(typeOf _unit == "B_UAV_02_CAS_F" or typeOf _unit == "B_UAV_02_CAS_F") then {
+		if(_unit isKindOf "UAV") then {
 			createVehicleCrew _unit;
 		};
 
@@ -269,7 +269,8 @@ while {_run} do
 		};
 
 		if (_hasname) then {
-			_unit setVehicleVarName _unitname;
+			// _unit setVehicleVarName _unitname;
+			[[_unit,_unitname],"setVehicleVarname"] call BIS_fnc_MP;
 			//_unit setVehicleInit format ["%1 = this; this setVehicleVarName ""%1""",_unitname];
 			//processInitCommands;
 		};

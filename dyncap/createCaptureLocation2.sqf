@@ -1,4 +1,4 @@
-if (!isServer) exitWith {};
+if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
 
 [] call compileFinal preprocessFileLineNumbers "dyncap\dyncap_fn.sqf";
 
@@ -15,8 +15,14 @@ _marker setMarkerType "mil_objective";
 _marker setMarkerSize [0.50, 0.50];
 _marker setMarkerColor "ColorRed";
 
+_dir = getDir (nearestBuilding _location);
+
 _captureBuilding = _buildingType createVehicle _location;
 waitUntil {alive _captureBuilding};
+
+_captureBuilding setDir _dir;
+
+_captureBuilding setVehiclePosition [_location, [], 0, "NONE"];
 
 _captureBuilding allowDamage false;
 _captureBuilding setVariable ["isBeingCaptured", false, true];

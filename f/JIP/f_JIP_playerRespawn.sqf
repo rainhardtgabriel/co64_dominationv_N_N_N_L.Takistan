@@ -37,7 +37,7 @@ if (isNil "_unit") exitWith {};
 
 if (isNil "f_var_JIP_FirstMenu") then {f_var_JIP_FirstMenu = false};
 if (isNil "f_var_JIP_GearMenu") then {f_var_JIP_GearMenu = true};
-if (isNil "f_var_JIP_RemoveCorpse") then {f_var_JIP_RemoveCorpse = false};
+if (isNil "f_var_JIP_RemoveCorpse") then {f_var_JIP_RemoveCorpse = true};
 
 // ===================================================================================
 
@@ -54,6 +54,7 @@ if (!f_var_JIP_FirstMenu && isNull _corpse) exitWith {};
 if (!f_var_JIP_GearMenu) then {
 	if (typeName (_unit getVariable "f_var_assignGear") == typeName "") then {
 		_loadout = (_unit getVariable "f_var_assignGear");
+		/*waitUntil {f_var_JIP_state == 3};*/
 		[_loadout,player] call f_fnc_assignGear;
 	};
 };
@@ -63,9 +64,9 @@ if (!f_var_JIP_GearMenu) then {
 // ADD JIP MENU TO PLAYER
 // Check if player already has the JIP Menu. If not, add it.
 
-if (isNil "F3_JIP_reinforcementOptionsAction") then {
+/*if (isNil "F3_JIP_reinforcementOptionsAction") then {
 	[player] execVM "f\JIP\f_JIP_addReinforcementOptionsAction.sqf";
-};
+};*/
 
 // ====================================================================================
 
@@ -75,7 +76,7 @@ if (isNil "F3_JIP_reinforcementOptionsAction") then {
 if (typeof _unit != "seagull" && {f_var_JIP_RemoveCorpse && !isNull _corpse}) then {
 	_corpse spawn {
 		hideBody _this;
-		sleep 60;
+		sleep 20;
 		deleteVehicle _this;
 	};
 };
