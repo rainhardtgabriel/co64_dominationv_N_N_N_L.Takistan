@@ -28,6 +28,8 @@ _mod_items = [
 	"U_B_PilotCoveralls",
 	
 	// Vests
+	"CUP_V_B_RRV_DA2",
+	"CUP_V_B_RRV_DA1",
 	"CUP_V_B_MTV_Pouches",
 	"CUP_V_B_MTV_PistolBlack",
 	"CUP_V_B_MTV",
