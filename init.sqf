@@ -311,8 +311,9 @@ if ((paramsArray select 0) != 4) then {
 sleep 0.5;
 
 //start base cleanup script
-ListOfBaseCleanMarker = ["BaseCleanMarker_0","BaseCleanMarker_1","BaseCleanMarker_2","BaseCleanMarker_3"];
-[ListOfBaseCleanMarker,600] spawn TF47_AreaCleanUp_fnc_cleanMarkedPosition;
+//ListOfBaseCleanMarker = ["BaseCleanMarker_0","BaseCleanMarker_1","BaseCleanMarker_2","BaseCleanMarker_3"];
+//[ListOfBaseCleanMarker,600] spawn TF47_AreaCleanUp_fnc_cleanMarkedPosition;
+[] spawn tf47_fnc_cleanup_Init;
 sleep 0.1;
 
 // Vehicle replacement

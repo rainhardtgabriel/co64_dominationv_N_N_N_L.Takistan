@@ -8,7 +8,7 @@
 if (isNil{_type}) then {} else {
 
     //prevent cleaning from cleanup script 
-    _object setVariable ["isDecoration", true , true];
+    _object setVariable ["pvpfw_cleanUp_keep", true , true];
 
 	switch (_type) do { 
 			case "chair" : {

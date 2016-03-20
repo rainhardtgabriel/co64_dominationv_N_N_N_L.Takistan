@@ -8,7 +8,7 @@ class EditorData
 	toggles=33;
 	class ItemIDProvider
 	{
-		nextID=3292;
+		nextID=3293;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8265.6943,303.34122,2063.7153};
-		dir[]={-0.23140134,-0.30103043,0.92512399};
-		up[]={-0.073052958,0.95360613,0.29206002};
-		aside[]={0.97012228,-1.1942757e-007,0.24265704};
+		pos[]={8201.7168,347.71698,2201.6296};
+		dir[]={0.61243224,-0.59470731,0.52084821};
+		up[]={0.45304483,0.80392778,0.38529623};
+		aside[]={0.6478619,-5.0966628e-007,-0.76177788};
 	};
 };
 binarizationWanted=0;
@@ -86,7 +86,8 @@ addons[]=
 	"A3_Structures_F_Civ_Lamps",
 	"A3_weapons_F_FIA",
 	"A3_Weapons_F_NATO",
-	"A3_Structures_F_System"
+	"A3_Structures_F_System",
+	"A3_Modules_F_Curator_Curator"
 };
 randomSeed=14170574;
 class ScenarioData
@@ -151,7 +152,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1524;
+		items=1525;
 		class Item0
 		{
 			dataType="Marker";
@@ -1238,7 +1239,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={8200.4707,296.76395,2230.7546};
-			angle=-0.30527765;
+			angle=-0.30527753;
 			class Attributes
 			{
 				onActivation="gt2 animate [""Door_1_rot"", 1];";
@@ -1257,7 +1258,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={8216.1563,295.42096,2180.4875};
-			angle=-0.29429799;
+			angle=-0.29429784;
 			class Attributes
 			{
 				onActivation="gt1 animate [""Door_1_rot"", 1];";
@@ -25406,7 +25407,7 @@ class Mission
 			position[]={9200.166,71.627617,12631.854};
 			name="patrolpoint_0";
 			type="Empty";
-			angle=164.99994;
+			angle=164.99992;
 			id=3273;
 		};
 		class Item1506
@@ -25415,7 +25416,7 @@ class Mission
 			position[]={7151.8755,41.153507,12744.757};
 			name="patrolpoint_1";
 			type="Empty";
-			angle=224.99994;
+			angle=224.9998;
 			id=3274;
 		};
 		class Item1507
@@ -25433,7 +25434,7 @@ class Mission
 			position[]={2311.9636,42.382427,12581.487};
 			name="patrolpoint_3";
 			type="Empty";
-			angle=224.99994;
+			angle=224.9998;
 			id=3276;
 		};
 		class Item1509
@@ -25469,7 +25470,7 @@ class Mission
 			position[]={330.70679,252.92303,2831.3347};
 			name="patrolpoint_7";
 			type="Empty";
-			angle=89.999962;
+			angle=89.999947;
 			id=3280;
 		};
 		class Item1513
@@ -25514,7 +25515,7 @@ class Mission
 			position[]={4790.3325,73.68187,11559.911};
 			name="patrolpoint_12";
 			type="Empty";
-			angle=89.999962;
+			angle=89.999947;
 			id=3285;
 		};
 		class Item1518
@@ -25570,6 +25571,115 @@ class Mission
 			type="Empty";
 			angle=67.770981;
 			id=3291;
+		};
+		class Item1524
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={8239.7246,296.20724,2201.446};
+			};
+			id=3292;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="MissionObserver";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleInfo";
+					expression="false";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=5;
+			};
 		};
 	};
 };

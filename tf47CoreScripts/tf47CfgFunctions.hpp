@@ -29,11 +29,15 @@
 			class isStable;
 			class checkForHc;
 		};
-
-
+		class cleanup {
+			/*
+			 * Module: Cleanup
+			 * Author: Conroy
+			 */
+			file = "tf47CoreScripts\cleanup";
+			class cleanup_Abandonded;
+			class cleanup_Init;
+		};
+	
 	};
-	
-	
-	
-
 //};

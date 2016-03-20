@@ -11,15 +11,6 @@ class SEPP
         class jetpatrol {};
 	};
 };
-class CleanUp
-{
-	tag= "TF47_AreaCleanUp";
-	class functions
-	{
-		file = "functions";
-		class cleanMarkedPosition {};
-	};
-};
 class VehicleReplacement
 {
 	tag= "TF47_VehicleReplacement";
