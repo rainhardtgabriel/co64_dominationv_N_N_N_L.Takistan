@@ -1,16 +1,36 @@
+private ["_side_log_pos","_side_rad","_side_name","_side_trig", "_side_ai_skill_array","_cacheside_loc_select","_cacheside_loc","_trigx","_trigy","_trigz"];
 
-private ["_side_log_pos","_side_rad","_side_name","_side_trig", "_side_ai_skill_array"];
+_ao = getMarkerPos "ao_mkr1";
+_oldSide = getMarkerPos "side_mkr1";
+
+_cacheside = [
+    [[4620.073,9428.168,0], 110, 30, 151.698], // Lalezear
+    [[3652.415,8596.474,0], 72, 20, 107.04], // Gospandi
+    [[9384.178,10010.58,0], 50, 40, 29.703], // Sagram
+    [[8683.315,11393.894,0], 18, 18, 0] // Par-e Siah oilfield
+    ];
+_cacheside = _cacheside call BIS_fnc_arrayShuffle;
+{
+    _newSide = _x select 0;
+    if ((_oldSide distance _newSide > 1500) && (_ao distance _newSide > 1500)) then
+    {
+        log_lalezar setpos _newSide;
+        _trigx = _x select 1;
+        _trigy = _x select 2;
+        _trigz = _x select 3;
+    };
+} forEach _cacheside;
 
 _side_log_pos   	    = log_lalezar;
 _side_rad    		    = 150;
 //_mkr_text  		    =
-_side_name   		    = "Lalezar";
+_side_name   		    = "Weapons Cache";
 _side_ai_skill_array  = [0.3,0.5,0.3,0.7,0.5,1,0.8,0.5,0.5,0.5]; // [aimingAccuracy, aimingShake, aimingSpeed, spotDistance, spotTime, courage, commanding, general, endurance, reloadSpeed] 
 sleep 1;
 
 //////////////// create a cache /////////////////////////////////////////////////////////////////////////////////////////////
-_side_trig1 = createTrigger          ["EmptyDetector",[4619.848,9430.2,0]];   
-_side_trig1 setTriggerArea           [110, 30, 151.471, true];
+_side_trig1 = createTrigger          ["EmptyDetector", getPos _side_log_pos];   
+_side_trig1 setTriggerArea           [_trigx, _trigy, _trigz, true];
 _side_trig1 setTriggerActivation     ["none", "notpresent", true]; 
 _side_trig1 setTriggerStatements      ["!alive cache1", 
                                      "deletevehicle thisTrigger" , ""];
@@ -23,7 +43,7 @@ cache1Alive = true;
 
 //////////////// creates a task/show notification for the ao ///////////////////////////////////////////////////////////////////////////////////////		
 
-["tsk4", true, ["Find hidden weapons cache at Lalezar!","Side Mission: Lalezar","Side Mission"],getPos _side_log_pos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
+["tsk4", true, ["Find the hidden weapons cache and destroy it!","Side Mission: Weapons Cache","Side Mission"],getPos _side_log_pos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
 
 
 //////////////// create 2 ai patrol around cache /////////////////////////////////////////////////////////////////////////
@@ -33,7 +53,7 @@ nul = [cache1,2,20,[true,false],[false,false,false],false,[2,0],[0,0],_side_ai_s
 
 nul = [_side_log_pos,2,true,2,[2,2],_side_rad,_side_ai_skill_array,nil,nil,nil] execVM "LV\fillHouse.sqf";
 nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],false,[10,0],[0,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
-nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,true],true,[0,0],[1,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],true,[0,0],[1,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
 
 //////////////// create trigger at the side ////////////////////////////////////////////////////////////////////////////////////////			
 
@@ -46,7 +66,7 @@ _side_trig setTriggerStatements ["!alive cache1",
 								"0 = execVM ""SIDEscripts\militarizeSideEast.sqf""; 
 								[side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 
 								[""Sidemission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; 
-								[""tsk4"", true, ['Find hidden weapons cache at Lalezar!','Side Mission: Lalezar',""Side Mission""],
+								[""tsk4"", true, ['Find the hidden weapons cache and destroy it!','Side Mission: Weapons Cache',""Side Mission""],
 								getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
 								[""tf47_changetickets"", [WEST, 2, 5]] call CBA_fnc_globalEvent;
 								[[cache1]] spawn tf47_fnc_cleanside;

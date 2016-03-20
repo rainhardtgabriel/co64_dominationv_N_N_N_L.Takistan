@@ -13,6 +13,7 @@ if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
 
 if (tf47_var_mainCount >= tf47_param_mainCount) then
 {
+	sleep 10;
 	remoteExec ['tf47_fnc_outroShot', 0];
 	sleep 22;
 	[1] call f_fnc_mpEnd;
@@ -87,7 +88,7 @@ tf47_var_AOCollection = tf47_var_AOCollection - [_ao_select];
         deleteMarker "BunkerMarker2";
 		sleep 0.1;
         deleteMarker "BunkerMarker3";
-//		sleep 30;	
+		sleep 30;	
 
 diag_log format ["New Main Mission in: %1", _ao_select];
 
@@ -327,7 +328,11 @@ if ( _ao_select == "sakhe") then {
 
 		nul = [_log_pos,2,true,2,[6,6],_ao_rad,_ao_ai_skill_array,nil,nil,nil] execVM "LV\fillHouse.sqf";
  		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],false,[20,0],[0,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
- 		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[5,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+ 		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+        nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+        nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+        nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+        nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
  		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
  		[getPos _log_pos, 200, 1000, round (1 + random 3), 1] call tf47_fnc_sniperTeam;
 
