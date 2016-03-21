@@ -111,13 +111,10 @@ _wp6_3 setWaypointStatements ["true", "JetVeh3 land 'LAND';"];
 
 //Sets the behaviour and speed of the units to "SAFE" and "LIMITED" and the waypointType to "MOVE"
 {
-    _x setWaypointBehaviour "AWARE"; 
-    _x setWaypointSpeed "FULL";
-    _x setWaypointType "GetInNearest";
 	_x setWaypointBehaviour "AWARE"; 
 	_x setWaypointSpeed "FULL";
 	_x setWaypointType "MOVE";
-	
+    
 } forEach [_wp2, _wp2_2, _wp2_3, _wp3, _wp3_2, _wp3_3, _wp4, _wp4_2, _wp4_3, _wp5, _wp5_2, _wp5_3];
 
 
