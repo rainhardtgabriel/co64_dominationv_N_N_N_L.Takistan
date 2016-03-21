@@ -17,16 +17,16 @@
 * 	@website	http://armasim.de/
 * 	@version    0.1a
 */
-isServer;
-// _ret = false;
-// if(headlessClientActive && isMultiplayer) then {
-    // if(!isServer && !hasInterface) then {
-		// _ret = true;
-    // };
-// } else {
-    // if(isServer) then {
-		// _ret = true;
-	// };
-// };
+// isServer;
+_ret = false;
+if(headlessClientActive && isMultiplayer) then {
+    if(!isServer && !hasInterface) then {
+		_ret = true;
+    };
+} else {
+    if(isServer) then {
+		_ret = true;
+	};
+};
 
-// _ret;
+_ret;
