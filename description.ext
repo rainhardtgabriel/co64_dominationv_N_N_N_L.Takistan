@@ -306,6 +306,14 @@ class Params
 		code = "tf47_param_MainCount = %1";
 	};
 
+	class tf47_param_mainEnemyCount
+	{
+		title = "Only relevant for reinforcements ATM";
+		values[] = {0,10,20,30,40,50,60,70,80,90,100,150};
+		default = 70;
+		code = "tf47_param_mainEnemyCount = %1";
+	};
+
 };
 
 // ============================================================================================
