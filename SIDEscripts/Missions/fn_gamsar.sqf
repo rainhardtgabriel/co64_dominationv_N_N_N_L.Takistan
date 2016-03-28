@@ -1,4 +1,4 @@
-private ["_side_log_pos","_side_rad","_side_name","_side_position","_side_flatPos", "_side_ai_skill_array","_heliside_loc","_heliside_loc_select"];
+private ["_side_log_pos","_side_rad","_side_name","_side_trig","_side_position","_side_flatPos", "_side_ai_skill_array","_heliside_loc","_heliside_loc_select"];
 
 _ao = getMarkerPos "ao_mkr1";
 _oldSide = getMarkerPos "side_mkr1";
