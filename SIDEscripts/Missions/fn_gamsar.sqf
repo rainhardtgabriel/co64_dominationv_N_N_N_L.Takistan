@@ -1,4 +1,4 @@
-private ["_side_log_pos","_side_rad","_side_name","_side_trig","_side_position","_side_flatPos", "_side_ai_skill_array","_heliside_loc","_heliside_loc_select"];
+private ["_side_log_pos","_side_rad","_side_name","_side_position","_side_flatPos", "_side_ai_skill_array","_heliside_loc","_heliside_loc_select"];
 
 _ao = getMarkerPos "ao_mkr1";
 _oldSide = getMarkerPos "side_mkr1";
@@ -111,12 +111,12 @@ heli_side_trig4 = createTrigger 		["EmptyDetector", getPos D_FLAG_BASE];
 heli_side_trig4 setTriggerArea 		[5, 5, 0, false];  
 heli_side_trig4 setTriggerActivation ["Any", "present", true];   
 heli_side_trig4 setTriggerStatements ["pilot1 in thislist", 
-								"[heliside_hintText1] remoteExec [""SEPP_fnc_globalHint"",0,false]" , ""];
+								"[heliside_hintText1] remoteExec [""SEPP_fnc_globalHint"",0,false]; deletevehicle heli_side_trig2" , ""];
                                 
 heli_side_trig = createTrigger 		["EmptyDetector", getPos D_FLAG_BASE];   
 heli_side_trig setTriggerArea 		[5, 5, 0, false];  
 heli_side_trig setTriggerActivation ["Any", "present", true];   
-heli_side_trig setTriggerStatements ["(triggeractivated heli_side_trig3) && (triggeractivated heli_side_trig4)", 
+heli_side_trig setTriggerStatements ["(triggeractivated heli_side_trig4) && (!alive CapVeh1)", 
 								"0 = execVM ""SIDEscripts\militarizeSideWest.sqf""; 
 								[side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 
 								[""Sidemission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; 
