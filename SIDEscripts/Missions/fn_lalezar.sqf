@@ -75,7 +75,7 @@ _side_trig setTriggerStatements ["!alive cache1",
 
 //////////////// moves sandstorm trigger to side ///////////////////////////////////////////////////////////////////////////		
 sleep 1;
-trig_sandstorm setpos (getpos _side_log_pos);
+trig_sandstorm setpos (getpos cache1);
 
 /*
 sleep 1;
