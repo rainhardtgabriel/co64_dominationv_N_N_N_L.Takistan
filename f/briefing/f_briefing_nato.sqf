@@ -11,7 +11,7 @@
 
 _cre = player createDiaryRecord ["diary", ["Credits","
 <br/>
-* Contributors: Raygab | Wartheater | BlackPixxel | 4Lucke | TheNiner | DeRampage | MisfitFred | Ribbon
+* Contributors: TF47 DEV Team
 <br/><br/>
 * Former TF47 Staff : Desty | Meat | Funkrusha | Amadox
 <br/><br/>

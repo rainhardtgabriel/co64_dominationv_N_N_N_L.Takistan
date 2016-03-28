@@ -79,7 +79,11 @@ CBA 3 - http://www.armaholic.com/page.php?id=18767
 ACE 3 - http://ace3mod.com/
 CUP Mods - http://cup-arma3.org/ Terrains, Units, Vehicles, Weapons
 MELB - http://www.armaholic.com/page.php?id=28856
+Firewill F15 - http://www.armaholic.com/page.php?id=30025
+Firewill AWS - http://www.armaholic.com/page.php?id=28646
 XLA Fixed Arsenal- http://www.armaholic.com/page.php?id=27155
+SAM Mod - http://www.armaholic.com/page.php?id=29916
+SAM Camo Mod - https://forums.bistudio.com/topic/186395-pook-camonets/
 ACRE2- http://www.armaholic.com/page.php?id=19324
 TFAR - http://radio.task-force.ru/en/
 TF47 Launchers - https://forums.bistudio.com/topic/176437-tf47-launchers-wip/page-3
