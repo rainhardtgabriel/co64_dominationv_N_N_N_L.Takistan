@@ -62,12 +62,22 @@ officer_trig2 setTriggerStatements ["!alive offizier", "0 = execVM ""SIDEscripts
                        
 /////////////// let officer surrender when he detects enemy/prevents him from fleeing ////////////////////////////////////////////////////////////////
 sleep 1;
-
+ if (f_var_medical >= 1) then {
 officer_trig3 = createTrigger 		    ["EmptyDetector", getPos _side_log_pos];   
 officer_trig3 setTriggerArea 		    [500, 500, 0, false];  
 officer_trig3 setTriggerActivation      ["WEST", "EAST D", false];
 officer_trig3 setTriggerStatements      ["this", "
                                         [offizier, true] call ACE_captives_fnc_setSurrendered;
+                                        deletevehicle thisTrigger" , ""];}
+                                        
+                         else {
+officer_trig3 = createTrigger 		    ["EmptyDetector", getPos _side_log_pos];   
+officer_trig3 setTriggerArea 		    [500, 500, 0, false];  
+officer_trig3 setTriggerActivation      ["WEST", "EAST D", false];
+officer_trig3 setTriggerStatements      ["this", "
+                                        offizier setUnitPos ""DOWN"";
+                                        doStop offizier; offizier disableAI ""MOVE"";
                                         deletevehicle thisTrigger" , ""];
+                         };
                                 
 [_side_log_pos,_side_rad,_side_name]
