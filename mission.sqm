@@ -86,8 +86,7 @@ addons[]=
 	"A3_Structures_F_System",
 	"A3_weapons_F_FIA",
 	"A3_Weapons_F_Bootcamp_LongRangeRifles_M320",
-	"a3_weapons_f_longrangerifles_m320",
-	"rhsusf_c_weapons"
+	"a3_weapons_f_longrangerifles_m320"
 };
 randomSeed=14170574;
 class ScenarioData
@@ -27973,30 +27972,7 @@ class Mission
 				init="equipmentarea = [this,""table_x""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=3354;
-			type="rhs_weapon_m4a1_carryhandle";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ace_isMedicalFacility";
-					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
+			type="WEAPON_arifle_MX_F";
 		};
 		class Item1505
 		{

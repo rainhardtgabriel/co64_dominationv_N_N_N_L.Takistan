@@ -1,4 +1,18 @@
-// by Xeno
+/* ----------------------------------------------------------------------------
+		file: x_reload.sqf
+		================================
+
+		Description:
+		Reload Vehicle Magazines and Fuel
+
+		Author: Xeno
+
+		Vehicle Rarm Script v1.1
+
+		Download @ http://www.armaholic.com/page.php?id=19139
+
+---------------------------------------------------------------------------- */
+
 private ["_config","_count","_i","_magazines","_object","_type","_type_name"];
 
 _object = _this select 0;

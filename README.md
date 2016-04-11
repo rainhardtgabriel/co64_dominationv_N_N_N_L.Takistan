@@ -1,25 +1,103 @@
-# Operation Conflict Resolve #
+# [TF47] SUPREMACY  README#
+## README CONTENTS ##
 
-## ACE3 Advanced Medical Settings ##
-||Name 						||Type 		||Description 															||Default value
-||Enabled for 				||Option 	||Select what units the advanced medical system will be enabled for.	||Players only
-||Enable Advanced wounds 	||Boolean 	||Allow reopening of bandaged wounds? 									||Yes
-||Vehicle Crashes 			||Boolean 	||Do units take damage from a vehicle crash? 							||Yes
-||Allow PAK 				||Option 	||Who can use the PAK for full heal? 									||Medics only
-||Remove PAK on use 		||Boolean 	||Should the PAK be removed on usage? 									||Yes
-||Condition PAK 			||Option 	||When can the PAK be used? 											||Stable
-||Locations PAK 			||Option 	||Where can the PAK be used? 											||facility
-||Allow Surgical kit 		||Option 	||Who can use the Surgical Kit? 										||Medics only
-||Remove Surgical kit 		||Boolean 	||Should Surgical Kit be removed on usage? 								||No
-||Locations Surgical Kit 	||Option 	||Where can the Surgical Kit be used? 									||Vehicles & facility
-||Condition Surgical Kit 	||Option 	||When can the Surgical Kit be used? 									||Anytime
-||Heal hitpoints 			||Boolean 	||Heal fully bandaged hitpoints. 										||No
-||Pain suppression 			||Boolean	||Pain is only temporarily suppressed not removed. 						||No
+01. MISSION VERSION HISTORY
+02. CREDITS
+03. COPYRIGHT STATEMENT
+04. TERMS OF USE
+05. LEGAL DISCLAIMER
+06. DISTRIBUTING SIMULATION CONTENT CREATED WITH THE SOFTWARE
+07. SUPPORT INFORMATION
+08. INSTALLATION
+09. NOTES
+10. CHANGE HISTORY
+
+## Mission Version History ##
+
+Version | Date | Notes
+*1-0-0 | XX-XX-XXXX | Initial Release 
+
+## CREDITS ##
+
+* Contributors: Raygab | Wartheater | BlackPixxel | 4Lucke | TheNiner | DeRampage | MisfitFred | Ribbon
+
+* Former TF47 Staff : Desty | Meat | Funkrusha | Amadox
+
+* AI Spawn Script Pack 0.90 by spunFIN
+	http://www.armaholic.com/page.php?id=19832
+* DynCap for Arma 3 by Celludriel
+	http://www.armaholic.com/page.php?id=29690
+* MKY Sandstorm Script by m0nkey
+	http://www.armaholic.com/page.php?id=30151
+* Light Switch Script by sevevnationdusty
+	http://www.armaholic.com/page.php?id=24239
+* F3 Mission Framework ( see full readme below )
+	https://github.com/ferstaberinde/F3
+
+## COPYRIGHT STATEMENT ##
+
+This Software is composed of many components. Each component is (c) 2007/2008/2009/2010/2011/2012/2013/2014/2015/2016 
+its respective contributor(s). All rights reserved.
+
+## TERMS OF USE ##
+
+TF47 SUPREMACY (hereafter 'Software') contains files to be used in the PC simulator "Arma 3". To use the Software you must agree to the following conditions of use:
+
+1. The term 'Software' specifically excludes the file 'mission.sqm'.
+
+2. The contributors of individual components of the Software (hereafter 'The Contributors') grant to you a personal, non-exclusive license to use the Software for the purpose of designing, developing, testing, and distributing non-commercial simulation content for ArmA 3.
+
+3. The commercial exploitation of any game content created using the Software without written permission from The Contributors is expressly prohibited.
+
+4. Reverse-engineering, or other conversion of the Software for use with any game except ArmA 3 without written permission from The Contributors is expressly prohibited.
+
+5. The Software may only be re-distributed in its entirety, complete with this "ReadMe" document.
+
+## LEGAL DISCLAIMER ##
+
+The Software is distributed without any warranty; without even the implied warranty of merchantability or fitness for a particular purpose. The Software is not an official addon or tool. Use of the Software (in whole or in part) is entirely at your own risk.
 
 
-## F3[TF47] README ##
+## SUPPORT INFORMATION ##
 
-This Version is an adapted Version of the Original F3 Mission Developement Framework by Ferstaberinde.
+There is no Support @ http://www.armasim.de 
+If you wish to adapt the Mission please contact us @ www.armasim.de
+
+## INSTALLATION ##
+
+To begin using the Software, move the co64_domination_N_N_N_L.Takistan folder into one of the following directories:
+
+* \My Documents\Arma 3\MPMissions\
+* \My Documents\Arma 3 Other Profiles\YourPlayerName\MPMissions\
+
+
+## NOTES ##
+
+To use the Mission you have to Start the following Mods before trying to start the Mission.
+
+CBA 3 - http://www.armaholic.com/page.php?id=18767
+ACE 3 - http://ace3mod.com/
+CUP Mods - http://cup-arma3.org/ Terrains, Units, Vehicles, Weapons
+MELB - http://www.armaholic.com/page.php?id=28856
+Firewill F15 - http://www.armaholic.com/page.php?id=30025
+Firewill AWS - http://www.armaholic.com/page.php?id=28646
+XLA Fixed Arsenal- http://www.armaholic.com/page.php?id=27155
+SAM Mod - http://www.armaholic.com/page.php?id=29916
+SAM Camo Mod - https://forums.bistudio.com/topic/186395-pook-camonets/
+ACRE2- http://www.armaholic.com/page.php?id=19324
+TFAR - http://radio.task-force.ru/en/
+TF47 Launchers - https://forums.bistudio.com/topic/176437-tf47-launchers-wip/page-3
+Lesh Tow Mod - http://www.armaholic.com/page.php?id=29737
+
+## CHANGE HISTORY ##
+
+Version | Date | Changes
+
+1-0-0  | 31-03-16 | IR : CUP / ACE3 / Mightygau / Lesh
+
+
+## EPILOGUE ##
+This MissionFramework is an adapted Version of the Original F3 Mission Developement Framework by Ferstaberinde.
 It was changed for the Needs of Taskforce 47 Community and with the Permission of Fer published by Raini(raini@taskforce47.de) for the Purpose of Mission Developement within the Taskforce47 Community.
 
 If there are any Bugs within this MissionFramework please Report to Developement Team at http://www.armasim.de
@@ -38,7 +116,7 @@ This Work is based on
 
 
 
-## README CONTENTS F3 ##
+### README CONTENTS F3 ###
 
 01. VERSION HISTORY
 02. CREDITS
@@ -52,17 +130,6 @@ This Work is based on
 10. CHANGE HISTORY
 
 
-
-## 01. VERSION HISTORY ##
-
-### [TF47] Version History ###
-
-* 3-3-0 IR3 | 28 OCT 2015 | Patch for CUP Units
-
-* 3-3-0 IR2 | 24 OCT 2015 | Internal Release - Various Improvements and Updates see change history
-
-* 3-3-0 IR1 | 05 SEP 2015 | Internal Release- Various Changes and Updates (see change history)
-  Based on F3 Version 3-3-0
 
 ### F3 Version History ###
 

@@ -11,9 +11,30 @@
 
 _cre = player createDiaryRecord ["diary", ["Credits","
 <br/>
-*** Insert mission credits here. ***
+* Contributors: TF47 DEV Team
+<br/><br/>
+* Former TF47 Staff : Desty | Meat | Funkrusha | Amadox
 <br/><br/>
 Made with F3 (http://www.ferstaberinde.com/f3/en/)
+<br/>
+* AI Spawn Script Pack 0.90 by spunFIN
+<br/>
+	http://www.armaholic.com/page.php?id=19832
+<br/>
+* DynCap for Arma 3 by Celludriel
+<br/>
+http://www.armaholic.com/page.php?id=29690
+<br/>
+* MKY Sandstorm Script by m0nkey
+<br/>
+	http://www.armaholic.com/page.php?id=30151
+<br/>
+* Light Switch Script by sevevnationdusty
+<br/>
+	http://www.armaholic.com/page.php?id=24239
+<br/>
+* F3 Mission Framework ( see full readme below )
+	https://github.com/ferstaberinde/F3
 "]];
 
 // ====================================================================================
@@ -33,7 +54,7 @@ _adm = player createDiaryRecord ["diary", ["Administration","
 
 _exe = player createDiaryRecord ["diary", ["Execution","
 <br/>
-<font size='18'>COMMANDER'S INTENT</font>
+<font size='18'>COMMANDER's INTENT</font>
 <br/>
 *** Insert very short summary of plan here. ***
 <br/><br/>

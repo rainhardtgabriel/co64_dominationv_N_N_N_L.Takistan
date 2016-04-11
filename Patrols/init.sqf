@@ -26,11 +26,12 @@ while {_amount != 0 AND (count Patrols) != 5} do {
 	_temp = _typs call BIS_fnc_selectRandom;
 	if (_temp select 1 <= _amount) then {
 	  	_amount = _amount - (_temp select 1);
-	  	[_temp select 0, _temp select 2] call tf47_fnc_createPatrol;	  	
+	  	[_temp select 0, _temp select 2] execVM "Patrols\delayedcreatePatrol.sqf";
+};	  	
 	};
 };
 
 while {true} do {
 	sleep 300;
-	[] execVM "Patrols\checkPatrols.sqf";
+	[] execVM "Patrols\delayedcreatePatrol.sqf";
 };
