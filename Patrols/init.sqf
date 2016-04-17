@@ -27,9 +27,9 @@ while {_amount != 0 AND (count Patrols) != 5} do {
 	if (_temp select 1 <= _amount) then {
 	  	_amount = _amount - (_temp select 1);
 	  	[_temp select 0, _temp select 2] execVM "Patrols\delayedcreatePatrol.sqf";
-};	  	
-	};
+	};	  	
 };
+
 
 while {true} do {
 	sleep 300;
