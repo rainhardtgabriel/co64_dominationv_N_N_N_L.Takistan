@@ -5,7 +5,22 @@ _pos = _this select 0;
 _side = _this select 1;
 
 _BLUveh = ["B_Heli_Light_01_armed_F","B_Heli_Attack_01_F","B_Heli_Transport_01_F"];
-_OPFveh = ["CUP_O_Mi24_D_TK","CUP_O_Su25_TKA"];
+
+_OPFveh = switch (tf47_param_vehiclemod) do { 
+	// Van
+	case 0 : {
+		["I_Plane_Fighter_03_AA_F","I_Plane_Fighter_03_CAS_F"];
+	};
+	// CUP
+	case 1 : {
+		["CUP_O_Mi24_D_TK","CUP_O_Su25_TKA"];
+	};
+	// RHS
+	case 2 : {
+		["RHS_Su25SM_vvs","RHS_Su25SM_KH29_vvs"];
+	};
+};
+
 _INDveh = ["I_Heli_Transport_02_F","I_Plane_Fighter_03_AA_F","I_Plane_Fighter_03_CAS_F"];
 
 _men = [];

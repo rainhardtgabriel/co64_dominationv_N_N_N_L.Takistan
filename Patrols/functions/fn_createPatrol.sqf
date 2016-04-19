@@ -59,6 +59,21 @@ switch (tf47_var_vehiclemod) do {
 		};
 
 	}; 
+	case 2 : {
+		switch (_typ) do { 
+			case "inf" : {
+				_veh = ["rhs_uaz_dshkm_chdkz", "rhs_uaz_open_chdkz", "rhs_ural_open_chdkz", "rhs_uaz_dshkm_chdkz"];
+			}; 
+			case "wheeld" : {
+				_veh = ["rhs_btr70_chdkz", "rhs_btr60_chdkz", "rhs_btr70_chdkz"];
+			}; 
+			case "tracked" : {
+				_veh = ["rhs_bmp2_chdkz", "rhs_bmp2e_chdkz", "rhs_bmp2_chdkz"];
+			};
+			default {}; 
+		};
+
+	}; 
 	default {}; 
 };
 

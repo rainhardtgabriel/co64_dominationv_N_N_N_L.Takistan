@@ -12,6 +12,10 @@ case 1 : {
 	#include "functions\vehicleReplacement\CUPVehicles.sqf" 
 	}; 
 };
+case 2 : { 
+	#include "functions\vehicleReplacement\RHSVehicles.sqf" 
+	}; 
+};
 //#include "functions\vehicleReplacement\vanillaVehicles.sqf"
 for "_i" from 0 to 99 do {
 _mkrname = format ["mkr_spawn_veh_%1",_i];

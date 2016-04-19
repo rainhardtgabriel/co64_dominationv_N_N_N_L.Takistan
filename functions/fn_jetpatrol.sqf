@@ -8,7 +8,7 @@
 if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
 
 
-private ["_alert_log_pos","_alert_rad","_alert_name","_alert_iniText"];
+private ["_alert_log_pos","_alert_rad","_alert_name","_alert_iniText","_pilot","_jet"];
 
 sleep (2400 +(random 600));
 
@@ -52,14 +52,35 @@ _marker11 = createMarker ["WP_East5",[7238.282,12748.9]];
 
 //Creates a group with 3 soldiers at position PILOTsp1
 
-_group1 = [getMarkerPos "PILOTsp1", East, ["CUP_O_TK_Pilot"],[],[],[],[],[],180] call BIS_fnc_spawnGroup;
-_group2 = [getMarkerPos "PILOTsp1", East, ["CUP_O_TK_Pilot"],[],[],[],[],[],180] call BIS_fnc_spawnGroup;
-_group3 = [getMarkerPos "PILOTsp1", East, ["CUP_O_TK_Pilot"],[],[],[],[],[],180] call BIS_fnc_spawnGroup;
+_pilot = "";
+_jet = "";
+
+switch (tf47_param_vehiclemod) do { 
+	// Van
+	case 0 : {
+		_pilot = "I_pilot_F";
+		_jet = "I_Plane_Fighter_03_AA_F";
+	};
+	// CUP
+	case 1 : {
+		_pilot = "CUP_O_TK_Pilot";
+		_jet = "CUP_O_Su25_TKA";
+	};
+	// RHS
+	case 2 : {
+		_pilot = "rhs_pilot";
+		_jet = "RHS_Su25SM_vvs";
+	};
+};
+
+_group1 = [getMarkerPos "PILOTsp1", East, [_pilot],[],[],[],[],[],180] call BIS_fnc_spawnGroup;
+_group2 = [getMarkerPos "PILOTsp1", East, [_pilot],[],[],[],[],[],180] call BIS_fnc_spawnGroup;
+_group3 = [getMarkerPos "PILOTsp1", East, [_pilot],[],[],[],[],[],180] call BIS_fnc_spawnGroup;
 
 
-JetVeh1   = "CUP_O_Su25_TKA" createVehicle getMarkerPos "SUsp1";
-JetVeh2   = "CUP_O_Su25_TKA" createVehicle getMarkerPos "SUsp2";
-JetVeh3   = "CUP_O_Su25_TKA" createVehicle getMarkerPos "SUsp3";
+JetVeh1   = _jet createVehicle getMarkerPos "SUsp1";
+JetVeh2   = _jet createVehicle getMarkerPos "SUsp2";
+JetVeh3   = _jet createVehicle getMarkerPos "SUsp3";
 
 _dirsp = 315;
 
