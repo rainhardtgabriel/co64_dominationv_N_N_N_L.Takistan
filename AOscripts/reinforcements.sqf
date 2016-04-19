@@ -20,23 +20,58 @@ nul = [helipad,true,2,4,false,false,player,"random",3000,true,false,8,"default",
 
 if ( _reinforcement == "armored") then
 {
-	_tanks = [
-	["CUP_O_BTR60_TK",3],
-	["CUP_O_BMP1_TKA",3],
-	["CUP_O_BMP1P_TKA",3],
-	["CUP_O_BMP2_TKA",3],
-	["CUP_O_BMP_HQ_TKA",3],
-	["CUP_O_BMP2_ZU_TKA",3],
-	["CUP_O_BRDM2_TKA",2],
-	["CUP_O_BRDM2_ATGM_TKA",2],
-	["CUP_O_BRDM2_HQ_TKA",2],
-	["CUP_O_M113_TKA",2],
-	["CUP_O_T34_TKA",3],
-	["CUP_O_T55_TK",3],
-	["CUP_O_T72_TKA",3],
-	["CUP_O_ZSU23_TK",3]
-	];
-
+	_tanks = switch (tf47_param_vehiclemod) do { 
+		// Van
+		case 0 : {
+			[
+				["I_APC_tracked_03_cannon_F",3],
+				["I_MBT_03_cannon_F",3],
+				["CUP_I_M113_AAF",3],
+				["I_APC_Wheeled_03_cannon_F",3],
+				["I_MRAP_03_F",3],
+				["I_MRAP_03_gmg_F",3],
+				["I_MRAP_03_hmg_F",3]
+			];
+		};
+		// CUP
+		case 1 : {
+			[
+				["CUP_O_BTR60_TK",3],
+				["CUP_O_BMP1_TKA",3],
+				["CUP_O_BMP1P_TKA",3],
+				["CUP_O_BMP2_TKA",3],
+				["CUP_O_BMP_HQ_TKA",3],
+				["CUP_O_BMP2_ZU_TKA",3],
+				["CUP_O_BRDM2_TKA",2],
+				["CUP_O_BRDM2_ATGM_TKA",2],
+				["CUP_O_BRDM2_HQ_TKA",2],
+				["CUP_O_M113_TKA",2],
+				["CUP_O_T34_TKA",3],
+				["CUP_O_T55_TK",3],
+				["CUP_O_T72_TKA",3],
+				["CUP_O_ZSU23_TK",3]
+			];
+		};
+		// RHS
+		case 2 : {
+			[
+				["rhs_btr70_chdkz",3],
+				["rhs_btr60_chdkz",3],
+				["rhs_bmd1_chdkz",3],
+				["rhs_bmd2_chdkz",3],
+				["rhs_bmp1_chdkz",3],
+				["rhs_bmp1d_chdkz",3],
+				["rhs_bmp1k_chdkz",2],
+				["rhs_bmp1p_chdkz",2],
+				["rhs_bmp2_chdkz",2],
+				["rhs_bmp2e_chdkz",2],
+				["rhs_bmp2e_chdkz",3],
+				["s_bmp2k_chdkz",3],
+				["rhs_bmp2d_chdkz",3],
+				["rhs_zsu234_chdkz",3]
+			];
+		};
+	};
 
 	_roads = [];
 

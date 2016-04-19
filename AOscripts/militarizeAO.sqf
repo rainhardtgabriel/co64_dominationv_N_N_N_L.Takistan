@@ -381,6 +381,9 @@ switch (tf47_param_vehiclemod) do {
 	case 1 : {
 		[_log_pos] execVM "AOscripts\initSAM.sqf";
 	};
+	case 2 : {
+		[_log_pos] execVM "AOscripts\initSAMRhs.sqf";
+	};
 };
 			
 //////////////// create a radiotower /////////////////////////////////////////////////////////////////////////////////////////////

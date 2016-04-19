@@ -60,8 +60,32 @@ _blueMenArray = ["B_Soldier_A_F","B_soldier_AR_F","B_medic_F","B_engineer_F","B_
 _blueMenArray2 = ["B_recon_exp_F","B_recon_JTAC_F","B_recon_M_F","B_recon_medic_F","B_recon_F","B_recon_LAT_F","B_recon_TL_F","B_soldier_AAR_F","B_soldier_AAA_F","B_soldier_AAT_F"];
 _blueMenArray3 = ["B_G_Soldier_A_F","B_G_soldier_AR_F","B_G_medic_F","B_G_engineer_F","B_G_soldier_exp_F","B_G_Soldier_GL_F","B_G_soldier_M_F","B_G_officer_F","B_G_Soldier_F","B_G_soldier_LAT_F","B_G_Soldier_lite_F","B_G_Soldier_SL_F","B_G_Soldier_TL_F"];
 _BLUarrays = [_blueMenArray,_blueMenArray2,_blueMenArray3];
-_redMenArray = ["CUP_O_TK_Soldier_MG","CUP_O_TK_Soldier_MG","CUP_O_TK_Soldier_MG","CUP_O_TK_Soldier","CUP_O_TK_Soldier","CUP_O_TK_Soldier_GL","CUP_O_TK_Soldier","CUP_O_TK_Soldier_AT","CUP_O_TK_Soldier_GL","CUP_O_TK_Soldier","CUP_O_TK_Soldier_AA","CUP_O_TK_Soldier_AT","CUP_O_TK_Soldier_HAT","CUP_O_TK_Soldier_AMG","CUP_O_TK_Soldier_GL"];
-_redMenArray2 = ["CUP_O_TK_Soldier_MG","CUP_O_TK_Soldier_MG","CUP_O_TK_Soldier_MG","CUP_O_TK_Soldier","CUP_O_TK_Soldier","CUP_O_TK_Soldier_GL","CUP_O_TK_Soldier","CUP_O_TK_Soldier_AT","CUP_O_TK_Soldier_GL","CUP_O_TK_Soldier","CUP_O_TK_Soldier_AA","CUP_O_TK_Soldier_AT","CUP_O_TK_Soldier_HAT","CUP_O_TK_Soldier_AMG","CUP_O_TK_Soldier_GL"];
+_redMenArray = switch (tf47_param_vehiclemod) do { 
+	// Van
+	case 0 : {
+		[
+		"I_Soldier_AR_F","I_Soldier_AR_F","I_Soldier_AR_F","I_soldier_F","I_soldier_F","I_soldier_F",
+		"I_soldier_F","I_soldier_F","I_Soldier_GL_F","I_soldier_F","I_Soldier_AA_F","I_Soldier_LAT_F",
+		"I_Soldier_AT_F","I_Soldier_A_F","I_Soldier_GL_F"];
+	};
+	// CUP
+	case 1 : {
+		[
+		"CUP_O_TK_Soldier_MG","CUP_O_TK_Soldier_MG","CUP_O_TK_Soldier_MG","CUP_O_TK_Soldier","CUP_O_TK_Soldier","CUP_O_TK_Soldier_GL",
+		"CUP_O_TK_Soldier","CUP_O_TK_Soldier_AT","CUP_O_TK_Soldier_GL","CUP_O_TK_Soldier","CUP_O_TK_Soldier_AA","CUP_O_TK_Soldier_AT",
+		"CUP_O_TK_Soldier_HAT","CUP_O_TK_Soldier_AMG","CUP_O_TK_Soldier_GL"];
+	};
+	// RHS
+	case 2 : {
+		[
+		"rhs_g_Soldier_AR_F","rhs_g_Soldier_AR_F","rhs_g_Soldier_AR_F","rhs_g_Soldier_lite_F","rhs_g_Soldier_lite_F","rhs_g_Soldier_GL_F",
+		"rhs_g_Soldier_lite_F","rhs_g_Soldier_AT_F","rhs_g_Soldier_GL_F","rhs_g_Soldier_lite_F","rhs_g_Soldier_AA_F","rhs_g_Soldier_AT_F",
+		"rhs_g_Soldier_AT_F","rhs_g_Soldier_AAR_F","rhs_g_Soldier_GL_F"];
+	};
+};
+_redMenArray2 = _redMenArray;
+
+//_redMenArray2 = ["CUP_O_TK_Soldier_MG","CUP_O_TK_Soldier_MG","CUP_O_TK_Soldier_MG","CUP_O_TK_Soldier","CUP_O_TK_Soldier","CUP_O_TK_Soldier_GL","CUP_O_TK_Soldier","CUP_O_TK_Soldier_AT","CUP_O_TK_Soldier_GL","CUP_O_TK_Soldier","CUP_O_TK_Soldier_AA","CUP_O_TK_Soldier_AT","CUP_O_TK_Soldier_HAT","CUP_O_TK_Soldier_AMG","CUP_O_TK_Soldier_GL"];
 _OPFarrays = [_redMenArray,_redMenArray2];
 _greenMenArray = ["I_Soldier_A_F","I_soldier_AR_F","I_medic_F","I_engineer_F","I_soldier_exp_F","I_Soldier_GL_F","I_soldier_M_F","I_soldier_AA_F","I_soldier_AT_F","I_officer_F","I_soldier_repair_F","I_Soldier_F","I_soldier_LAT_F","I_Soldier_lite_F","I_Soldier_SL_F","I_Soldier_TL_F","I_soldier_AAR_F","I_soldier_AAA_F","I_soldier_AAT_F"];
 

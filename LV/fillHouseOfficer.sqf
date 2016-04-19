@@ -54,12 +54,40 @@ if(isNil("LV_ACskills"))then{LV_ACskills = compile preprocessFile "LV\LV_functio
 if(isNil("LV_vehicleInit"))then{LV_vehicleInit = compile preprocessFile "LV\LV_functions\LV_fnc_vehicleInit.sqf";};
 if(isNil("LV_nearestBuilding"))then{LV_nearestBuilding = compile preprocessFile "LV\LV_functions\LV_fnc_nearestBuilding.sqf";};
 
-_blueMenArray = ["CUP_B_US_Pilot"];
-_blueMenArray2 = ["CUP_B_US_Pilot"];
-_blueMenArray3 = ["CUP_B_US_Pilot"];
+_blueMenArray = switch (tf47_param_vehiclemod) do { 
+	// Van
+	case 0 : {
+		["B_Helipilot_F"];
+	};
+	// CUP
+	case 1 : {
+		["CUP_B_US_Pilot"];
+	};
+	// RHS
+	case 2 : {
+		["rhsusf_usmc_marpat_wd_helipilot"];
+	};
+};
+
+_redMenArray = switch (tf47_param_vehiclemod) do { 
+	// Van
+	case 0 : {
+		["I_officer_F"];
+	};
+	// CUP
+	case 1 : {
+		["CUP_O_TK_Officer"];
+	};
+	// RHS
+	case 2 : {
+		["rhs_g_Soldier_SL_F"];
+	};
+};
+
+_blueMenArray2 = _blueMenArray;
+_blueMenArray3 = _blueMenArray2;
 _BLUarrays = [_blueMenArray,_blueMenArray2,_blueMenArray3];
-_redMenArray = ["CUP_O_TK_Officer"];
-_redMenArray2 = ["CUP_O_TK_Officer"];
+_redMenArray2 = _redMenArray;
 _OPFarrays = [_redMenArray,_redMenArray2];
 _greenMenArray = ["I_Soldier_A_F","I_soldier_AR_F","I_medic_F","I_engineer_F","I_soldier_exp_F","I_Soldier_GL_F","I_soldier_M_F","I_soldier_AA_F","I_soldier_AT_F","I_officer_F","I_soldier_repair_F","I_Soldier_F","I_soldier_LAT_F","I_Soldier_lite_F","I_Soldier_SL_F","I_Soldier_TL_F","I_soldier_AAR_F","I_soldier_AAA_F","I_soldier_AAT_F"];
 
