@@ -25,6 +25,9 @@ if (_sandstorm) then {
 
 //"side_mkr1" setmarkerpos [0,0,0];
 sleep 30;
+if(!isNil "CapVeh1") then {
+	waitUntil { sleep 10; ((count (crew CapVeh1)) == 0)};
+};
 {
 	if !(_x == objNull) then {
 		deleteVehicle _x;
