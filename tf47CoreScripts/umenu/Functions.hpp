@@ -16,8 +16,8 @@ class tf47_core_umenu_vd {
 		class trackViewMode;
 		class updateViewdistance;
 		class saveViewdistance;
-	}
-}
+	};
+};
 class tf47_core_umenu_ft {
 	class ft {
 		file = "tf47CoreScripts\umenu\functions";
@@ -25,6 +25,6 @@ class tf47_core_umenu_ft {
 		class enableMenu;
 		class createTeam;
 		class deleteTeam;
-	}
-}
+	};
+};
 	
