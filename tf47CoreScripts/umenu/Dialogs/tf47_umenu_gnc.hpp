@@ -4,7 +4,7 @@
 class tf47_umenu_gnc_dialog
 {
 	idd = -1;
-	movingEnable = false;
+	movingEnable = 0;
 	onLoad = "uiNamespace setVariable ['tf47_core_umenu_vd_dialog_var',_this select 0]; _nul = [] spawn { sleep 0.05; ctrlSetText [1400,groupId (group player)];};";
 	onUnLoad = "uiNamespace setVariable ['tf47_core_umenu_vd_dialog_var',nil]";
 	class ControlsBackground
