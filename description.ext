@@ -692,7 +692,7 @@ class RscTitles
 		idd = -1;
 		onLoad = "uiNamespace setVariable [""CapProgressBar"", _this select 0];";
 		duration = 999999999;
-		movingEnable = false;
+		movingEnable = 0;
 		class controls
 		{
 			class CapProgressBarBackground: IGUIBack

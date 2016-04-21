@@ -4,7 +4,7 @@
 class tf47_umenu_main_dialog
 {
 	idd = -1;
-	movingEnable = false;
+	movingEnable = 0;
 	onLoad = "uiNamespace setVariable ['tf47_umenu_main_dialog_var',_this select 0]; _nul = [] execVM 'tf47CoreScripts\umenu\functions\initMain.sqf';";
 	onUnLoad = "uiNamespace setVariable ['tf47_umenu_main_dialog_var',nil]";
 	class ControlsBackground
