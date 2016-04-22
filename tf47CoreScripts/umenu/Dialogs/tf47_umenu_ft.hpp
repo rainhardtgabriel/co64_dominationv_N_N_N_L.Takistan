@@ -4,7 +4,7 @@
 class tf47_umenu_ft_dialog
 {
 	idd = -1;
-	movingEnable = false;
+	movingEnable = 0;
 	onLoad = "uiNamespace setVariable ['tf47_core_umenu_ft_dialog_var',_this select 0]; [_this] call tf47_core_umenu_ft_fnc_onLoadFt;";
 	onUnLoad = "uiNamespace setVariable ['tf47_core_umenu_ft_dialog_var',nil]";
 	class ControlsBackground

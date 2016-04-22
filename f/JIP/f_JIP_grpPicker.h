@@ -32,7 +32,7 @@ class GrpPicker
             y = SafeZoneY + 0.2;
             text = "Select group to join";
         };
-    }
+    };
 
     class controls
     {

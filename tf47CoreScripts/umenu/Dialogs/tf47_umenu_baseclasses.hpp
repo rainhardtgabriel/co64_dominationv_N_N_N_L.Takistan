@@ -130,7 +130,7 @@ class tf47_umenu_scrollbar
 	arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
 	arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
 	border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-}
+};
 class tf47_umenu_base_combo : tf47_umenu_base
 {
 	type = 4;
