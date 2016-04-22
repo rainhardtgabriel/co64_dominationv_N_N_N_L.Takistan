@@ -10,6 +10,12 @@
 * 	@website	http://armasim.de/
 * 	@version    0.1a
 */
+//Arms Euqipmentarea
+_rifle= "Weapon_arifle_Mk20_GL_plain_F";
+_dmr = "Weapon_srifle_EBR_F";
+_nlaw = "Weapon_launch_NLAW_F";
+_drone = "B_UAV_01_F";
+_machinegun = "Weapon_arifle_MX_SW_F";
 //Small Vehicles
 _quad = "B_Quadbike_01_F";//veh= [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM "tf47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true]; 
 _bike = "B_Quadbike_01_F"; // veh = [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM 47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true];
