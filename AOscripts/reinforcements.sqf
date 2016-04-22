@@ -26,7 +26,6 @@ if ( _reinforcement == "armored") then
 			[
 				["I_APC_tracked_03_cannon_F",3],
 				["I_MBT_03_cannon_F",3],
-				["CUP_I_M113_AAF",3],
 				["I_APC_Wheeled_03_cannon_F",3],
 				["I_MRAP_03_F",3],
 				["I_MRAP_03_gmg_F",3],
@@ -66,7 +65,7 @@ if ( _reinforcement == "armored") then
 				["rhs_bmp2_chdkz",2],
 				["rhs_bmp2e_chdkz",2],
 				["rhs_bmp2e_chdkz",3],
-				["s_bmp2k_chdkz",3],
+				["rhs_bmp2k_chdkz",3],
 				["rhs_bmp2d_chdkz",3],
 				["rhs_zsu234_chdkz",3]
 			];
