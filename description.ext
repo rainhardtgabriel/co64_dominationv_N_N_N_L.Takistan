@@ -485,7 +485,15 @@ class CfgFunctions
 			class addGetInEvent;
 			class addGetOutEvent;
 		};
-
+		class cleanup {
+			/*
+			* Module: Cleanup
+			* Author: Conroy
+			*/
+			file = "tf47CoreScripts\cleanup";
+			class cleanup_Abandonded;
+			class cleanup_Init;
+        	};
 	};
 	
 		//#include "tf47CoreScripts\UMenu\Functions.hpp"
