@@ -37,6 +37,11 @@ switch (tf47_param_vehiclemod) do {
 	case 1 : { 
 		_veh addWeaponCargoGlobal ["CUP_arifle_M4A1_black",2];
 		_veh addMagazineCargoGlobal ["30Rnd_556x45_Stanag",30];
+	}; 	
+	// RHS
+	case 2 : { 
+		_veh addWeaponCargoGlobal ["rhs_weap_m4a1_carryhandle",2];
+		_veh addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_Stanag",30];
 	}; 
 };
 
