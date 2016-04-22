@@ -10697,7 +10697,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
-				init="this setObjectTexture [0,'sign\boxHW_20130620.paa']; this allowDamage false";
+				init="this setObjectTexture [0,'tf47_supremacy_signs\data\boxHW_20130620.paa']; this allowDamage false";
 			};
 			id=755;
 			type="Infostand_2_EP1";
@@ -30841,7 +30841,7 @@ class Mission
 			name="mkr_spawn_veh_119";
 			text="_machinegun";
 			type="Empty";
-			angle=90.862976;
+			angle=90.862961;
 			id=3391;
 		};
 		class Item1523
