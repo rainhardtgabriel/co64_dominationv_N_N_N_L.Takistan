@@ -8,8 +8,33 @@ parameter: [AOCenter, mindist, maxdist, number, missionType]
 ------------------------------------------------------------------------------------
 */
 
-private ["_AOCenter","_minDist","_maxDist","_number","_pos","_unit","_group","_missionType"];
+private ["_AOCenter","_minDist","_maxDist","_number","_pos","_unit","_group","_missionType","_spotter","_sniper","_sniper2"];
 params ["_AOCenter","_minDist","_maxDist","_number","_missionType"];
+
+_spotter = "";
+_sniper = "";
+_sniper2 = "";
+
+switch (tf47_param_vehiclemod) do { 
+	// Van
+	case 0 : {
+		_spotter = "I_soldier_F";
+		_sniper = "I_Soldier_M_F";
+		_sniper2 = _sniper;
+	};
+	// CUP
+	case 1 : {
+		_spotter = "CUP_O_TK_Spotter";
+		_sniper = "CUP_O_TK_Sniper_KSVK";
+		_sniper2 = "CUP_O_TK_Sniper";
+	};
+	// RHS
+	case 2 : {
+		_spotter = "rhs_g_Soldier_TL_F";
+		_sniper = "rhs_g_Soldier_M_F";
+		_sniper2 = _sniper;
+	};
+};
 
 for [{_i=1},{_i<=_number},{_i=_i+1}] do
 {
@@ -17,15 +42,15 @@ for [{_i=1},{_i<=_number},{_i=_i+1}] do
 
 	_group = createGroup east;
 
-	_unit = _group createUnit ["CUP_O_TK_Spotter", _pos, [], 0, "NONE"];
+	_unit = _group createUnit [_spotter, _pos, [], 0, "NONE"];
 
 	if (random 1 > 0.5) then
 	{
-		_unit = _group createUnit ["CUP_O_TK_Sniper_KSVK", _pos, [], 0, "NONE"];
+		_unit = _group createUnit [_sniper, _pos, [], 0, "NONE"];
 	}
 	else
 	{
-		_unit = _group createUnit ["CUP_O_TK_Sniper", _pos, [], 0, "NONE"];
+		_unit = _group createUnit [_sniper2, _pos, [], 0, "NONE"];
 	};
 
 	if (_missionType == 1) then

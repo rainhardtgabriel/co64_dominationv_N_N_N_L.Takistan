@@ -17,12 +17,22 @@ _veh addWeaponCargoGlobal ["ACE_MapTools",2];
 _veh addWeaponCargoGlobal ["ACE_microDAGR",2];
 _veh addWeaponCargoGlobal ["ACE_Altimeter",10];
 
-//Radio
-_veh addWeaponCargoGlobal ["ACRE_PRC117F",3];
-_veh addWeaponCargoGlobal ["ACRE_PRC343",10];
-_veh addWeaponCargoGlobal ["ACRE_PRC152",10];
-
 //Backpack
-_veh addBackpackCargoGlobal ["ACE_NonSteerableParachute",10]
-_veh addBackpackCargoGlobal ["ACE_ReserveParachute",10]
-_veh addBackpackCargoGlobal ["BIS_Steerable_Parachute",10]
+_veh addBackpackCargoGlobal ["ACE_NonSteerableParachute",10];
+_veh addBackpackCargoGlobal ["ACE_ReserveParachute",10];
+_veh addBackpackCargoGlobal ["BIS_Steerable_Parachute",10];
+
+// Radios
+switch (f_var_radios) do {
+	// ACRE 2
+	case 1: {
+		_veh addWeaponCargoGlobal ["ACRE_PRC343",10];
+		_veh addWeaponCargoGlobal ["ACRE_PRC152",10];
+		_veh addWeaponCargoGlobal ["ACRE_PRC117F",3];
+	};
+	// TFR
+	case 2: {
+		_veh addWeaponCargoGlobal ["tf_rt1523g",3];
+		_veh addWeaponCargoGlobal ["tf_anprc152",10];
+	};
+};

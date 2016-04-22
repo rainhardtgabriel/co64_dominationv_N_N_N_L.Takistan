@@ -4,7 +4,7 @@
 //																																  //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  
-private ["_side_log_pos","_side_rad","_side_name","_convoy_end_select","_convoy_ends"];
+private ["_side_log_pos","_side_rad","_side_name","_convoy_end_select","_convoy_ends","_apc","_refuel","_repair","_techMg"];
 
 _side_log_pos   		= log_airfield;
 _side_rad    			= 100;
@@ -42,23 +42,50 @@ switch (_convoy_end_select) do {
 "WP_Convoy_End" setMarkerType "hd_end";
 "WP_Convoy_End" setMarkerText "Convoy End";
 
+_apc = "";
+_refuel = "";
+_repair = "";
+_techMg = "";
 
+switch (tf47_param_vehiclemod) do { 
+	// Van
+	case 0 : {
+		_apc = "I_APC_tracked_03_cannon_F";
+		_refuel = "I_Truck_02_fuel_F";
+		_repair = "I_Truck_02_box_F";
+		_techMg = "I_MRAP_03_hmg_F";
+	};
+	// CUP
+	case 1 : {
+		_apc = "CUP_O_BTR60_TK";
+		_refuel = "CUP_O_URAL_REFUEL_TKA";
+		_repair = "CUP_O_URAL_REPAIR_TKA";
+		_techMg = "CUP_O_UAZ_MG_TKA";
+	};
+	// RHS
+	case 2 : {
+		_apc = "rhs_btr70_chdkz";
+		_refuel = "rhs_ural_chdkz";
+		_repair = "rhs_ural_chdkz";
+		_techMg = "rhs_uaz_dshkm_chdkz";
+	};
+};
 // Creates Convoy
 _groupconvoy = createGroup east;
 
-_convoy_veh_array1 = [getMarkerPos "WP_Convoy_Start", 206, "CUP_O_BTR60_TK", _groupconvoy] call bis_fnc_spawnvehicle;
+_convoy_veh_array1 = [getMarkerPos "WP_Convoy_Start", 206, _apc, _groupconvoy] call bis_fnc_spawnvehicle;
 my_convoy_vec1 = _convoy_veh_array1 select 0;
 sleep 0.5;
 _convoy_veh2_pos = my_convoy_vec1 getRelPos [30, 180];
-_convoy_veh_array2 = [_convoy_veh2_pos, 206, "CUP_O_URAL_REFUEL_TKA", _groupconvoy] call bis_fnc_spawnvehicle;
+_convoy_veh_array2 = [_convoy_veh2_pos, 206, _refuel, _groupconvoy] call bis_fnc_spawnvehicle;
 my_convoy_vec2 = _convoy_veh_array2 select 0;
 sleep 0.5;
 _convoy_veh3_pos = my_convoy_vec2 getRelPos [30, 180];
-_convoy_veh_array3 = [_convoy_veh3_pos, 206, "CUP_O_URAL_REPAIR_TKA", _groupconvoy] call bis_fnc_spawnvehicle;
+_convoy_veh_array3 = [_convoy_veh3_pos, 206, _repair, _groupconvoy] call bis_fnc_spawnvehicle;
 my_convoy_vec3 = _convoy_veh_array3 select 0;
 sleep 0.5;
 _convoy_veh4_pos = my_convoy_vec3 getRelPos [30, 190];
-_convoy_veh_array4 = [_convoy_veh4_pos, 206, "CUP_O_UAZ_MG_TKA", _groupconvoy] call bis_fnc_spawnvehicle;
+_convoy_veh_array4 = [_convoy_veh4_pos, 206, _techMg, _groupconvoy] call bis_fnc_spawnvehicle;
 my_convoy_vec4 = _convoy_veh_array4 select 0;
 
 

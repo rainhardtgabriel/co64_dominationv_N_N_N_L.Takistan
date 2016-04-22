@@ -83,5 +83,32 @@ switch (tf47_param_vehiclemod) do {
 		_veh addWeaponCargoGlobal ["CUP_lmg_M249_para",1];
 		_veh addMagazineCargoGlobal ["CUP_200Rnd_TE4_Red_Tracer_556x45_M249",4];
 
+	}; 	
+	// RHS
+	case 2 : { 
+		// Weapons
+		_veh addWeaponCargoGlobal ["rhs_weap_m4a1_carryhandle",2];
+		_veh addWeaponCargoGlobal ["rhs_weap_m16a4_carryhandle",1];
+		_veh addWeaponCargoGlobal ["rhs_weap_m16a4_carryhandle_M203",1];
+
+		// Ammo
+		_veh addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_Stanag",30];
+		_veh addMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",12];
+		_veh addMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",8];
+		_veh addMagazineCargoGlobal ["1Rnd_SmokeGreen_Grenade_shell",8];
+		_veh addMagazineCargoGlobal ["1Rnd_SmokeRed_Grenade_shell",4];
+		
+		// Attachments
+		_veh addItemCargoGlobal ["rhsusf_acc_eotech_552",2];
+		_veh addItemCargoGlobal ["rhsusf_acc_ACOG_USMC",2];
+		_veh addItemCargoGlobal ["rhsusf_acc_anpeq15",4];
+		
+		// Launcher
+		_veh addWeaponCargoGlobal ["tf47_at4_heat",3];
+		
+		// LMG
+		_veh addWeaponCargoGlobal ["rhs_weap_m249_pip_L",1];
+		_veh addMagazineCargoGlobal ["rhs_200rnd_556x45_T_SAW",4];
+
 	}; 
 };

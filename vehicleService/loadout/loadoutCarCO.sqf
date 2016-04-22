@@ -74,7 +74,30 @@ switch (tf47_param_vehiclemod) do {
 		_veh addMagazineCargoGlobal ["CUP_Stinger_M",1];
 		_veh addMagazineCargoGlobal ["tf47_m3maaws_HE",1];
 		_veh addMagazineCargoGlobal ["tf47_m3maaws_HEAT",1];
-	}; 
+	};
+	// RHS
+	case 2 : {
+		// Weapons
+		_veh addWeaponCargoGlobal ["rhs_weap_m4a1_carryhandle",2];
+		_veh addWeaponCargoGlobal ["rhs_weap_m16a4_carryhandle",1];
+		_veh addWeaponCargoGlobal ["rhs_weap_m16a4_carryhandle_M203",1];
+
+		// Ammo
+		_veh addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_Mk318_Stanag",30];
+		_veh addMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",10];
+	
+		// Launcher
+		_veh addWeaponCargoGlobal ["rhs_weap_fim92",1];
+		_veh addWeaponCargoGlobal ["rhs_weap_fgm148", 1]; 
+		_veh addWeaponCargoGlobal ["rhs_weap_smaw",1];
+		_veh addWeaponCargoGlobal ["tf47_at4_heat",1];
+
+		// Launcher Ammo
+		_veh addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",2];
+		_veh addMagazineCargoGlobal ["rhs_fim92_mag",1];
+		_veh addMagazineCargoGlobal ["rhs_mag_smaw_HEAA",1];
+		_veh addMagazineCargoGlobal ["rhs_mag_smaw_HEDP",1];
+	};
 };
 
 

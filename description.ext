@@ -147,8 +147,8 @@ class Params
 	class tf47_param_vehiclemod
 	{
 			title = "Vehicle Mod(s)";
-			values[] = {0,1};
-			texts[] = {"Vanilla","CUP-MELB-FIRF15-SAM"};
+			values[] = {0,1,2};
+			texts[] = {"Vanilla","CUP-MELB-FIRF15-SAM","RHS-MELB-FIRF15"};
 			default = 1;
 			code = "tf47_param_vehiclemod = %1";
 	};
