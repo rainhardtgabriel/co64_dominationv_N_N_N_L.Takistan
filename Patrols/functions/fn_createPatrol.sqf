@@ -29,7 +29,7 @@ _endpos = getMarkerPos _end;
 _startdir = markerDir _start;
 _group = createGroup east;
 
-switch (tf47_var_vehiclemod) do { 
+switch (tf47_param_vehiclemod) do { 
 	case 0 : {
 		switch (_typ) do { 
 			case "inf" : {
