@@ -8,7 +8,7 @@ case "m":
 	// LOADOUT: MEDIUM
 	if (_loadout <= 1) then {
 		_unit addBackpack _bagmedic;
-		clearMagazineCargoGlobal (unitBackpack _unit);
+		clearAllItemsFromBackpack (unitBackpack _unit);
 		(unitBackpack _unit) addItemCargoGlobal [_medkit,1];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 4];
 		(unitBackpack _unit) addItemCargoGlobal [_firstaid, 4];
@@ -16,7 +16,7 @@ case "m":
 	// LOADOUT: HEAVY
 	if (_loadout == 2) then {
 		_unit addBackpack _bagmedic;
-		clearMagazineCargoGlobal (unitBackpack _unit);
+		clearAllItemsFromBackpack (unitBackpack _unit);
 		(unitBackpack _unit) addItemCargoGlobal [_medkit,2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 6];
 		(unitBackpack _unit) addItemCargoGlobal [_firstaid, 8];
@@ -28,7 +28,7 @@ case "cfr":
 	// LOADOUT: MEDIUM
 	if (_loadout <= 1) then {
 		_unit addBackpack _bagmedic;
-		clearMagazineCargoGlobal (unitBackpack _unit);
+		clearAllItemsFromBackpack (unitBackpack _unit);
 		(unitBackpack _unit) addMagazineCargoGlobal [_carbinemag,6];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 3];
 		(unitBackpack _unit) addItemCargoGlobal [_firstaid, 4];
@@ -37,7 +37,7 @@ case "cfr":
 	// LOADOUT: HEAVY
 	if (_loadout == 2) then {
 		_unit addBackpack _bagmedic;
-		clearMagazineCargoGlobal (unitBackpack _unit);
+		clearAllItemsFromBackpack (unitBackpack _unit);
 		(unitBackpack _unit) addItemCargoGlobal [_carbinemag,8];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 6];
 		(unitBackpack _unit) addItemCargoGlobal [_firstaid, 8];

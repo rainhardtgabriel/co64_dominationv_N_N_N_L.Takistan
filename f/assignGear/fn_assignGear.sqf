@@ -182,6 +182,7 @@ if (_faction in _ind_g_faction) then {
 
 if(isPlayer _unit) then {
 	[] execVM "f\medical\medical_init.sqf";
+	[] execVM "f\radios\radio_init.sqf";
 } else {};
 
 // This variable simply tracks the progress of the gear assignation process, for other
