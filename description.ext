@@ -135,9 +135,9 @@ class Params
 	class f_param_uniforms
 	{
 			title = "$STR_f_param_uniforms";
-			values[] = {0,1,2,3};
-			texts[] = {"Vanilla","RHS Woodland","RHS Desert","CUP Woodland"};
-			default = 3;
+			values[] = {0,1,2,3,4};
+			texts[] = {"Vanilla","RHS Woodland","RHS Desert","CUP Woodland","CUP & USM Desert"};
+			default = 4;
 			code = "f_param_uniforms = %1";
 	};
 
