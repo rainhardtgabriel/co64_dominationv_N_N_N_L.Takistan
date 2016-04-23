@@ -90,11 +90,6 @@ nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],false,[10,0],[0
 nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],true,[0,0],[1,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
 
 
-//////////////// makes pilot handcuffed ///////////////////////////////////////////////////////////////////////////////////////////////////
-sleep 1;
- if (f_var_medical >= 1) then {[pilot1, true] call ACE_captives_fnc_setHandcuffed;};
-
- 
 //////////////// create marker for HeliReturnPoint ////////////////////////////////////////////////////////////////////////////////////////
 	
 _markerreturn    = createMarker ["HeliReturn",     [8222.997,1776.622,0]]; //Loy Manara Airfield
