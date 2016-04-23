@@ -43,6 +43,9 @@ RespawnDialog = 0;										// default = 1. show respawn timer and scoreboard wh
 
 // ============================================================================================
 
+// Disable Channels
+
+disableChannels[] = {0,1,2,5,6};					// 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global. 
 
 // F3 - Start of Notifications block.
 
