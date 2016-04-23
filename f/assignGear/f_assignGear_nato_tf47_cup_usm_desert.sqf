@@ -1,4 +1,4 @@
-// F3 - Folk ARPS Assign Gear Script - NATO TF 47 Woodland
+// F3 - Folk ARPS Assign Gear Script - NATO TF 47 Desert // USMilitaryMod
 // adapted by TF47 Dev Team
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
@@ -161,12 +161,12 @@ _chemyellow =  "Chemlight_yellow";
 _chemblue = "Chemlight_blue";
 
 // Backpacks
-_bagsmall = "CUP_B_USMC_MOLLE";			// carries 120, weighs 20
-_bagmedium = "CUP_B_USMC_MOLLE";				// carries 240, weighs 30
-_baglarge =  "CUP_B_USMC_MOLLE"; 			// carries 320, weighs 40
-_bagmedic = _bagsmall;
-_baglargeradio = _baglarge;
-_bagautorifle = _bagmedium;
+_bagsmall = "usm_pack_alice";			// carries 120, weighs 20
+_bagmedium = "usm_pack_alice";				// carries 240, weighs 30
+_bagmedic = "usm_pack_m5_medic";				// carries 240, weighs 30
+_baglarge =  "usm_pack_alice"; 			// carries 320, weighs 40
+_baglargeradio = "usm_pack_alice_prc119";
+_bagautorifle = "usm_pack_200rnd_556_bandoliers";
 _bagmediumdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "B_UAV_01_backpack_F";			// used by UAV operator
 _baghmgg = "B_HMG_01_weapon_F";				// used by Heavy MG gunner
@@ -255,19 +255,19 @@ _specOp = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
-_baseUniform = ["CUP_U_B_USMC_Officer"];
-_baseHelmet = ["CUP_H_USMC_HelmetWDL"];
-_baseGlasses = ["G_Combat"];
+_baseUniform = ["usm_bdu_dcu_m";];
+_baseHelmet = ["usm_helmet_pasgt_dcu_m","usm_helmet_pasgt_d_m";];
+_baseGlasses = [""];
 
 // Vests
-_lightRig = ["CUP_V_B_MTV_Mine"];
-_mediumRig = ["CUP_V_B_MTV_Mine"]; 	// default for all infantry classes
+_lightRig = ["usm_vest_pasgtdes"];
+_mediumRig = ["usm_vest_pasgtdes_lbe_rm_m"]; 	// default for all infantry classes
 _heavyRig = ["CUP_V_B_MTV_Mine"];
-_oalrig =["CUP_V_B_MTV_Mine"];
-_grenftlrig =["CUP_V_B_MTV_Mine"];
-_corpsmanrig = ["CUP_V_B_MTV_Mine"];
-_marksmanrig = ["CUP_V_B_MTV_Mine"];
-_machinegunnersrig = ["CUP_V_B_MTV_Mine"];
+_oalrig =["usm_vest_pasgtdes_lbv_gr_m"];
+_grenftlrig =["usm_vest_pasgtdes_lbv_gr_m"];
+_corpsmanrig = ["usm_vest_pasgtdes_lbe_rmp_m"];
+_marksmanrig = ["usm_vest_pasgtdes_lbe_rmp_m"];
+_machinegunnersrig = ["usm_vest_pasgtdes_lbv_mg_m","usm_vest_pasgtdes_lbv_mg"];
 
 // Diver
 _diverUniform =  ["U_B_Wetsuit"];
@@ -762,7 +762,7 @@ switch (_typeofUnit) do
 		{_unit addItemToVest _smgmag; }			forEach[1,2,3,4,5];
 		_unit addweapon _smg;
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
-		["cc"] call _backpack;
+		["pil"] call _backpack;
 	};
 
 // LOADOUT: AIR VEHICLE CREW
@@ -771,6 +771,7 @@ switch (_typeofUnit) do
 		{_unit addItemToVest _smgmag; }			forEach[1,2,3,4,5];
 		_unit addweapon _smg;
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
+		["pil"] call _backpack;
 	};
 
 // LOADOUT: ENGINEER (DEMO)

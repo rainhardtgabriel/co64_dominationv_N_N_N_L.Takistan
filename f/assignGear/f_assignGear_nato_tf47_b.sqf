@@ -7,7 +7,7 @@ case "m":
 {
 	// LOADOUT: MEDIUM
 	if (_loadout <= 1) then {
-		_unit addBackpack _bagsmall;
+		_unit addBackpack _bagmedic;
 		clearMagazineCargoGlobal (unitBackpack _unit);
 		(unitBackpack _unit) addItemCargoGlobal [_medkit,1];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 4];
@@ -15,7 +15,7 @@ case "m":
 	};
 	// LOADOUT: HEAVY
 	if (_loadout == 2) then {
-		_unit addBackpack _baglarge;
+		_unit addBackpack _baglargeradio;
 		clearMagazineCargoGlobal (unitBackpack _unit);
 		(unitBackpack _unit) addItemCargoGlobal [_medkit,2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 6];
@@ -27,7 +27,7 @@ case "cfr":
 {
 	// LOADOUT: MEDIUM
 	if (_loadout <= 1) then {
-		_unit addBackpack _bagsmall;
+		_unit addBackpack _bagmedic;
 		clearMagazineCargoGlobal (unitBackpack _unit);
 		(unitBackpack _unit) addMagazineCargoGlobal [_carbinemag,6];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 3];
@@ -36,7 +36,7 @@ case "cfr":
 
 	// LOADOUT: HEAVY
 	if (_loadout == 2) then {
-		_unit addBackpack _bagmedium;
+		_unit addBackpack _bagmedic;
 		clearMagazineCargoGlobal (unitBackpack _unit);
 		(unitBackpack _unit) addItemCargoGlobal [_carbinemag,8];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 6];
@@ -86,13 +86,13 @@ case "ar":
 {
 	// LOADOUT: LIGHT
 	if (_loadout == 0) then {
-		_unit addBackpack _bagsmall;
+		_unit addBackpack _bagautorifle;
 		clearMagazineCargoGlobal (unitBackpack _unit);
 		(unitBackpack _unit)addMagazineCargoGlobal [_ARmag_Tr,1];
 	};
 	// LOADOUT: MEDIUM
 	if (_loadout == 1) then {
-		_unit addBackpack _bagsmall;
+		_unit addBackpack _bagautorifle;
 		clearMagazineCargoGlobal (unitBackpack _unit);
 		(unitBackpack _unit) addMagazineCargoGlobal [_ARmag, 1];
 		(unitBackpack _unit) addMagazineCargoGlobal [_ARmag_Tr, 1];
@@ -602,4 +602,10 @@ case "cc":
 	_unit addBackpack _bagsmall;
 	clearMagazineCargoGlobal (unitBackpack _unit);
 	(unitBackpack _unit) addItemCargoGlobal ["ToolKit",1];
+};
+// BACKPACK: Pilots
+case "pil":
+{
+	_unit addBackpack _baglargeradio;
+	clearMagazineCargoGlobal (unitBackpack _unit);
 };
