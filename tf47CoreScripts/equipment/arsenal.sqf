@@ -16,10 +16,6 @@ switch (f_param_uniforms) do {
 		// CUP
 		#include "cup_arsenal.sqf"
 	}; 
-	case 4 : {  
-		// CUP & USM
-		#include "us_arsenal.sqf"
-	}; 
 	default {  
 		// Vanilla
 		#include "vanilla_arsenal.sqf"
