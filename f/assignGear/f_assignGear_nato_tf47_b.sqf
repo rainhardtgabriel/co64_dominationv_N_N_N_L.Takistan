@@ -87,7 +87,6 @@ case "com":
 	if (_loadout == 0) then {
 		_unit addBackpack _baglargeradio;
 		clearMagazineCargoGlobal (unitBackpack _unit);
-		(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag,2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_glmag,1];
 		(unitBackpack _unit) addMagazineCargoGlobal [_glsmokewhite,1];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade,1];
@@ -96,7 +95,6 @@ case "com":
 	if (_loadout == 1) then {
 		_unit addBackpack _baglargeradio;
 		clearMagazineCargoGlobal (unitBackpack _unit);
-		(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 1];
 		(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_glsmokewhite, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
@@ -105,7 +103,6 @@ case "com":
 	if (_loadout == 2) then {
 		_unit addBackpack _baglargeradio;
 		clearMagazineCargoGlobal (unitBackpack _unit);
-		(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_glsmokewhite, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
