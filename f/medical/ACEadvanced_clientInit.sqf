@@ -24,8 +24,8 @@ player addItemtoUniform "ACE_Maptools"; 	// Add Maptools
 player addItemtoUniform "ACE_IR_Strobe_Item"; // Add IR Strobe
 player addItemtoUniform "ACE_CableTie"; // Add Cable Ties
 player addItemToUniform "ACE_Flashlight_XL50"; // Add ACE Flashlights
-// Backpacks
-player addItemToBackpack "ACE_personalAidKit"; // add this one to Backpack
+// Vest
+player addItemToVest "ACE_personalAidKit"; // add this one to Backpack
 
 if (_typeOfUnit == "m") then
 {

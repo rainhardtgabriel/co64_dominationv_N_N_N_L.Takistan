@@ -15,7 +15,7 @@ case "m":
 	};
 	// LOADOUT: HEAVY
 	if (_loadout == 2) then {
-		_unit addBackpack _baglargeradio;
+		_unit addBackpack _bagmedic;
 		clearMagazineCargoGlobal (unitBackpack _unit);
 		(unitBackpack _unit) addItemCargoGlobal [_medkit,2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 6];
@@ -78,6 +78,37 @@ case "g":
 		(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 4];
 		(unitBackpack _unit) addMagazineCargoGlobal [_mgrenade, 4];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 4];
+	};
+};
+// BACKPACK:  (CO/DC/SL)
+case "com":
+{
+	// LOADOUT: LIGHT
+	if (_loadout == 0) then {
+		_unit addBackpack _baglargeradio;
+		clearMagazineCargoGlobal (unitBackpack _unit);
+		(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag,2];
+		(unitBackpack _unit) addMagazineCargoGlobal [_glmag,1];
+		(unitBackpack _unit) addMagazineCargoGlobal [_glsmokewhite,1];
+		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade,1];
+	};
+	// LOADOUT: MEDIUM
+	if (_loadout == 1) then {
+		_unit addBackpack _baglargeradio;
+		clearMagazineCargoGlobal (unitBackpack _unit);
+		(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 1];
+		(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 2];
+		(unitBackpack _unit) addMagazineCargoGlobal [_glsmokewhite, 2];
+		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
+	};
+	// LOADOUT: HEAVY
+	if (_loadout == 2) then {
+		_unit addBackpack _baglargeradio;
+		clearMagazineCargoGlobal (unitBackpack _unit);
+		(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 2];
+		(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 2];
+		(unitBackpack _unit) addMagazineCargoGlobal [_glsmokewhite, 2];
+		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
 	};
 };
 
@@ -599,7 +630,7 @@ case "uav":
 // BACKPACK: CREW CHIEFS & VEHICLE DRIVERS
 case "cc":
 {
-	_unit addBackpack _bagsmall;
+	_unit addBackpack _baglargeradio;
 	clearMagazineCargoGlobal (unitBackpack _unit);
 	(unitBackpack _unit) addItemCargoGlobal ["ToolKit",1];
 };

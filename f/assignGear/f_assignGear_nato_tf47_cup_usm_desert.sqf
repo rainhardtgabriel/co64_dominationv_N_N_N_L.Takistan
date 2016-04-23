@@ -379,7 +379,7 @@ switch (_typeofUnit) do
 // LOADOUT: COMMANDER
 	case "co":
 	{
-		{ _unit addItemtoVest _glriflemag; } 		forEach [1,2,3,4,5,6,7];
+		{ _unit addItemtoVest _glriflemag; } 		forEach [1,2,3,4,5,6,7,8,9];
 		{ _unit addItemToVest _glriflemag_tr; } 	forEach	[1,2];
 		{ _unit addItemToVest _glmag; }			forEach	[1,2,3];
 		{ _unit addItemToVest _glsmokewhite; }		forEach [1,2,3,4];
@@ -393,13 +393,13 @@ switch (_typeofUnit) do
 		_attachments = [_attach1,_scope3];
 		_unit addWeapon "ACE_Vector";
 		_unit linkItem "ItemGPS";
-		["g"] call _backpack;
+		["com"] call _backpack;
 	};
 
 // LOADOUT: DEPUTY COMMANDER AND SQUAD LEADER
 	case "dc":
 	{
-		{ _unit addItemtoVest _glriflemag; } 		forEach [1,2,3,4,5,6,7];
+		{ _unit addItemtoVest _glriflemag; } 		forEach [1,2,3,4,5,6,7,8,9];
 		{ _unit addItemToVest _glriflemag_tr; } 	forEach	[1,2];
 		{ _unit addItemToVest _glmag; }			forEach	[1,2,3];
 		{ _unit addItemToVest _glsmokewhite; }		forEach [1,2,3,4];
@@ -413,7 +413,7 @@ switch (_typeofUnit) do
 		_attachments = [_attach1,_scope2];
 		_unit addWeapon "ACE_Vector";
 		_unit linkItem "ItemGPS";
-		["g"] call _backpack;
+		["com"] call _backpack;
 	};
 
 // LOADOUT: MEDIC
