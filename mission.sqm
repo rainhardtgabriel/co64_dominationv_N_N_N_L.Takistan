@@ -17834,7 +17834,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="this setFlagTexture ""tf47_supremacy_signs\data\squads\tf47_vegas.paa""; this allowDamage false;";
+				init="this setFlagTexture ""tf47_supremacy_signs\data\squads\tf47vegas.paa""; this allowDamage false;";
 				name="TF47FlagComm_1";
 			};
 			id=1592;
