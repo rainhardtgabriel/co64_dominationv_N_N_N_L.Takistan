@@ -149,7 +149,7 @@ _firstaid = "FirstAidKit";
 _medkit = "Medikit";
 
 // Night Vision Goggles (NVGoggles)
-_nvg = "NVGoggles";
+_nvg = "CUP_NVG_PVS7";
 
 // UAV Terminal
 _uavterminal = "B_UavTerminal";	  // BLUFOR - FIA
@@ -256,18 +256,18 @@ _specOp = [];
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
 _baseUniform = ["usm_bdu_dcu_m"];
-_baseHelmet = ["usm_helmet_pasgt_dcu_m","usm_helmet_pasgt_d_m"];
+_baseHelmet = ["usm_helmet_pasgt_dcu_m"];
 _baseGlasses = [""];
 
 // Vests
-_lightRig = ["usm_vest_pasgtdes"];
-_mediumRig = ["usm_vest_pasgtdes_lbe_rm_m"]; 	// default for all infantry classes
+_lightRig = ["usm_vest_pasgtdcu"];
+_mediumRig = ["usm_vest_pasgtdcu_lbe_rm_m"]; 	// default for all infantry classes
 _heavyRig = ["CUP_V_B_MTV_Mine"];
-_oalrig =["usm_vest_pasgtdes_lbv_gr_m"];
-_grenftlrig =["usm_vest_pasgtdes_lbv_gr_m"];
-_corpsmanrig = ["usm_vest_pasgtdes_lbe_rmp_m"];
-_marksmanrig = ["usm_vest_pasgtdes_lbe_rmp_m"];
-_machinegunnersrig = ["usm_vest_pasgtdes_lbv_mg_m","usm_vest_pasgtdes_lbv_mg"];
+_oalrig =["usm_vest_pasgtdcu_lbv_gr_m"];
+_grenftlrig =["usm_vest_pasgtdcu_lbv_gr_m"];
+_corpsmanrig = ["usm_vest_pasgtdcu_lbe_rmp_m"];
+_marksmanrig = ["usm_vest_pasgtdcu_lbe_rmp_m"];
+_machinegunnersrig = ["usm_vest_pasgtdcu_lbv_mg_m","usm_vest_pasgtdes_lbv_mg"];
 
 // Diver
 _diverUniform =  ["U_B_Wetsuit"];
