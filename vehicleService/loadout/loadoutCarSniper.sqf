@@ -31,7 +31,7 @@ switch (tf47_param_vehiclemod) do {
 	// Vanilla
 	case 0 : { 
 		_veh addWeaponCargoGlobal ["arifle_MX_F",2];
-		_veh addWeaponCargoGlobal ["30Rnd_65x39_caseless_mag",30];];
+		_veh addWeaponCargoGlobal ["30Rnd_65x39_caseless_mag",30];
 	}; 
 	// CUP
 	case 1 : { 
