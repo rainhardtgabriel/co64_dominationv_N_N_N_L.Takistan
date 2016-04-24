@@ -4,6 +4,7 @@ _veh setVariable ["loadoutName", "Mortar Loadout", true];
 clearItemCargoGlobal _veh;
 clearWeaponCargoGlobal _veh;
 clearMagazineCargoGlobal _veh;	
+clearBackpackCargoGlobal _veh;
 
 //Grenades
 _veh addMagazineCargoGlobal ["SmokeShell",3];
@@ -30,7 +31,7 @@ switch (tf47_param_vehiclemod) do {
 	case 0 : { 
 		//Items
 		_veh addItemCargoGlobal ["NVGoggles",2];
-		_veh addWeaponCargoGlobal ["arifle_MX_F",2
+		_veh addWeaponCargoGlobal ["arifle_MX_F",2];
 		_veh addMagazineCargoGlobal ["30Rnd_65x39_caseless_mag",30];
 	}; 
 	// CUP

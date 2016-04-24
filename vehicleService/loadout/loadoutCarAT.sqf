@@ -3,7 +3,8 @@ _veh setVariable ["loadoutName", "Anti Tank Loadout", true];
 //Clear Cargo
 clearItemCargoGlobal _veh;
 clearWeaponCargoGlobal _veh;
-clearMagazineCargoGlobal _veh;	
+clearMagazineCargoGlobal _veh;
+clearBackpackCargoGlobal _veh;
 
 
 _veh addWeaponCargoGlobal ["ACE_EarPlugs",4];
