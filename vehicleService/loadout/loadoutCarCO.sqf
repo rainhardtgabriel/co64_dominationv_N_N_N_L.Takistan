@@ -3,7 +3,8 @@ _veh setVariable ["loadoutName", "Combined Operations Loadout", true];
 //Clear Cargo
 clearItemCargoGlobal _veh;
 clearWeaponCargoGlobal _veh;
-clearMagazineCargoGlobal _veh;	
+clearMagazineCargoGlobal _veh;
+clearBackpackCargoGlobal _veh;
 
 //Grenades
 _veh addMagazineCargoGlobal ["SmokeShell",3];

@@ -3,7 +3,8 @@ _veh setVariable ["loadoutName", "Infantry Loadout", true];
 //Clear Cargo
 clearItemCargoGlobal _veh;
 clearWeaponCargoGlobal _veh;
-clearMagazineCargoGlobal _veh;	
+clearMagazineCargoGlobal _veh;
+clearBackpackCargoGlobal _veh;
 
 //Medic
 _veh addItemCargoGlobal ["ACE_fieldDressing",10];
