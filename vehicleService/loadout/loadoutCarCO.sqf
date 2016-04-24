@@ -10,7 +10,7 @@ _veh addMagazineCargoGlobal ["SmokeShell",3];
 _veh addMagazineCargoGlobal ["SmokeShellGreen",3];
 _veh addMagazineCargoGlobal ["SmokeShellRed",3];
 _veh addMagazineCargoGlobal ["SmokeShellBLue",3];
-_veh addMagazineCargoGlobal ["HandGrenade_West",5];
+_veh addMagazineCargoGlobal ["HandGrenade",5];
 
 //Items
 _veh addWeaponCargoGlobal ["ACE_EarPlugs",10];
