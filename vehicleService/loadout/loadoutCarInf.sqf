@@ -23,7 +23,6 @@ _veh addMagazineCargoGlobal ["SmokeShellBLue",2];
 _veh addItemCargoGlobal ["ItemRadio",2];
 _veh addItemCargoGlobal ["ACE_Flashlight_XL50",4];
 
-_veh addItemCargoGlobal ["NVGoggles",4];
 _veh addWeaponCargoGlobal ["ACE_Vector",1];
 _veh addItemCargoGlobal ["B_UavTerminal",1];
 
@@ -31,6 +30,8 @@ _veh addItemCargoGlobal ["B_UavTerminal",1];
 switch (tf47_param_vehiclemod) do { 
 	// Vanilla
 	case 0 : { 
+		// Items
+		_veh addItemCargoGlobal ["NVGoggles",4];
 		// Weapons
 		_veh addWeaponCargoGlobal ["arifle_MX_F",2];
 		_veh addWeaponCargoGlobal ["arifle_MXC_F",1];
@@ -58,6 +59,8 @@ switch (tf47_param_vehiclemod) do {
 	}; 
 	// CUP
 	case 1 : { 
+		// Items
+		_veh addItemCargoGlobal ["CUP_NVG_PVS7",4];
 		// Weapons
 		_veh addWeaponCargoGlobal ["CUP_arifle_M4A1_black",2];
 		_veh addWeaponCargoGlobal ["CUP_arifle_M16A4_Base",1];
@@ -86,6 +89,8 @@ switch (tf47_param_vehiclemod) do {
 	}; 	
 	// RHS
 	case 2 : { 
+		//Items
+		_veh addItemCargoGlobal ["ACE_NVG_Gen1",4];
 		// Weapons
 		_veh addWeaponCargoGlobal ["rhs_weap_m4a1_carryhandle",2];
 		_veh addWeaponCargoGlobal ["rhs_weap_m16a4_carryhandle",1];
