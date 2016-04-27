@@ -1,4 +1,4 @@
-private ["_side_log_pos","_side_rad","_side_name","_side_trig", "_side_ai_skill_array","_cacheside_loc_select","_cacheside_loc","_trigx","_trigy","_trigz"];
+private ["_side_log_pos","_side_rad","_side_name","_side_trig", "_side_ai_skill_array","_cacheside_loc_select","_cacheside_loc","_trigx","_trigy","_trigz","_cache"];
 
 _ao = getMarkerPos "ao_mkr1";
 _oldSide = getMarkerPos "side_mkr1";
@@ -35,8 +35,24 @@ _side_trig1 setTriggerActivation     ["none", "notpresent", true];
 _side_trig1 setTriggerStatements      ["!alive cache1", 
                                      "deletevehicle thisTrigger" , ""];
  
+ 
+_cache = switch (tf47_param_vehiclemod) do { 
+	// Van
+	case 0 : {
+		"Box_IND_Wps_F";
+	};
+	// CUP
+	case 1 : {
+		"CUP_TKBasicWeapons_EP1";
+	};
+	// RHS
+	case 2 : {
+		"rhs_mags_crate";
+	};
+};
+ 
 _side_position = [ _side_trig1] call BIS_fnc_randomPosTrigger;
-cache1 = "CUP_TKBasicWeapons_EP1" createVehicle _side_position;
+cache1 = _cache createVehicle _side_position;
 waitUntil { sleep 0.5; alive cache1 };
 cache1 setVectorUp [0,0,1];
 cache1Alive = true;									

@@ -202,7 +202,9 @@ if (isServer) then {
                                 } else {
                                         diag_log "--- TF47 Ticket System DB Extension failed: No MissionID given";
                                 };
-
+								
+								publicVariable "westTickets";
+								
                                 // Ticket Reset Message
                                 if (_action == 1) then {
                                         ["tf47_showTickets", WEST] call cba_fnc_globalEvent;

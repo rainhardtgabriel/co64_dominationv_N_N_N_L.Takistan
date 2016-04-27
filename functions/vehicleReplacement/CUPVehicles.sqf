@@ -10,6 +10,12 @@
 * 	@website	http://armasim.de/
 * 	@version    0.1a
 */
+//Arms Euqipmentarea
+_rifle= "CUP_Weapon_arifle_M16A4_Base";
+_dmr = "CUP_Weapon_srifle_M110";
+_nlaw = "CUP_Weapon_launch_M136";
+_drone = "B_UAV_01_F";
+_machinegun = "CUP_Weapon_lmg_M249";
 //Small Vehicles
 _quad = "B_Quadbike_01_F";//veh= [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM "tf47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true]; 
 _bike = "CUP_B_M1030"; // veh = [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM 47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true];

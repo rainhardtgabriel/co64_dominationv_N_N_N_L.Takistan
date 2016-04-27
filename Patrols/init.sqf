@@ -33,5 +33,5 @@ while {_amount != 0 AND (count Patrols) != 5} do {
 
 while {true} do {
 	sleep 300;
-	[] execVM "Patrols\delayedcreatePatrol.sqf";
+	[] execVM "Patrols\checkPatrols.sqf"; 
 };

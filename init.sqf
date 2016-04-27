@@ -41,8 +41,8 @@ if(isServer) then {
 // F3 - Automatic Body Removal
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_var_removeBodyDelay = 180;
-f_var_removeBodyDistance = 500;
+f_var_removeBodyDelay = 60;
+f_var_removeBodyDistance = 0;
 // f_var_doNotRemoveBodies = [];
 [] execVM "f\removeBody\f_addRemoveBodyEH.sqf";
 
@@ -95,7 +95,7 @@ f_var_cachingAggressiveness = 1;
 // F3 - Radio Systems Support
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[] execVM "f\radios\radio_init.sqf";
+//[] execVM "f\radios\radio_init.sqf";
 
 // ====================================================================================
 
@@ -115,25 +115,25 @@ publicVariable "headlessClientActive";
 // Spawn units on the HC if hes active
 // otherwise spawn him on the server
 
-// if(headlessClientActive && isMultiplayer) then {
-    // if(!isServer && !hasInterface) then {
-		// tf47_var_iedTracker = [];
-		// tf47_var_mainCount = 0;
+if(headlessClientActive && isMultiplayer) then {
+    if(!isServer && !hasInterface) then {
+		tf47_var_iedTracker = [];
+		tf47_var_mainCount = 0;
 
-		// tf47_var_AOCollection = [
-							// "timurkulay","chadarakht","gamarud","gamsar","imarat","zavarak","karachinar","ravanay","nagara","shamali",/*"airfield",*/
-							// "rasman","bastam","falar","mulladost","nur","feruz", "jilavur","chak","landay","shukurkalay","chaman","sakhe"];
+		tf47_var_AOCollection = [
+							"timurkulay","chadarakht","gamarud","gamsar","imarat","zavarak","karachinar","ravanay","nagara","shamali",/*"airfield",*/
+							"rasman","bastam","falar","mulladost","nur","feruz", "jilavur","chak","landay","shukurkalay","chaman","sakhe"];
 
-		// tf47_var_AOObjects = [];
-        // diag_log "HeadlessClient: Spawning the AI on the HeadlessClient!";
-		// [] execVM "AOscripts\AOstart.sqf";
-		// sleep 0.1;
-		// [] execVM "SIDEscripts\SIDEstart.sqf";
-		// sleep 0.1;
-		// [] execVM "Patrols\init.sqf";
-		// sleep 0.1;
-    // };
-// } else { 
+		tf47_var_AOObjects = [];
+        diag_log "HeadlessClient: Spawning the AI on the HeadlessClient!";
+		[] execVM "AOscripts\AOstart.sqf";
+		sleep 0.1;
+		[] execVM "SIDEscripts\SIDEstart.sqf";
+		sleep 0.1;
+		[] execVM "Patrols\init.sqf";
+		sleep 0.1;
+    };
+} else { 
     if(isServer) then {
         diag_log "HeadlessClient: Spawning the AI on the Server!";
 		[] execVM "AOscripts\AOstart.sqf";
@@ -145,7 +145,7 @@ publicVariable "headlessClientActive";
 		[] execVM "Patrols\init.sqf";
 		sleep 0.1;
     };
-// };
+};
 
 // ======================== TF47 Stuff ===================================
 

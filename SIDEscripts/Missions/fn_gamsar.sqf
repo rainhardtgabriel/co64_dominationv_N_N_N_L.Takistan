@@ -1,4 +1,4 @@
-private ["_side_log_pos","_side_rad","_side_name","_side_trig","_side_position","_side_flatPos", "_side_ai_skill_array","_heliside_loc","_heliside_loc_select"];
+private ["_side_log_pos","_side_rad","_side_name","_side_trig","_side_position","_side_flatPos", "_side_ai_skill_array","_heliside_loc","_heliside_loc_select","_helo"];
 
 _ao = getMarkerPos "ao_mkr1";
 _oldSide = getMarkerPos "side_mkr1";
@@ -51,7 +51,23 @@ while {IsOnRoad _side_flatPos} do {
 _side_position = [[[getPos _side_log_pos, 50],_side_trig],["water","out"]] call BIS_fnc_randomPos;
 _side_flatPos = _side_position isFlatEmpty[3, 1, 0.5, 30, 0, false];
 };
-CapVeh1 = "CUP_B_AH1Z_Escort" createVehicle _side_flatPos;
+
+_helo = switch (tf47_param_vehiclemod) do { 
+	// Van
+	case 0 : {
+		"B_Heli_Attack_01_F";
+	};
+	// CUP
+	case 1 : {
+		"CUP_B_AH1Z_Escort";
+	};
+	// RHS
+	case 2 : {
+		"RHS_AH1Z";
+	};
+};
+
+CapVeh1 = _helo createVehicle _side_flatPos;
 waitUntil { sleep 0.5; alive CapVeh1 };
 CapVeh1 setVectorUp [0,0,1];
 CapVeh1 setHit ["motor", 1];
@@ -74,11 +90,6 @@ nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],false,[10,0],[0
 nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],true,[0,0],[1,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
 
 
-//////////////// makes pilot handcuffed ///////////////////////////////////////////////////////////////////////////////////////////////////
-sleep 1;
- if (f_var_medical >= 1) then {[pilot1, true] call ACE_captives_fnc_setHandcuffed;};
-
- 
 //////////////// create marker for HeliReturnPoint ////////////////////////////////////////////////////////////////////////////////////////
 	
 _markerreturn    = createMarker ["HeliReturn",     [8222.997,1776.622,0]]; //Loy Manara Airfield

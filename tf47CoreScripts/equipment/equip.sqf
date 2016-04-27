@@ -34,30 +34,9 @@ if (isNil{_type}) then {} else {
 					_object allowDamage false;
 					_object enableSimulationGlobal false;
 			};
-			case "table_x" : {
-					_object setPos [_pos_x,_pos_y,_pos_z+0.88];
-					_object allowDamage false;
-					_object enableSimulationGlobal false;
-			};
 			case "levelphone" : {
 					_object setPos [_pos_x,_pos_y,_pos_z+0.86];
 					_object allowDamage false;
-					_object enableSimulationGlobal false;
-			};
-			case "levelat" : {
-					_object setPos [_pos_x,_pos_y,_pos_z+0.93];
-					_object allowDamage false;
-					_object enableSimulationGlobal false;
-			};
-			case "leveldrone" : {
-					_object setPos [_pos_x,_pos_y,_pos_z+0.84];
-					_object allowDamage false;
-					_object enableSimulationGlobal false;
-			};
-			case "rifle" : {
-					_object setPos [_pos_x,_pos_y,_pos_z+0.88];
-					_object allowDamage false;
-					_object setVectorDirAndUp [[0,1,0],[0,1,.33]];
 					_object enableSimulationGlobal false;
 			};
 			case "tent" : {

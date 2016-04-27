@@ -43,6 +43,9 @@ RespawnDialog = 0;										// default = 1. show respawn timer and scoreboard wh
 
 // ============================================================================================
 
+// Disable Channels
+
+disableChannels[] = {0,1,2,5,6};					// 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global. 
 
 // F3 - Start of Notifications block.
 
@@ -135,9 +138,9 @@ class Params
 	class f_param_uniforms
 	{
 			title = "$STR_f_param_uniforms";
-			values[] = {0,1,2,3};
-			texts[] = {"Vanilla","RHS Woodland","RHS Desert","CUP Woodland"};
-			default = 3;
+			values[] = {0,1,2,3,4};
+			texts[] = {"Vanilla","RHS Woodland","RHS Desert","CUP Woodland","CUP & USM Desert"};
+			default = 4;
 			code = "f_param_uniforms = %1";
 	};
 
@@ -147,8 +150,8 @@ class Params
 	class tf47_param_vehiclemod
 	{
 			title = "Vehicle Mod(s)";
-			values[] = {0,1};
-			texts[] = {"Vanilla","CUP-MELB-FIRF15-SAM"};
+			values[] = {0,1,2};
+			texts[] = {"Vanilla","CUP-MELB-FIRF15-SAM","RHS-MELB-FIRF15"};
 			default = 1;
 			code = "tf47_param_vehiclemod = %1";
 	};
@@ -726,85 +729,6 @@ class RscTitles
 				texture = "#(argb,8,8,3)color(1,1,1,1)";
 			};
 		};
-	};
-};
-
-class CfgSounds
-{
-
-sounds[] = {mission_new, mission_complete,sidemission_complete,sidemission_new,sidemission_failed};
-
-class mission_new
-{
-name = "mission_new";
-sound[] = {\sounds\mission_new.ogg, 1.9, 1.0};
-titles[] = {0, ""};
-};
-class mission_complete
-{
-name = "mission_complete";
-sound[] = {\sounds\mission_complete.ogg, 1.9, 1.0};
-titles[] = {0, ""};
-};
-class sidemission_complete
-{
-name = "sidemission_complete";
-sound[] = {\sounds\sidemission_complete.ogg, 1.9, 1.0};
-titles[] = {0, ""};
-};
-class sidemission_new
-{
-name = "sidemission_new";
-sound[] = {\sounds\sidemission_new.ogg, 1.9, 1.0};
-titles[] = {0, ""};
-};
-class sidemission_failed
-{
-name = "sidemission_failed";
-sound[] = {\sounds\sidemission_failed.ogg, 1.9, 1.0};
-titles[] = {0, ""};
-};
-	class buildingFOB
-	{
-		name="buildingFOB";
-		sound[] = {"\sounds\buildingFOB.ogg",1,1.0};
-		titles[]={};
-	};
-
-	class preintro
-	{
-		name="preintro";
-		sound[] = {"\sounds\preintro.ogg",1,1.0};
-		titles[]={};
-	};
-
-	class intro
-	{
-		name="intro";
-		sound[] = {"\sounds\intro.ogg",1,1.0};
-		titles[]={};
-	};
-
-	class outro
-	{
-		name="outro";
-		sound[] = {"\sounds\outro.ogg",1,1.0};
-		titles[]={};
-	};
-};
-class CfgMusic
-{
-	tracks[]={"MKY_Blizzard","MKY_Snowfall"};
-
-	class MKY_Blizzard
-	{
-		name = "";
-		sound[] = {"\MKY\sounds\m0nkey_blizzard.ogg", db+0, 1.0};
-	};
-	class MKY_Snowfall
-	{
-		name = "";
-		sound[] = {"\MKY\sounds\m0nkey_snowfall.ogg", db+0, 1.0};
 	};
 };
 

@@ -5,7 +5,23 @@ _pos = _this select 0;
 _side = _this select 1;
 
 _BLUveh = ["B_MRAP_01_F","B_MRAP_01_hmg_F","B_MRAP_01_gmg_F","B_Quadbike_01_F","B_Truck_01_transport_F","B_Truck_01_covered_F","B_APC_Tracked_01_rcws_F","B_APC_Tracked_01_AA_F","B_APC_Wheeled_01_cannon_F","B_MBT_01_cannon_F","B_MBT_01_arty_F","B_MBT_01_mlrs_F"];
-_OPFveh = ["CUP_O_M113_TKA","CUP_O_ZSU23_TK","CUP_O_T72_TKA","CUP_O_UAZ_MG_TKA","CUP_O_UAZ_MG_TKA","CUP_O_UAZ_MG_TKA","CUP_O_UAZ_SPG9_TKA","CUP_O_UAZ_SPG9_TKA","CUP_O_UAZ_SPG9_TKA"];
+
+
+_OPFveh = switch (tf47_param_vehiclemod) do { 
+	// Van
+	case 0 : {
+		["I_APC_tracked_03_cannon_F","I_APC_Wheeled_03_cannon_F","I_MRAP_03_gmg_F","I_MRAP_03_hmg_F","I_MBT_03_cannon_F"];
+	};
+	// CUP
+	case 1 : {
+		["CUP_O_M113_TKA","CUP_O_ZSU23_TK","CUP_O_T72_TKA","CUP_O_UAZ_MG_TKA","CUP_O_UAZ_MG_TKA","CUP_O_UAZ_MG_TKA","CUP_O_UAZ_SPG9_TKA","CUP_O_UAZ_SPG9_TKA","CUP_O_UAZ_SPG9_TKA"];
+	};
+	// RHS
+	case 2 : {
+		["rhs_zsu234_chdkz","rhs_btr70_chdkz","rhs_t72bb_chdkz","rhs_bmp2_chdkz","rhs_bmp2_chdkz","rhs_uaz_ags_chdkz","rhs_uaz_dshkm_chdkz","rhs_uaz_spg9_chdkz"];
+	};
+};
+
 _INDveh = ["I_MRAP_03_F","I_MRAP_03_gmg_F","I_MRAP_03_hmg_F","I_Quadbike_01_F","I_Truck_02_transport_F","I_Truck_02_covered_F","I_APC_Wheeled_03_cannon_F","I_APC_Wheeled_03_cannon_F","I_APC_Wheeled_03_cannon_F"];
 
 _men = [];
