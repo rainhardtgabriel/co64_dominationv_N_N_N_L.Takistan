@@ -147,7 +147,7 @@ _comp = [
 
 } forEach _comp;
 
-_padPos = _location findEmptyPosition [10,30,"Land_HelipadCircle_F"];
+_padPos = _location findEmptyPosition [10,50,"Land_HelipadCircle_F"];
 fobhelipad = createVehicle ["Land_HelipadCircle_F", _padPos, [], 0, "NONE"];
 fobhelipad enablesimulationglobal false;
 
@@ -159,8 +159,6 @@ deleteVehicle fobtable;
 
 //[_location, _dir-40, [["Land_Workbench_01_F",[3.4,-4.45,0],310.891,1,0,[],"fobtable","this addAction ['remove F.O.B.', '[] remoteExec [""tf47_fnc_removeFOB"", 2];'];",true,false]]] call BIS_fnc_ObjectsMapper;
 [_location, _dir-40, [["Land_Workbench_01_F",[3.4,-4.45,0],310.891,1,0,[],"fobtable","",true,false]]] call BIS_fnc_ObjectsMapper;
-
-hint "addaction";
 
 [fobtable, "remove F.O.B.", "[] remoteExec [""tf47_fnc_removeFOB"", 2];"] remoteExecCall ["tf47_fnc_addAction", 0];
 

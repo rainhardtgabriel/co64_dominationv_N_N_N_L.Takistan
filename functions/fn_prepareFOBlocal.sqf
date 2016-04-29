@@ -4,6 +4,10 @@ if (tf47_var_FOBStatus == 1) exitWith {hint composeText ["Die Aktion ist gerade 
 
 if ((fobContainer1 distance fobContainer2) + (fobContainer2 distance fobContainer3) + (fobContainer1 distance fobContainer3) >60) exitWith {hint composeText ["Der Abstand der Kisten ist zu hoch.", lineBreak, lineBreak, "The distance between the containers is too high."]};
 
+if (!(tf47_var_FOBhelper isEqualTo [])) exitWith{};
+
+/*
+
 _nearRoads = fobContainer1 nearRoads 15;
 
 _location = [0,0];
@@ -36,6 +40,80 @@ if (count _nearRoads < 0) exitWith {hint composeText ["Es sind keine Straßen in
 
 } forEach _nearRoads;
 
-if (_location isEqualTo [0,0]) exitWith {hint composeText ["Das Gelände ist uneben oder nicht frei.", lineBreak, lineBreak,"The terrain is not free or empty."]};
+*/
+
+tf47_var_FOBhelper = [];
+_ball = createVehicle ["Sign_Sphere25cm_F", getPos player, [], 0, "NONE"];
+_ball attachTo [player, [0, 18, 2] ];
+tf47_var_FOBhelper pushback _ball;
+_ball = createVehicle ["Sign_Sphere25cm_F", getPos player, [], 0, "NONE"];
+_ball attachTo [player, [0, 18, 1] ];
+tf47_var_FOBhelper pushback _ball;
+_ball = createVehicle ["Sign_Sphere25cm_F", getPos player, [], 0, "NONE"];
+_ball attachTo [player, [0, 18, 0.5] ];
+tf47_var_FOBhelper pushback _ball;
+_ball = createVehicle ["Sign_Sphere25cm_F", getPos player, [], 0, "NONE"];
+_ball attachTo [player, [-14, 18, 2] ];
+tf47_var_FOBhelper pushback _ball;
+_ball = createVehicle ["Sign_Sphere25cm_F", getPos player, [], 0, "NONE"];
+_ball attachTo [player, [-14, 18, 1] ];
+tf47_var_FOBhelper pushback _ball;
+_ball = createVehicle ["Sign_Sphere25cm_F", getPos player, [], 0, "NONE"];
+_ball attachTo [player, [-14, 18, 0.5] ];
+tf47_var_FOBhelper pushback _ball;
+_ball = createVehicle ["Sign_Sphere25cm_F", getPos player, [], 0, "NONE"];
+_ball attachTo [player, [14, 18, 2] ];
+tf47_var_FOBhelper pushback _ball;
+_ball = createVehicle ["Sign_Sphere25cm_F", getPos player, [], 0, "NONE"];
+_ball attachTo [player, [14, 18, 1] ];
+tf47_var_FOBhelper pushback _ball;
+_ball = createVehicle ["Sign_Sphere25cm_F", getPos player, [], 0, "NONE"];
+_ball attachTo [player, [14, 18, 0.5] ];
+tf47_var_FOBhelper pushback _ball;
+_ball = createVehicle ["Sign_Sphere25cm_F", getPos player, [], 0, "NONE"];
+_ball attachTo [player, [0, 3, 0.1] ];
+tf47_var_FOBhelper pushback _ball;
+_ball = createVehicle ["Sign_Sphere25cm_F", getPos player, [], 0, "NONE"];
+_ball attachTo [player, [-14, 3, 2] ];
+tf47_var_FOBhelper pushback _ball;
+_ball = createVehicle ["Sign_Sphere25cm_F", getPos player, [], 0, "NONE"];
+_ball attachTo [player, [-14, 3, 1] ];
+tf47_var_FOBhelper pushback _ball;
+_ball = createVehicle ["Sign_Sphere25cm_F", getPos player, [], 0, "NONE"];
+_ball attachTo [player, [-14, 3, 0.5] ];
+tf47_var_FOBhelper pushback _ball;
+_ball = createVehicle ["Sign_Sphere25cm_F", getPos player, [], 0, "NONE"];
+_ball attachTo [player, [14, 3, 2] ];
+tf47_var_FOBhelper pushback _ball;
+_ball = createVehicle ["Sign_Sphere25cm_F", getPos player, [], 0, "NONE"];
+_ball attachTo [player, [14, 3, 1] ];
+tf47_var_FOBhelper pushback _ball;
+_ball = createVehicle ["Sign_Sphere25cm_F", getPos player, [], 0, "NONE"];
+_ball attachTo [player, [14, 3, 0.5] ];
+tf47_var_FOBhelper pushback _ball;
+
+_action = player addAction ["Set F.O.B. Position", "[] call tf47_fnc_checkFOBlocal"];
+
+_timer = 0;
+
+while {(player distance fobcontainer1 < 80) && (_timer < 8)} do
+{
+	sleep 5;
+	_timer = _timer + 1;
+};
+
+player removeAction _action;
+
+{
+	deleteVehicle _x;
+} forEach tf47_var_FOBhelper;
+
+tf47_var_FOBhelper = [];
+/*
+
+_angle = getDir player;
+_location = getPos player;
 
 [_location, _angle] remoteExec ["tf47_fnc_buildFOB", 2];
+
+*/
