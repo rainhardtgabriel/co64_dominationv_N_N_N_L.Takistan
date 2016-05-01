@@ -31,7 +31,7 @@ sleep 0.5;
 {
 	if (_x distance fobtable <150) then
 	{
-		remoteExecCall ['tf47_fnc_buildFOBlocal', _x];
+		remoteExec ['tf47_fnc_buildFOBlocal', _x];
 	};
 } forEach allPlayers;
 
