@@ -1,24 +1,24 @@
 /*
-Author: 
+Author:
 
 	Lucke
 
-Last modified: 
+Last modified:
 
 	12/03/2016
 
 Description:
 
 	[] call tf47_fnc_checkPatrols;
-	
+
 Notes:
-	
-	
+
+
 ______________________________________________*/
 private["_respawn"];
 Patrols = Patrols;
 {
-	[(_x select 4) -  units (_x select 3), 300] execVM "Patrols\delayeddeleteVehicles.sqf";
+	[(_x select 4) -  units (_x select 2), 300] execVM "Patrols\delayeddeleteVehicles.sqf";
 	_respawn = true;
 	{
 		if !(alive _x) then {
