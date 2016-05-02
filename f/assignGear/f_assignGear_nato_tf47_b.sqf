@@ -4,7 +4,7 @@
 
 // BACKPACK: MEDIC
 case "m":
-{
+{	
 	// LOADOUT: MEDIUM
 	if (_loadout <= 1) then {
 		_unit addBackpack _bagmedic;
@@ -21,13 +21,19 @@ case "m":
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 6];
 		(unitBackpack _unit) addItemCargoGlobal [_firstaid, 8];
 	};
+	// USM Mod active
+	if (f_param_uniforms == 4) then {
+		_unit removeItems "usm_fielddressing";
+	};
 };
 // BACKPACK: COMBAT FIRST RESPONDER
 case "cfr":
-{
+{	
+
 	// LOADOUT: MEDIUM
 	if (_loadout <= 1) then {
 		_unit addBackpack _bagmedic;
+		clearBackpackCargoGlobal (unitBackpack _unit);
 		clearAllItemsFromBackpack (unitBackpack _unit);
 		(unitBackpack _unit) addMagazineCargoGlobal [_carbinemag,6];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 3];
@@ -37,10 +43,15 @@ case "cfr":
 	// LOADOUT: HEAVY
 	if (_loadout == 2) then {
 		_unit addBackpack _bagmedic;
+		clearBackpackCargoGlobal (unitBackpack _unit);
 		clearAllItemsFromBackpack (unitBackpack _unit);
 		(unitBackpack _unit) addItemCargoGlobal [_carbinemag,8];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 6];
 		(unitBackpack _unit) addItemCargoGlobal [_firstaid, 8];
+	};
+	// USM Mod active
+	if (f_param_uniforms == 4) then {
+		_unit removeItems "usm_fielddressing";
 	};
 };
 // BACKPACK: GRENADIER (CO/DC/SL/FTL/G)
