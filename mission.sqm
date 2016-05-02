@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8273.1748,306.24103,2157.0845};
-		dir[]={-0.87811553,-0.096682943,-0.46883693};
-		up[]={-0.085482694,0.99525344,-0.045640856};
-		aside[]={-0.47103783,9.998621e-007,0.88223052};
+		pos[]={7965.311,384.32498,2046.3179};
+		dir[]={-0.51072693,-0.29022789,0.80943644};
+		up[]={-0.15498753,0.956837,0.24562748};
+		aside[]={0.84581119,5.825641e-007,0.53369075};
 	};
 };
 binarizationWanted=0;
@@ -524,7 +524,7 @@ class Mission
 			dataType="Marker";
 			position[]={8204.9473,296.04001,2128.6116};
 			name="clp_1_1";
-			text="Vehice Service";
+			text="Vehicle Service";
 			type="n_service";
 			colorName="ColorBlack";
 			id=36;
@@ -28249,7 +28249,7 @@ class Mission
 			dataType="Marker";
 			position[]={8174.8491,296.04001,2112.4563};
 			name="clp_1_2";
-			text="Vehice Service";
+			text="Vehicle Service";
 			type="n_service";
 			colorName="ColorBlack";
 			id=3230;
