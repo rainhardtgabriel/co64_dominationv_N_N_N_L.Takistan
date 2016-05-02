@@ -14,6 +14,8 @@ if (tf47_var_FOBStatus == 2) then
 	fobtable addAction ["remove F.O.B.", "[] remoteExec [""tf47_fnc_removeFOB"", 2];"];
 };
 
+tf47_var_FOBhelper = [];
+
 _null = [] execVM "tf47CoreScripts\safezone.sqf"; 										// spawn protection
 
 // tyre spawn

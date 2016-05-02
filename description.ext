@@ -478,6 +478,7 @@ class CfgFunctions
 			class nearPlayerDist;
 			class buildSubstation;
 			class lightOut;
+			class checkFOBlocal;
 		};
 		#include "SIDEscripts\Missions\Missions.hpp"
 		#include "Patrols\functions\functions.hpp"
