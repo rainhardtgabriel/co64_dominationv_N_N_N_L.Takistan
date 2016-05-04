@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8281.3721,410.13797,1608.0753};
+		pos[]={8225.1006,298.26694,2053.595};
 		dir[]={-0.12470056,-0.39745656,0.9092378};
 		up[]={-0.054037567,0.91750515,0.39399642};
 		aside[]={0.99083775,1.5337719e-008,0.13589443};
@@ -24867,7 +24867,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						init="this addAction [""Start Camera"",""[] exec camera.sqs;"",[],2,false,true,"""",""driver _target == _this""]; this allowDamage false;";
+						init="this allowDamage false;";
 						name="MissionObserver";
 						description="MissionObserver";
 						isPlayable=1;
