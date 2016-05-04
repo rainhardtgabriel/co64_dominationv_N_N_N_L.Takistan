@@ -10,6 +10,12 @@
 * 	@website	http://armasim.de/
 * 	@version    0.1a
 */
+//Arms Euqipmentarea
+_rifle= "rhs_weap_m4a1_grip";
+_dmr = "rhs_weap_m14ebrri_leu";
+_nlaw = "tf47_at4_heat";
+_drone = "B_UAV_01_F";
+_machinegun = "rhs_weap_m249_pip_L";
 //Small Vehicles
 _quad = "B_Quadbike_01_F";//veh= [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM "tf47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true]; 
 _bike = "B_Quadbike_01_F"; // veh = [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM 47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true];
@@ -23,13 +29,13 @@ _hmmwv_tow ="rhsusf_m1025_d_m2"; //veh = [this, 1800, 7200, " ", "mil_dot", "Col
 _hmmwv_mk19_crows = "rhsusf_m1025_d_Mk19"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _hmmwv_avenger = "rhsusf_m1025_d_m2"; //  veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _rg31_m2 = "rhsusf_m1025_d_m2"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_dingo_m2 = "rhsusf_m113d_usarmy"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_dingo_m2 = "UK3CB_BAF_Coyote_Logistics_L134A1_D"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _dingo_gl = "rhsusf_m113d_usarmy_MK19"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _landrover_gb = "rhsusf_m998_d_2dr_fulltop"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_landrover_cz = "rhsusf_m998_d_4dr_fulltop"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_landrover_cz = "UK3CB_BAF_Coyote_Passenger_L111A1_D"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _landrover_transport ="rhsusf_m998_d_4dr_halftop";//veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 5] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_jackal2_gmg = "rhsusf_m1025_d_m2"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_jackal2_l2a1= "rhsusf_m1025_d_Mk19"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_jackal2_gmg = "UK3CB_BAF_Jackal2_GMG"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_jackal2_l2a1= "UK3CB_BAF_Jackal2_L2A1_D"; // veh = [this, 1800, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 10] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _ambulance = "rhsusf_M1083A1P2_B_M2_d_Medical_fmtv_usarmy";
 //Trucks
 _refuel = "B_Truck_01_Fuel_F"; // veh = [this, 2700, 7200, "Fuel2", "mil_dot", "ColorBlue", WEST, "", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
@@ -62,7 +68,7 @@ _goose = "rhsusf_CH53E_USMC"; // veh = [this, 2700, 0, "GOOSE", "b_air", "ColorB
 _albatros = "RHS_C130J"; // veh = [this, 2700, 0, "ALBATROS", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "ALBATROS", "b_plane", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";if(isServer) then { clearBackpackCargoGlobal this; clearWeaponCargoGlobal this;          clearMagazineCargoGlobal this;         clearItemCargoGlobal this; };
 //Attack Planes
 _thunderbird = "RHS_A10"; // veh = [this, 2700, 0, "THUNDERBIRD", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_wasp01 = "RHS_A10"; // veh = [this, 2700, 0, "WASP-01", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_wasp01 = "FIR_F16C"; // veh = [this, 2700, 0, "WASP-01", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _eagle01 = "FIR_F15E"; // veh = [this, 2700, 0, "WASP-02", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 // Drones
 _evileye = "B_UAV_02_CAS_F";
