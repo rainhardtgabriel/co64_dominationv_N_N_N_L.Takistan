@@ -60,6 +60,11 @@ if (isNil{_type}) then {} else {
 					};
 				};
 			};
+			case "medictrunk" : {
+					medicarsenal = [_object] execVM "tf47CoreScripts\equipment\arsenal.sqf";
+					_object allowDamage false;
+					_object enableSimulationGlobal false;
+			};
 			default { _object enableSimulationGlobal false;}; 
 		};
 	};

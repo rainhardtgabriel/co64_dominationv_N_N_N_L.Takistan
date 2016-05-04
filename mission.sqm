@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=3406;
+		nextID=3409;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8022.5249,340.59692,1950.2563};
-		dir[]={0.057910442,-0.58358353,0.81014258};
-		up[]={0.041615542,0.81189424,0.58222568};
-		aside[]={0.99756539,-2.7359274e-006,-0.071293741};
+		pos[]={8281.3721,410.13797,1608.0753};
+		dir[]={-0.12470056,-0.39745656,0.9092378};
+		up[]={-0.054037567,0.91750515,0.39399642};
+		aside[]={0.99083775,1.5337719e-008,0.13589443};
 	};
 };
 binarizationWanted=0;
@@ -23372,12 +23372,12 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8218.5781,297.12131,2061.1079};
-				angles[]={0,1.1543577,0};
+				angles[]={0,1.1543608,0};
 			};
 			side="Empty";
 			class Attributes
 			{
-				init="if (isServer) then {this enableSimulation false;}; this allowDamage false;[this,false] call ace_dragging_fnc_setCarryable;[this,false] call ace_dragging_fnc_setDraggable;";
+				init="equipmentarea = [this,""medictrunk""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=2033;
 			type="ACE_medicalSupplyCrate_advanced";
@@ -23399,11 +23399,30 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[""ACE_fieldDressing"",""ACE_packingBandage"",""ACE_elasticBandage"",""ACE_tourniquet"",""ACE_morphine"",""ACE_epinephrine"",""ACE_plasmaIV"",""ACE_plasmaIV_500"",""ACE_plasmaIV_250"",""ACE_salineIV"",""ACE_salineIV_500"",""ACE_salineIV_250"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_quikclot"",""ACE_personalAidKit"",""ACE_surgicalKit"",""ACE_bodyBag""],[]],[[],[]]],true]";
+							value="[[[[],[]],[[],[]],[[""ACE_packingBandage"",""ACE_elasticBandage"",""ACE_tourniquet"",""ACE_morphine"",""ACE_epinephrine"",""ACE_plasmaIV"",""ACE_plasmaIV_500"",""ACE_plasmaIV_250"",""ACE_salineIV"",""ACE_salineIV_500"",""ACE_salineIV_250"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_quikclot"",""ACE_personalAidKit"",""ACE_surgicalKit"",""ACE_bodyBag""],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]],[[],[]]],false]";
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item1089
@@ -23417,7 +23436,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="if (isServer) then {this enableSimulation false;}; this allowDamage false;[this,false] call ace_dragging_fnc_setCarryable;[this,false] call ace_dragging_fnc_setDraggable;";
+				init="equipmentarea = [this,""medictrunk""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=2035;
 			type="ACE_medicalSupplyCrate_advanced";
@@ -23439,11 +23458,30 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[""ACE_fieldDressing"",""ACE_packingBandage"",""ACE_elasticBandage"",""ACE_tourniquet"",""ACE_morphine"",""ACE_epinephrine"",""ACE_plasmaIV"",""ACE_plasmaIV_500"",""ACE_plasmaIV_250"",""ACE_salineIV"",""ACE_salineIV_500"",""ACE_salineIV_250"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_quikclot"",""ACE_personalAidKit"",""ACE_surgicalKit"",""ACE_bodyBag""],[]],[[],[]]],true]";
+							value="[[[[],[]],[[],[]],[[""ACE_fieldDressing"",""ACE_packingBandage"",""ACE_elasticBandage"",""ACE_tourniquet"",""ACE_morphine"",""ACE_epinephrine"",""ACE_plasmaIV"",""ACE_plasmaIV_500"",""ACE_plasmaIV_250"",""ACE_salineIV"",""ACE_salineIV_500"",""ACE_salineIV_250"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_quikclot"",""ACE_personalAidKit"",""ACE_surgicalKit"",""ACE_bodyBag""],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]],[[],[]]],false]";
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item1090
@@ -23490,17 +23528,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8223.875,296.32257,2062.5178};
+				position[]={8224.1143,296.3223,2062.646};
 				angles[]={0,5.8063436,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="if (isServer) then {this enableSimulation false;}; this allowDamage false; [this,false]call ace_dragging_fnc_setDraggable; [this,false] call ace_dragging_fnc_setCarryable;";
+				init="equipmentarea = [this,""medictrunk""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=2047;
 			type="ACE_medicalSupplyCrate_advanced";
+			atlOffset=0.091003418;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23518,11 +23557,30 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[""ACE_fieldDressing"",""ACE_packingBandage"",""ACE_elasticBandage"",""ACE_tourniquet"",""ACE_morphine"",""ACE_epinephrine"",""ACE_plasmaIV"",""ACE_plasmaIV_500"",""ACE_plasmaIV_250"",""ACE_salineIV"",""ACE_salineIV_500"",""ACE_salineIV_250"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_quikclot"",""ACE_personalAidKit"",""ACE_surgicalKit"",""ACE_bodyBag""],[]],[[],[]]],true]";
+							value="[[[[],[]],[[],[]],[[""ACE_packingBandage"",""ACE_elasticBandage"",""ACE_tourniquet"",""ACE_morphine"",""ACE_epinephrine"",""ACE_plasmaIV"",""ACE_plasmaIV_500"",""ACE_plasmaIV_250"",""ACE_salineIV"",""ACE_salineIV_500"",""ACE_salineIV_250"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_quikclot"",""ACE_personalAidKit"",""ACE_surgicalKit"",""ACE_bodyBag""],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]],[[],[]]],false]";
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item1092
@@ -24802,20 +24860,21 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8007.4512,296.04144,1981.652};
-						angles[]={0,4.1887903,0};
+						position[]={8221.9502,296.13245,2061.709};
+						angles[]={0,5.7834277,0};
 					};
 					side="Civilian";
 					flags=6;
 					class Attributes
 					{
-						init="this addAction [""Start Camera"",""[] call bis_fnc_camera;"",[],2,false,true,"""",""driver _target == _this""]; this allowDamage false;";
+						init="this addAction [""Start Camera"",""[] exec camera.sqs;"",[],2,false,true,"""",""driver _target == _this""]; this allowDamage false;";
 						name="MissionObserver";
 						description="MissionObserver";
 						isPlayable=1;
 					};
 					id=2529;
 					type="C_journalist_F";
+					atlOffset=0.091003418;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -24864,6 +24923,7 @@ class Mission
 			{
 			};
 			id=2527;
+			atlOffset=0.091003418;
 		};
 		class Item1198
 		{
@@ -29502,8 +29562,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8273.0684,296.47229,2113.1418};
-				angles[]={0,1.9392457,0};
+				position[]={8273.0684,296.47229,2113.1421};
+				angles[]={0,1.9392527,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29514,6 +29574,29 @@ class Mission
 			};
 			id=3317;
 			type="Land_WoodenTable_large_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item1474
 		{
