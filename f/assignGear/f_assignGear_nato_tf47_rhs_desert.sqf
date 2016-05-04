@@ -389,7 +389,7 @@ switch (_typeofUnit) do
 		_attachments = [_attach1,_scope3];
 		_unit addWeapon "ACE_Vector";
 		_unit linkItem "ItemGPS";
-		["g"] call _backpack;
+		["com"] call _backpack;
 	};
 
 // LOADOUT: DEPUTY COMMANDER AND SQUAD LEADER
