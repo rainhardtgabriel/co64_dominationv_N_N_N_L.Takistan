@@ -15,14 +15,14 @@ _veh addMagazineCargoGlobal ["HandGrenade_West",5];
 
 
 //Items
-_veh addWeaponCargoGlobal ["ACE_EarPlugs",2];
-_veh addWeaponCargoGlobal ["ACE_ATragMX",2];
-_veh addWeaponCargoGlobal ["ACE_Kestrel4500",2];
-_veh addWeaponCargoGlobal ["ACE_MapTools",2];
-_veh addWeaponCargoGlobal ["ACE_microDAGR",2];
-_veh addWeaponCargoGlobal ["ACE_RangeCard",2];
-_veh addWeaponCargoGlobal ["ACE_Sandbag_empty",2];
-_veh addWeaponCargoGlobal ["ACE_SpottingScope",2];
+_veh addItemCargoGlobal ["ACE_EarPlugs",2];
+_veh addItemCargoGlobal ["ACE_ATragMX",2];
+_veh addItemCargoGlobal ["ACE_Kestrel4500",2];
+_veh addItemCargoGlobal ["ACE_MapTools",2];
+_veh addItemCargoGlobal ["ACE_microDAGR",2];
+_veh addItemCargoGlobal ["ACE_RangeCard",2];
+_veh addItemCargoGlobal ["ACE_Sandbag_empty",2];
+_veh addItemCargoGlobal ["ACE_SpottingScope",2];
 _veh addWeaponCargoGlobal ["ACE_Tripod",2];
 _veh addWeaponCargoGlobal ["ACE_Vector",2];
 
