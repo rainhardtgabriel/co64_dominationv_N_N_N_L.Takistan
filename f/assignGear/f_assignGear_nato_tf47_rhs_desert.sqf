@@ -823,8 +823,8 @@ switch (_typeofUnit) do
 // LOADOUT: RIFLEMAN
 	case "r":
 	{
-		{_unit addmagazines _riflemag; }		forEach[1,2,3,4,5,6,7];
-		{_unit addmagazines _riflemag_tr; }		forEach[1,2];
+		{_unit addItemtoVest _riflemag; }		forEach[1,2,3,4,5,6,7];
+		{_unit addItemtoVest _riflemag_tr; }		forEach[1,2];
 		_unit addweapon _rifle;
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2,3];
 		{ _unit addItemToVest _grenade; }		forEach [1,2,3];
