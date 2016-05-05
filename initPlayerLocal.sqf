@@ -23,4 +23,7 @@ tyreSpawnSign addAction ["<t color='#00FF00'>Spawn Spare Wheel</t>", "tf47CoreSc
 tyreSpawnSign addAction ["<t color='#00FF00'>Spawn Spare Track</t>", "tf47CoreScripts\helper\spawnTyre.sqf", "ACE_Track"];
 
 TF47_UMenu_isEnabled = true;
+
+sleep 5;
+
 #include "tf47CoreScripts\umenu\Includes\initPlayerLocal.sqf";
