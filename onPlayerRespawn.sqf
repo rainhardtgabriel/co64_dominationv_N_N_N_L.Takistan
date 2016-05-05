@@ -1,4 +1,4 @@
-waitUntil{!isNull player};
+/*waitUntil{!isNull player};
 
 ["JIP",["Your standard Gear was selected."]] call BIS_fnc_showNotification;
 
@@ -88,3 +88,4 @@ if ((!isNil "f_var_debugMode") && {f_var_debugMode == 1}) then
 	player sideChat format["DEBUG (onPlayerRespawn.sqf): Slotname '%1' got loadout: '%2'.",_slotName,_loadout];
 };
 [_loadout,player] call f_fnc_assignGear;
+*/

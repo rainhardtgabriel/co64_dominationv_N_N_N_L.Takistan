@@ -6,13 +6,13 @@ if(!isServer) exitwith {
 waitUntil {!isNil "tf47_param_vehiclemod"};
 switch (tf47_param_vehiclemod) do { 
 	case 0 : { 
-		#include "functions\vehicleReplacement\vanillaVehicles.sqf" 
+		#include "vehicleReplacement\vanillaVehicles.sqf" 
 		}; 
 	case 1 : { 
-		#include "functions\vehicleReplacement\CUPVehicles.sqf" 
+		#include "vehicleReplacement\CUPVehicles.sqf" 
 		}; 
 	case 2 : { 
-		#include "functions\vehicleReplacement\RHSVehicles.sqf" 
+		#include "vehicleReplacement\RHSVehicles.sqf" 
 		}; 
 };
 //#include "functions\vehicleReplacement\vanillaVehicles.sqf"

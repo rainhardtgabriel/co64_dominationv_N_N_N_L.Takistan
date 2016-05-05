@@ -389,7 +389,7 @@ switch (_typeofUnit) do
 		_attachments = [_attach1,_scope3];
 		_unit addWeapon "ACE_Vector";
 		_unit linkItem "ItemGPS";
-		["g"] call _backpack;
+		["com"] call _backpack;
 	};
 
 // LOADOUT: DEPUTY COMMANDER AND SQUAD LEADER
@@ -823,8 +823,8 @@ switch (_typeofUnit) do
 // LOADOUT: RIFLEMAN
 	case "r":
 	{
-		{_unit addmagazines _riflemag; }		forEach[1,2,3,4,5,6,7];
-		{_unit addmagazines _riflemag_tr; }		forEach[1,2];
+		{_unit addItemtoVest _riflemag; }		forEach[1,2,3,4,5,6,7];
+		{_unit addItemtoVest _riflemag_tr; }		forEach[1,2];
 		_unit addweapon _rifle;
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2,3];
 		{ _unit addItemToVest _grenade; }		forEach [1,2,3];

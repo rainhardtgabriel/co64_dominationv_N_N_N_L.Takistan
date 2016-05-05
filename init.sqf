@@ -41,7 +41,7 @@ if(isServer) then {
 // F3 - Automatic Body Removal
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_var_removeBodyDelay = 60;
+f_var_removeBodyDelay = 10;
 f_var_removeBodyDistance = 0;
 // f_var_doNotRemoveBodies = [];
 [] execVM "f\removeBody\f_addRemoveBodyEH.sqf";
@@ -95,7 +95,7 @@ f_var_cachingAggressiveness = 1;
 // F3 - Radio Systems Support
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-//[] execVM "f\radios\radio_init.sqf";
+[] execVM "f\radios\radio_init.sqf";
 
 // ====================================================================================
 
