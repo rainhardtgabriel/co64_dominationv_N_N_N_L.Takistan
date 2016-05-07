@@ -48,9 +48,9 @@ _rhino02 = "CUP_B_M1A1_DES_US_Army"; // veh = [this, 3600, 0, "RHINO-02", "b_mec
 _lion01 = "CUP_B_M2A3Bradley_USA_D"; // veh = [this, 3600, 0, "LION-01", "b_mech_inf", "ColorOrange", WEST, "harmor", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _lion02 = "CUP_B_M2A3Bradley_USA_D"; // veh = [this, 3600, 0, "LION-02", "b_mech_inf", "ColorOrange", WEST, "harmor", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _frog01 = "CUP_B_M6LineBacker_USA_D"; // veh = [this, 3600, 0, "FROG-01", "b_mech_inf", "ColorOrange", WEST, "harmor", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_tiger01 = "CUP_B_M1126_ICV_MK19_Desert"; // veh = [this, 2700, 0, "TIGER-01", "b_mech_inf", "ColorOrange", WEST, "larmor", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_tiger01 = "CUP_B_M1126_ICV_M2_Desert_Slat"; // veh = [this, 2700, 0, "TIGER-01", "b_mech_inf", "ColorOrange", WEST, "larmor", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _tiger02 = "CUP_B_M1126_ICV_MK19_Desert_Slat"; // veh = [this, 2700, 0, "TIGER-02", "b_mech_inf", "ColorOrange", WEST, "larmor", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_tiger03 = "CUP_B_M1126_ICV_MK19_Desert"; // veh = [this, 2700, 0, "TIGER-03", "b_mech_inf", "ColorOrange", WEST, "larmor", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_tiger03 = "CUP_B_M1128_MGS_Desert_Slat"; // veh = [this, 2700, 0, "TIGER-03", "b_mech_inf", "ColorOrange", WEST, "larmor", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _gator01 = "CUP_B_LAV25M240_USMC"; // veh = [this, 2700, 0, "GATOR-01", "b_mech_inf", "ColorOrange", WEST, "larmor", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _gator02 = "CUP_B_LAV25_USMC"; // veh = [this, 2700, 0, "GATOR-02", "b_mech_inf", "ColorOrange", WEST, "larmor", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 //Helicopters
