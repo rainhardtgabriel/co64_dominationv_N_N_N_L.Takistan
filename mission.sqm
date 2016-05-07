@@ -10507,7 +10507,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargo this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=734;
 			type="Land_Box_AmmoOld_F";
@@ -10526,7 +10526,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=735;
 			type="Land_Box_AmmoOld_F";
@@ -10545,7 +10545,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=736;
 			type="Land_Box_AmmoOld_F";
@@ -10564,7 +10564,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=737;
 			type="Land_Box_AmmoOld_F";
@@ -10583,7 +10583,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=739;
 			type="Land_Box_AmmoOld_F";
@@ -10602,7 +10602,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=740;
 			type="Land_Box_AmmoOld_F";
@@ -10621,7 +10621,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=741;
 			type="Land_Box_AmmoOld_F";
@@ -10640,7 +10640,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=742;
 			type="Land_Box_AmmoOld_F";
@@ -11619,7 +11619,7 @@ class Mission
 			{
 				skill=0.60000002;
 				ammo=0;
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=832;
 			type="Land_Box_AmmoOld_F";
@@ -11638,7 +11638,7 @@ class Mission
 			{
 				skill=0.60000002;
 				ammo=0;
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=833;
 			type="Land_Box_AmmoOld_F";
@@ -11657,7 +11657,7 @@ class Mission
 			{
 				skill=0.60000002;
 				ammo=0;
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=834;
 			type="Land_Box_AmmoOld_F";
@@ -11676,7 +11676,7 @@ class Mission
 			{
 				skill=0.60000002;
 				ammo=0;
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=835;
 			type="Land_Box_AmmoOld_F";
@@ -11730,7 +11730,7 @@ class Mission
 			{
 				skill=0.60000002;
 				ammo=0;
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=838;
 			type="Land_Box_AmmoOld_F";
@@ -11749,7 +11749,7 @@ class Mission
 			{
 				skill=0.60000002;
 				ammo=0;
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=839;
 			type="Land_Box_AmmoOld_F";
@@ -11768,7 +11768,7 @@ class Mission
 			{
 				skill=0.60000002;
 				ammo=0;
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=840;
 			type="Land_Box_AmmoOld_F";
@@ -11823,7 +11823,7 @@ class Mission
 			{
 				skill=0.60000002;
 				ammo=0;
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=843;
 			type="Land_Box_AmmoOld_F";
@@ -11894,7 +11894,7 @@ class Mission
 			{
 				skill=0.60000002;
 				lock="UNLOCKED";
-				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargoGlobal this; clearMagazineCargoGlobal this;";
+				init="this setVariable [""R3F_LOG_disabled"", true]; clearWeaponCargo this; clearMagazineCargo this;";
 			};
 			id=847;
 			type="Land_Box_AmmoOld_F";
@@ -23153,7 +23153,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2020;
 			type="Box_NATO_Ammo_F";
@@ -23171,7 +23171,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2021;
 			type="Box_NATO_Ammo_F";
@@ -23189,7 +23189,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2022;
 			type="Box_NATO_Ammo_F";
@@ -23207,7 +23207,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2023;
 			type="Box_NATO_Ammo_F";
@@ -23225,7 +23225,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2024;
 			type="Box_NATO_Ammo_F";
@@ -23243,7 +23243,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2025;
 			type="Box_NATO_Ammo_F";
@@ -23261,7 +23261,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2026;
 			type="Box_NATO_Ammo_F";
@@ -23279,7 +23279,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2027;
 			type="Box_NATO_Ammo_F";
@@ -23297,7 +23297,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2028;
 			type="Box_NATO_Ammo_F";
@@ -23315,7 +23315,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2029;
 			type="Box_NATO_Ammo_F";
@@ -23333,7 +23333,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2030;
 			type="Box_NATO_Ammo_F";
@@ -23351,7 +23351,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2031;
 			type="Box_NATO_Ammo_F";
