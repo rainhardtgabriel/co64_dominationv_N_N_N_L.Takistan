@@ -130,6 +130,7 @@ class Mission
 		briefingName="co64_community_project.Takistan";
 		overviewText="[TF47] Community Project";
 		resistanceWest=0;
+		resistanceEast=1;
 		startWeather=0.39999998;
 		startWind=0.099999994;
 		startWaves=0.099999994;
