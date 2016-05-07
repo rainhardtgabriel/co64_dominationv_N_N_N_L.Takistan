@@ -92,7 +92,7 @@ _color = switch true do {
 _marker setMarkerColor _color;
 
 if (isNil "_freq" or _freq == "") then {
-	_marker setMarkerText format ["%1 | %2",_name,_leader];
+	_marker setMarkerText format [" %1 | %2",_name,_leader];
 } else {
-	_marker setMarkerText format ["%1 | %2 | Channel: %3",_name,_leader,_freq];
+	_marker setMarkerText format [" %1 | %2 | Channel: %3",_name,_leader,_freq];
 };

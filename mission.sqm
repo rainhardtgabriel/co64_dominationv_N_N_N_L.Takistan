@@ -130,6 +130,7 @@ class Mission
 		briefingName="co64_community_project.Takistan";
 		overviewText="[TF47] Community Project";
 		resistanceWest=0;
+		resistanceEast=1;
 		startWeather=0.39999998;
 		startWind=0.099999994;
 		startWaves=0.099999994;
@@ -1040,7 +1041,7 @@ class Mission
 			{
 				name="trig_rt";
 				condition="this && alive radiotower;";
-				onActivation="0 = execVM ""AOscripts\reinforcements.sqf"";";
+				onActivation="[[[],""AOscripts\reinforcements.sqf""],""BIS_fnc_execVM"",false,true] call BIS_fnc_MP;";
 				sizeA=700;
 				sizeB=700;
 				timeout[]={5,10,20};
@@ -23153,7 +23154,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2020;
 			type="Box_NATO_Ammo_F";
@@ -23171,7 +23172,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2021;
 			type="Box_NATO_Ammo_F";
@@ -23189,7 +23190,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2022;
 			type="Box_NATO_Ammo_F";
@@ -23207,7 +23208,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2023;
 			type="Box_NATO_Ammo_F";
@@ -23225,7 +23226,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2024;
 			type="Box_NATO_Ammo_F";
@@ -23243,7 +23244,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2025;
 			type="Box_NATO_Ammo_F";
@@ -23261,7 +23262,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2026;
 			type="Box_NATO_Ammo_F";
@@ -23279,7 +23280,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2027;
 			type="Box_NATO_Ammo_F";
@@ -23297,7 +23298,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2028;
 			type="Box_NATO_Ammo_F";
@@ -23315,7 +23316,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2029;
 			type="Box_NATO_Ammo_F";
@@ -23333,7 +23334,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2030;
 			type="Box_NATO_Ammo_F";
@@ -23351,7 +23352,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="clearWeaponCargo this; clearmagazinecargo this;";
+				init="clearWeaponCargoGlobal this; clearmagazinecargoGlobal this;";
 			};
 			id=2031;
 			type="Box_NATO_Ammo_F";
@@ -25159,7 +25160,7 @@ class Mission
 			position[]={7845.333,295.86139,1581.7181};
 			name="callsign_thunderbird";
 			text="THUNDERBIRD";
-			type="b_air";
+			type="b_plane";
 			colorName="ColorBlack";
 			angle=359.26794;
 			id=2654;
