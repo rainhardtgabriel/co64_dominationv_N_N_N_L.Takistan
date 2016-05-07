@@ -34,11 +34,12 @@ if (count _this > 3) then {
 };
 
 // Make sure only the correct side sees the unit
-if (!isServer) then {
-	waitUntil {!isNull player};
-};
-if (isNull player) exitWith {};
-if (side player != _side) exitWith {};
+if(!isServer) exitWith {};
+// if (!isServer) then {
+	// waitUntil {!isNull player};
+// };
+// if (isNull player) exitWith {};
+// if (side player != _side) exitWith {};
 
 // Set Color
 if (count _this > 4) then {
@@ -55,11 +56,11 @@ if (count _this > 4) then {
 _markerdespawn = if (count _this > 5) then {_this select 5} else { 300 };
 
 // Create the Marker
-_marker = createMarkerLocal [format ["mrk%1%2%3", _text, _side, floor(random 1000000)], getPos _unit];
-_marker setMarkerShapeLocal "ICON";
-_marker setMarkerTypeLocal _type;
-_marker setMarkerTextLocal _text;
-_marker setMarkerColorLocal _color;
+_marker = createMarker [format ["mrk%1%2%3", _text, _side, floor(random 1000000)], getPos _unit];
+_marker setMarkerShape "ICON";
+_marker setMarkerType _type;
+_marker setMarkerText _text;
+_marker setMarkerColor _color;
 
 // Update Position
 while {(alive _unit)} do
@@ -67,19 +68,19 @@ while {(alive _unit)} do
 	_unitpos = getPos _unit;
 
 	if (_text == " ") then {
-		_marker setMarkerPosLocal _unitpos;
+		_marker setMarkerPos _unitpos;
 		sleep 30;
 	} else {
 		_unitpos0 = (_unitpos select 0);
 		_unitpos1 = (_unitpos select 1)+5;
 		_unitpos2 = (_unitpos select 2);
-		_marker setMarkerPosLocal [_unitpos0, _unitpos1, _unitpos2];
+		_marker setMarkerPos [_unitpos0, _unitpos1, _unitpos2];
 		sleep 1;
 	};
 };
 
 // Upon Destruction, blur Marker...
-_marker setMarkerAlphaLocal 0.3;
+_marker setMarkerAlpha 0.3;
 
 // ...and remove it after a few minutes
 sleep _markerdespawn;
