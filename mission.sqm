@@ -25159,7 +25159,7 @@ class Mission
 			position[]={7845.333,295.86139,1581.7181};
 			name="callsign_thunderbird";
 			text="THUNDERBIRD";
-			type="b_air";
+			type="b_plane";
 			colorName="ColorBlack";
 			angle=359.26794;
 			id=2654;

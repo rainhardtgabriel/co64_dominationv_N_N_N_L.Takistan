@@ -139,7 +139,7 @@ switch (_mkrtext) do  {
 		lion1 = [_mkrpos,_mkrdir,_lion01] call TF47_VehicleReplacement_fnc_replaceVehicle;
 		spawnveh = [lion1, _timeondestruction, _timeondesertion, "LION-01", "b_mech_inf", "ColorOrange", WEST, "harmor", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 		[[lion1,"lion1"],"setVehicleVarname",true] call BIS_fnc_MP;
-		publicVariable "lion11";
+		publicVariable "lion1";
 		};
 	case "_lion02" : {
 		lion2 = [_mkrpos,_mkrdir,_lion02] call TF47_VehicleReplacement_fnc_replaceVehicle;
