@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=3409;
+		nextID=3426;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8225.1006,298.26694,2053.595};
-		dir[]={-0.12470056,-0.39745656,0.9092378};
-		up[]={-0.054037567,0.91750515,0.39399642};
-		aside[]={0.99083775,1.5337719e-008,0.13589443};
+		pos[]={8219,297.94449,2098.1892};
+		dir[]={-0.99009705,-0.10558638,-0.093822166};
+		up[]={-0.10541161,0.99433827,-0.0099893045};
+		aside[]={-0.09435124,-3.5244739e-007,0.9956544};
 	};
 };
 binarizationWanted=0;
@@ -147,7 +147,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1526;
+		items=1529;
 		class Item0
 		{
 			dataType="Marker";
@@ -10689,8 +10689,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8214.3838,296.62027,2098.7754};
-				angles[]={0,4.7507863,0};
+				position[]={8213.7041,296.62027,2097.4441};
+				angles[]={0,4.2548509,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10701,6 +10701,29 @@ class Mission
 			};
 			id=755;
 			type="Infostand_2_EP1";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item615
 		{
@@ -23377,7 +23400,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="equipmentarea = [this,""medictrunk""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="equipmentarea = [this,""mortarbox""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=2033;
 			type="ACE_medicalSupplyCrate_advanced";
@@ -23496,12 +23519,51 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="equipmentarea = [this,""mortarbox""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=2045;
 			type="B_supplyCrate_F";
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulation _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
 				{
 					property="ammoBox";
 					expression="[_this,_value] call bis_fnc_initAmmoBox;";
@@ -23516,11 +23578,30 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[]],[[""ACE_RangeTable_82mm"",""ACE_DAGR"",""ACE_MapTools"",""ACE_microDAGR"",""ACE_Vector""],[]],[[""B_Mortar_01_weapon_F"",""B_Mortar_01_support_F"",""CUP_B_M2_Gun_Bag"",""CUP_B_M2_Tripod_Bag"",""RHS_Mk19_Gun_Bag"",""RHS_Mk19_Tripod_Bag"",""rhs_Tow_Gun_Bag"",""rhs_TOW_Tripod_Bag""],[]]],true]";
+							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[1,1,1]],[[""ACE_Vector"",""ACE_RangeTable_82mm"",""ACE_DAGR"",""ACE_MapTools"",""ACE_microDAGR""],[1,1,1,1,1]],[[""B_Mortar_01_weapon_F"",""B_Mortar_01_support_F"",""CUP_B_M2_Gun_Bag"",""CUP_B_M2_Tripod_Bag""],[1,1,1,1]]],false]";
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute3
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=4;
 			};
 		};
 		class Item1091
@@ -31004,6 +31085,297 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item1526
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8213.8262,296.93243,2096.271};
+				angles[]={0,1.0776012,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="equipmentarea = [this,""mortarbox""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+			};
+			id=3410;
+			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulation _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[1,1,1]],[[""ACE_Vector"",""ACE_RangeTable_82mm"",""ACE_DAGR"",""ACE_MapTools"",""ACE_microDAGR""],[1,1,1,1,1]],[[""B_Mortar_01_weapon_F"",""B_Mortar_01_support_F"",""CUP_B_M2_Gun_Bag"",""CUP_B_M2_Tripod_Bag""],[1,1,1,1]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item1527
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8214.3164,296.8298,2094.675};
+				angles[]={0,1.0126226,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="equipmentarea = [this,""mortarbox""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+			};
+			id=3413;
+			type="Box_NATO_AmmoVeh_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulation _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[1,1,1]],[[""ACE_Vector"",""ACE_RangeTable_82mm"",""ACE_DAGR"",""ACE_MapTools"",""ACE_microDAGR""],[1,1,1,1,1]],[[""B_Mortar_01_weapon_F"",""B_Mortar_01_support_F"",""CUP_B_M2_Gun_Bag"",""CUP_B_M2_Tripod_Bag""],[1,1,1,1]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item1528
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8212.7432,296.8298,2100.0891};
+				angles[]={0,1.7601122,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="equipmentarea = [this,""mortarbox""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+			};
+			id=3414;
+			type="Box_NATO_AmmoVeh_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulation _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[1,1,1]],[[""ACE_Vector"",""ACE_RangeTable_82mm"",""ACE_DAGR"",""ACE_MapTools"",""ACE_microDAGR""],[1,1,1,1,1]],[[""B_Mortar_01_weapon_F"",""B_Mortar_01_support_F"",""CUP_B_M2_Gun_Bag"",""CUP_B_M2_Tripod_Bag""],[1,1,1,1]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=4;
 			};
 		};
 	};
