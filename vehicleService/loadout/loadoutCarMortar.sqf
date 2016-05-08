@@ -14,7 +14,7 @@ _veh addMagazineCargoGlobal ["SmokeShellBLue",3];
 _veh addMagazineCargoGlobal ["HandGrenade_West",5];
 
 //Items
-_veh addWeaponCargoGlobal ["ACE_EarPlugs",5];
+_veh addItemCargoGlobal ["ACE_EarPlugs",5];
 _veh addWeaponCargoGlobal ["ACE_MapTools",5];
 _veh addWeaponCargoGlobal ["ACE_RangeTable_82mm",2];
 _veh addWeaponCargoGlobal ["ACE_microDAGR",3];

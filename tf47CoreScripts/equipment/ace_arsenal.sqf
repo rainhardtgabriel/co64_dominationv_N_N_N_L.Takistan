@@ -45,6 +45,7 @@ _ace_items = [
 "ACE_plasmaIV",
 "ACE_epinephrine",
 "ACE_atropine",
+"ACE_adenosine",
 "ACE_morphine",
 "ACE_tourniquet",
 "ACE_elasticBandage",

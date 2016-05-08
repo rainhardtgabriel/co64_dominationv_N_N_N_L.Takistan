@@ -7,7 +7,7 @@ clearMagazineCargoGlobal _veh;
 clearBackpackCargoGlobal _veh;
 
 
-_veh addWeaponCargoGlobal ["ACE_EarPlugs",4];
+_veh addItemCargoGlobal ["ACE_EarPlugs",4];
 _veh addWeaponCargoGlobal ["ACE_Vector",2];
 _veh addWeaponCargoGlobal ["Binocular",2];
 _veh addMagazineCargoGlobal ["SmokeShellGreen",5];
