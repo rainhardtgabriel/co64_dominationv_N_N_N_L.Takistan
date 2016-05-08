@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8219,297.94449,2098.1892};
+		pos[]={8220.2979,298.55713,2098.0034};
 		dir[]={-0.99009705,-0.10558638,-0.093822166};
 		up[]={-0.10541161,0.99433827,-0.0099893045};
 		aside[]={-0.09435124,-3.5244739e-007,0.9956544};
@@ -23578,7 +23578,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[1,1,1]],[[""ACE_Vector"",""ACE_RangeTable_82mm"",""ACE_DAGR"",""ACE_MapTools"",""ACE_microDAGR""],[1,1,1,1,1]],[[""B_Mortar_01_weapon_F"",""B_Mortar_01_support_F"",""CUP_B_M2_Gun_Bag"",""CUP_B_M2_Tripod_Bag""],[1,1,1,1]]],false]";
+							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[1,1,1]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -31158,7 +31158,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[1,1,1]],[[""ACE_Vector"",""ACE_RangeTable_82mm"",""ACE_DAGR"",""ACE_MapTools"",""ACE_microDAGR""],[1,1,1,1,1]],[[""B_Mortar_01_weapon_F"",""B_Mortar_01_support_F"",""CUP_B_M2_Gun_Bag"",""CUP_B_M2_Tripod_Bag""],[1,1,1,1]]],false]";
+							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[1,1,1]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -31255,7 +31255,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[1,1,1]],[[""ACE_Vector"",""ACE_RangeTable_82mm"",""ACE_DAGR"",""ACE_MapTools"",""ACE_microDAGR""],[1,1,1,1,1]],[[""B_Mortar_01_weapon_F"",""B_Mortar_01_support_F"",""CUP_B_M2_Gun_Bag"",""CUP_B_M2_Tripod_Bag""],[1,1,1,1]]],false]";
+							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[1,1,1]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -31352,7 +31352,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[1,1,1]],[[""ACE_Vector"",""ACE_RangeTable_82mm"",""ACE_DAGR"",""ACE_MapTools"",""ACE_microDAGR""],[1,1,1,1,1]],[[""B_Mortar_01_weapon_F"",""B_Mortar_01_support_F"",""CUP_B_M2_Gun_Bag"",""CUP_B_M2_Tripod_Bag""],[1,1,1,1]]],false]";
+							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[1,1,1]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};

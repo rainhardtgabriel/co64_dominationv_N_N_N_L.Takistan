@@ -23,7 +23,7 @@ _veh addItemCargoGlobal ["ACE_microDAGR",2];
 _veh addItemCargoGlobal ["ACE_RangeCard",2];
 _veh addItemCargoGlobal ["ACE_Sandbag_empty",2];
 _veh addItemCargoGlobal ["ACE_SpottingScope",2];
-_veh addWeaponCargoGlobal ["ACE_Tripod",2];
+_veh addItemCargoGlobal ["ACE_Tripod",2];
 _veh addWeaponCargoGlobal ["ACE_Vector",2];
 
 // Weapons + Ammo
