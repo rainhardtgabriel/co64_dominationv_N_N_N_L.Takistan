@@ -479,6 +479,8 @@ class CfgFunctions
 			class buildSubstation;
 			class lightOut;
 			class checkFOBlocal;
+			class staticAT;
+			class staticMG;
 		};
 		#include "SIDEscripts\Missions\Missions.hpp"
 		#include "Patrols\functions\functions.hpp"

@@ -14,7 +14,7 @@ _OPFveh = switch (tf47_param_vehiclemod) do {
 	};
 	// CUP
 	case 1 : {
-		["CUP_O_M113_TKA","CUP_O_ZSU23_TK","CUP_O_T72_TKA","CUP_O_UAZ_MG_TKA","CUP_O_UAZ_MG_TKA","CUP_O_UAZ_MG_TKA","CUP_O_UAZ_SPG9_TKA","CUP_O_UAZ_SPG9_TKA","CUP_O_UAZ_SPG9_TKA"];
+		["CUP_O_M113_TKA","CUP_O_ZSU23_TK","CUP_O_T72_TKA","CUP_O_T72_TKA","CUP_O_UAZ_MG_TKA","CUP_O_UAZ_SPG9_TKA"];
 	};
 	// RHS
 	case 2 : {

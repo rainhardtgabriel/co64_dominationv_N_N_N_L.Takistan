@@ -132,9 +132,12 @@ if ( _ao_select == "sakhe") then {
 //////////////// Spawn Enemy AI in AO ////////////////////////////////////////////////////////////////////////////////////	
 
 		nul = [_log_pos,2,true,2,[6,6],_ao_rad,"default",nil,nil,nil] execVM "LV\fillHouse.sqf";
-		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],false,[20,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
-		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[5,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
-		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],false,[45,20],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[5,3],"default",nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,1],"default",nil,nil,nil] execVM "LV\militarize.sqf";
+		
+		[_log_pos] spawn tf47_fnc_staticAT;		
+		[_log_pos] spawn tf47_fnc_staticMG;		
 
 		
 //////////////// moves a visible marker to the ao //////////////////////////////////////////////////////////////////////////		
