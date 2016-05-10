@@ -1,7 +1,8 @@
 
 
 _ao = position (_this select 0);
-hint str _ao;
+diag_log "---------------------stuff";
+diag_log str _ao;
 _staticType = "";
 _staticType2 = ""; 
 _crew = "";
@@ -16,7 +17,7 @@ switch (tf47_param_vehiclemod) do {
 	// CUP
 	case 1 : {
 		_staticType = "CUP_O_D30_AT_TK";
-		_staticType2 = "CUP_O_Metis_TK";
+		_staticType2 = "CUP_O_ZU23_TK_INS";
 		_crew = "CUP_O_TK_Soldier";
 	};
 	// RHS
@@ -31,32 +32,36 @@ for "_x" from 1 to 2 do {
 	_staticGroup = createGroup east;
 	_randomPos = [_ao, 200, 10, 10] call BIS_fnc_findOverwatch;
 	_static = _staticType createVehicle _randomPos;
-	waitUntil{!isNull _static};	
+	waitUntil{!isNull _static};
+	_static setMass 1000;	
 	_static setDir random 360;
 	_static setVectorUp [0,0,1];
 	_static setPos [((getPos _static) select 0),((getPos _static) select 1),((getPos _static) select 2) + 2.5];
 	_static setVectorUp [0,0,1];
+	_static setVectorUp (surfaceNormal (position _static));
+	sleep 5;
 	_crew createUnit [_randomPos,_staticGroup];
 	((units _staticGroup) select 0) assignAsGunner _static;
 	((units _staticGroup) select 0) moveInGunner _static;
 	_staticGroup setBehaviour "COMBAT";
 	_staticGroup setCombatMode "RED";
 	_static lock 3;
-	_static setVectorUp [0,0,1];
 	_static = objNull;
 };
 _staticGroup = createGroup east;
 _randomPos = [_ao, 200, 10, 10] call BIS_fnc_findOverwatch;
 _static = _staticType2 createVehicle _randomPos;
 waitUntil{!isNull _static};	
+_static setMass 1000;
 _static setDir random 360;
 _static setVectorUp [0,0,1];
 _static setPos [((getPos _static) select 0),((getPos _static) select 1),((getPos _static) select 2) + 2.5];
 _static setVectorUp [0,0,1];
+_static setVectorUp (surfaceNormal (position _static));
+sleep 5;
 _crew createUnit [_randomPos,_staticGroup];
 ((units _staticGroup) select 0) assignAsGunner _static;
 ((units _staticGroup) select 0) moveInGunner _static;
 _staticGroup setBehaviour "COMBAT";
 _staticGroup setCombatMode "RED";
-_static setVectorUp [0,0,1];
 _static lock 3;
