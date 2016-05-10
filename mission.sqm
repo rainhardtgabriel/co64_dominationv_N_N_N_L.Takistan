@@ -8,7 +8,7 @@ class EditorData
 	toggles=582;
 	class ItemIDProvider
 	{
-		nextID=3434;
+		nextID=3439;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8231.0215,364.99902,2121.5969};
+		pos[]={8257.9072,308.16479,2141.5869};
 		dir[]={0.58849847,-0.80556452,0.070677899};
 		up[]={0.79988074,0.59234911,0.096067466};
 		aside[]={0.11925936,-2.6862836e-006,-0.99297798};
@@ -21472,13 +21472,13 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""eng"",this] call f_fnc_assignGear;";
+						init="[""engm"",this] call f_fnc_assignGear;";
 						name="UnitNATO_ENG1_FTL";
 						description="US Engineers  Fireteam Leader (Repair)";
 						isPlayable=1;
 					};
-					id=1894;
-					type="B_Soldier_TL_F";
+					id=3435;
+					type="B_soldier_repair_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21559,8 +21559,8 @@ class Mission
 						description="US Engineers (Repair)";
 						isPlayable=1;
 					};
-					id=1895;
-					type="B_soldier_AR_F";
+					id=3436;
+					type="B_soldier_repair_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21641,8 +21641,8 @@ class Mission
 						description="US Engineers (Demo)";
 						isPlayable=1;
 					};
-					id=1896;
-					type="B_soldier_AAR_F";
+					id=3437;
+					type="B_soldier_exp_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21723,8 +21723,8 @@ class Mission
 						description="US Engineers  Specialist (Demo)";
 						isPlayable=1;
 					};
-					id=1897;
-					type="B_soldier_LAT_F";
+					id=3438;
+					type="B_soldier_exp_F";
 					class CustomAttributes
 					{
 						class Attribute0
