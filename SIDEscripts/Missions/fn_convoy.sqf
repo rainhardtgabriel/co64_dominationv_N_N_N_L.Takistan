@@ -138,7 +138,7 @@ convoy_trig1 setTriggerStatements   [" !(alive my_convoy_vec1) && !(alive my_con
 									getMarkerpos ""WP_Convoy_Start"", ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
 									[""tf47_changetickets"", [WEST, 2, 5]] call CBA_fnc_globalEvent; 
                                     {deleteMarker _x} forEach [""WP_Convoy_Start"", ""WP_Convoy_End""]; [[]] spawn tf47_fnc_cleanside;
-                                    deletevehicle convoy_trig2; deletevehicle convoy_trig2; deletevehicle thisTrigger", ""];
+                                    deletevehicle convoy_trig2; deletevehicle convoy_trig3; deletevehicle thisTrigger", ""];
                                     
 convoy_trig2 = createTrigger 		    ["EmptyDetector", getMarkerPos "WP_Convoy_End"];
 convoy_trig2 setTriggerArea 			[150, 150, 0, false];
