@@ -140,7 +140,7 @@ class Params
 			title = "$STR_f_param_uniforms";
 			values[] = {0,1,2,3,4};
 			texts[] = {"Vanilla","RHS Woodland","RHS Desert","CUP Woodland","CUP & USM Desert"};
-			default = 3;
+			default = 4;
 			code = "f_param_uniforms = %1";
 	};
 
@@ -152,7 +152,7 @@ class Params
 			title = "Vehicle Mod(s)";
 			values[] = {0,1,2};
 			texts[] = {"Vanilla","CUP-MELB-FIRF15-SAM","RHS-3CB-MELB-FIRF15-FIRF16"};
-			default = 2;
+			default = 1;
 			code = "tf47_param_vehiclemod = %1";
 	};
 // ============================================================================================
