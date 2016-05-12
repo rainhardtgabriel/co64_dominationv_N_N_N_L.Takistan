@@ -105,7 +105,7 @@ if ( _ao_select == "timurkulay") then {
 };
 
 //////////////// AO is chadarakht ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "chadarakht") then {
+/*if ( _ao_select == "chadarakht") then {
 									_log_pos   			= log_chadarakht;
 									//_ao_rad    			= 300;
 									//_mkr_text 	 	=
@@ -115,7 +115,7 @@ if ( _ao_select == "chadarakht") then {
 									sleep 1;
 									
 };
-
+*/
 //////////////// AO is gamarud ////////////////////////////////////////////////////////////////////////////////////////////////		
 if ( _ao_select == "gamarud") then {
 									_log_pos   			= log_gamarud;
