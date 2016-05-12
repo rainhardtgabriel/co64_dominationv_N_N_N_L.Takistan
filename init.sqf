@@ -41,10 +41,11 @@ if(isServer) then {
 // F3 - Automatic Body Removal
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_var_removeBodyDelay = 10;
-f_var_removeBodyDistance = 0;
+// not used, TF Core Script will handle that functionality 
+//f_var_removeBodyDelay = 10;
+//f_var_removeBodyDistance = 0;
 // f_var_doNotRemoveBodies = [];
-[] execVM "f\removeBody\f_addRemoveBodyEH.sqf";
+//[] execVM "f\removeBody\f_addRemoveBodyEH.sqf";
 
 // ====================================================================================
 
@@ -182,9 +183,7 @@ if ((paramsArray select 0) != 4) then {
 };
 sleep 0.5;
 
-//start base cleanup script
-//ListOfBaseCleanMarker = ["BaseCleanMarker_0","BaseCleanMarker_1","BaseCleanMarker_2","BaseCleanMarker_3"];
-//[ListOfBaseCleanMarker,600] spawn TF47_AreaCleanUp_fnc_cleanMarkedPosition;
+//start cleanup script
 [] spawn tf47_fnc_cleanup_Init;
 sleep 0.1;
 

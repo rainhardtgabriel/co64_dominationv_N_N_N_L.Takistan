@@ -495,8 +495,9 @@ class CfgFunctions
 			* Author: Conroy
 			*/
 			file = "tf47CoreScripts\cleanup";
-			class cleanup_Abandonded;
-			class cleanup_Init;
+			class cleanup_abandonded;
+			class cleanup_init;
+			class cleanup_registerPlayer;
         	};
 	};
 	

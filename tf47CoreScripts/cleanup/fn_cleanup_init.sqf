@@ -3,7 +3,7 @@
 
 Module: Cleanup
 Global-var-shortcut: pvpfw_cleanup_
-Author: Conroy
+Author: Conroy,  exteded by Fred TF47
 
 You can "setVariable["pvpfw_cleanUp_keep",true]" on any object, to exempt it from the cleanup
 
@@ -23,7 +23,8 @@ private[
 	"_pipeBombObjects",
 	"_pipeBombTime",
 	"_chemLightSetTime",
-	"_pipeBombSetTime"
+	"_pipeBombSetTime",
+    "_listOfDeadPlayersBodies"
 ];
 
 if(!isServer) exitWith{};
@@ -47,6 +48,18 @@ _chemLightTime = [];
 
 _pipeBombObjects = [];
 _pipeBombTime = [];
+
+listOfDeadPlayersBodies=[];
+
+/************** register some events *************/
+["TF47_cleanup_ev_registerDeadPlayerBody", {
+   private ["_playerBody"];
+	_playerBody = param [0, objNull];
+	if (_playerBody != objNull) then {
+		//deleteVehicle _playerBody;
+        listOfDeadPlayersBodies pushBack _playerBody; 
+	};    
+}] call CBA_fnc_addEventHandler;
 
 while {true} do{
     
@@ -201,6 +214,40 @@ while {true} do{
               
 	}forEach (allMissionObjects _checkTypes);
 	
+    
+    // delete all dead player bodies
+    {	    		
+        //@ToDo: I see some chance to get a read modify write problem here. Psydo synchronization realized via data localization. 
+        _listOfDeadPlayersBodies =+ listOfDeadPlayersBodies;
+		diag_log format["#PVPFW found dead player object %1",_x];
+		
+					
+			_cleanUpInitTime = _x getVariable ["pvpfw_cleanup_InitTime",0];
+			if (_cleanUpInitTime == 0) then{
+				_cleanUpInitTime = diag_tickTime;
+				_x setVariable ["pvpfw_cleanup_InitTime",_cleanUpInitTime,false];
+			};
+			//delete the body if the time limit has been reached
+			if (diag_tickTime > (_cleanUpInitTime + pvpfw_cleanUp_bodyTimer)) then{
+                			
+				// Hide and remove the body from the game		
+				hideBody _body;
+				sleep 5;                
+				deleteVehicle _body;						                                	               
+				diag_log format["#PVPFW module_cleanup: deleting player body. init = %1, current time = %2",_cleanUpInitTime,diag_tickTime];
+                
+			};       
+    	sleep 0.05;                    
+    }forEach _listOfDeadPlayersBodies;
+    
+    
+    // delete all empty groups, no wait time foreseen, if units not removed from groups, then the group can be deleted next time	   
+    {
+		_grp = _x;
+		if(({alive _x}count units _grp)==0)then{deleteGroup _grp;};
+  	}forEach allGroups;
+  
+   
 	#ifdef __pvpfw_cleanUp_cleanExtra
 	//clean the chemlight array
 	{
@@ -223,6 +270,5 @@ while {true} do{
 	#endif
 	
 	sleep PVPFW_WAIT_TIME;
-    
-
+   
 };

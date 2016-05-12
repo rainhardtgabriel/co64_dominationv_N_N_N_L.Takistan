@@ -24,3 +24,5 @@ tyreSpawnSign addAction ["<t color='#00FF00'>Spawn Spare Track</t>", "tf47CoreSc
 
 TF47_UMenu_isEnabled = true;
 #include "tf47CoreScripts\umenu\Includes\initPlayerLocal.sqf";
+
+[] spawn tf47_fnc_cleanup_registerPlayer;
