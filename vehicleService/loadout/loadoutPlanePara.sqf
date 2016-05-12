@@ -12,10 +12,10 @@ _veh addMagazineCargoGlobal ["SmokeShellRed",10];
 _veh addMagazineCargoGlobal ["SmokeShellBLue",10];
 
 //Items
-_veh addWeaponCargoGlobal ["ACE_EarPlugs",10];
-_veh addWeaponCargoGlobal ["ACE_MapTools",2];
-_veh addWeaponCargoGlobal ["ACE_microDAGR",2];
-_veh addWeaponCargoGlobal ["ACE_Altimeter",10];
+_veh addItemCargoGlobal ["ACE_EarPlugs",10];
+_veh addItemCargoGlobal ["ACE_MapTools",2];
+_veh addItemCargoGlobal ["ACE_microDAGR",2];
+_veh addItemCargoGlobal ["ACE_Altimeter",10];
 
 //Backpack
 _veh addBackpackCargoGlobal ["ACE_NonSteerableParachute",10];

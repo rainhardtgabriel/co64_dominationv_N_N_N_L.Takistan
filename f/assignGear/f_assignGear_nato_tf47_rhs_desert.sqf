@@ -777,7 +777,6 @@ switch (_typeofUnit) do
 		{ _unit addItemToVest _grenade; }		forEach [1];
 		{ _unit addItemToVest _mgrenade; }		forEach [1];
 		{_unit addItemToVest _satchel; }		forEach [1,2];
-		_unit addItem "MineDetector";
 		["eng"] call _backpack;
 	};
 
@@ -790,7 +789,6 @@ switch (_typeofUnit) do
 		{ _unit addItemToVest _grenade; }		forEach [1];
 		{ _unit addItemToVest _mgrenade; }		forEach [1];
 		{_unit addItemToVest _APmine2; }		forEach [1,2];
-		_unit addItem "MineDetector";
 		["engm"] call _backpack;
 	};
 

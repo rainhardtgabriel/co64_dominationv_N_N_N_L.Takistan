@@ -61,10 +61,68 @@ if (isNil{_type}) then {} else {
 				};
 			};
 			case "medictrunk" : {
-					medicarsenal = [_object] execVM "tf47CoreScripts\equipment\arsenal.sqf";
-					_object allowDamage false;
-					_object enableSimulationGlobal false;
+				clearWeaponCargoGlobal _object;
+				clearMagazineCargoGlobal _object;
+				clearItemCargoGlobal _object;
+				_object enableSimulationGlobal false;
+				_object allowDamage false;
+				[_object] spawn {
+					while{true} do {
+						_object = _this select 0;
+						clearItemCargoGlobal _object;
+						_object addItemCargoGlobal ["ACE_bodyBag",50];
+						_object addItemCargoGlobal ["ACE_surgicalKit",50];
+						_object addItemCargoGlobal ["ACE_personalAidKit",50];
+						_object addItemCargoGlobal ["ACE_quikclot",50];
+						_object addItemCargoGlobal ["ACE_salineIV_250",50];
+						_object addItemCargoGlobal ["ACE_salineIV_500",50];
+						_object addItemCargoGlobal ["ACE_salineIV",50];
+						_object addItemCargoGlobal ["ACE_bloodIV_250",50];
+						_object addItemCargoGlobal ["ACE_bloodIV_500",50];
+						_object addItemCargoGlobal ["ACE_bloodIV",50];
+						_object addItemCargoGlobal ["ACE_plasmaIV_250",50];
+						_object addItemCargoGlobal ["ACE_plasmaIV_500",50];
+						_object addItemCargoGlobal ["ACE_plasmaIV",50];
+						_object addItemCargoGlobal ["ACE_epinephrine",50];
+						_object addItemCargoGlobal ["ACE_atropine",50];
+						_object addItemCargoGlobal ["ACE_adenosine",50];
+						_object addItemCargoGlobal ["ACE_morphine",50];
+						_object addItemCargoGlobal ["ACE_tourniquet",50];
+						_object addItemCargoGlobal ["ACE_elasticBandage",50];
+						_object addItemCargoGlobal ["ACE_packingBandage",50];
+						_object addItemCargoGlobal ["ACE_fieldDressing",50];
+						sleep 3600;
+					};
+				};
 			};
-			default { _object enableSimulationGlobal false;}; 
+			case "mortarbox" : {
+				clearWeaponCargoGlobal _object;
+				clearMagazineCargoGlobal _object;
+				clearItemCargoGlobal _object;
+				_object allowDamage false;
+				[_object] spawn {
+					while{true} do {
+						_object = _this select 0;
+						clearWeaponCargoGlobal _object;
+						clearMagazineCargoGlobal _object;
+						clearItemCargoGlobal _object;
+						clearBackpackCargoGlobal _object;
+						_object addBackpackCargoGlobal ["B_Mortar_01_weapon_F",1];
+						_object addBackpackCargoGlobal ["B_Mortar_01_support_F",1];
+						_object addMagazineCargoGlobal ["ACE_1Rnd_82mm_Mo_HE",20];
+						_object addMagazineCargoGlobal ["ACE_1Rnd_82mm_Mo_Smoke",20];
+						_object addMagazineCargoGlobal ["ACE_1Rnd_82mm_Mo_Illum",20];
+						_object addMagazineCargoGlobal ["ACE_1Rnd_82mm_Mo_HE_Guided",20];
+						_object addMagazineCargoGlobal ["ACE_1Rnd_82mm_Mo_HE_LaserGuided",20];
+						_object addItemCargoGlobal ["ACE_MapTools",10];
+						_object addItemCargoGlobal ["ACE_RangeTable_82mm",10];
+						_object addItemCargoGlobal ["ACE_microDAGR",10];
+						_object addItemCargoGlobal ["ACE_RangeCard",10];
+						_object addItemCargoGlobal ["ACE_Vector",10];
+						sleep 7200;
+					};
+				};
+			};
+		default { _object enableSimulationGlobal false;}; 
 		};
 	};

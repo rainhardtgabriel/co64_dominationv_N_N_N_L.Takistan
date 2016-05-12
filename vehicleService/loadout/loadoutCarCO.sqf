@@ -14,7 +14,7 @@ _veh addMagazineCargoGlobal ["SmokeShellBLue",3];
 _veh addMagazineCargoGlobal ["HandGrenade",5];
 
 //Items
-_veh addWeaponCargoGlobal ["ACE_EarPlugs",10];
+_veh addItemCargoGlobal ["ACE_EarPlugs",10];
 
 //Medic
 _veh addWeaponCargoGlobal ["ACE_fieldDressing",10];

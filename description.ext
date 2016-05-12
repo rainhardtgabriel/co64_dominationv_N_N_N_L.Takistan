@@ -140,7 +140,7 @@ class Params
 			title = "$STR_f_param_uniforms";
 			values[] = {0,1,2,3,4};
 			texts[] = {"Vanilla","RHS Woodland","RHS Desert","CUP Woodland","CUP & USM Desert"};
-			default = 4;
+			default = 3;
 			code = "f_param_uniforms = %1";
 	};
 
@@ -152,7 +152,7 @@ class Params
 			title = "Vehicle Mod(s)";
 			values[] = {0,1,2};
 			texts[] = {"Vanilla","CUP-MELB-FIRF15-SAM","RHS-3CB-MELB-FIRF15-FIRF16"};
-			default = 1;
+			default = 2;
 			code = "tf47_param_vehiclemod = %1";
 	};
 // ============================================================================================
@@ -479,6 +479,7 @@ class CfgFunctions
 			class buildSubstation;
 			class lightOut;
 			class checkFOBlocal;
+			class static;
 		};
 		#include "SIDEscripts\Missions\Missions.hpp"
 		#include "Patrols\functions\functions.hpp"
@@ -827,12 +828,12 @@ class ACE_Settings {
 		force = 1;
 	};
 	class ace_map_BFT_Interval {
-		value = 1;
+		value = 60;
 		typeName = "SCALAR";
 		force = 1;
 	};
 	class ace_map_BFT_Enabled {
-		value = 0;
+		value = 1;
 		typeName = "BOOL";
 		force = 1;
 	};

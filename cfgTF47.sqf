@@ -135,20 +135,20 @@ _vehicleRestrictionData = [
         ["thunderbird1",                   [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P","UnitNATO_AFW3_P","UnitNATO_AFW4_P"],                 []]],
 
         // Tank M1A1 Rhino
-        ["rhino1",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"]]],
-        ["rhino2",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"]]],
+        ["rhino1",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G","UnitNATO_TNK2_C","UnitNATO_TNK2_D","UnitNATO_TNK2_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G","UnitNATO_TNK2_C","UnitNATO_TNK2_D","UnitNATO_TNK2_G"]]],
+        ["rhino2",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G","UnitNATO_TNK2_C","UnitNATO_TNK2_D","UnitNATO_TNK2_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G","UnitNATO_TNK2_C","UnitNATO_TNK2_D","UnitNATO_TNK2_G"]]],
         // Tank M2A2 Lion
-        ["lion1",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"]]],
-        ["lion2",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"]]],
+        ["lion1",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G","UnitNATO_TNK2_C","UnitNATO_TNK2_D","UnitNATO_TNK2_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G","UnitNATO_TNK2_C","UnitNATO_TNK2_D","UnitNATO_TNK2_G"]]],
+        ["lion2",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G","UnitNATO_TNK2_C","UnitNATO_TNK2_D","UnitNATO_TNK2_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G","UnitNATO_TNK2_C","UnitNATO_TNK2_D","UnitNATO_TNK2_G"]]],
         // M6 Linebacker Frog
-        ["frog1",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G"]]],
+        ["frog1",                     [2, 2,  ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G","UnitNATO_TNK2_C","UnitNATO_TNK2_D","UnitNATO_TNK2_G"],      ["UnitNATO_TNK1_C","UnitNATO_TNK1_D","UnitNATO_TNK1_G","UnitNATO_TNK2_C","UnitNATO_TNK2_D","UnitNATO_TNK2_G"]]],
         // IFV M1126 ICV Tiger
-        ["tiger1",                     [2, 2,  ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"],      ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"]]],
-        ["tiger2",                     [2, 2,  ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"],      ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"]]],
-        ["tiger3",                     [2, 2,  ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"],      ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"]]],
+        ["tiger1",                     [2, 2,  ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G","UnitNATO_IFV2_C","UnitNATO_IFV2_D","UnitNATO_IFV2_G"],      ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G","UnitNATO_IFV2_C","UnitNATO_IFV2_D","UnitNATO_IFV2_G"]]],
+        ["tiger2",                     [2, 2,  ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G","UnitNATO_IFV2_C","UnitNATO_IFV2_D","UnitNATO_IFV2_G"],      ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G","UnitNATO_IFV2_C","UnitNATO_IFV2_D","UnitNATO_IFV2_G"]]],
+        ["tiger3",                     [2, 2,  ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G","UnitNATO_IFV2_C","UnitNATO_IFV2_D","UnitNATO_IFV2_G"],      ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G","UnitNATO_IFV2_C","UnitNATO_IFV2_D","UnitNATO_IFV2_G"]]],
         // LAV25 GATOR
-        ["gator1",                     [2, 2,  ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"],      ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"]]],
-        ["gator2",                     [2, 2,  ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"],      ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G"]]]
+        ["gator1",                     [2, 2,  ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G","UnitNATO_IFV2_C","UnitNATO_IFV2_D","UnitNATO_IFV2_G"],      ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G","UnitNATO_IFV2_C","UnitNATO_IFV2_D","UnitNATO_IFV2_G"]]],
+        ["gator2",                     [2, 2,  ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G","UnitNATO_IFV2_C","UnitNATO_IFV2_D","UnitNATO_IFV2_G"],      ["UnitNATO_IFV1_C","UnitNATO_IFV1_D","UnitNATO_IFV1_G","UnitNATO_IFV2_C","UnitNATO_IFV2_D","UnitNATO_IFV2_G"]]]
 
 	// AW-159
         //["aw159",                     [1, 1,  ["b_29","b_30"],                               ["b_29","b_30"]]],

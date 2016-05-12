@@ -1,3 +1,5 @@
+if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
+
 _reinforcement = ["paradrop","touchdown","armored"] call BIS_fnc_selectRandom;
 
 {
