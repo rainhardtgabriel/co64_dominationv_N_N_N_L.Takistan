@@ -29,7 +29,7 @@ tf47_var_mainCount = tf47_var_mainCount + 1;
 
 //////////////// Declare Variables  /////////////////////////////////////////////////////////////////////////////////////////////
 
-private ["_Playertext", "_NumOfPlayers", "_ao_select", "_ao_mkr", "_trig", "_trig_rt", "_log_pos", "_ao_task", "_mkr_text", "_ao_name", "_ao_rad", "_position","_flatPos", "_ao_iniText", "_mission_complete", "_mission_new","_ao_ai_skill_array"];
+private ["_Playertext", "_NumOfPlayers", "_ao_select", "_ao_mkr", "_trig", "_trig_rt", "_log_pos", "_ao_task", "_mkr_text", "_ao_name", "_ao_rad", "_position","_flatPos", "_ao_iniText", "_mission_complete", "_mission_new","_ao_ai_skill_array","_ao_pilot_skill_array"];
 
 
 
@@ -105,7 +105,7 @@ if ( _ao_select == "timurkulay") then {
 };
 
 //////////////// AO is chadarakht ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "chadarakht") then {
+/*if ( _ao_select == "chadarakht") then {
 									_log_pos   			= log_chadarakht;
 									//_ao_rad    			= 300;
 									//_mkr_text 	 	=
@@ -115,7 +115,7 @@ if ( _ao_select == "chadarakht") then {
 									sleep 1;
 									
 };
-
+*/
 //////////////// AO is gamarud ////////////////////////////////////////////////////////////////////////////////////////////////		
 if ( _ao_select == "gamarud") then {
 									_log_pos   			= log_gamarud;
@@ -334,8 +334,10 @@ if ( _ao_select == "sakhe") then {
         nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
         nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
  		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
-		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[5,3],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
-		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,1],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,1],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,1],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,1],_ao_pilot_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,1],_ao_pilot_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
  		[getPos _log_pos, 200, 1000, round (1 + random 3), 1] call tf47_fnc_sniperTeam;
 		
 		nul = [_log_pos] spawn tf47_fnc_static;		

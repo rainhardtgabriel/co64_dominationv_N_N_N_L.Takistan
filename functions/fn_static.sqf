@@ -22,9 +22,9 @@ switch (tf47_param_vehiclemod) do {
 	};
 	// RHS
 	case 2 : {
-		_staticType = "rhs_g_Soldier_lite_F"; 
-		_staticType2 = "rhs_SPG9_INS";
-		_crew = "rhs_g_Soldier_lite_F";
+		_staticType = "rhs_SPG9_INS"; 
+		_staticType2 = "rhs_D30_vdv";
+		_crew = "rhs_vdv_rifleman";
 	};
 };
 
