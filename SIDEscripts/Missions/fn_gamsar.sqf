@@ -39,19 +39,6 @@ sleep 1;
 
 //////////////// create a CapVeh1 /////////////////////////////////////////////////////////////////////////////////////////////
 
-_side_position = [[[getPos _side_log_pos, 0],_side_trig],["water","out"]] call BIS_fnc_randomPos;
-_side_flatPos = _side_position isFlatEmpty[3, 1, 0.5, 30, 0, false];
-
-while {(count _side_flatPos) < 1} do {
-_side_position = [[[getPos _side_log_pos,50],_side_trig],["water","out"]] call BIS_fnc_randomPos;
-_side_flatPos = _side_position isFlatEmpty[3, 1, 0.5, 30, 0, false];
-};
-
-while {IsOnRoad _side_flatPos} do {
-_side_position = [[[getPos _side_log_pos, 50],_side_trig],["water","out"]] call BIS_fnc_randomPos;
-_side_flatPos = _side_position isFlatEmpty[3, 1, 0.5, 30, 0, false];
-};
-
 _helo = switch (tf47_param_vehiclemod) do { 
 	// Van
 	case 0 : {
@@ -67,7 +54,7 @@ _helo = switch (tf47_param_vehiclemod) do {
 	};
 };
 
-CapVeh1 = _helo createVehicle _side_flatPos;
+CapVeh1 = _helo createVehicle (getPos _side_log_pos);
 waitUntil { sleep 0.5; alive CapVeh1 };
 CapVeh1 setVectorUp [0,0,1];
 CapVeh1 setHit ["motor", 1];

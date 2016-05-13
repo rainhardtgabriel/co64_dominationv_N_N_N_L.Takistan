@@ -44,6 +44,9 @@ switch true do {
 	case (["_M", _slotName] call BIS_fnc_inString): {
 		_loadout = "m";
 	};
+	case (["_CFR", _slotName] call BIS_fnc_inString): {
+		_loadout = "cfr";
+	};
 	case (["_CO", _slotName] call BIS_fnc_inString): {
 		_loadout = "co";
 	};	
