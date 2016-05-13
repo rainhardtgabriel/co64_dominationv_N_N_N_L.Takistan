@@ -640,7 +640,7 @@ case "cc":
 {
 	_unit addBackpack _baglargeradio;
 	clearMagazineCargoGlobal (unitBackpack _unit);
-	(unitBackpack _unit) addItemCargoGlobal ["ToolKit",1];
+//	(unitBackpack _unit) addItemCargoGlobal ["ToolKit",1];
 };
 // BACKPACK: Pilots
 case "pil":
