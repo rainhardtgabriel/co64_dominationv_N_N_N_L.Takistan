@@ -29,7 +29,7 @@ tf47_var_mainCount = tf47_var_mainCount + 1;
 
 //////////////// Declare Variables  /////////////////////////////////////////////////////////////////////////////////////////////
 
-private ["_Playertext", "_NumOfPlayers", "_ao_select", "_ao_mkr", "_trig", "_trig_rt", "_log_pos", "_ao_task", "_mkr_text", "_ao_name", "_ao_rad", "_position","_flatPos", "_ao_iniText", "_mission_complete", "_mission_new","_ao_ai_skill_array"];
+private ["_Playertext", "_NumOfPlayers", "_ao_select", "_ao_mkr", "_trig", "_trig_rt", "_log_pos", "_ao_task", "_mkr_text", "_ao_name", "_ao_rad", "_position","_flatPos", "_ao_iniText", "_mission_complete", "_mission_new","_ao_ai_skill_array","_ao_pilot_skill_array"];
 
 
 
@@ -42,7 +42,7 @@ _ao_name 			= "";
 _ao_rad 			= 350;
 
 _ao_ai_skill_array  = [0.3,0.5,0.3,0.7,0.5,1,0.8,0.5,0.5,0.5]; // [aimingAccuracy, aimingShake, aimingSpeed, spotDistance, spotTime, courage, commanding, general, endurance, reloadSpeed];
-
+_ao_pilot_skill_array = [0.5,0.5,0.5,0.5,0.5,1,1,1,1,0.5];
 
 //////////////// Count all playable Blufor Units /////////////////////////////////////////////////////////////////////////////////
 
@@ -339,8 +339,8 @@ if ( _ao_select == "sakhe") then {
 		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
 		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
 		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
-		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
-		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_pilot_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],_ao_pilot_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
  		[getPos _log_pos, 200, 1000, round (1 + random 3), 1] call tf47_fnc_sniperTeam;
 		
 		nul = [_log_pos] spawn tf47_fnc_static;		
