@@ -30,8 +30,8 @@ switch (tf47_param_vehiclemod) do {
 	};
 	// RHS
 	case 2 : {
-		_spotter = "rhs_g_Soldier_TL_F";
-		_sniper = "rhs_g_Soldier_M_F";
+		_spotter = "rhs_vdv_des_marksman_asval";
+		_sniper = "rhs_vdv_des_marksman";
 		_sniper2 = _sniper;
 	};
 };
