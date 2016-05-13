@@ -749,6 +749,7 @@ switch (_typeofUnit) do
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
 		_unit addItem "ItemGPS";
 		_unit assignItem "ItemGPS";
+		["cc"] call _backpack;
 	};
 
 // LOADOUT: AIR VEHICLE CREW CHIEF
@@ -766,6 +767,7 @@ switch (_typeofUnit) do
 		{_unit addItemToVest _smgmag; }			forEach[1,2,3,4,5];
 		_unit addweapon _smg;
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
+		["cc"] call _backpack;
 	};
 
 // LOADOUT: ENGINEER (DEMO)
