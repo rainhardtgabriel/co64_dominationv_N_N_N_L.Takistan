@@ -1033,7 +1033,7 @@ class Mission
 			{
 				name="trig_rt";
 				condition="this && alive radiotower;";
-				onActivation="[[[],""AOscripts\reinforcements.sqf""],""BIS_fnc_execVM"",false,true] call BIS_fnc_MP;";
+				onActivation="[[[],""AOscripts\reinforcements.sqf""],""BIS_fnc_execVM""] call BIS_fnc_MP;";
 				sizeA=700;
 				sizeB=700;
 				timeout[]={0,0,1};
