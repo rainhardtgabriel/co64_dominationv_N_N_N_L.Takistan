@@ -70,10 +70,13 @@ _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 _scope1 = "";						// Ironsight
 _scope2 = "rhsusf_acc_eotech_552";			// Holosight
 _scope3 = "rhsusf_acc_ACOG2_USMC";			// MRCO Scope - 1x - 6x
-_scope4 = "optic_SOS";					// SOS Scope - 18x - 75x
+_scope4 = "rhsusf_acc_LEUPOLDMK4";					// SOS Scope - 18x - 75x
+_scope5 = "rhsusf_acc_LEUPOLDMK4_2";
 
 _bipod1 = "bipod_01_F_snd";		// Default bipod
-_bipod2 = "bipod_02_F_blk";		// Black bipod
+_bipod2 = "rhsusf_acc_harris_bipod";		// Black bipod
+
+_rangefinder ="ACE_Vector";
 
 // Default setup
 _attachments = [_attach1,_scope1]; // The default attachment set for most units, overwritten in the individual unitType
@@ -112,6 +115,9 @@ _smg = "SMG_01_F";
 _smgmag = "30Rnd_45ACP_Mag_SMG_01";
 _smgmag_tr = "30Rnd_45ACP_Mag_SMG_01_tracer_red";
 
+// Stanard AAR Rifle
+_aarrifle = "rhs_weap_m27iar";
+_aarriflemag = "rhs_mag_30Rnd_556x45_Mk318_Stanag";
 // Diver
 _diverWep = "rhs_weap_m16a4_carryhandle_grip";
 _diverMag1 = "rhs_mag_30Rnd_556x45_Mk318_Stanag";
@@ -143,6 +149,7 @@ _grenade = "rhs_mag_m67";
 _Mgrenade = "MiniGrenade";
 _smokegrenade = "SmokeShell";
 _smokegrenadegreen = "SmokeShellGreen";
+_smokegrenadepurple = "rhs_mag_m18_purple";
 
 // misc medical items.
 _firstaid = "FirstAidKit";
@@ -198,8 +205,8 @@ _MMGmag_tr = "rhsusf_100Rnd_762x51";
 // _MMGmag_tr = ""150Rnd_762x54_Box"_Tracer";
 
 // Marksman rifle
-_DMrifle = "srifle_DMR_03_tan_F";
-_DMriflemag = "20Rnd_762x51_Mag";
+_DMrifle = "rhs_weap_m14ebrri";
+_DMriflemag = "rhsusf_20Rnd_762x51_m118_special_Mag";
 
 // MAR-10
 //_DMrifle = "srifle_DMR_02_F";
@@ -210,10 +217,10 @@ _RAT = "tf47_at4_heat";
 //_RATmag = "tf47_m3maaws_HE";
 
 // Medium AT
-_MAT = "tf47_m3maaws";
-_MATmag1 = "tf47_m3maaws_HE";
-_MATmag2 = "tf47_m3maaws_HE";
-
+_MAT = "tf47_smaw";
+_MATmag1 = "tf47_smaw_HEAA";
+_MATmag2 = "tf47_smaw_HEDP";
+_matscope= "tf47_optic_smaw"; //Scope for MAT
 // Surface Air
 _SAM = "rhs_weap_fim92";
 _SAMmag = "rhs_fim92_mag";
@@ -222,6 +229,7 @@ _SAMmag = "rhs_fim92_mag";
 _HAT = "tf47_m3maaws";
 _HATmag1 = "tf47_m3maaws_HE";
 _HATmag2 = "tf47_m3maaws_HE";
+_hatscope = "tf47_optic_m3aaws"; //Scope for HAT
 
 // Sniper
 _SNrifle = "srifle_LRR_F";
@@ -241,7 +249,7 @@ _APmine2 = "APERSMine_Range_Mag";
 // "medium" vests are used for all classes if they are not assigned a specific uniform
 
 _light = [];
-_heavy =  ["eng","engm"];
+_heavy =  [];
 _oalead = ["co","dc"];
 _grenftl =["gren","ftl"];
 _corpsman =["m"];
@@ -282,9 +290,9 @@ _pilotRig = ["V_TacVest_blk"];
 _pilotGlasses = [];
 
 // Crewman
-_crewUniform = ["rhs_uniform_FROG01_wd"];
+_crewUniform = ["rhs_uniform_FROG01_d"];
 _crewHelmet = ["H_HelmetCrew_B"];
-_crewRig = ["rhs_spc_crewman"];
+_crewRig = ["rhsusf_spc_crewman"];
 _crewGlasses = [];
 
 // Ghillie
@@ -294,7 +302,7 @@ _ghillieRig = ["V_Chestrig_rgr"];
 _ghillieGlasses = [];
 
 // Spec Op
-_sfuniform = ["rhsusf_mich_helmet_marpatwd"];
+_sfuniform = ["rhsusf_mich_helmet_marpat_d"];
 _sfhelmet = ["H_HelmetSpecB","H_HelmetSpecB_paint1","H_HelmetSpecB_paint2","H_HelmetSpecB_blk"];
 _sfRig = ["V_PlateCarrierSpec_rgr"];
 _sfGlasses = [];
@@ -387,7 +395,7 @@ switch (_typeofUnit) do
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
 		{ _unit addItemToVest _smokegrenadegreen; }	forEach [1,2];
 		_attachments = [_attach1,_scope3];
-		_unit addWeapon "ACE_Vector";
+		_unit addWeapon _rangefinder;
 		_unit linkItem "ItemGPS";
 		["com"] call _backpack;
 	};
@@ -400,14 +408,14 @@ switch (_typeofUnit) do
 		{ _unit addItemToVest _glmag; }			forEach	[1,2,3];
 		{ _unit addItemToVest _glsmokewhite; }		forEach [1,2,3,4];
 		_unit addweapon _glrifle;					//_DCrifle
-		{_unit addmagazine _pistolmag; }		forEach [1,2];
+		{_unit addItemToVest _pistolmag; }		forEach [1,2];
 		_unit addweapon _pistol;
 		{ _unit addItemToVest _grenade; }		forEach [1];
 		{ _unit addItemToVest _mgrenade; }		forEach [1];
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
 		{ _unit addItemToVest _smokegrenadegreen; }	forEach [1,2];
 		_attachments = [_attach1,_scope2];
-		_unit addWeapon "ACE_Vector";
+		_unit addWeapon _rangefinder;
 		_unit linkItem "ItemGPS";
 		["g"] call _backpack;
 	};
@@ -415,9 +423,10 @@ switch (_typeofUnit) do
 // LOADOUT: MEDIC
 	case "m":
 	{
-		{ _unit addItemtoVest _carbinemag; } 		forEach [1,2,3,4,5,6,7];
+		{ _unit addItemtoVest _carbinemag; } 		forEach [1,2,3,4,5,6,7,8,9,10];
 		_unit addweapon _carbine;
-		{ _unit addItemToVest _smokegrenade; }		forEach [1,2,3,4];
+		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
+		{ _unit addItemToVest _smokegrenadepurple; }		forEach [1,2];
 		{_unit addItem _firstaid} 			forEach [1,2,3,4];
 		_attachments = [_attach1,_scope2];
 		_unit linkItem "ItemGPS";
@@ -429,9 +438,10 @@ switch (_typeofUnit) do
 // LOADOUT: COMBAT FIRST RESPONDER
 	case "cfr":
 	{
-		_unit addmagazines [_carbinemag,7];
+		{ _unit addItemtoVest _carbinemag; } 		forEach [1,2,3,4,5,6,7,8,9,10,11,12,13];
 		_unit addweapon _carbine;
-		_unit addmagazines [_smokegrenade,4];
+		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
+		{ _unit addItemToVest _smokegrenadepurple; }		forEach [1,2];
 		{_unit addItem _firstaid} forEach [1,2,3,4];
 		_unit linkItem "ItemGPS";
 		["cfr"] call _backpack;
@@ -452,7 +462,7 @@ switch (_typeofUnit) do
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
 		{ _unit addItemToVest _smokegrenadegreen; }	forEach [1,2];
 		_attachments = [_attach1,_scope2];
-		_unit addWeapon "ACE_Vector";
+		_unit addWeapon _rangefinder;
 		_unit linkItem "ItemGPS";
 		["g"] call _backpack;
 	};
@@ -465,8 +475,8 @@ switch (_typeofUnit) do
 		_unit addweapon _AR;
 		{ _unit addItemToVest _grenade; }		forEach [1];
 		{ _unit addItemToVest _mgrenade; }		forEach [1];
-		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
-		{_unit addmagazine _pistolmag; }		forEach [1,2];
+		{ _unit addItemToVest _smokegrenade; }		forEach [1];
+		{_unit addItemToVest _pistolmag; }		forEach [1];
 		_unit addweapon _pistol;
 		["ar"] call _backpack;
 		_attachments pushback (_bipod1);
@@ -475,13 +485,14 @@ switch (_typeofUnit) do
 // LOADOUT: ASSISTANT AUTOMATIC RIFLEMAN
 	case "aar":
 	{
-		{ _unit addItemtoVest _riflemag; } 		forEach [1,2,3,4,5,6,7];
+		{ _unit addItemtoVest _riflemag; } 		forEach [1,2,3,4,5,6,7,8,9];
 		{ _unit addItemtoVest _riflemag_tr; } 		forEach [1,2];
-		_unit addweapon _rifle;
+		_unit addweapon _aarrifle;
 		{ _unit addItemToVest _grenade; }		forEach [1,2];
 		{ _unit addItemToVest _mgrenade; }		forEach [1,2];
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
-		_unit addWeapon "Binocular";
+		_unit addWeapon _rangefinder;
+		_attachments pushback (_bipod2);
 		["aar"] call _backpack;
 	};
 
@@ -510,6 +521,7 @@ switch (_typeofUnit) do
 		_attachments = [_attach1,_scope4];
 		_unit addweapon _pistol;
 		["dm"] call _backpack;
+		_attachments pushback (_bipod2);
 		_attachments = [_attach1,_scope3];
 	};
 
@@ -567,22 +579,21 @@ switch (_typeofUnit) do
 	case "matg":
 	{
 		["matg"] call _backpack;
-		{ _unit addItemtoVest _carbinemag; } 		forEach [1,2,3,4,5,6,7];
+		{ _unit addItemtoVest _carbinemag; } 		forEach [1,2,3,4,5,6,7,8,9,10];
 		{ _unit addItemtoVest _carbinemag_tr; } 	forEach [1,2];
-		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
+		{ _unit addItemToVest _smokegrenade; }		forEach [1,2,3];
 		_unit addweapon _carbine;
 		_unit addweapon _MAT;
+		_unit addSecondaryWeaponItem _matscope;
 	};
 
 // LOADOUT: MEDIUM AT ASSISTANT GUNNER
 	case "matag":
 	{
-		{ _unit addItemtoVest _carbinemag; } 		forEach [1,2,3,4,5,6,7];
+		{ _unit addItemtoVest _carbinemag; } 		forEach [1,2,3,4,5,6,7,8,9,10,11];
 		{ _unit addItemtoVest _carbinemag_tr; } 	forEach [1,2];
 		_unit addweapon _carbine;
-		_unit addWeapon "Rangefinder";;
-		{ _unit addItemToVest _grenade; }		forEach [1];
-		{ _unit addItemToVest _mgrenade; }		forEach [1];
+		_unit addWeapon _rangefinder;
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
 		["matag"] call _backpack;
 	};
@@ -594,12 +605,13 @@ switch (_typeofUnit) do
 		_unit addweapon _carbine;
 		["hatg"] call _backpack;
 		_unit addWeapon _HAT;
+		_unit addSecondaryWeaponItem _hatscope;
 	};
 
 // LOADOUT: HEAVY AT ASSISTANT GUNNER
 	case "hatag":
 	{
-		{ _unit addItemtoVest _carbinemag; } 		forEach [1,2,3,4,5,6,7];
+		{ _unit addItemtoVest _carbinemag; } 		forEach [1,2,3,4,5,6,7,8,9,10,11];
 		{ _unit addItemtoVest _carbinemag_tr; } 	forEach [1,2];
 		_unit addweapon _carbine;
 		_unit addWeapon "Binocular";
@@ -630,7 +642,7 @@ switch (_typeofUnit) do
 		{ _unit addItemToVest _grenade; }		forEach [1];
 		{ _unit addItemToVest _mgrenade; }		forEach [1];
 		{ _unit addItemToVest _smokegrenade; }		forEach [1];
-		_unit addWeapon "ACE_Vector";
+		_unit addWeapon _rangefinder;
 		["mtrag"] call _backpack;
 	};
 
@@ -691,21 +703,21 @@ switch (_typeofUnit) do
 		{_unit addmagazine _pistolmag; }		forEach [1,2,3,4];
 		_unit addweapon _pistol;
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
-		_attachments = [_scope3];
+		_attachments = [_scope5];
+		_attachments pushback (_bipod2);
 	};
 
 // LOADOUT: SPOTTER
 	case "sp":
 	{
-		{ _unit addItemtoVest _glriflemag; } 		forEach [1,2,3,4,5,6,7];
-		{ _unit addItemToVest _glriflemag_tr; } 	forEach	[1,2];
-		{ _unit addItemToVest _glmag; }			forEach	[1,2,3];
-		{ _unit addItemToVest _glsmokewhite; }		forEach [1,2,3,4];
-		_unit addweapon _glrifle;					//_COrifle
+		{ _unit addItemtoVest _DMriflemag; } 		forEach [1,2,3,4,5,6,7];
+		_unit addweapon _DMrifle;					//_COrifle
 		{_unit addmagazine _pistolmag; }		forEach [1,2,3,4];
 		_unit addweapon _pistol;
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
 		_unit addWeapon "ACE_Vector";
+		_attachments = [_scope4];
+		_attachments pushback (_bipod2);
 		_unit linkItem "ItemGPS";
 	};
 
@@ -728,7 +740,7 @@ switch (_typeofUnit) do
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
 		_unit addItem "ItemGPS";
 		_unit assignItem "ItemGPS";
-		["cc"] call _backpack;
+		["engm"] call _backpack;
 	};
 
 // LOADOUT: VEHICLE GUNNER
@@ -773,12 +785,13 @@ switch (_typeofUnit) do
 // LOADOUT: ENGINEER (DEMO)
 	case "eng":
 	{
-		{ _unit addItemtoVest _carbinemag; } 		forEach [1,2,3,4,5,6,7];
+		{ _unit addItemtoVest _carbinemag; } 		forEach [1,2,3,4,5,6,7,8,9,10,11];
 		_unit addweapon _carbine;
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
 		{ _unit addItemToVest _grenade; }		forEach [1];
 		{ _unit addItemToVest _mgrenade; }		forEach [1];
-		{_unit addItemToVest _satchel; }		forEach [1,2];
+		_unit addItemToVest "ACE_DefusalKit";
+		_unit addItemToVest "ACE_Clacker";
 		["eng"] call _backpack;
 	};
 
@@ -790,7 +803,6 @@ switch (_typeofUnit) do
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
 		{ _unit addItemToVest _grenade; }		forEach [1];
 		{ _unit addItemToVest _mgrenade; }		forEach [1];
-		{_unit addItemToVest _APmine2; }		forEach [1,2];
 		["engm"] call _backpack;
 	};
 
