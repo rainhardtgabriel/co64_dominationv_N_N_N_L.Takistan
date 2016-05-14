@@ -8,7 +8,7 @@ class EditorData
 	toggles=70;
 	class ItemIDProvider
 	{
-		nextID=3520;
+		nextID=3521;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8212.5117,375.01746,2136.6455};
-		dir[]={0.56238776,-0.81676924,0.12903637};
-		up[]={0.79608297,0.57696813,0.18265614};
-		aside[]={0.2236381,-1.990702e-007,-0.97469383};
+		pos[]={8040.2124,598.10583,2287.9441};
+		dir[]={0.81982112,-0.54698443,-0.1695469};
+		up[]={0.53566182,0.83713692,-0.11078018};
+		aside[]={-0.20252782,7.7707227e-008,-0.97929931};
 	};
 };
 binarizationWanted=0;
@@ -82,7 +82,8 @@ addons[]=
 	"A3_Characters_F_EPC",
 	"A3_Structures_F_Civ_Lamps",
 	"A3_Structures_F_System",
-	"ace_common"
+	"ace_common",
+	"task_force_radio_items"
 };
 randomSeed=14170574;
 class ScenarioData
@@ -148,7 +149,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1528;
+		items=1529;
 		class Item0
 		{
 			dataType="Marker";
@@ -32209,6 +32210,153 @@ class Mission
 			{
 			};
 			id=3430;
+		};
+		class Item1528
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={8311.8936,296.04001,2174.5549};
+			};
+			id=3520;
+			type="tfar_ModuleTaskForceRadioEnforceUsage";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_password";
+					expression="_this setVariable ['radio_channel_password',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="India65";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_RiflemanRadio";
+					expression="_this setVariable ['RiflemanRadio',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_name";
+					expression="_this setVariable ['radio_channel_name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Radio Communication - Public I";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_same_sw_frequencies_for_side";
+					expression="_this setVariable ['same_sw_frequencies_for_side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_TeamLeaderRadio";
+					expression="_this setVariable ['TeamLeaderRadio',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_same_lr_frequencies_for_side";
+					expression="_this setVariable ['same_lr_frequencies_for_side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_terrain_interception_coefficient";
+					expression="_this setVariable ['terrain_interception_coefficient',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=7;
+						};
+					};
+				};
+				nAttributes=7;
+			};
 		};
 	};
 };

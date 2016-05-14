@@ -165,7 +165,7 @@ class Params
             title = "Radio System";
             values[] = {0,1,2};
             texts[] = {"Off","ACRE2","TFR"};
-            default = 1;
+            default = 2;
             code = "f_var_radios = %1";
     };
 
