@@ -143,6 +143,7 @@ _grenade = "rhs_mag_m67";
 _Mgrenade = "MiniGrenade";
 _smokegrenade = "SmokeShell";
 _smokegrenadegreen = "SmokeShellGreen";
+_smokegrenadepurple = "rhs_mag_m18_purple";
 
 // misc medical items.
 _firstaid = "FirstAidKit";
@@ -400,7 +401,7 @@ switch (_typeofUnit) do
 		{ _unit addItemToVest _glmag; }			forEach	[1,2,3];
 		{ _unit addItemToVest _glsmokewhite; }		forEach [1,2,3,4];
 		_unit addweapon _glrifle;					//_DCrifle
-		{_unit addmagazine _pistolmag; }		forEach [1,2];
+		{_unit addItemToVest _pistolmag; }		forEach [1,2];
 		_unit addweapon _pistol;
 		{ _unit addItemToVest _grenade; }		forEach [1];
 		{ _unit addItemToVest _mgrenade; }		forEach [1];
@@ -415,9 +416,10 @@ switch (_typeofUnit) do
 // LOADOUT: MEDIC
 	case "m":
 	{
-		{ _unit addItemtoVest _carbinemag; } 		forEach [1,2,3,4,5,6,7];
+		{ _unit addItemtoVest _carbinemag; } 		forEach [1,2,3,4,5,6,7,8,9,10];
 		_unit addweapon _carbine;
-		{ _unit addItemToVest _smokegrenade; }		forEach [1,2,3,4];
+		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
+		{ _unit addItemToVest _smokegrenadepurple; }		forEach [1,2];
 		{_unit addItem _firstaid} 			forEach [1,2,3,4];
 		_attachments = [_attach1,_scope2];
 		_unit linkItem "ItemGPS";
@@ -429,9 +431,10 @@ switch (_typeofUnit) do
 // LOADOUT: COMBAT FIRST RESPONDER
 	case "cfr":
 	{
-		_unit addmagazines [_carbinemag,7];
+		{ _unit addItemtoVest _carbinemag; } 		forEach [1,2,3,4,5,6,7,8,9,10,11,12,13];
 		_unit addweapon _carbine;
-		_unit addmagazines [_smokegrenade,4];
+		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
+		{ _unit addItemToVest _smokegrenadepurple; }		forEach [1,2];
 		{_unit addItem _firstaid} forEach [1,2,3,4];
 		_unit linkItem "ItemGPS";
 		["cfr"] call _backpack;

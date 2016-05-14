@@ -10,7 +10,8 @@ case "m":
 		_unit addBackpack _bagmedic;
 		clearAllItemsFromBackpack (unitBackpack _unit);
 		(unitBackpack _unit) addItemCargoGlobal [_medkit,1];
-		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 4];
+		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
+		{ _unit addItemToVest _smokegrenadepurple; }		forEach [1,2];
 		(unitBackpack _unit) addItemCargoGlobal [_firstaid, 4];
 	};
 	// LOADOUT: HEAVY
@@ -18,7 +19,8 @@ case "m":
 		_unit addBackpack _bagmedic;
 		clearAllItemsFromBackpack (unitBackpack _unit);
 		(unitBackpack _unit) addItemCargoGlobal [_medkit,2];
-		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 6];
+		{ _unit addItemToVest _smokegrenade; }		forEach [1,2,3];
+		{ _unit addItemToVest _smokegrenadepurple; }		forEach [1,2,3];
 		(unitBackpack _unit) addItemCargoGlobal [_firstaid, 8];
 	};
 	// USM Mod active
@@ -35,8 +37,7 @@ case "cfr":
 		_unit addBackpack _bagmedic;
 		clearBackpackCargoGlobal (unitBackpack _unit);
 		clearAllItemsFromBackpack (unitBackpack _unit);
-		(unitBackpack _unit) addMagazineCargoGlobal [_carbinemag,6];
-		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 3];
+		{ _unit addItemToVest _smokegrenadepurple; }		forEach [1,2,3];
 		(unitBackpack _unit) addItemCargoGlobal [_firstaid, 4];
 	};
 
@@ -45,8 +46,8 @@ case "cfr":
 		_unit addBackpack _bagmedic;
 		clearBackpackCargoGlobal (unitBackpack _unit);
 		clearAllItemsFromBackpack (unitBackpack _unit);
-		(unitBackpack _unit) addItemCargoGlobal [_carbinemag,8];
-		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 6];
+		(unitBackpack _unit) addItemCargoGlobal [_carbinemag,4];
+		{ _unit addItemToVest _smokegrenadepurple; }		forEach [1,2,3];
 		(unitBackpack _unit) addItemCargoGlobal [_firstaid, 8];
 	};
 	// USM Mod active
@@ -64,31 +65,22 @@ case "g":
 		(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag,2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_glmag,1];
 		(unitBackpack _unit) addMagazineCargoGlobal [_glsmokewhite,1];
-		(unitBackpack _unit) addMagazineCargoGlobal [_grenade,1];
-		(unitBackpack _unit) addMagazineCargoGlobal [_mgrenade,1];
-		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade,1];
 	};
 	// LOADOUT: MEDIUM
 	if (_loadout == 1) then {
 		_unit addBackpack _bagsmall;
 		clearMagazineCargoGlobal (unitBackpack _unit);
 		(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 4];
-		(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 2];
-		(unitBackpack _unit) addMagazineCargoGlobal [_glsmokewhite, 2];
-		(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
-		(unitBackpack _unit) addMagazineCargoGlobal [_mgrenade, 2];
-		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 2];
+
+
 	};
 	// LOADOUT: HEAVY
 	if (_loadout == 2) then {
 		_unit addBackpack _baglarge;
 		clearMagazineCargoGlobal (unitBackpack _unit);
-		(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 6];
-		(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 4];
-		(unitBackpack _unit) addMagazineCargoGlobal [_glsmokewhite, 4];
-		(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 4];
-		(unitBackpack _unit) addMagazineCargoGlobal [_mgrenade, 4];
-		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 4];
+		(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 4];
+
+
 	};
 };
 // BACKPACK:  (CO/DC/SL)
@@ -100,7 +92,6 @@ case "com":
 		clearMagazineCargoGlobal (unitBackpack _unit);
 		(unitBackpack _unit) addMagazineCargoGlobal [_glmag,1];
 		(unitBackpack _unit) addMagazineCargoGlobal [_glsmokewhite,1];
-		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade,1];
 	};
 	// LOADOUT: MEDIUM
 	if (_loadout == 1) then {
@@ -116,7 +107,7 @@ case "com":
 		clearMagazineCargoGlobal (unitBackpack _unit);
 		(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_glsmokewhite, 2];
-		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
+
 	};
 };
 
