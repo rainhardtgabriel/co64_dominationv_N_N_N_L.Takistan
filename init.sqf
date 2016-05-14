@@ -184,7 +184,7 @@ if ((paramsArray select 0) != 4) then {
 sleep 0.5;
 
 //start cleanup script
-[] spawn tf47_fnc_cleanup_Init;
+[] spawn tf47_fnc_cleanup_init;
 sleep 0.1;
 
 // Vehicle replacement

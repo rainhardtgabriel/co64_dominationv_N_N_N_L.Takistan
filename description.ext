@@ -499,6 +499,7 @@ class CfgFunctions
 			class cleanup_abandonded;
 			class cleanup_init;
 			class cleanup_registerPlayer;
+			class cleanup_unitKillHandler;
         	};
 	};
 	
