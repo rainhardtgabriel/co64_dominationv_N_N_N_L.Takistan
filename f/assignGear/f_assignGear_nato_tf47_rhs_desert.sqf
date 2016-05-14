@@ -249,7 +249,7 @@ _APmine2 = "APERSMine_Range_Mag";
 // "medium" vests are used for all classes if they are not assigned a specific uniform
 
 _light = [];
-_heavy =  ["eng","engm"];
+_heavy =  [];
 _oalead = ["co","dc"];
 _grenftl =["gren","ftl"];
 _corpsman =["m"];
@@ -290,9 +290,9 @@ _pilotRig = ["V_TacVest_blk"];
 _pilotGlasses = [];
 
 // Crewman
-_crewUniform = ["rhs_uniform_FROG01_wd"];
+_crewUniform = ["rhs_uniform_FROG01_d"];
 _crewHelmet = ["H_HelmetCrew_B"];
-_crewRig = ["rhs_spc_crewman"];
+_crewRig = ["rhsusf_spc_crewman"];
 _crewGlasses = [];
 
 // Ghillie
@@ -302,7 +302,7 @@ _ghillieRig = ["V_Chestrig_rgr"];
 _ghillieGlasses = [];
 
 // Spec Op
-_sfuniform = ["rhsusf_mich_helmet_marpatwd"];
+_sfuniform = ["rhsusf_mich_helmet_marpat_d"];
 _sfhelmet = ["H_HelmetSpecB","H_HelmetSpecB_paint1","H_HelmetSpecB_paint2","H_HelmetSpecB_blk"];
 _sfRig = ["V_PlateCarrierSpec_rgr"];
 _sfGlasses = [];
@@ -740,7 +740,7 @@ switch (_typeofUnit) do
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
 		_unit addItem "ItemGPS";
 		_unit assignItem "ItemGPS";
-		["cc"] call _backpack;
+		["engm"] call _backpack;
 	};
 
 // LOADOUT: VEHICLE GUNNER
@@ -785,12 +785,13 @@ switch (_typeofUnit) do
 // LOADOUT: ENGINEER (DEMO)
 	case "eng":
 	{
-		{ _unit addItemtoVest _carbinemag; } 		forEach [1,2,3,4,5,6,7];
+		{ _unit addItemtoVest _carbinemag; } 		forEach [1,2,3,4,5,6,7,8,9,10,11];
 		_unit addweapon _carbine;
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
 		{ _unit addItemToVest _grenade; }		forEach [1];
 		{ _unit addItemToVest _mgrenade; }		forEach [1];
-		{_unit addItemToVest _satchel; }		forEach [1,2];
+		_unit addItemToVest "ACE_DefusalKit";
+		_unit addItemToVest "ACE_Clacker";
 		["eng"] call _backpack;
 	};
 
@@ -802,7 +803,6 @@ switch (_typeofUnit) do
 		{ _unit addItemToVest _smokegrenade; }		forEach [1,2];
 		{ _unit addItemToVest _grenade; }		forEach [1];
 		{ _unit addItemToVest _mgrenade; }		forEach [1];
-		{_unit addItemToVest _APmine2; }		forEach [1,2];
 		["engm"] call _backpack;
 	};
 

@@ -23,6 +23,7 @@ _mod_items = [
 	"U_B_FullGhillie_ard",
 	"U_B_PilotCoveralls",
 	"U_B_HeliPilotCoveralls",
+	"U_B_GhillieSuit",
 	 
 	//VESTS
 	"rhsusf_spc",
