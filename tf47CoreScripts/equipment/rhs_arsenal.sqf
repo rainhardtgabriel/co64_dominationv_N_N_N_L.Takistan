@@ -179,10 +179,21 @@ _mod_items = [
 
 	 
 	//ATTACHMENTS
-	"rhs_weap_optic_smaw"
+	"rhs_weap_optic_smaw",
+	"tf47_optic_smaw",
+	"tf47_optic_m3maaws"
 ];
 _mod_magazines = [
 	//LAUNCHER AMMO
+	"tf47_smaw_HEAA",
+	"tf47_smaw_HEDP",
+	"tf47_smaw_SR",
+	"tf47_smaw_NE",
+	"tf_m3maaws_heat",
+	"tf47_m3maaws_hedp",
+	"tf47_m3maaws_he",
+	"tf47_m3maaws_illum",
+	"tf47_m3maaws_smoke",
 	"rhs_mag_smaw_SR",
 	"rhs_mag_smaw_HEAA",
 	"rhs_mag_smaw_HEDP",
@@ -294,6 +305,12 @@ _mod_weapons = [
 	"rhsusf_weap_m9",
 
 	//LAUNCHER
+	"tf47_at4_heat",
+	"tf47_at4_hedp",
+	"tf47_at4_hp",
+	"tf47_smaw",
+	"tf47_smaw_green",
+	"tf47_m3maaws",
 	"rhs_weap_smaw",
 	"rhs_weap_M136",
 	"rhs_weap_M136_hedp",
