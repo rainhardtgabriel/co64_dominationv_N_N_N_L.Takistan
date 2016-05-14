@@ -49,4 +49,3 @@ if(alive player) then {
 			sleep 300;
 		}:
 	};
-};

@@ -107,9 +107,10 @@ _OPFmen = switch (tf47_param_vehiclemod) do {
 	// RHS
 	case 2 : {
 		[
-		"rhs_g_Soldier_AR_F","rhs_g_Soldier_AR_F","rhs_g_Soldier_AR_F","rhs_g_Soldier_lite_F","rhs_g_Soldier_lite_F","rhs_g_Soldier_GL_F",
-		"rhs_g_Soldier_lite_F","rhs_g_Soldier_AT_F","rhs_g_Soldier_GL_F","rhs_g_Soldier_lite_F","rhs_g_Soldier_AA_F","rhs_g_Soldier_AT_F",
-		"rhs_g_Soldier_AT_F","rhs_g_Soldier_AAR_F","rhs_g_Soldier_GL_F"];
+			"rhs_vdv_des_machinegunner","rhs_vdv_des_arifleman","rhs_vdv_des_machinegunner","rhs_vdv_des_rifleman","rhs_vdv_des_medic",
+			"rhs_vdv_des_grenadier","rhs_vdv_des_junior_sergeant","rhs_vdv_des_RShG2","rhs_vdv_des_grenadier","rhs_vdv_des_sergeant",
+			"rhs_vdv_des_aa","rhs_vdv_des_LAT","rhs_vdv_des_grenadier_rpg","rhs_vdv_des_machinegunner_assistant",
+			"rhs_vdv_des_strelok_rpg_assist","rhs_vdv_des_marksman"];
 	};
 };
 

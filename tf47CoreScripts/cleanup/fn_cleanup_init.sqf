@@ -69,7 +69,7 @@ waituntil{
 			switch(true)do{
 				case(_x getVariable["pvpfw_cleanUp_keep",false]):{
 					_delay = 0.01;
-					diag_log format["#PVPFW The objects variable indicates, that it should not be cleaned up %1", _type];					
+					//diag_log format["#PVPFW The objects variable indicates, that it should not be cleaned up %1", _type];					
 				};
 			
 				#ifdef __pvpfw_cleanUp_cleanExtra
@@ -82,7 +82,7 @@ waituntil{
 				case(!alive _x):{
 					_delay = 0.05;
 					//_nearEntities resize 0;
-					diag_log format["#PVPFW found dead object %1",_x];
+					//diag_log format["#PVPFW found dead object %1",_x];
 					
 					_nearEntities = (getPosATL _x) nearEntities [["CAManBase","Air","LandVehicle"],pvpfw_cleanUp_vehicleRadius];
 					_numberOfPlayerNearby = 0;
@@ -158,6 +158,7 @@ waituntil{
 					diag_log format["#PVPFW found ruin  %1",_x];
 					_delay = 0.05;
 					_nearEntities = (getPosATL _x) nearEntities [["CAManBase","Air","LandVehicle"],pvpfw_cleanUp_ruinRadius];
+					//@todo we shall check if no player entities are in the area!
 					if (count _nearEntities == 0) then{
 						deleteVehicle _x;
 						diag_log format["#PVPFW module_cleanup: deleting destroyed building. type = %1",_type];

@@ -37,7 +37,10 @@ onPreloadFinished {
 [[evileye1,"evileye1"],"setVehicleVarname",true] call BIS_fnc_MP;
 
 if(tf47_param_vehiclemod == 2) then {
-	albatros1 addAction ["<t color='#FF0000'>Get in C130J</t>", "(_this select 1) moveInCargo (_this select 0)",nil, 1.5, true, true, "", "!(_this in _target)"]; 
+	_nul = [] spawn {
+		waitUntil {sleep 10; !isNil "albatros1"; };
+		albatros1 addAction ["<t color='#FF0000'>Get in C130J</t>", "(_this select 1) moveInCargo (_this select 0)",nil, 1.5, true, true, "", "!(_this in _target)"]; 
+	};
 };
 if (tf47_var_FOBStatus == 2) then
 {

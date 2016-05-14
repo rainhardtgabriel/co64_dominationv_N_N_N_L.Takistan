@@ -27,7 +27,7 @@ ______________________________________________*/
 //_group
 #define PATROLS_GROUPHANDLE 2
 //_convoy
-#define PATROLS_LIST_OF_CONVOY_VEHICLES
+#define PATROLS_LIST_OF_CONVOY_VEHICLES 3
 //_inf 
 #define PATROLS_LIST_OF_CONVOY_INFANTRY_UNITS 4
 //_start

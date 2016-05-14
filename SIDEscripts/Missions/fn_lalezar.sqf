@@ -47,7 +47,7 @@ _cache = switch (tf47_param_vehiclemod) do {
 	};
 	// RHS
 	case 2 : {
-		"rhs_mags_crate";
+		"rhs_weapon_crate";
 	};
 };
  

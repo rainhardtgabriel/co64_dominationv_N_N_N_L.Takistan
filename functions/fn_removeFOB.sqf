@@ -16,15 +16,15 @@ fob1 setvariable ["ace_medical_isMedicalFacility", false];
 
 _location = getPos fobtable;
 
-_position = _location findEmptyPosition [5,20,"Land_Cargo_House_V3_F"];
+_position = _location findEmptyPosition [0,35,"Land_Cargo10_military_green_F"];
 fobContainer1 setPos _position;
 sleep 0.5;
 
-_position = _location findEmptyPosition [5,25,"Land_Cargo_House_V3_F"];
+_position = _location findEmptyPosition [0,35,"Land_Cargo10_military_green_F"];
 fobContainer2 setPos _position;
 sleep 0.5;
 
-_position = _location findEmptyPosition [5,30,"Land_Cargo_House_V3_F"];
+_position = _location findEmptyPosition [0,35,"Land_Cargo10_military_green_F"];
 fobContainer3 setPos _position;
 sleep 0.5;
 

@@ -25,7 +25,7 @@ TICKETS_HARDCAP = 150;
 TF47_MISSIONID = 94;
  
 // Mission Name/Version Info for Log
-TF47_MISSIONINFO = "CO 64 Operation Solve Conflict";
+TF47_MISSIONINFO = "SUPREMACY";
  
 _pathtoscripts = "tf47CoreScripts\";
  
