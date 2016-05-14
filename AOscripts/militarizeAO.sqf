@@ -42,7 +42,7 @@ _ao_name 			= "";
 _ao_rad 			= 350;
 
 _ao_ai_skill_array  = [0.3,0.5,0.3,0.7,0.5,1,0.8,0.5,0.5,0.5]; // [aimingAccuracy, aimingShake, aimingSpeed, spotDistance, spotTime, courage, commanding, general, endurance, reloadSpeed];
-
+_ao_pilot_skill_array = [0.3,0.5,0.3,0.7,0.5,1,0.8,0.9,0.9,0.5];
 
 //////////////// Count all playable Blufor Units /////////////////////////////////////////////////////////////////////////////////
 
