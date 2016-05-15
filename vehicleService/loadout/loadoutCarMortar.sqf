@@ -15,10 +15,10 @@ _veh addMagazineCargoGlobal ["HandGrenade_West",5];
 
 //Items
 _veh addItemCargoGlobal ["ACE_EarPlugs",5];
-_veh addWeaponCargoGlobal ["ACE_MapTools",5];
-_veh addWeaponCargoGlobal ["ACE_RangeTable_82mm",2];
-_veh addWeaponCargoGlobal ["ACE_microDAGR",3];
-_veh addWeaponCargoGlobal ["ACE_RangeCard",3];
+_veh addItemCargoGlobal ["ACE_MapTools",5];
+_veh addItemCargoGlobal ["ACE_RangeTable_82mm",2];
+_veh addItemCargoGlobal ["ACE_microDAGR",3];
+_veh addItemCargoGlobal ["ACE_RangeCard",3];
 _veh addWeaponCargoGlobal ["ACE_Vector",3];
 
 //Mortar
@@ -56,10 +56,10 @@ switch (tf47_param_vehiclemod) do {
 switch (f_var_radios) do {
 	// ACRE 2
 	case 1: {
-		_veh addWeaponCargoGlobal ["ACRE_PRC117F",1];
+		_veh addItemCargoGlobal ["ACRE_PRC117F",1];
 	};
 	// TFR
 	case 2: {
-		_veh addWeaponCargoGlobal ["tf_rt1523g",1];
+		_veh addItemCargoGlobal ["tf_rt1523g",1];
 	};
 };

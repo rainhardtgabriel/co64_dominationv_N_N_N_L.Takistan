@@ -17,16 +17,17 @@ _veh addMagazineCargoGlobal ["HandGrenade",5];
 _veh addItemCargoGlobal ["ACE_EarPlugs",10];
 
 //Medic
-_veh addWeaponCargoGlobal ["ACE_fieldDressing",10];
-_veh addWeaponCargoGlobal ["ACE_elasticBandage",7];
-_veh addWeaponCargoGlobal ["ACE_quikclot",10];
-_veh addWeaponCargoGlobal ["ACE_tourniquet",3];
-_veh addWeaponCargoGlobal ["ACE_personalAidKit",2];
-_veh addWeaponCargoGlobal ["ACE_packingBandage",15];
+_veh addItemCargoGlobal ["ACE_fieldDressing",10];
+_veh addItemCargoGlobal ["ACE_elasticBandage",7];
+_veh addItemCargoGlobal ["ACE_quikclot",10];
+_veh addItemCargoGlobal ["ACE_tourniquet",3];
+_veh addItemCargoGlobal ["ACE_personalAidKit",2];
+_veh addItemCargoGlobal ["ACE_packingBandage",15];
+_veh addItemCargoGlobal ["TF47_firstAidKit",4];
 //Injectors
-_veh addWeaponCargoGlobal ["ACE_morphine",10];
-_veh addWeaponCargoGlobal ["ACE_atropine",10];
-_veh addWeaponCargoGlobal ["ACE_epinephrine",10];
+_veh addItemCargoGlobal ["ACE_morphine",10];
+_veh addItemCargoGlobal ["ACE_atropine",10];
+_veh addItemCargoGlobal ["ACE_epinephrine",10];
 
 // Weapons + Ammo
 switch (tf47_param_vehiclemod) do { 
@@ -111,13 +112,13 @@ switch (tf47_param_vehiclemod) do {
 switch (f_var_radios) do {
 	// ACRE 2
 	case 1: {
-		_veh addWeaponCargoGlobal ["ACRE_PRC343",3];
-		_veh addWeaponCargoGlobal ["ACRE_PRC152",3];
-		_veh addWeaponCargoGlobal ["ACRE_PRC117F",1];
+		_veh addItemCargoGlobal ["ACRE_PRC343",3];
+		_veh addItemCargoGlobal ["ACRE_PRC152",3];
+		_veh addItemCargoGlobal ["ACRE_PRC117F",1];
 	};
 	// TFR
 	case 2: {
-		_veh addWeaponCargoGlobal ["tf_rt1523g",1];
-		_veh addWeaponCargoGlobal ["tf_anprc152",6];
+		_veh addItemCargoGlobal ["tf_rt1523g",1];
+		_veh addItemCargoGlobal ["tf_anprc152",6];
 	};
 };

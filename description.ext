@@ -739,6 +739,7 @@ class RscTitles
 // =============== ACE3 Settings =================================================================
 class ACE_Settings {
     // Add exported settings here
+
 		class ace_common_forceAllSettings {
 		    value = 0;
 		    typeName = "BOOL";
@@ -920,7 +921,7 @@ class ACE_Settings {
 		    force = 1;
 		};
 		class ace_medical_increaseTrainingInLocations {
-		    value = 0;
+		    value = 1;
 		    typeName = "BOOL";
 		    force = 1;
 		};
@@ -935,7 +936,7 @@ class ACE_Settings {
 		    force = 1;
 		};
 		class ace_medical_bleedingCoefficient {
-		    value = 0.3;
+		    value = 0.1;
 		    typeName = "SCALAR";
 		    force = 1;
 		};
@@ -1000,7 +1001,7 @@ class ACE_Settings {
 		    force = 1;
 		};
 		class ace_medical_maxReviveTime {
-		    value = 300;
+		    value = 900;
 		    typeName = "SCALAR";
 		    force = 1;
 		};
@@ -1030,12 +1031,12 @@ class ACE_Settings {
 		    force = 1;
 		};
 		class ace_medical_medicSetting_PAK {
-		    value = 0;
+		    value = 1;
 		    typeName = "SCALAR";
 		    force = 1;
 		};
 		class ace_medical_medicSetting_SurgicalKit {
-		    value = 1;
+		    value = 2;
 		    typeName = "SCALAR";
 		    force = 1;
 		};
@@ -1055,12 +1056,12 @@ class ACE_Settings {
 		    force = 1;
 		};
 		class ace_medical_useLocation_PAK {
-		    value = 2;
+		    value = 3;
 		    typeName = "SCALAR";
 		    force = 1;
 		};
 		class ace_medical_useLocation_SurgicalKit {
-		    value = 3;
+		    value = 0;
 		    typeName = "SCALAR";
 		    force = 1;
 		};
@@ -1420,12 +1421,12 @@ class ACE_Settings {
 		    force = 1;
 		};
 		class tf47_medical_fak_medicSetting {
-		    value = 1;
+		    value = 0;
 		    typeName = "SCALAR";
 		    force = 1;
 		};
 		class tf47_medical_fak_selfTreatment {
-		    value = 0;
+		    value = 1;
 		    typeName = "SCALAR";
 		    force = 1;
 		};

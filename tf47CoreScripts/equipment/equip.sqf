@@ -64,7 +64,6 @@ if (isNil{_type}) then {} else {
 				clearWeaponCargoGlobal _object;
 				clearMagazineCargoGlobal _object;
 				clearItemCargoGlobal _object;
-				_object enableSimulationGlobal false;
 				_object allowDamage false;
 				[_object] spawn {
 					while{true} do {
@@ -91,6 +90,7 @@ if (isNil{_type}) then {} else {
 						_object addItemCargoGlobal ["ACE_elasticBandage",50];
 						_object addItemCargoGlobal ["ACE_packingBandage",50];
 						_object addItemCargoGlobal ["ACE_fieldDressing",50];
+						_object addItemCargoGlobal ["TF47_firstAidKit",50];
 						sleep 3600;
 					};
 				};
