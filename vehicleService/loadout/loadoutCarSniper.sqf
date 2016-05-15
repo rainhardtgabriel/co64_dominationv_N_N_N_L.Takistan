@@ -58,10 +58,10 @@ switch (tf47_param_vehiclemod) do {
 switch (f_var_radios) do {
 	// ACRE 2
 	case 1: {
-		_veh addWeaponCargoGlobal ["ACRE_PRC117F",1];
+		_veh addItemCargoGlobal ["ACRE_PRC117F",1];
 	};
 	// TFR
 	case 2: {
-		_veh addWeaponCargoGlobal ["tf_rt1523g",1];
+		_veh addItemCargoGlobal ["tf_rt1523g",1];
 	};
 };
