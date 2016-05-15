@@ -5,6 +5,7 @@ _reinforcement = ["paradrop","touchdown","armored"] call BIS_fnc_selectRandom;
 {
 	if (!alive _x) then
 	{
+		deleteVehicle _x;
 		tf47_var_AOUnits = tf47_var_AOUnits - [_x];
 	};
 } forEach tf47_var_AOUnits;
@@ -107,8 +108,11 @@ if ( _reinforcement == "armored") then
 
 		[_vehicle, _group] call BIS_fnc_spawnCrew;
 
-		tf47_var_AOObjects pushBack [_vehicle];
-		tf47_var_AOUnits pushBack (crew _vehicle);
+		tf47_var_AOObjects pushBack _vehicle;
+
+		{
+			tf47_var_AOUnits pushBack _x;
+		} forEach (crew _vehicle);
 
 		_wp = _group addWaypoint [getMarkerPos "ao_mkr1", 1];
 		[_group, 0] setWaypointType "MOVE";
