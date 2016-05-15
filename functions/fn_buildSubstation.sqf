@@ -119,7 +119,28 @@ nul = [sub7,2,50,[true,false],[true,false,true],true,[0,0],[1,0],"default",nil,n
 
 // add to AO cleanup array ... 
 
-tf47_var_AOObjects pushback [sub1, sub2, sub3, sub4, sub5, sub6, sub7, sub8, sub9, sub10, sub11, sub12, sub13, sub14, sub15, sub16, sub17, sub18, sub19, sub20, sub21, sub22];
+tf47_var_AOObjects pushback sub1;
+tf47_var_AOObjects pushback sub2;
+tf47_var_AOObjects pushback sub3;
+tf47_var_AOObjects pushback sub4;
+tf47_var_AOObjects pushback sub5;
+tf47_var_AOObjects pushback sub6;
+tf47_var_AOObjects pushback sub7;
+tf47_var_AOObjects pushback sub8;
+tf47_var_AOObjects pushback sub9;
+tf47_var_AOObjects pushback sub10;
+tf47_var_AOObjects pushback sub11;
+tf47_var_AOObjects pushback sub12;
+tf47_var_AOObjects pushback sub13;
+tf47_var_AOObjects pushback sub14;
+tf47_var_AOObjects pushback sub15;
+tf47_var_AOObjects pushback sub16;
+tf47_var_AOObjects pushback sub17;
+tf47_var_AOObjects pushback sub18;
+tf47_var_AOObjects pushback sub19;
+tf47_var_AOObjects pushback sub20;
+tf47_var_AOObjects pushback sub21;
+tf47_var_AOObjects pushback sub22;
 
 substationmarker = createMarker ["substationmarker",_location];
 substationmarker setMarkerText "Transformer";

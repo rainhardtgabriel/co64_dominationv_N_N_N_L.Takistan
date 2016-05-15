@@ -153,7 +153,7 @@ fobhelipad enablesimulationglobal false;
 
 fobmarker = createMarker ["fobmarker",_location];
 fobmarker setMarkerText "F.O.B. Knight";
-fobmarker setMarkerType "Faction_CUP_NATO";
+fobmarker setMarkerType "flag_NATO";
 
 deleteVehicle fobtable;
 
