@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=70;
+	toggles=66;
 	class ItemIDProvider
 	{
 		nextID=3521;
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8040.2124,598.10583,2287.9441};
-		dir[]={0.81982112,-0.54698443,-0.1695469};
-		up[]={0.53566182,0.83713692,-0.11078018};
-		aside[]={-0.20252782,7.7707227e-008,-0.97929931};
+		pos[]={8246.416,328.0123,2094.7085};
+		dir[]={-0.9092319,-0.41437545,0.040882066};
+		up[]={-0.41400069,0.91008931,0.018614095};
+		aside[]={0.044919245,4.1403109e-007,0.99903601};
 	};
 };
 binarizationWanted=0;
@@ -23730,20 +23730,39 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8218.5781,297.12131,2061.1079};
+				position[]={8217.1719,296.23129,2071.406};
 				angles[]={0,1.1543608,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="equipmentarea = [this,""mortarbox""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=2033;
 			type="ACE_medicalSupplyCrate_advanced";
-			atlOffset=0.79901123;
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
 				{
 					property="ammoBox";
 					expression="[_this,_value] call bis_fnc_initAmmoBox;";
@@ -23762,7 +23781,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
+				class Attribute2
 				{
 					property="ace_isMedicalFacility";
 					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
@@ -23781,7 +23800,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=2;
+				nAttributes=3;
 			};
 		};
 		class Item1086
@@ -23789,17 +23808,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8223.4814,297.1113,2067.2119};
+				position[]={8225,296.23129,2061};
 				angles[]={0,5.8627877,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="equipmentarea = [this,""medictrunk""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=2035;
 			type="ACE_medicalSupplyCrate_advanced";
-			atlOffset=0.78952026;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23945,7 +23964,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8224.1143,296.3223,2062.646};
+				position[]={8225.4805,296.23129,2073.595};
 				angles[]={0,5.8063436,0};
 			};
 			side="Empty";
@@ -23956,7 +23975,6 @@ class Mission
 			};
 			id=2047;
 			type="ACE_medicalSupplyCrate_advanced";
-			atlOffset=0.091003418;
 			class CustomAttributes
 			{
 				class Attribute0
