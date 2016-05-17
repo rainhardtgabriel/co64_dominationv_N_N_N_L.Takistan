@@ -80,6 +80,7 @@
 
 */
 ////////////////////////// FUNCTIONS //////////////////////////
+if !(player in (list trig_sandstorm)) exitwith {};
 
 MKY_fnc_ppEffect_On = {
 	if !(isNil "effsand") exitWith {true;};
