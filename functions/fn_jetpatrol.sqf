@@ -8,7 +8,7 @@
 if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
 
 
-private ["_alert_log_pos","_alert_rad","_alert_name","_alert_iniText","_pilot","_jet"];
+private ["_alert_log_pos","_alert_rad","_alert_name","_alert_iniText","_pilot","_jet","_alert_endText"];
 
 sleep (2400 +(random 600));
 
@@ -17,15 +17,12 @@ _alert_log_pos   		= log_airfield;
 _alert_name   			= "Enemy Air Patrol";
 
 
-//////////////// creates a task/show notification for the ao ///////////////////////////////////////////////////////////////////////////////////////		
-
-["tsk9", true, ["Air Patrol. Be aware: Our latest Intel shows some enemy activities at Rasman Airfield!","Alert: Air Patrol","alert"],getPos _alert_log_pos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
 
 //////////////// Hint for active Alert Mission /////////////////////////////////////////////////////////////////////////////////////////// 
 
 _alert_iniText = format
 	[
-		"<t align='center' size='1.5'>ALERT!</t><br/><t size='1' align='center' color='#DAA520'>%1</t>",
+		"<t align='center' size='1.5'>ALERT: Enemy Activity at Rasman Airfield!</t><br/><t size='1' align='center' color='#DAA520'>%1</t>",
 		_alert_name
 	];
 
@@ -33,6 +30,14 @@ _alert_iniText = format
 
 [_alert_iniText] remoteExec ["SEPP_fnc_globalHint",0,false];
 
+
+//////////////// Hint for End of Alert Mission /////////////////////////////////////////////////////////////////////////////////////////// 
+
+_alert_endText = = format
+	[
+		"<t align='center' size='1.5'>Air Patrol is gone, Radar clear!</t><br/><t size='1' align='center' color='#DAA520'>%1</t>",
+		_alert_name
+	];
 
 //Creates marker for waypoints
 
@@ -167,6 +172,4 @@ _side_trig1 setTriggerArea 		    [0, 0, 0, false];
 _side_trig1 setTriggerActivation    ["ANY", "present", false];   
 _side_trig1 setTriggerStatements    [" !(alive JetVeh1) && !(alive JetVeh2) && !(alive JetVeh3)", 
                                     "0 = execVM ""TacAds\jetpatrolinit.sqf"";
-                                    [""tsk9"", true, ['Air Patrol. Be aware: Our latest Intel shows some enemy activities at Rasman Airfield!','Alert Mission: Air Patrol',""Alert Mission""],
-                                    getPos _alert_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
                                     deletevehicle thisTrigger" , ""];
