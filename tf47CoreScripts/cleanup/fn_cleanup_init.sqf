@@ -3,7 +3,7 @@
 
 Module: Cleanup
 Global-var-shortcut: pvpfw_cleanup_
-Author: Conroy
+Author: Conroy,  exteded by Fred TF47
 
 You can "setVariable["pvpfw_cleanUp_keep",true]" on any object, to exempt it from the cleanup
 
@@ -16,7 +16,7 @@ private[
 	"_delay",
 	"_type",
 	"_cleanUpInitTime",
-    "_numberOfPlayerNearby",
+	"_numberOfPlayerNearby",
 	"_checkTypes",
 	"_chemLightObjects",
 	"_chemLightTime",
@@ -48,10 +48,19 @@ _chemLightTime = [];
 _pipeBombObjects = [];
 _pipeBombTime = [];
 
-while {true} do{
-    
-    diag_log format["#PVPFW next Clean up run"];
-    
+diag_log format["#PVPFW add event handler for killed player"];
+/************** register some events *************/
+
+["TF47_cleanup_ev_registerDeadPlayerBody", {
+   private ["_playerBody"];
+	_playerBody = param [0, objNull];
+	[_playerBody] spawn TF47_fnc_cleanup_unitKillHandler;		
+}] call CBA_fnc_addEventHandler;
+
+
+pvpfw_cleanup_run = 1;
+waituntil{	
+	diag_log format["#PVPFW next Clean up run"];
 	{
 		_delay = 0.02;
 		_type = typeOf _x;
@@ -60,7 +69,7 @@ while {true} do{
 			switch(true)do{
 				case(_x getVariable["pvpfw_cleanUp_keep",false]):{
 					_delay = 0.01;
-					// The objects variable indicates, that it should not be cleaned up
+					//diag_log format["#PVPFW The objects variable indicates, that it should not be cleaned up %1", _type];					
 				};
 			
 				#ifdef __pvpfw_cleanUp_cleanExtra
@@ -73,17 +82,17 @@ while {true} do{
 				case(!alive _x):{
 					_delay = 0.05;
 					//_nearEntities resize 0;
-					diag_log format["#PVPFW found dead object %1",_x];
-                    
-                    _nearEntities = (getPosATL _x) nearEntities [["CAManBase","Air","LandVehicle"],pvpfw_cleanUp_vehicleRadius];
-                    _numberOfPlayerNearby = 0;
-                    {
-                        if (_x in playableunits) then {
-                            _numberOfPlayerNearby = _numberOfPlayerNearby +1                           
-                        };                                       
-                    } foreach(_nearEntities);   
-                                            
-                    if (_numberOfPlayerNearby == 0) then{
+					//diag_log format["#PVPFW found dead object %1",_x];
+					
+					_nearEntities = (getPosATL _x) nearEntities [["CAManBase","Air","LandVehicle"],pvpfw_cleanUp_vehicleRadius];
+					_numberOfPlayerNearby = 0;
+					{
+						if (_x in playableunits) then {
+							_numberOfPlayerNearby = _numberOfPlayerNearby +1						   
+						};									   
+					} foreach(_nearEntities);   
+											
+					if (_numberOfPlayerNearby == 0) then{
 						if (_x isKindOf "CAManBase") then{
 							_cleanUpInitTime = _x getVariable ["pvpfw_cleanup_InitTime",0];
 							if (_cleanUpInitTime == 0) then{
@@ -96,7 +105,7 @@ while {true} do{
 								diag_log format["#PVPFW module_cleanup: deleting body. init = %1, current time = %2",_cleanUpInitTime,diag_tickTime];
 							};
 						}else{
-							// wreck?                      
+							// wreck?   
 							_cleanupInitTime = _x getVariable["pvpfw_cleanup_InitTime",0];
 							if (_cleanupInitTime == 0) then{
 								_x setVariable ["pvpfw_cleanup_InitTime",diag_tickTime,false];
@@ -107,25 +116,26 @@ while {true} do{
 								};
 							};
 						};
-                    }else{
-                        _x setVariable ["pvpfw_cleanup_InitTime",0,false];
+					}else{
+						_x setVariable ["pvpfw_cleanup_InitTime",0,false];
+                    };
 				};
 				
-				#ifdef __pvpfw_cleanUp_cleanWeaponHolders                
+				#ifdef __pvpfw_cleanUp_cleanWeaponHolders				
 				case(_type in ["GroundWeaponHolder","WeaponHolderSimulated"]):{
-                        diag_log format["#PVPFW found Weapon Holder  %1",_x];
-                        _delay = 0.05;
+						diag_log format["#PVPFW found Weapon Holder  %1",_x];
+						_delay = 0.05;
 					
-                        _nearEntities = (getPosATL _x) nearEntities [["CAManBase"],pvpfw_cleanUp_weaponHolderRadius];
+						_nearEntities = (getPosATL _x) nearEntities [["CAManBase"],pvpfw_cleanUp_weaponHolderRadius];
 						
-                        _numberOfPlayerNearby = 0;
-                        {
+						_numberOfPlayerNearby = 0;
+						{
 							if (_x in playableunits) then {
-	                            _numberOfPlayerNearby = _numberOfPlayerNearby +1                           
+								_numberOfPlayerNearby = _numberOfPlayerNearby +1						   
 							};
-                                           
-                        } foreach(_nearEntities);                                        
-                    if (_numberOfPlayerNearby == 0) then{
+										   
+						} foreach(_nearEntities);										
+					if (_numberOfPlayerNearby == 0) then{
 						_cleanupInitTime = _x getVariable["pvpfw_cleanup_InitTime",0];
 						
 						if (_cleanupInitTime == 0) then{
@@ -145,9 +155,10 @@ while {true} do{
 				#ifdef __pvpfw_cleanUp_cleanRuins
 				//case(_type call _ruinsCheck):{
 				case(_x isKindOf "Ruins_F"):{
-                    diag_log format["#PVPFW found ruin  %1",_x];
+					diag_log format["#PVPFW found ruin  %1",_x];
 					_delay = 0.05;
 					_nearEntities = (getPosATL _x) nearEntities [["CAManBase","Air","LandVehicle"],pvpfw_cleanUp_ruinRadius];
+					//@todo we shall check if no player entities are in the area!
 					if (count _nearEntities == 0) then{
 						deleteVehicle _x;
 						diag_log format["#PVPFW module_cleanup: deleting destroyed building. type = %1",_type];
@@ -198,9 +209,14 @@ while {true} do{
 			};
 		};
 		sleep _delay;
-              
+			  
 	}forEach (allMissionObjects _checkTypes);
-	
+
+	// delete all empty groups, no wait time foreseen, if units not removed from groups, then the group can be deleted next time	   
+	{
+		_grp = _x;
+		if(({alive _x}count units _grp)==0)then{deleteGroup _grp;};
+  	}forEach allGroups;
 	#ifdef __pvpfw_cleanUp_cleanExtra
 	//clean the chemlight array
 	{
@@ -221,8 +237,8 @@ while {true} do{
 	_pipeBombObjects = _pipeBombObjects - [objNull];
 	_pipeBombTime = _pipeBombTime - [0];
 	#endif
-	
 	sleep PVPFW_WAIT_TIME;
-    
-
+	(pvpfw_cleanup_run < 1);
 };
+
+diag_log format["#PVPFW end of cylic cleanup scipt"];
