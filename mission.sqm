@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8243.9658,389.66003,2031.8234};
-		dir[]={0.070046417,-0.66931146,0.73973012};
-		up[]={0.063097648,0.74296516,0.66635537};
-		aside[]={0.99559325,2.5305781e-007,-0.09427394};
+		pos[]={4349.5786,593.2666,535.62714};
+		dir[]={-0.8188141,-0.56464094,-0.10419732};
+		up[]={-0.56017601,0.82530677,-0.071285181};
+		aside[]={-0.12624423,4.7761205e-007,0.9920705};
 	};
 };
 binarizationWanted=0;
@@ -1034,7 +1034,7 @@ class Mission
 			class Attributes
 			{
 				name="trig_rt";
-				condition="this && alive radiotower;";
+				condition="this && alive radiotower && player in thisList;";
 				onActivation="[[[],""AOscripts\reinforcements.sqf""],""BIS_fnc_execVM""] call BIS_fnc_MP;";
 				sizeA=700;
 				sizeB=700;
