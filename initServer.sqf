@@ -14,7 +14,5 @@ tf47_var_AOCollection = [
 tf47_var_AOObjects = [];
 tf47_var_AOUnits = [];
 
-trig_rt enablesimulationGlobal false;
-sleep 1;
-trig_rt enablesimulation true;
+
 

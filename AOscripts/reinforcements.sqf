@@ -1,4 +1,4 @@
-if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
+if(!isServer) exitwith {};
 
 trig_rt enablesimulation false;
 

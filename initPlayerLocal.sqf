@@ -62,4 +62,3 @@ sleep 5;
 #include "tf47CoreScripts\umenu\Includes\initPlayerLocal.sqf";
 
 [] spawn tf47_fnc_cleanup_registerPlayer;
-trig_rt enablesimulation false;
