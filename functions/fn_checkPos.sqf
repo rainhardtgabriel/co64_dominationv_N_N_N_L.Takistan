@@ -16,7 +16,6 @@ _nearObjects = _position nearObjects _rad + 4;
 
 _output = 1;
 
-if (isurfaceIsWater _position) then
 {
 	_output = 0;
 };
