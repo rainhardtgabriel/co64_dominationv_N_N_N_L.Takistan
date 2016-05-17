@@ -1,5 +1,7 @@
 if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
 
+trig_rt enablesimulation false;
+
 _reinforcement = ["paradrop","touchdown","armored"] call BIS_fnc_selectRandom;
 
 {
@@ -133,7 +135,5 @@ if ( _reinforcement == "armored") then
 
 };
 
-sleep 0.1;
-trig_rt enablesimulation false;
 sleep (200 + (random 300));
 trig_rt enablesimulation true;
