@@ -40,7 +40,7 @@ while {true} do{
     };
     if (!(_unit isKindOf "CAManBase")) exitwith{
          //ERROR("Unit is not typ of CAManBAse");
-         diag_log format["PVPFW module_cleanup: Unit is not typ of CAManBAse"];       
+     //    diag_log format["PVPFW module_cleanup: Unit is not typ of CAManBAse"];       
     };
 	_cleanUpInitTime = _unit getVariable ["pvpfw_cleanup_InitTime",0];
 	if (_cleanUpInitTime == 0) then{
@@ -53,7 +53,7 @@ while {true} do{
 		hideBody _unit;
 		sleep 5; 
 		deleteVehicle _unit;
-		diag_log format["#PVPFW module_cleanup: deleting player body. init = %1, current time = %2",_cleanUpInitTime,diag_tickTime];
+	//	diag_log format["#PVPFW module_cleanup: deleting player body. init = %1, current time = %2",_cleanUpInitTime,diag_tickTime];
          _cleanUpProcessRunning = false;                
 	};
     sleep 10;

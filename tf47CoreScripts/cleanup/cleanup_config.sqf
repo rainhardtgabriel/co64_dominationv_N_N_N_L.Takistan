@@ -83,5 +83,5 @@ pvpfw_cleanUp_customRemoveScript = {
 	_object = _this;
 	
 	deleteVehicle _object;
-	diag_log format["#PVPFW module_cleanup: deleting object with custom condition %1",typeOf _object];
+	//diag_log format["#PVPFW module_cleanup: deleting object with custom condition %1",typeOf _object];
 };
