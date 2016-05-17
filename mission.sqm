@@ -91,11 +91,9 @@ class ScenarioData
 	overViewPicture="intro\pics\supremacy.paa";
 	overViewPictureLocked="intro\pics\taskforce47.paa";
 	saving=0;
-	wreckManagerMode="AddAll";
 	wreckLimit=20;
 	wreckRemovalMinTime=164.86377;
 	wreckRemovalMaxTime=901.78558;
-	corpseManagerMode="AddAll";
 	corpseLimit=20;
 	corpseRemovalMinTime=419.96964;
 	corpseRemovalMaxTime=2341.8232;
