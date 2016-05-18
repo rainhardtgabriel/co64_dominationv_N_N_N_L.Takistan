@@ -1,6 +1,6 @@
 if(!isServer) exitwith {};
 
-trig_rt enablesimulation false;
+trig_rt enablesimulationGlobal false;
 
 _reinforcement = ["paradrop","touchdown","armored"] call BIS_fnc_selectRandom;
 
@@ -136,4 +136,4 @@ if ( _reinforcement == "armored") then
 };
 
 sleep (200 + (random 300));
-trig_rt enablesimulation true;
+trig_rt enablesimulationGlobal true;
