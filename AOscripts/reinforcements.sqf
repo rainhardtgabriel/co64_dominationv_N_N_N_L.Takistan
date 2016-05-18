@@ -25,7 +25,7 @@ nul = [helipad,true,2,4,false,false,player,"random",3000,true,false,8,"default",
 
 if ( _reinforcement == "armored") then
 {
-	_tanks = switch (tf47_param_vehiclemod) do { 
+	_tanks = switch (tf47_param_vehiclemod) do {
 		// Van
 		case 0 : {
 			[
@@ -59,20 +59,20 @@ if ( _reinforcement == "armored") then
 		// RHS
 		case 2 : {
 			[
-				["rhs_btr70_chdkz",3],
-				["rhs_btr60_chdkz",3],
-				["rhs_bmd1_chdkz",3],
-				["rhs_bmd2_chdkz",3],
-				["rhs_bmp1_chdkz",3],
-				["rhs_bmp1d_chdkz",3],
-				["rhs_bmp1k_chdkz",2],
-				["rhs_bmp1p_chdkz",2],
-				["rhs_bmp2_chdkz",2],
-				["rhs_bmp2e_chdkz",2],
-				["rhs_bmp2e_chdkz",3],
-				["rhs_bmp2k_chdkz",3],
-				["rhs_bmp2d_chdkz",3],
-				["rhs_zsu234_chdkz",3]
+				["rhsgref_ins_g_btr70",3],
+				["rhsgref_ins_g_btr60",3],
+				["rhsgref_ins_g_bmp1",3],
+				["rhsgref_ins_g_bmp1d",3],
+				["rhsgref_ins_g_bmp1k",3],
+				["rhsgref_ins_g_bmp1p",3],
+				["rhsgref_ins_g_bmp2e",2],
+				["rhsgref_ins_g_bmp2",2],
+				["rhsgref_ins_g_bmp2d",2],
+				["rhsgref_ins_g_bmp2k",2],
+				["rhsgref_ins_g_zsu234",3],
+				["rhsgref_ins_g_t72ba",3],
+				["rhsgref_ins_g_t72bb",3],
+				["rhsgref_ins_g_t72bc",3]
 			];
 		};
 	};
@@ -87,7 +87,7 @@ if ( _reinforcement == "armored") then
 		{
 			_r = 2000 + random 1500;
 			_phi = random 360;
-			
+
 			_pos = [((getMarkerPos "ao_mkr1") select 0) + _r * sin(_phi),((getMarkerPos "ao_mkr1") select 1) + _r * cos(_phi)];
 			_roads = _pos nearRoads 500;
 			sleep 0.01;
