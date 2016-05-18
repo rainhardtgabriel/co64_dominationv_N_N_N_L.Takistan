@@ -138,8 +138,10 @@ _OPFmen = switch (tf47_param_vehiclemod) do {
 	// RHS
 	case 2 : {
 	[
-		"rhsgref_ins_g_squadleader","rhsgref_ins_g_machinegunner","rhsgref_ins_g_grenadier","rhsgref_ins_g_grenadier_rpg","rhsgref_ins_g_rifleman_RPG26","rhsgref_ins_g_rifleman","rhsgref_ins_g_rifleman_akm",
-        "rhsgref_ins_g_specialist_aa","rhsgref_ins_g_medic","rhsgref_ins_g_sniper","rhsgref_ins_g_spotter","rhsgref_ins_g_saboteur"];
+		"rhs_vdv_des_machinegunner","rhs_vdv_des_arifleman","rhs_vdv_des_machinegunner","rhs_vdv_des_rifleman","rhs_vdv_des_medic",
+		"rhs_vdv_des_grenadier","rhs_vdv_des_junior_sergeant","rhs_vdv_des_RShG2","rhs_vdv_des_grenadier","rhs_vdv_des_sergeant",
+		"rhs_vdv_des_aa","rhs_vdv_des_LAT","rhs_vdv_des_grenadier_rpg","rhs_vdv_des_machinegunner_assistant","rhs_g_Soldier_GL_F",
+		"rhs_vdv_des_strelok_rpg_assist","rhs_vdv_des_marksman"];
 	};
 };
 
@@ -160,7 +162,7 @@ _OPFchoppers = switch (tf47_param_vehiclemod) do {
 	};
 	// RHS
 	case 2 : {
-		["rhsgref_ins_g_Mi8amt","rhsgref_mi24g_CAS"];
+		["RHS_Mi8amt_chdkz","RHS_Mi24P_vvs","RHS_Mi8AMTSh_UPK23_vvs","RHS_Mi24P_CAS_vvs"];
 	};
 };
 

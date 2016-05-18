@@ -22,14 +22,14 @@ switch (tf47_param_vehiclemod) do {
 	};
 	// RHS
 	case 2 : {
-		_staticType = "rhsgref_ins_g_SPG9"; 
-		_staticType2 = "rhsgref_ins_g_NSV_TriPod";
+		_staticType = "rhs_SPG9_INS"; 
+		_staticType2 = "rhs_D30_vdv";
 		_crew = "rhs_vdv_rifleman";
 	};
 };
 
 for "_x" from 1 to 2 do {
-	_staticGroup = createGroup resistance;
+	_staticGroup = createGroup east;
 	_randomPos = [_ao, 200, 10, 10] call BIS_fnc_findOverwatch;
 	_static = _staticType createVehicle _randomPos;
 	waitUntil{!isNull _static};
@@ -48,7 +48,7 @@ for "_x" from 1 to 2 do {
 	_static lock 3;
 	_static = objNull;
 };
-_staticGroup = createGroup resistance;
+_staticGroup = createGroup east;
 _randomPos = [_ao, 200, 10, 10] call BIS_fnc_findOverwatch;
 _static = _staticType2 createVehicle _randomPos;
 waitUntil{!isNull _static};	
