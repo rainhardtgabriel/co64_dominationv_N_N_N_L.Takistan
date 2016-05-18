@@ -20,7 +20,7 @@ _random_village_area = (_find_village select 0) select 0;
 log_village setpos _random_village_area;
 sleep 1;
 
-nul = [_side_log_pos,2,true,1,[1,0],_side_rad,_side_ai_skill_array,nil,"offizier = this; removeAllWeapons this; this setcaptive true; removeBackpackGlobal this;",nil] execVM "LV\fillHouseOfficer.sqf";
+nul = [_side_log_pos,2,true,1,[1,0],_side_rad,_side_ai_skill_array,nil,"offizier = this; removeAllWeapons this; this setcaptive true;",nil] execVM "LV\fillHouseOfficer.sqf";
 nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],false,[10,0],[0,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
 
 
