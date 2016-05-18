@@ -65,7 +65,7 @@ sleep 1;
  if (f_var_medical >= 1) then {
 officer_trig3 = createTrigger 		    ["EmptyDetector", getPos _side_log_pos];   
 officer_trig3 setTriggerArea 		    [500, 500, 0, false];  
-officer_trig3 setTriggerActivation      ["WEST", "EAST D", false];
+officer_trig3 setTriggerActivation      ["WEST", "GUER D", false];
 officer_trig3 setTriggerStatements      ["this", "
                                         [offizier, true] call ACE_captives_fnc_setSurrendered;
                                         deletevehicle thisTrigger" , ""];}
@@ -73,7 +73,7 @@ officer_trig3 setTriggerStatements      ["this", "
                          else {
 officer_trig3 = createTrigger 		    ["EmptyDetector", getPos _side_log_pos];   
 officer_trig3 setTriggerArea 		    [500, 500, 0, false];  
-officer_trig3 setTriggerActivation      ["WEST", "EAST D", false];
+officer_trig3 setTriggerActivation      ["WEST", "GUER D", false];
 officer_trig3 setTriggerStatements      ["this", "
                                         offizier setUnitPos ""DOWN"";
                                         doStop offizier; offizier disableAI ""MOVE"";

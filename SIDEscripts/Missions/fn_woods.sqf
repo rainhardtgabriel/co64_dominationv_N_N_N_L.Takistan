@@ -38,7 +38,7 @@ sleep 0.1;
 ["tsk5", true, ["Find the enemy Camp and eliminate all enemy Soldiers!","Side Mission: Woods","Side Mission"],getPos _side_log_pos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
 
 
-nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],false,[15,0],[0,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+nul = [_side_log_pos,3,_side_rad,[true,false],[true,false,false],false,[15,0],[0,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
 
 //////////////// create trigger at the side ////////////////////////////////////////////////////////////////////////////////////////			
 
@@ -46,7 +46,7 @@ sleep 1;
 
 _side_trig = createTrigger 					["EmptyDetector", getPos _side_log_pos];   
 _side_trig setTriggerArea 					[_side_rad, _side_rad, 0, false];  
-_side_trig setTriggerActivation 			["EAST", "notpresent", true];   
+_side_trig setTriggerActivation 			["GUER", "notpresent", true];   
 _side_trig setTriggerStatements 			["this", 
 											"0 = execVM ""SIDEscripts\militarizeSideEast.sqf""; 
 											[side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 

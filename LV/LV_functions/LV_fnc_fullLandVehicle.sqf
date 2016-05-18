@@ -18,7 +18,14 @@ _OPFveh = switch (tf47_param_vehiclemod) do {
 	};
 	// RHS
 	case 2 : {
-		["rhs_zsu234_chdkz","rhs_btr70_chdkz","rhs_t72bb_chdkz","rhs_bmp2_chdkz","rhs_bmp2_chdkz","rhs_uaz_ags_chdkz","rhs_uaz_dshkm_chdkz","rhs_uaz_spg9_chdkz"];
+		["rhsgref_ins_g_zsu234","rhsgref_ins_g_btr70","rhsgref_ins_g_t72bc","rhsgref_ins_g_BM21","rhsgref_ins_g_ural_Zu23","rhsgref_ins_g_bmp2k","rhsgref_ins_g_uaz_ags","rhsgref_cdf_reg_uaz_dshkm","rhsgref_ins_g_uaz_spg9"];
+
+
+
+
+
+
+        
 	};
 };
 
