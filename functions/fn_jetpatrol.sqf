@@ -33,7 +33,7 @@ _alert_iniText = format
 
 //////////////// Hint for End of Alert Mission /////////////////////////////////////////////////////////////////////////////////////////// 
 
-_alert_endText = = format
+_alert_endText = format
 	[
 		"<t align='center' size='1.5'>Air Patrol is gone, Radar clear!</t><br/><t size='1' align='center' color='#DAA520'>%1</t>",
 		_alert_name
@@ -73,8 +73,8 @@ switch (tf47_param_vehiclemod) do {
 	};
 	// RHS
 	case 2 : {
-		_pilot = "rhs_pilot";
-		_jet = "RHS_Su25SM_vvs";
+		_pilot = "rhsgref_ins_g_pilot";
+		_jet = "rhsgref_cdf_su25";
 	};
 };
 
