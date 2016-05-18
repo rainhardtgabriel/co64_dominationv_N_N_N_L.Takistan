@@ -80,7 +80,7 @@ _redMenArray = switch (tf47_param_vehiclemod) do {
 	};
 	// RHS
 	case 2 : {
-		["rhsgref_cdf_reg_officer"];
+		["rhs_vdv_des_officer_armored"];
 	};
 };
 
