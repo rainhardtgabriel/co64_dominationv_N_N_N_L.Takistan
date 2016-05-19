@@ -73,8 +73,8 @@ switch (tf47_param_vehiclemod) do {
 	};
 	// RHS
 	case 2 : {
-		_pilot = "rhs_pilot";
-		_jet = "RHS_Su25SM_vvs";
+		_pilot = "rhsgref_ins_g_pilot";
+		_jet = "rhsgref_cdf_su25";
 	};
 };
 
