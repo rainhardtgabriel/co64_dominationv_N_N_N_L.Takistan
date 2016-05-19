@@ -29,7 +29,17 @@ if (isNil{_type}) then {} else {
 					_object setVariable ["ace_cargo_size", -1];
 					_object allowDamage false;
 			};
-			case "table" : { 	
+			case "table_usmc" : { 	
+					arsenal = [_object] execVM "tf47CoreScripts\equipment\arsenal.sqf";
+					_object allowDamage false;
+					_object enableSimulationGlobal false;
+			};
+			case "table_baf" : { 	
+					arsenal = [_object] execVM "tf47CoreScripts\equipment\arsenal.sqf";
+					_object allowDamage false;
+					_object enableSimulationGlobal false;
+			};
+			case "table_us" : { 	
 					arsenal = [_object] execVM "tf47CoreScripts\equipment\arsenal.sqf";
 					_object allowDamage false;
 					_object enableSimulationGlobal false;
