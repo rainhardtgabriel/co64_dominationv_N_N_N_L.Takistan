@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4349.5786,593.2666,535.62714};
-		dir[]={-0.8188141,-0.56464094,-0.10419732};
-		up[]={-0.56017601,0.82530677,-0.071285181};
-		aside[]={-0.12624423,4.7761205e-007,0.9920705};
+		pos[]={8274.5635,298.17368,2116.3887};
+		dir[]={-0.71940112,-0.17882381,0.67132497};
+		up[]={-0.13083124,0.98385668,0.12208708};
+		aside[]={0.68232173,6.0349703e-007,0.73118526};
 	};
 };
 binarizationWanted=0;
@@ -5874,7 +5874,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
-				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal_usmc.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 				description="SABER 5 (German Special Forces - Rifleman)";
 			};
 			id=430;
@@ -5958,7 +5958,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
-				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal_usmc.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=432;
 			type="Infostand_2_EP1";
@@ -11930,7 +11930,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
-				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal_baf.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=848;
 			type="Infostand_2_EP1";
@@ -17274,18 +17274,42 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8255.1582,296.48178,2168.447};
-				angles[]={6.2816415,4.4656343,0};
+				position[]={8255.1582,296.48175,2168.4473};
+				angles[]={6.2816491,4.4656343,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="equipmentarea = [this,""table_usmc""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=1557;
 			type="Land_WoodenTable_large_F";
+			atlOffset=-3.0517578e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item964
 		{
@@ -17328,18 +17352,41 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8248.4111,296.47632,2166.6118};
-				angles[]={6.2816033,4.4593163,0.0015822123};
+				position[]={8248.4111,296.47632,2166.6123};
+				angles[]={6.2815971,4.4593163,0.0015882496};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="equipmentarea = [this,""table_baf""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=1561;
 			type="Land_WoodenTable_large_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item967
 		{
@@ -17365,18 +17412,41 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8250.6094,296.4798,2167.1968};
-				angles[]={6.2816415,4.4557209,0};
+				position[]={8250.6094,296.4798,2167.1973};
+				angles[]={6.2816491,4.4557209,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="equipmentarea = [this,""table_baf""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=1563;
 			type="Land_WoodenTable_large_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item969
 		{
@@ -17391,11 +17461,34 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="equipmentarea = [this,""table_usmc""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=1564;
 			type="Land_WoodenTable_large_F";
 			atlOffset=-3.0517578e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item970
 		{
@@ -29943,19 +30036,42 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8266.5146,296.47565,2115.5786};
-				angles[]={0,1.9455638,0};
+				position[]={8266.5146,296.47528,2115.5791};
+				angles[]={0,1.9455708,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="equipmentarea = [this,""table_baf""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=3313;
 			type="Land_WoodenTable_large_F";
-			atlOffset=0.0033569336;
+			atlOffset=0.0029907227;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item1468
 		{
@@ -30007,7 +30123,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="equipmentarea = [this,""table_usarmy""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=3317;
 			type="Land_WoodenTable_large_F";
@@ -30066,7 +30182,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="equipmentarea = [this,""table_usarmy""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=3319;
 			type="Land_WoodenTable_large_F";
@@ -30100,19 +30216,42 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8268.7344,296.47464,2114.74};
-				angles[]={0,1.9485307,0};
+				position[]={8268.7344,296.4743,2114.74};
+				angles[]={0,1.9485378,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="equipmentarea = [this,""table_baf""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=3320;
 			type="Land_WoodenTable_large_F";
-			atlOffset=0.0023498535;
+			atlOffset=0.0020141602;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item1474
 		{
@@ -30741,8 +30880,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8248.2578,296.04855,2167.8494};
-						angles[]={6.2816033,2.8947685,0.0015822123};
+						position[]={8248.2578,296.04813,2167.8491};
+						angles[]={6.2815971,2.8947682,0.0015882496};
 					};
 					side="West";
 					flags=6;
@@ -30753,14 +30892,56 @@ class Mission
 					};
 					id=1816;
 					type="B_Soldier_A_F";
-					atlOffset=0.0014343262;
+					atlOffset=0.0010070801;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
 			id=3372;
-			atlOffset=0.0014343262;
+			atlOffset=0.0010070801;
 		};
 		class Item1502
 		{
@@ -30775,7 +30956,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8250.5146,296.05234,2168.4736};
-						angles[]={6.2816415,2.8603675,0};
+						angles[]={6.2816405,2.8603671,0};
 					};
 					side="West";
 					flags=6;
@@ -30788,6 +30969,48 @@ class Mission
 					id=1814;
 					type="B_officer_F";
 					atlOffset=0.0014343262;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 			};
 			class Attributes
@@ -30809,7 +31032,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8252.6328,296.05283,2169.0491};
-						angles[]={6.2815971,2.8947682,0};
+						angles[]={6.2815971,2.894768,0};
 					};
 					side="West";
 					flags=6;
@@ -31438,7 +31661,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
-				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal_us.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=3396;
 			type="Infostand_2_EP1";
