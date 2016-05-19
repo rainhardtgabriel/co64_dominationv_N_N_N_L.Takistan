@@ -38,7 +38,7 @@ sleep 0.1;
 ["tsk5", true, ["Find the enemy Camp and eliminate all enemy Soldiers!","Side Mission: Woods","Side Mission"],getPos _side_log_pos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
 
 
-nul = [_side_log_pos,3,_side_rad,[true,false],[true,false,false],false,[15,0],[0,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],false,[15,0],[0,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
 
 //////////////// create trigger at the side ////////////////////////////////////////////////////////////////////////////////////////			
 

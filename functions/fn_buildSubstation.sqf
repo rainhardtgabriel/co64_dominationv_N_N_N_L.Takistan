@@ -113,9 +113,9 @@ _comp = [
 
 [_location, _angle+55, _comp] call BIS_fnc_ObjectsMapper;
 
-nul = [sub7,3,true,2,[2,2],50,"default",nil,nil,nil] execVM "LV\fillHouse.sqf";
-nul = [sub7,3,50,[true,false],[true,false,false],false,[10,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
-nul = [sub7,3,50,[true,false],[true,false,true],true,[0,0],[1,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
+nul = [sub7,2,true,2,[2,2],50,"default",nil,nil,nil] execVM "LV\fillHouse.sqf";
+nul = [sub7,2,50,[true,false],[true,false,false],false,[10,0],[0,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
+nul = [sub7,2,50,[true,false],[true,false,true],true,[0,0],[1,0],"default",nil,nil,nil] execVM "LV\militarize.sqf";
 
 // add to AO cleanup array ... 
 

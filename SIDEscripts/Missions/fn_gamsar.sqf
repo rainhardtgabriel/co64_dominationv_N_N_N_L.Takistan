@@ -68,13 +68,13 @@ CapVeh1Alive = true;
 //////////////// create 2 ai patrol around CapVeh1 /////////////////////////////////////////////////////////////////////////
 
 sleep 0.1;
-nul = [CapVeh1,3,20,[true,false],[false,false,false],false,[2,0],[0,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";	
+nul = [CapVeh1,2,20,[true,false],[false,false,false],false,[2,0],[0,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";	
 nul = [_side_log_pos,1,false,1,[1,0],100,"default",nil,"pilot1 = this; removeAllWeapons this; this setcaptive true; removeHeadgear this;",nil] execVM "LV\fillHouseOfficer.sqf";
 
 
-nul = [_side_log_pos,3,true,2,[2,2],_side_rad,_side_ai_skill_array,nil,nil,nil] execVM "LV\fillHouse.sqf";
-nul = [_side_log_pos,3,_side_rad,[true,false],[true,false,false],false,[10,0],[0,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
-nul = [_side_log_pos,3,_side_rad,[true,false],[true,false,false],true,[0,0],[1,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+nul = [_side_log_pos,2,true,2,[2,2],_side_rad,_side_ai_skill_array,nil,nil,nil] execVM "LV\fillHouse.sqf";
+nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],false,[10,0],[0,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],true,[0,0],[1,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
 
 
 //////////////// create marker for HeliReturnPoint ////////////////////////////////////////////////////////////////////////////////////////
