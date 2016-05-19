@@ -46,7 +46,7 @@ sleep 1;
 
 _side_trig = createTrigger 					["EmptyDetector", getPos _side_log_pos];   
 _side_trig setTriggerArea 					[_side_rad, _side_rad, 0, false];  
-_side_trig setTriggerActivation 			["EAST", "notpresent", true];   
+_side_trig setTriggerActivation 			["GUER", "notpresent", true];   
 _side_trig setTriggerStatements 			["this", 
 											"0 = execVM ""SIDEscripts\militarizeSideEast.sqf""; 
 											[side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 

@@ -19,7 +19,7 @@ samEndText = format
 
 _dist = [[]];
 
-// BEST Algorithm ever 
+// BEST Algorithm ever
 for "_i" from 0 to ((count samMarkers) -1) do {
 	_curMarker = (samMarkers select _i);
 	_dist pushBack ((getMarkerPos _curMarker) distance _aoPos);
@@ -48,17 +48,17 @@ _allObjectsArr = [];
 
 // 4x ZSU
 for "_i" from 0 to 4 do {
-	_newGroup = [_sitePos, east, ["rhs_zsu234_chdkz"]] call BIS_fnc_spawnGroup;
+	_newGroup = [_sitePos, east, ["rhsgref_ins_g_zsu234"]] call BIS_fnc_spawnGroup;
 	[_newGroup,_sitePos, 100] call BIS_fnc_taskPatrol;
 	_allObjectsArr pushBack _newGroup;
 	sleep 10;
 };
-	
+
 sleep 10;
 
 // 4x AA Patrol
 for "_i" from 0 to 4 do {
-	_newGroup = [_sitePos, east, (configfile >> "CfgGroups" >> "Indep" >> "rhs_faction_insurgents" >> "Infantry" >> "IRG_InfSquad")] call BIS_fnc_spawnGroup;
+	_newGroup = [_sitePos, east, (configfile >> "CfgGroups" >> "Indep" >> "rhsgref_faction_chdkz_g" >> "rhsgref_group_chdkz_ins_gurgents_infantry" >> "rhsgref_group_chdkz_ins_gurgents_squad")] call BIS_fnc_spawnGroup;
 	[_newGroup,_sitePos, 100] call BIS_fnc_taskPatrol;
 	_allObjectsArr pushBack _newGroup;
 	sleep 5;
@@ -67,7 +67,7 @@ for "_i" from 0 to 4 do {
 // Show global target start hint
 ["tskSam", true, samTaskMsg,_sitePos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
 [_samInitText] remoteExec ["SEPP_fnc_globalHint",0,false];
-// Sound for Hint for active Main Mission 
+// Sound for Hint for active Main Mission
 sleep 0.1;
 
 ["Sidemission_new"] remoteExec ["SEPP_fnc_globalsound",0,false];
@@ -93,14 +93,13 @@ cleanUpSam = compile "
 ";
 
 
-_samTrigger = createTrigger 		["EmptyDetector",_sitePos];   
-_samTrigger setTriggerArea 		    [400, 400, 0, false];  
-_samTrigger setTriggerActivation    ["EAST", "NOT PRESENT", false];   
-_samTrigger setTriggerStatements    ["this", 
+_samTrigger = createTrigger 		["EmptyDetector",_sitePos];
+_samTrigger setTriggerArea 		    [400, 400, 0, false];
+_samTrigger setTriggerActivation    ["EAST", "NOT PRESENT", false];
+_samTrigger setTriggerStatements    ["this",
                                     "[samEndText] remoteExec ['SEPP_fnc_globalHint',0,false];
-									['Sidemission_complete'] remoteExec ['SEPP_fnc_globalsound',0,false]; 
+									['Sidemission_complete'] remoteExec ['SEPP_fnc_globalsound',0,false];
 									['tskSam', true, samTaskMsg,samSitePos, 'SUCCEEDED', 1, true, true,'',true] call BIS_fnc_setTask;
 									['tf47_changetickets', [WEST, 2, 15]] call CBA_fnc_globalEvent;
 									[] call cleanUpSam;
                                     deletevehicle thisTrigger" , ""];
-
