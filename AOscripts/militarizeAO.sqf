@@ -326,18 +326,18 @@ if ( _ao_select == "sakhe") then {
 
 //////////////// Spawn Enemy AI in AO ////////////////////////////////////////////////////////////////////////////////////	
 
-		nul = [_log_pos,3,true,2,[6,6],_ao_rad,_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\fillHouse.sqf";
- 		nul = [_log_pos,3,_ao_rad,[true,false],[true,false,false],false,[35,20],[0,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
- 		nul = [_log_pos,3,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
-        nul = [_log_pos,3,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
-        nul = [_log_pos,3,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
-        nul = [_log_pos,3,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
-        nul = [_log_pos,3,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
- 		nul = [_log_pos,3,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
-		nul = [_log_pos,3,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,1],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
-		nul = [_log_pos,3,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,1],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
-		nul = [_log_pos,3,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,1],_ao_pilot_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
-		nul = [_log_pos,3,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,1],_ao_pilot_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,true,2,[6,6],_ao_rad,_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\fillHouse.sqf";
+ 		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],false,[35,20],[0,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+ 		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+        nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+        nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+        nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+        nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+ 		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,1],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,1],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,1],_ao_pilot_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+		nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,1],_ao_pilot_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
  		[getPos _log_pos, 200, 1000, round (1 + random 3), 1] call tf47_fnc_sniperTeam;
 		
 		nul = [_log_pos] spawn tf47_fnc_static;		
@@ -423,7 +423,7 @@ switch (tf47_param_vehiclemod) do {
 //////////////// create 2 ai patrol around radiotower /////////////////////////////////////////////////////////////////////////
 
 		sleep 0.1;
-		nul = [radiotower,3,20,[true,false],[false,false,false],false,[2,0],[0,0],"default",nil,nil,nil,1] execVM "LV\militarize.sqf";	
+		nul = [radiotower,2,20,[true,false],[false,false,false],false,[2,0],[0,0],"default",nil,nil,nil,1] execVM "LV\militarize.sqf";	
 	
 		
 //////////////// create a helipad /////////////////////////////////////////////////////////////////////////////////////////////
@@ -500,11 +500,11 @@ trig_rt setpos (getpos _log_pos);
 //////////////// Spawn AI in Capturable Bunker /////////////////////////////////////////////////////////////////////////////////////////// 
 
 		sleep 0.1;
-		nul = [captureBunker1,3,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+		nul = [captureBunker1,2,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
 		sleep 0.1;
-		nul = [captureBunker2,3,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+		nul = [captureBunker2,2,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
 		sleep 0.1;
-		nul = [captureBunker3,3,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
+		nul = [captureBunker3,2,5,[true,false],[false,false,false],true,[4,0],[0,0],_ao_ai_skill_array,nil,nil,nil,1] execVM "LV\militarize.sqf";
 
 
 
