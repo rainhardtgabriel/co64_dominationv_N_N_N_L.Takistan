@@ -15,7 +15,7 @@ _spotter = "";
 _sniper = "";
 _sniper2 = "";
 
-switch (tf47_param_vehiclemod) do {
+switch (tf47_param_vehiclemod) do { 
 	// Van
 	case 0 : {
 		_spotter = "I_soldier_F";
@@ -30,8 +30,8 @@ switch (tf47_param_vehiclemod) do {
 	};
 	// RHS
 	case 2 : {
-		_spotter = "rhsgref_ins_g_sniper";
-		_sniper = "rhsgref_ins_g_spotter";
+		_spotter = "rhs_vdv_des_marksman_asval";
+		_sniper = "rhs_vdv_des_marksman";
 		_sniper2 = _sniper;
 	};
 };

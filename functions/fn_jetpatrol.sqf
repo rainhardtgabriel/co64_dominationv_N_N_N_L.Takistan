@@ -33,7 +33,7 @@ _alert_iniText = format
 
 //////////////// Hint for End of Alert Mission /////////////////////////////////////////////////////////////////////////////////////////// 
 
-_alert_endText = = format
+_alert_endText = format
 	[
 		"<t align='center' size='1.5'>Air Patrol is gone, Radar clear!</t><br/><t size='1' align='center' color='#DAA520'>%1</t>",
 		_alert_name

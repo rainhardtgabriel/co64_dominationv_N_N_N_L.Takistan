@@ -69,7 +69,7 @@ CapVeh1Alive = true;
 
 sleep 0.1;
 nul = [CapVeh1,2,20,[true,false],[false,false,false],false,[2,0],[0,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";	
-nul = [_side_log_pos,1,false,1,[1,0],100,"default",nil,"pilot1 = this; removeAllWeapons this; this setcaptive true; removeHeadgear this;",nil] execVM "LV\fillHouseOfficer.sqf";
+nul = [_side_log_pos,1,false,1,[1,0],50,"default",nil,"pilot1 = this; removeAllWeapons this; this setcaptive true; removeHeadgear this;",nil] execVM "LV\fillHouseOfficer.sqf";
 
 
 nul = [_side_log_pos,2,true,2,[2,2],_side_rad,_side_ai_skill_array,nil,nil,nil] execVM "LV\fillHouse.sqf";
