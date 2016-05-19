@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8255.3896,298.71869,2164.8157};
-		dir[]={-0.26021999,-0.35924187,0.89633447};
-		up[]={-0.1001859,0.93320459,0.34509003};
-		aside[]={0.96043724,6.2999607e-007,0.27883083};
+		pos[]={8274.5635,298.17368,2116.3887};
+		dir[]={-0.71940112,-0.17882381,0.67132497};
+		up[]={-0.13083124,0.98385668,0.12208708};
+		aside[]={0.68232173,6.0349703e-007,0.73118526};
 	};
 };
 binarizationWanted=0;
@@ -17360,7 +17360,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="equipmentarea = [this,""table_usmc""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="equipmentarea = [this,""table_baf""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=1561;
 			type="Land_WoodenTable_large_F";
@@ -17420,7 +17420,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="equipmentarea = [this,""table_usmc""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="equipmentarea = [this,""table_baf""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=1563;
 			type="Land_WoodenTable_large_F";

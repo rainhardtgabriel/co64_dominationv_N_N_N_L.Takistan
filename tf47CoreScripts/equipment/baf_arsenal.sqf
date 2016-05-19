@@ -5,12 +5,12 @@ waitUntil {!isNil "f_param_uniforms" && !isNil "f_var_radios"};
 
 switch (f_param_uniforms) do {
 	case 1 : {
-		// RHS & 3CB
-		#include "3cb_baf_arsenal.sqf"
-	}; 
-	case 2 : {  
 		// RHS
 		#include "rhs_usmc_arsenal.sqf"
+	}; 
+	case 2 : {  
+		// RHS & 3CB
+		#include "3cb_baf_arsenal.sqf"
 	}; 
 	case 3 : {  
 		// CUP

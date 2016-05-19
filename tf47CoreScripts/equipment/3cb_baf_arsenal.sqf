@@ -50,7 +50,7 @@ _mod_backpacks = [
 	"UK3CB_BAF_B_Bergen_MTP_Sapper_H_A",
 	"UK3CB_BAF_B_Bergen_MTP_Sapper_L_A"
 ];
-_moditems = [
+_mod_items = [
 	//UNIFORM
 	"U_B_FullGhillie_lsh",
 	"U_B_FullGhillie_sard",
@@ -460,7 +460,7 @@ _mod_magazines = [
 	//LASER BATTERIES
 	"Laserbatteries"
 ];
-_modweapons = [
+_mod_weapons = [
 	//PISTOLS
 	"UK3CB_BAF_L131A1",
 	
