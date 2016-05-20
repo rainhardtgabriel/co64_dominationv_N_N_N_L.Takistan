@@ -5,12 +5,12 @@ waitUntil {!isNil "f_param_uniforms" && !isNil "f_var_radios"};
 
 switch (f_param_uniforms) do {
 	case 1 : {
-		// RHS
-		#include "rhs_arsenal.sqf"
+		// RHS & 3CB
+		#include "rhs_usarmy_arsenal.sqf"
 	}; 
 	case 2 : {  
 		// RHS
-		#include "rhs_arsenal.sqf"
+		#include "rhs_usarmy_arsenal.sqf"
 	}; 
 	case 3 : {  
 		// CUP
@@ -18,7 +18,7 @@ switch (f_param_uniforms) do {
 	}; 
 	case 4 : {  
 		// CUP & USM
-		#include "us_arsenal.sqf"
+		#include "cup_usm_arsenal.sqf"
 	}; 
 	default {  
 		// Vanilla
@@ -58,5 +58,5 @@ if (isnil "XLA_fnc_addVirtualItemCargo") then {
     [_arsenal, _magazines, true, false] call XLA_fnc_addVirtualMagazineCargo; 
         
     // Start the arsenal on it
-    ["AmmoboxInit",[_arsenal,false,{true},"<t color='#45B6EA'>Arsenal",false]] spawn XLA_fnc_arsenal;
+    ["AmmoboxInit",[_arsenal,false,{true},"<t color='#166B11'>Arsenal",false]] spawn XLA_fnc_arsenal;
 };
