@@ -48,7 +48,7 @@ _chemLightTime = [];
 _pipeBombObjects = [];
 _pipeBombTime = [];
 
-//diag_log format["#PVPFW add event handler for killed player"];
+diag_log format["#PVPFW add event handler for killed player"];
 /************** register some events *************/
 
 ["TF47_cleanup_ev_registerDeadPlayerBody", {
@@ -60,7 +60,7 @@ _pipeBombTime = [];
 
 pvpfw_cleanup_run = 1;
 waituntil{	
-	//diag_log format["#PVPFW next Clean up run"];
+	diag_log format["#PVPFW next Clean up run"];
 	{
 		_delay = 0.02;
 		_type = typeOf _x;
@@ -80,19 +80,10 @@ waituntil{
 				#endif
 				
 				case(!alive _x):{
-					_delay = 0.05;
-					//_nearEntities resize 0;
-					//diag_log format["#PVPFW found dead object %1",_x];
-					
-					_nearEntities = (getPosATL _x) nearEntities [["CAManBase","Air","LandVehicle"],pvpfw_cleanUp_vehicleRadius];
-					_numberOfPlayerNearby = 0;
-					{
-						if (_x in playableunits) then {
-							_numberOfPlayerNearby = _numberOfPlayerNearby +1						   
-						};									   
-					} foreach(_nearEntities);   
-											
-					if (_numberOfPlayerNearby == 0) then{
+					_delay = 0.05;					
+					diag_log format["#PVPFW found dead object %1",_x];
+									
+					if ((([ getPosATL _x ] call tf47_fnc_nearPlayerDist) > pvpfw_cleanUp_vehicleRadius) || (((getMarkerPos "cleanup_base") distance (getPosATL _x)) < pvpfw_cleanUp_baseRadius))  then{
 						if (_x isKindOf "CAManBase") then{
 							_cleanUpInitTime = _x getVariable ["pvpfw_cleanup_InitTime",0];
 							if (_cleanUpInitTime == 0) then{
@@ -102,7 +93,7 @@ waituntil{
 							//delete the body if the time limit has been reached
 							if (diag_tickTime > (_cleanUpInitTime + pvpfw_cleanUp_bodyTimer)) then{
 								deleteVehicle _x;
-								//diag_log format["#PVPFW module_cleanup: deleting body. init = %1, current time = %2",_cleanUpInitTime,diag_tickTime];
+								diag_log format["#PVPFW module_cleanup: deleting body. init = %1, current time = %2",_cleanUpInitTime,diag_tickTime];
 							};
 						}else{
 							// wreck?   
@@ -112,7 +103,7 @@ waituntil{
 							}else{
 								if (diag_tickTime > (_cleanupInitTime + pvpfw_cleanUp_vehicleTimer)) then{
 									deleteVehicle _x;
-									//diag_log format["#PVPFW module_cleanup: deleting vehicle. init = %1, current time = %2",_cleanUpInitTime,diag_tickTime];
+									diag_log format["#PVPFW module_cleanup: deleting vehicle. init = %1, current time = %2",_cleanUpInitTime,diag_tickTime];
 								};
 							};
 						};
@@ -121,21 +112,14 @@ waituntil{
                     };
 				};
 				
-				#ifdef __pvpfw_cleanUp_cleanWeaponHolders				
-				case(_type in ["GroundWeaponHolder","WeaponHolderSimulated"]):{
-						diag_log format["#PVPFW found Weapon Holder  %1",_x];
+								
+				case(_type in ["GroundWeaponHolder","WeaponHolderSimulated","ACE_bodyBagObject"]):{
+						diag_log format["#PVPFW found %1 name: %2 ",_x, _type];
 						_delay = 0.05;
-					
-						_nearEntities = (getPosATL _x) nearEntities [["CAManBase"],pvpfw_cleanUp_weaponHolderRadius];
-						
-						_numberOfPlayerNearby = 0;
-						{
-							if (_x in playableunits) then {
-								_numberOfPlayerNearby = _numberOfPlayerNearby +1						   
-							};
-										   
-						} foreach(_nearEntities);										
-					if (_numberOfPlayerNearby == 0) then{
+					if (
+					      (([getPosATL _x] call tf47_fnc_nearPlayerDist) > pvpfw_cleanUp_weaponHolderRadius) || 
+					      (((getMarkerPos "cleanup_base") distance (getPosATL _x)) < pvpfw_cleanUp_baseRadius)
+					   ) then{
 						_cleanupInitTime = _x getVariable["pvpfw_cleanup_InitTime",0];
 						
 						if (_cleanupInitTime == 0) then{
@@ -143,25 +127,25 @@ waituntil{
 						}else{
 							if (diag_tickTime > (_cleanupInitTime + pvpfw_cleanUp_weaponHolderTimer)) then{
 								deleteVehicle _x;
-								//diag_log format["#PVPFW module_cleanup: deleting GroundWeaponHolder. init = %1, current time = %2",_cleanUpInitTime,diag_tickTime];
+								diag_log format["#PVPFW module_cleanup: deleting GroundWeaponHolder. init = %1, current time = %2",_cleanUpInitTime,diag_tickTime];
 							};
 						};
 					}else{
 						_x setVariable ["pvpfw_cleanup_InitTime",0,false];
 					};
 				};
-				#endif
+				
 				
 				#ifdef __pvpfw_cleanUp_cleanRuins
 				//case(_type call _ruinsCheck):{
-				case(_x isKindOf "Ruins_F"):{
-					//diag_log format["#PVPFW found ruin  %1",_x];
+				case(_x isKindOf "Ruins"):{
+					diag_log format["#PVPFW found ruin  %1 %2",_x, _type];
 					_delay = 0.05;
 					_nearEntities = (getPosATL _x) nearEntities [["CAManBase","Air","LandVehicle"],pvpfw_cleanUp_ruinRadius];
 					//@todo we shall check if no player entities are in the area!
 					if (count _nearEntities == 0) then{
 						deleteVehicle _x;
-						//diag_log format["#PVPFW module_cleanup: deleting destroyed building. type = %1",_type];
+						diag_log format["#PVPFW module_cleanup: deleting destroyed building. type = %1",_type];
 					};
 				};
 				#endif
@@ -179,7 +163,7 @@ waituntil{
 						_chemLightSetTime = _chemLightTime select _index;
 						if (diag_tickTime > (_chemLightSetTime + pvpfw_cleanUp_chemLightTimer)) then{
 							deleteVehicle _x;
-							//diag_log format["#PVPFW module_cleanup: deleting chemlight"];
+							diag_log format["#PVPFW module_cleanup: deleting chemlight"];
 						};
 					};
 				};
@@ -195,7 +179,7 @@ waituntil{
 						_pipeBombSetTime = _pipeBombTime select _index;
 						if (diag_tickTime > (_pipeBombSetTime + pvpfw_cleanUp_pipeBombTimer)) then{
 							deleteVehicle _x;
-							//diag_log format["#PVPFW module_cleanup: deleting remotBomb"];
+							diag_log format["#PVPFW module_cleanup: deleting remotBomb"];
 						};
 					};
 				};
@@ -241,4 +225,4 @@ waituntil{
 	(pvpfw_cleanup_run < 1);
 };
 
-//diag_log format["#PVPFW end of cylic cleanup scipt"];
+diag_log format["#PVPFW end of cylic cleanup scipt"];
