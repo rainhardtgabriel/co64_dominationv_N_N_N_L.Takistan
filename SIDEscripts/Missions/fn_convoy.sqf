@@ -64,14 +64,14 @@ switch (tf47_param_vehiclemod) do {
 	};
 	// RHS
 	case 2 : {
-		_apc = "rhs_btr70_chdkz";
-		_refuel = "rhs_ural_chdkz";
-		_repair = "rhs_ural_chdkz";
-		_techMg = "rhs_uaz_dshkm_chdkz";
+		_apc = "rhsgref_ins_g_btr70";
+		_refuel = "rhsgref_ins_g_gaz66_r142";
+		_repair = "rhsgref_ins_g_gaz66_repair";
+		_techMg = "rhsgref_cdf_reg_uaz_dshkm";
 	};
 };
 // Creates Convoy
-_groupconvoy = createGroup east;
+_groupconvoy = createGroup resistance;
 
 _convoy_veh_array1 = [getMarkerPos "WP_Convoy_Start", 206, _apc, _groupconvoy] call bis_fnc_spawnvehicle;
 my_convoy_vec1 = _convoy_veh_array1 select 0;
