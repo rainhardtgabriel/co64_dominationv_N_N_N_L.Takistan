@@ -8,11 +8,11 @@ class EditorData
 	toggles=66;
 	class ItemIDProvider
 	{
-		nextID=3521;
+		nextID=3529;
 	};
 	class MarkerIDProvider
 	{
-		nextID=255;
+		nextID=261;
 	};
 	class Camera
 	{
@@ -150,7 +150,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1529;
+		items=1530;
 		class Item0
 		{
 			dataType="Marker";
@@ -32599,6 +32599,14 @@ class Mission
 				};
 				nAttributes=7;
 			};
+		};
+		class Item1529
+		{
+			dataType="Marker";
+			position[]={8271.0518,296.04001,2138.8337};
+			name="cleanup_base";
+			type="Empty";
+			id=3527;
 		};
 	};
 };

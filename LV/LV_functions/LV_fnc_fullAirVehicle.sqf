@@ -17,7 +17,7 @@ _OPFveh = switch (tf47_param_vehiclemod) do {
 	};
 	// RHS
 	case 2 : {
-		["rhsgref_mi24g_CAS","rhsgref_cdf_Mi35","rhsgref_cdf_su25","];
+		["rhsgref_mi24g_CAS","rhsgref_cdf_Mi35","rhsgref_cdf_su25"];
 	};
 };
 
