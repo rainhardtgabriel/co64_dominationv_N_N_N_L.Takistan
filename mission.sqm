@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8274.5635,298.17368,2116.3887};
-		dir[]={-0.71940112,-0.17882381,0.67132497};
-		up[]={-0.13083124,0.98385668,0.12208708};
-		aside[]={0.68232173,6.0349703e-007,0.73118526};
+		pos[]={8224.4023,299.21005,2111.3931};
+		dir[]={-0.74358481,-0.63080513,-0.22222643};
+		up[]={-0.60444802,0.77589542,-0.18064474};
+		aside[]={-0.28637648,6.0768798e-007,0.95823061};
 	};
 };
 binarizationWanted=0;
@@ -32602,11 +32602,46 @@ class Mission
 		};
 		class Item1529
 		{
-			dataType="Marker";
-			position[]={8271.0518,296.04001,2138.8337};
-			name="cleanup_base";
-			type="Empty";
-			id=3527;
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8216.8408,296.62027,2108.5786};
+				angles[]={0,4.3003058,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.2;
+				init="null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
+				name="supplySpawnSign";
+				description="Lamp";
+			};
+			id=3521;
+			type="Infostand_2_EP1";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };

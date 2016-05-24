@@ -55,6 +55,27 @@ _null = [] execVM "tf47CoreScripts\safezone.sqf"; 										// spawn protection
 tyreSpawnSign addAction ["<t color='#00FF00'>Spawn Spare Wheel</t>", "tf47CoreScripts\helper\spawnTyre.sqf", "ACE_Wheel"];
 tyreSpawnSign addAction ["<t color='#00FF00'>Spawn Spare Track</t>", "tf47CoreScripts\helper\spawnTyre.sqf", "ACE_Track"];
 
+// supply box spawn
+supplySpawnSign addAction ["<t color='#00FF00'>Empty Box</t>", "_this spawn tf47_fnc_spawnThing", ["Box_NATO_Ammo_F","emptyBox"]];
+supplySpawnSign addAction ["<t color='#00FF00'>Weapon Box</t>", "_this spawn tf47_fnc_spawnThing", ["Box_NATO_Wps_F","weaponBox"]];
+supplySpawnSign addAction ["<t color='#00FF00'>AntiTank Box</t>", "_this spawn tf47_fnc_spawnThing", ["Box_NATO_WpsLaunch_F","ATBox"]];
+supplySpawnSign addAction ["<t color='#00FF00'>AntiAir Box</t>", "_this spawn tf47_fnc_spawnThing", ["Box_NATO_WpsLaunch_F","AABox"]];
+supplySpawnSign addAction ["<t color='#00FF00'>Ammo Box</t>", "_this spawn tf47_fnc_spawnThing", ["Box_NATO_Ammo_F","AmmoBox"]];
+supplySpawnSign addAction ["<t color='#00FF00'>Medical Box</t>", "_this spawn tf47_fnc_spawnThing", ["ACE_medicalSupplyCrate_advanced",""]];
+
+/* maybe later
+supplySpawnSign addAction ["<t color='#FF0000'>Mk. 6 Mortar</t>", "_this spawn tf47_fnc_spawnThing", ["B_G_Mortar_01_F",""]];
+
+switch (tf47_param_vehiclemod) do { 
+	// RHS
+	case 2 : {
+		supplySpawnSign addAction ["<t color='#FF0000'>M2 high</t>", "_this spawn tf47_fnc_spawnThing", ["RHS_M2StaticMG_D",""]];
+		supplySpawnSign addAction ["<t color='#FF0000'>M2 low</t>", "_this spawn tf47_fnc_spawnThing", ["RHS_M2StaticMG_MiniTripod_D",""]];
+		supplySpawnSign addAction ["<t color='#FF0000'>Mk.19 low</t>", "_this spawn tf47_fnc_spawnThing", ["RHS_MK19_TriPod_D",""]];
+	};
+};
+*/
+
 TF47_UMenu_isEnabled = true;
 
 sleep 5;

@@ -12,7 +12,7 @@ You can "setVariable["pvpfw_cleanUp_keep",true]" on any object, to exempt it fro
 
 private[
 	"_unit",
-    "_keep",
+    "_keep"
 ];
 
 if(!isServer) exitWith{};
