@@ -17,7 +17,7 @@ _nlaw = "tf47_at4_heat";
 _drone = "B_UAV_01_F";
 _machinegun = "rhs_weap_m249_pip_L";
 //Small Vehicles
-_quad = "B_Quadbike_01_F";//veh= [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM "tf47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true]; 
+_quad = "B_Quadbike_01_F";//veh= [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM "tf47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true];
 _bike = "B_Quadbike_01_F"; // veh = [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM 47CoreScripts\vehicleRespawn.sqf"; this setVariable ["R3F_LOG_disabled", true];
 _tractor = "B_UGV_01_F"; //veh = [this, 60, 1200, "", "mil_dot", "ColorBlue", WEST, "", 1] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 //Medium Vehicles
@@ -54,9 +54,9 @@ _tiger03 = "RHS_M2A3_BUSKIII"; // veh = [this, 2700, 0, "TIGER-03", "b_mech_inf"
 _gator01 = "RHS_M6"; // veh = [this, 2700, 0, "GATOR-01", "b_mech_inf", "ColorOrange", WEST, "larmor", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _gator02 = "RHS_M6"; // veh = [this, 2700, 0, "GATOR-02", "b_mech_inf", "ColorOrange", WEST, "larmor", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 //Helicopters
-_butterfly01 ="MELB_MH6M"; // veh = [this, 1800, 0, "BUTTERFLY-01", "b_air", "ColorBrown", WEST, "rottrans", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_butterfly02 ="MELB_MH6M"; // veh = [this, 1800, 0, "BUTTERFLY-02", "b_air", "ColorBrown", WEST, "rottrans", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_firefly = "MELB_AH6M_L"; // veh = [this, 2700, 0, "FIREFLY", "b_air", "ColorOrange", WEST, "rotatk", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_butterfly01 ="RHS_MELB_MH6M"; // veh = [this, 1800, 0, "BUTTERFLY-01", "b_air", "ColorBrown", WEST, "rottrans", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_butterfly02 ="RHS_MELB_MH6M"; // veh = [this, 1800, 0, "BUTTERFLY-02", "b_air", "ColorBrown", WEST, "rottrans", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_firefly = "RHS_MELB_AH6M_L"; // veh = [this, 2700, 0, "FIREFLY", "b_air", "ColorOrange", WEST, "rotatk", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _griffin = "RHS_UH1Y_UNARMED_d"; // veh = [this, 2700, 0, "GRIFFIN", "b_air", "ColorBrown", WEST, "rottrans", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "GRIFFIN", "b_air", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 _manticore = "RHS_AH1Z"; // veh = [this, 2700, 0, "MANTICORE", "b_air", "ColorOrange", WEST, "rotatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _pelican = "RHS_CH_47F_light"; // veh = [this, 3600, 0, "PELICAN", "b_air", "ColorBrown", WEST, "rottrans", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "PLECAN", "b_air", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
